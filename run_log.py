@@ -494,7 +494,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         retriever_type=retriever_type,  # EmbeddingRetriever
         decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
         lm_decoding_config=lm_decoding_config,  # {'method': 'top_p', 'top_p': 0.9, 'stop_token': ';', 'max_mi_candidates': 100, 'null_prompt_format': 'python-prompt', 'null_prompt_weight': 1.0, 'min_null_probability': 0.0, 'min_token_null_probability': 0.0}
-        output_dir=output_dir,  # /home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
+        output_dir=output_dir,  # /home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
         format_example=format_example,  # None
         **kwargs    # {'retriever_args': {'state_transformation': 'ref_aware'}, 'run_name': 'runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
     )
@@ -516,8 +516,8 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         run.update()
 
 if __name__ == "__main__":
-    os.environ['REFPYDST_DATA_DIR'] = "/home/pyun/RefPyDST-gpt-4/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/pyun/RefPyDST-gpt-4/outputs"    
+    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
+    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
     import warnings
     warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")

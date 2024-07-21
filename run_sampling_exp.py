@@ -108,7 +108,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
         if codex_engine.startswith('gpt'):
             self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
-        elif codex_engine.startswith('llama') or codex_engine.startswith('meta'):
+        elif codex_engine.startswith('llama') or codex_engine.startswith('meta') or 'llama' in codex_engine.lower():
             self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
         self.num_sampling_iteration = kwargs.get("num_sampling_iteration", 5)
         self.num_samples = kwargs.get("num_samples", 10)
@@ -622,7 +622,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         retriever_type=retriever_type,  # EmbeddingRetriever
         decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
         lm_decoding_config=lm_decoding_config,  # {'method': 'top_p', 'top_p': 0.9, 'stop_token': ';', 'max_mi_candidates': 100, 'null_prompt_format': 'python-prompt', 'null_prompt_weight': 1.0, 'min_null_probability': 0.0, 'min_token_null_probability': 0.0}
-        output_dir=output_dir,  # /home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
+        output_dir=output_dir,  # /home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
         format_example=format_example,  # None
         **kwargs    # {'retriever_args': {'state_transformation': 'ref_aware'}, 'run_name': 'runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
     )
@@ -644,62 +644,30 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         run.update()
 
 if __name__ == "__main__":
-    os.environ['REFPYDST_DATA_DIR'] = "/home/pyun/RefPyDST-gpt-4/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/pyun/RefPyDST-gpt-4/outputs"    
+    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
+    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
     import warnings
     warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # raise ValueError
     
-    # run_file: str ="runs/table4/5p/smapling_exp/split_v1_topk_bm_5_fs_5.json"
-    # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
-    # # "runs/table4/5p/bm25/mixed.json"
-    # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
-    # # 'runs/table4/5p/pretrained_sbert/split_v1.json'
+    run_file: str = "runs/table4_llama/5p/smapling_exp_train/split_v1_topk_bm_5_fs_5_70B_vllm.json"
+    # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
+    # "runs/table4/5p/bm25/mixed.json"
+    # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
+    # 'runs/table4/5p/pretrained_sbert/split_v1.json'
 
-    # # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-    # # 'runs/codex/zero_shot/python/split_v1.json'
-    # # "runs/codex/toy_test.json"
-    # # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-    #     # arguments are input from a configuration file if the first argument to the program is a valid file
-    # args: CodexPromptingRunConfig = read_json(run_file)
-    # if 'output_dir' not in args:
-    #     args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
-    # if not 'run_name' in args:
-    #     args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
-
-    if os.path.exists(sys.argv[1]):
-        run_file: str = sys.argv[1]
+    # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
+    # 'runs/codex/zero_shot/python/split_v1.json'
+    # "runs/codex/toy_test.json"
+    # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
         # arguments are input from a configuration file if the first argument to the program is a valid file
-        args: CodexPromptingRunConfig = read_json(run_file)
-        if 'output_dir' not in args:
-            args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
-        if not 'run_name' in args:
-            args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
-    else:
-        # otherwise, try to parse from argparse
-        parser = argparse.ArgumentParser()
-        parser.add_argument('--train_fn', type=str, help="training data file (few-shot or full shot)",
-                            required=True)  # e.g. "./data/mw21_10p_train_v3.json"
-        parser.add_argument('--prompt_format', type=str, choices=PROMPT_VARIANTS,
-                            help=f"prompt format variant, among: {', '.join(PROMPT_VARIANTS)}",
-                            default="IC-DST")  # e.g. "IC-DST"
-        parser.add_argument('--retriever_dir', type=str, required=True,
-                            help="sentence transformer saved path")  # "./retriever/expts/mw21_10p_v3_0304_400_20"
-        parser.add_argument('--output_dir', type=str, default="./expts/debug",
-                            help="directory to save running log and configs")
-        parser.add_argument('--mwz_ver', type=str, default="2.1", choices=['2.1', '2.4'], help="version of MultiWOZ")
-        parser.add_argument('--codex_engine', type=str, default="gpt-3.5-turbo", choices=["text-davinci-002"],
-                            help="version of GPT-3/Codex to complete with")
-        parser.add_argument('--demonstration_mapping_path', type=str, default=None,
-                            help="if provided, don't use retriever to find nearby dialogue turns, and instead use those "
-                                 "provided in the mapping load-able at this path. It should contain a dictionary of the"
-                                 "form: {dial_id: {turn_id: [(dial_id, turn_id), ...]}, ...}")
-        parser.add_argument('--test_fn', type=str, default='', help="file to evaluate on, empty means use the test set")
-        parser.add_argument('--retriever_type', type=str, default='EmbeddingRetriever',
-                            help="what kind of retriever to use")
-        args = parser.parse_args()
-        args = vars(args)
+    args: CodexPromptingRunConfig = read_json(run_file)
+    if 'output_dir' not in args:
+        args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
+    if not 'run_name' in args:
+        args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
+    
     default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
     wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
@@ -711,6 +679,51 @@ if __name__ == "__main__":
     # args.pop('format_example')
     # args['num_examples'] = 0
     main(**args)
+
+
+    # if os.path.exists(sys.argv[1]):
+    #     run_file: str = sys.argv[1]
+    #     # arguments are input from a configuration file if the first argument to the program is a valid file
+    #     args: CodexPromptingRunConfig = read_json(run_file)
+    #     if 'output_dir' not in args:
+    #         args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
+    #     if not 'run_name' in args:
+    #         args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
+    # else:
+    #     # otherwise, try to parse from argparse
+    #     parser = argparse.ArgumentParser()
+    #     parser.add_argument('--train_fn', type=str, help="training data file (few-shot or full shot)",
+    #                         required=True)  # e.g. "./data/mw21_10p_train_v3.json"
+    #     parser.add_argument('--prompt_format', type=str, choices=PROMPT_VARIANTS,
+    #                         help=f"prompt format variant, among: {', '.join(PROMPT_VARIANTS)}",
+    #                         default="IC-DST")  # e.g. "IC-DST"
+    #     parser.add_argument('--retriever_dir', type=str, required=True,
+    #                         help="sentence transformer saved path")  # "./retriever/expts/mw21_10p_v3_0304_400_20"
+    #     parser.add_argument('--output_dir', type=str, default="./expts/debug",
+    #                         help="directory to save running log and configs")
+    #     parser.add_argument('--mwz_ver', type=str, default="2.1", choices=['2.1', '2.4'], help="version of MultiWOZ")
+    #     parser.add_argument('--codex_engine', type=str, default="gpt-3.5-turbo", choices=["text-davinci-002"],
+    #                         help="version of GPT-3/Codex to complete with")
+    #     parser.add_argument('--demonstration_mapping_path', type=str, default=None,
+    #                         help="if provided, don't use retriever to find nearby dialogue turns, and instead use those "
+    #                              "provided in the mapping load-able at this path. It should contain a dictionary of the"
+    #                              "form: {dial_id: {turn_id: [(dial_id, turn_id), ...]}, ...}")
+    #     parser.add_argument('--test_fn', type=str, default='', help="file to evaluate on, empty means use the test set")
+    #     parser.add_argument('--retriever_type', type=str, default='EmbeddingRetriever',
+    #                         help="what kind of retriever to use")
+    #     args = parser.parse_args()
+    #     args = vars(args)
+    # default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
+    # default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
+    # wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
+    # wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    # run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
+    #                  name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
+    #                  group=args.get("run_group", default_run_group),
+    #                  tags=args.get("run_tags", None))
+    # # args.pop('format_example')
+    # # args['num_examples'] = 0
+    # main(**args)
 
 
 

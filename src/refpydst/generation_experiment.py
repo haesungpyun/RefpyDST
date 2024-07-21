@@ -9,6 +9,7 @@ the prompt-format mechanisms
 """
 import abc
 import copy
+import itertools
 import json
 import logging
 import os
@@ -33,10 +34,12 @@ from refpydst.retriever.abstract_example_set_decoder import AbstractExampleListD
 from refpydst.retriever.code.embed_based_retriever import EmbeddingRetriever
 from refpydst.retriever.code.bm25_retriever import BM25Retriever
 from refpydst.retriever.code.mixed_retriever import MixedRetriever
+from refpydst.retriever.code.error_retriever import ErrorRetriever
 from refpydst.retriever.decoders.bm25_max_emb_distance import BM25MaxEmbDistinct
 from refpydst.retriever.decoders.mixed_max_emb_distance import MixedMaxEmbDistinct
 from refpydst.retriever.decoders.mixed_topk import MixedTopK
 from refpydst.retriever.decoders.sampling_topk import SamplingTopK
+from refpydst.retriever.decoders.error_topk import ErrorTopK
 from refpydst.retriever.decoders.maximize_embedding_distinctness import MaximizeEmbeddingDistinctness
 from refpydst.retriever.decoders.top_k import TopKDecoder
 from refpydst.retriever.random_retriever import RandomExampleRetriever
@@ -112,8 +115,10 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         # choose a decoder for selecting example lists, given retrieval scores of individual examples (local parts)
         if not decoder_config:
             self.demonstration_decoder = TopKDecoder()
+        
         elif decoder_config.get('decoder_type', 'top_k') == 'top_k':
             self.demonstration_decoder = TopKDecoder()
+        
         elif decoder_config['decoder_type'] == 'max_emb_distance':
             if not isinstance(self.retriever, EmbeddingRetriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
@@ -122,6 +127,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 from_n_possible=decoder_config['from_n_possible'],
                 discount_factor=decoder_config['discount_factor']
             )
+        
         elif decoder_config['decoder_type'] == 'bm25_max_emb_distance':
             if not isinstance(self.retriever, BM25Retriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
@@ -130,6 +136,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 from_n_possible=decoder_config['from_n_possible'],
                 discount_factor=decoder_config['discount_factor']
             )
+        
         elif decoder_config['decoder_type'] == 'mixed_max_emb_distance':
             if not isinstance(self.retriever, MixedRetriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
@@ -140,16 +147,26 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 operation=decoder_config.get('operation', 'sum'),
                 zscore=decoder_config.get('zscore', False)
             )
+        
         elif decoder_config['decoder_type'] == 'mixed_top_k':
             if not isinstance(self.retriever, MixedRetriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
             self.demonstration_decoder = MixedTopK(retriever=self.retriever, operation=decoder_config['operation'], zscore=decoder_config['zscore'])
+        
         elif decoder_config['decoder_type'] == 'sampling_top_k':
             if not isinstance(self.retriever, MixedRetriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
-            self.demonstration_decoder = SamplingTopK(retriever=self.retriever)
+            self.demonstration_decoder = SamplingTopK(retriever=self.retriever, k=self.num_examples)
+
+        elif decoder_config['decoder_type'] == 'error_top_k':
+            if not isinstance(self.retriever, ErrorRetriever):
+                raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
+            ground_key = decoder_config.get('ground_key', 'correct')
+            self.demonstration_decoder = SamplingTopK(retriever=self.retriever, ground_key=ground_key)
+        
         else:
             raise ValueError(f"Unable to construct decoder: {pprint.pformat(decoder_config)}")
+        
         self.mwz_ver = mwz_ver
         if demonstration_mapping_path:
             # this may load as a set of tuples in the values, but we should inject the full turn
@@ -252,13 +269,24 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
             modified_item = copy.deepcopy(data_item)
             modified_item['last_slot_values'] = predicted_context
-            ex = self.retriever.item_to_best_examples(
-                modified_item, k=self.num_examples,
-                decoder=self.demonstration_decoder)
-            if isinstance(ex, dict):
-                examples = [item for sublist in ex.values() for item in sublist if item['ID'] != data_item['ID']]
+            examples = self.retriever.item_to_best_examples(
+                modified_item, k=self.num_examples, decoder=self.demonstration_decoder)
+            if isinstance(examples, dict):
+                tmp = []
+                iter_num = max([len(v) for v in examples.values()])
+                # iterate keys in d only for 10 times
+                key_iter = itertools.islice(itertools.cycle(examples.keys()), iter_num*len(examples))
+                while True:
+                    try:
+                        key = next(key_iter)
+                        tmp.append(examples[key].pop())
+                    except IndexError:
+                        continue
+                    except StopIteration:
+                        break
+                examples = [e for e in tmp if e['ID'] != data_item['ID']][::-1]
         # verify we haven't selected an example in this dialogue
-        examples = [e for e in ex if e['ID'] != data_item['ID']]
+        examples = [e for e in examples if e['ID'] != data_item['ID']]
         if len(examples) > num_examples:
             examples = examples[-num_examples:]
         return examples
@@ -523,13 +551,14 @@ def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_arg
         return BM25Retriever(**retriever_args)
     elif retriever_type == "Mixed":
         retriever_full_path: str = get_output_dir_full_path(retriever_dir)
-        if retriever_full_path != retriever_dir:
-            if not os.path.exists(retriever_full_path):
-                raise ValueError(f"retriever_dir={retriever_dir} is a relative path, attempted to find rooted from "
-                                 f"{get_output_dir_full_path('')}, but not found. Set an abs path to retriever or "
-                                 f"check setting of REFPYDST_OUTPUTS_DIR.")
-            logging.info(f"loading retriever from {retriever_full_path}")
         return MixedRetriever(**{
+            "model_path": retriever_full_path,
+            "search_index_filename": os.path.join(retriever_full_path, "train_index.npy"),
+            **retriever_args
+        })
+    elif retriever_type == "Error":
+        retriever_full_path: str = get_output_dir_full_path(retriever_dir)
+        return ErrorRetriever(**{
             "model_path": retriever_full_path,
             "search_index_filename": os.path.join(retriever_full_path, "train_index.npy"),
             **retriever_args

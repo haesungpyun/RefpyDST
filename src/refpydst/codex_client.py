@@ -22,9 +22,14 @@ import openai
 from openai import BadRequestError
 from openai._exceptions import RateLimitError, APIError, APIConnectionError, OpenAIError
 
+from accelerate import Accelerator
+from transformers import BitsAndBytesConfig
+
 from refpydst.abstract_lm_client import AbstractLMClient
 from refpydst.utils.general import check_argument
 from refpydst.utils.speed_limit_timer import SpeedLimitTimer
+from vllm import LLM, SamplingParams
+
 
 TOO_MANY_TOKENS_FOR_ENGINE: str = "This model's maximum context length is"
 
@@ -236,18 +241,35 @@ class LlamaClient(AbstractLMClient):
     timer: SpeedLimitTimer
 
     def __init__(self, config = None, engine: str = "meta-llama/Meta-Llama-3-8B-Instruct",
-                 stop_sequences: List[str] = None) -> None:
+                 stop_sequences: List[str] = None, use_vllm: bool = True, quantization: str = None) -> None:
         super().__init__()
         self.config = config
         self.engine = engine
         self.stop_sequences = stop_sequences or ['--', '\n', ';', '#']
+        self.use_vllm = use_vllm
         self.timer = SpeedLimitTimer(second_per_step=0.2)  # openai limitation 20 query/min
-        self.tokenizer = AutoTokenizer.from_pretrained(self.engine)
-        self.model = LlamaForCausalLM.from_pretrained(
-            self.engine,
-            torch_dtype=torch.bfloat16,
-            device_map="auto",
-        )
+
+        if use_vllm:
+            self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True)
+            self.tokenizer = self.model.get_tokenizer()
+        else:
+            self.tokenizer = AutoTokenizer.from_pretrained(self.engine)
+            self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_compute_dtype=torch.float16,
+                bnb_4bit_use_double_quant=True,
+            )
+
+            self.model = LlamaForCausalLM.from_pretrained(
+                self.engine,
+                quantization_config=bnb_config,
+                torch_dtype=torch.bfloat16,
+                device_map="auto",
+                trust_remote_code=True,
+                load_in_8bit=False
+            )
         self.terminators =  [
             self.tokenizer.eos_token_id,
             self.tokenizer.convert_tokens_to_ids("<|eot_id|>")    
@@ -262,35 +284,46 @@ class LlamaClient(AbstractLMClient):
         """
         stop_sequences = self.stop_sequences or ['--', '\n', ';', '#']
         
-        input_ids = self.tokenizer.apply_chat_template(
-                prompt_text,
-                add_generation_prompt=True,
-                return_tensors="pt"
-            ).to(self.model.device)
-        input_len = input_ids.shape[-1]
-
         sequences, logits = [], []
         try:            
             self.timer.step()
             # result = openai.completions.create(**args)
-            result = self.model.generate(
-                input_ids,
-                max_new_tokens=120,
-                eos_token_id=self.terminators,
-                do_sample=False,
-                temperature=0.0,
-                output_scores= True,
-                return_dict_in_generate=True,
-                stop_strings=stop_sequences,
-                tokenizer=self.tokenizer,
-                output_logits=True
-            )
-            sequences.append(result['sequences'][0])
-            logits.append(result['logits'])
+            if self.use_vllm:
+                samplig_params = SamplingParams(
+                    n=1, best_of=1, max_tokens=120, 
+                    temperature=0, stop=stop_sequences,
+                    stop_token_ids=self.terminators)
+                prompts = [self.tokenizer.batch_decode(prompt, skip_special_tokens=False)[0] for prompt in prompt_text]
+                result = self.model.generate(prompts, sampling_params=samplig_params)
+                if len(result) > 1:
+                    completions = [{output.outputs[0].text: 1} for output in result]
+                else:
+                    completions = [{result[0].outputs[0].text: 1}]
+            else:
+                input_ids = self.tokenizer.apply_chat_template(
+                prompt_text,
+                add_generation_prompt=True,
+                return_tensors="pt"
+                )
+                input_len = input_ids.shape[-1]
+                result = self.model.generate(
+                    input_ids.to(self.model.device),
+                    max_new_tokens=120,
+                    eos_token_id=self.terminators,
+                    do_sample=False,
+                    output_scores= True,
+                    return_dict_in_generate=True,
+                    stop_strings=stop_sequences,
+                    tokenizer=self.tokenizer,
+                    output_logits=True,
+                    pad_token_id=self.tokenizer.eos_token_id
+                )
+                sequences.append(result['sequences'][0])
+                logits.append(result['logits'])
 
-            completions = dict(zip(
-                [self.tokenizer.decode(seq[input_len:], skip_special_tokens=True) for seq in sequences] ,
-                [torch.stack(logit).softmax(dim=-1).max(dim=-1)[0].log().sum().item() for logit in logits]))
+                completions = dict(zip(
+                    [self.tokenizer.decode(seq[input_len:], skip_special_tokens=True) for seq in sequences] ,
+                    [torch.stack(logit).softmax(dim=-1).max(dim=-1)[0].log().sum().item() for logit in logits]))
             return completions
         except BadRequestError as e:
             # if e.user_message.startswith(TOO_MANY_TOKENS_FOR_ENGINE):

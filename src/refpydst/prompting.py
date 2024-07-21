@@ -293,8 +293,9 @@ class PromptGenerator:
 
 if __name__ == '__main__': 
     import os 
-    os.environ['REFPYDST_DATA_DIR'] = "/home/pyun/RefPyDST/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/pyun/RefPyDST/outputs"
+    os.environ['OPENAI_API_KEY'] = "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"
+    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/RefPyDST/data"
+    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/RefPyDST/outputs"
     
     pg = PromptGenerator()
     data = read_json_from_data_dir("mw24_10p_dev.json")

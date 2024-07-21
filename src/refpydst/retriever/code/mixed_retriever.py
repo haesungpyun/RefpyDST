@@ -220,7 +220,7 @@ class MixedRetriever(ExampleRetriever):
             bm25_example_generator = (
                 (turn_label, score) 
                 for turn_label, score in self.retriever.bm25_iterate_nearest_dialogs(bm25_query, k=k_bm25))
-            return decoder.select_k(k=k, examples=example_generator, bm25_examples=bm25_example_generator)
+            return decoder.select_k(k=k, examples=example_generator, bm25_examples=bm25_example_generator, query_id=self.data_item_to_label(data_item))
         except StopIteration as e:
             print("ran out of examples! unable to decode")
             raise e
