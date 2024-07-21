@@ -256,7 +256,7 @@ def iterative_parsing(python_completion: str, state: Union[MultiWOZDict, ParserB
                 
     return agent.state.to_mwoz_dict()
 
-def my_parsing(python_completion: str, state: Union[MultiWOZDict, ParserBeliefState] = None,
+def parse_state_change(python_completion: str, state: Union[MultiWOZDict, ParserBeliefState] = None,
                             exceptions_are_empty: bool = True, **kwargs) -> MultiWOZDict:
     if not type(state) == ParserBeliefState:
         state = parser_belief_state_from_mwoz_dict(state)

@@ -70,7 +70,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
             retriever_type=retriever_type,  # EmbeddingRetriever
             decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
             **kwargs    # {'artifact_cache': None, 
-                        # 'output_dir': '/home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2', 
+                        # 'output_dir': '/home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2', 
                         # 'retriever_args': {'state_transformation': 'ref_aware'}, 
                         # 'run_name': '-runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
         )
@@ -291,7 +291,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         retriever_type=retriever_type,  # EmbeddingRetriever
         decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
         lm_decoding_config=lm_decoding_config,  # {'method': 'top_p', 'top_p': 0.9, 'stop_token': ';', 'max_mi_candidates': 100, 'null_prompt_format': 'python-prompt', 'null_prompt_weight': 1.0, 'min_null_probability': 0.0, 'min_token_null_probability': 0.0}
-        output_dir=output_dir,  # /home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
+        output_dir=output_dir,  # /home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
         format_example=format_example,  # None
         **kwargs    # {'retriever_args': {'state_transformation': 'ref_aware'}, 'run_name': 'runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
     )
@@ -314,19 +314,20 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
 
 
 if __name__ == "__main__":
-    os.environ['REFPYDST_DATA_DIR'] = "/home/pyun/RefPyDST-gpt-4/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/pyun/RefPyDST-gpt-4/outputs"    
+    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
+    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
     # import warnings
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
-    # raise ValueError
+    # # # raise ValueError
     
-    # run_file: str ='runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
+    # run_file: str = 'runs/table4/5p/error_shot/split_v1.json'
+    # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
+    # # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
     # # "runs/table4/5p/bm25/mixed.json"
     # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # # 'runs/table4/5p/pretrained_sbert/split_v1.json'
-
     # # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
     # # 'runs/codex/zero_shot/python/split_v1.json'
     # # "runs/codex/toy_test.json"
@@ -346,6 +347,7 @@ if __name__ == "__main__":
     #                  name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
     #                  group=args.get("run_group", default_run_group),
     #                  tags=args.get("run_tags", None))
+    # main(**args)
     
 
     if os.path.exists(sys.argv[1]):
