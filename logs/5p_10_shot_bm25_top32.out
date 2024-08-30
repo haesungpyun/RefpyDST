@@ -1,11 +1,11 @@
 nohup: ignoring input
-/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+/homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.16.6 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/pyun/RefPyDST-gpt-4/wandb/run-20240412_081428-iw0pg0dl
+wandb: Run data is saved locally in /homehaesungpyun/my_refpydst/wandb/run-20240412_081428-iw0pg0dl
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run -runs-table4-5p-bm25-split_v1_top32
 wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
@@ -51,10 +51,10 @@ reading surface forms from ontology.json:  77%|███████▋  | 24/31
 reading surface forms from ontology.json:  87%|████████▋ | 27/31 [00:04<00:01,  3.45it/s]
 reading surface forms from ontology.json: 100%|██████████| 31/31 [00:04<00:00,  6.73it/s]
 
-0it [00:00, ?it/s]/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/custom_max_emb_distance.py:31: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+0it [00:00, ?it/s]/homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/custom_max_emb_distance.py:31: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
   all_embeddings: NDArray = np.asarray([
 
-1it [00:01,  1.23s/it]/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/custom_max_emb_distance.py:31: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+1it [00:01,  1.23s/it]/homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/custom_max_emb_distance.py:31: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
   all_embeddings: NDArray = np.asarray([
 
 2it [00:02,  1.22s/it]
@@ -41253,7 +41253,7 @@ calculating slot-level F1: 100%|██████████| 1447/1447 [00:00
 
 0it [00:00, ?it/s]
 1447it [00:00, 226969.26it/s]
-wandb: Adding directory to artifact (/home/pyun/RefPyDST-gpt-4/outputs/runs/table4/5p/bm25/split_v1_top32)... Done. 0.1s
+wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/table4/5p/bm25/split_v1_top32)... Done. 0.1s
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:

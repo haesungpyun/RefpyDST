@@ -1,16 +1,16 @@
 nohup: ignoring input
 Traceback (most recent call last):
-  File "/home/pyun/RefPyDST-gpt-4/src/refpydst/run_codex_experiment.py", line 11, in <module>
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 11, in <module>
     import wandb
 ModuleNotFoundError: No module named 'wandb'
 nohup: ignoring input
-/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+/home/haesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.16.6 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/pyun/RefPyDST-gpt-4/wandb/run-20240412_032332-nzuuq0yo
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240412_032332-nzuuq0yo
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run -runs-table4-5p-bm25-split_v1
 wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
@@ -55,10 +55,10 @@ reading surface forms from ontology.json:  77%|███████▋  | 24/31
 reading surface forms from ontology.json:  87%|████████▋ | 27/31 [00:04<00:01,  3.40it/s]
 reading surface forms from ontology.json: 100%|██████████| 31/31 [00:04<00:00,  6.65it/s]
 
-0it [00:00, ?it/s]/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/bm25_max_emb_distance.py:30: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+0it [00:00, ?it/s]/home/haesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/bm25_max_emb_distance.py:30: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
   all_embeddings: NDArray = np.asarray([
 
-1it [00:00,  1.00it/s]/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/bm25_max_emb_distance.py:30: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+1it [00:00,  1.00it/s]/home/haesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/refpydst/retriever/decoders/bm25_max_emb_distance.py:30: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
   all_embeddings: NDArray = np.asarray([
 
 2it [00:02,  1.02s/it]
@@ -41179,7 +41179,7 @@ calculating slot-level F1: 100%|██████████| 1447/1447 [00:00
 
 0it [00:00, ?it/s]
 1447it [00:00, 247266.57it/s]
-wandb: Adding directory to artifact (/home/pyun/RefPyDST-gpt-4/outputs/runs/table4/5p/bm25/split_v1_0412_1223)... Done. 0.1s
+wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/table4/5p/bm25/split_v1_0412_1223)... Done. 0.1s
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:

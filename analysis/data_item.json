@@ -1,0 +1,230 @@
+{
+    "ID": "MUL0602.json",
+    "turn_id": 2,
+    "IDS": "MUL0602.json_2",
+    "rights": [
+        0,
+        0,
+        0
+    ],
+    "slot_values": {
+        "hotel-area": "south",
+        "hotel-internet": "yes",
+        "hotel-pricerange": "moderate",
+        "hotel-stars": "4",
+        "hotel-type": "hotel"
+    },
+    "pred_slot_values": {
+        "hotel-area": "south",
+        "hotel-internet": "yes",
+        "hotel-name": "acorn guest house",
+        "hotel-pricerange": "moderate",
+        "hotel-stars": "4"
+    },
+    "pred_og_slot_values": {
+        "hotel-area": "south",
+        "hotel-internet": "yes",
+        "hotel-name": "acorn guest house",
+        "hotel-pricerange": "moderate",
+        "hotel-stars": "4"
+    },
+    "turn_slot_values": {
+        "hotel-area": "south",
+        "hotel-name": "[DELETE]",
+        "hotel-stars": "4"
+    },
+    "pred_turn_slot_values": {
+        "hotel-area": "south",
+        "hotel-stars": "4"
+    },
+    "completion": "hotel = agent.find_hotel(area=\"south\", stars=\"4\")",
+    "last_slot_values": {
+        "hotel-internet": "yes",
+        "hotel-name": "acorn guest house",
+        "hotel-pricerange": "moderate",
+        "hotel-type": "hotel"
+    },
+    "pred_last_slot_values": {
+        "hotel-internet": "yes",
+        "hotel-name": "acorn guest house",
+        "hotel-pricerange": "moderate"
+    },
+    "error": [
+        [
+            "delta_miss_delete",
+            [
+                "hotel-name",
+                "acorn guest house"
+            ]
+        ],
+        [
+            "error_prop_miss_total",
+            [
+                "hotel-type",
+                "hotel"
+            ]
+        ]
+    ],
+    "dialog": [
+        "sys: ",
+        "usr: i looking for information about a hotel in the moderate price range that include -s free wifi .",
+        "sys: there is acorn guest house available in the moderate price range with free wifi",
+        "usr: what is the star rating of the acorn guest house ?",
+        "sys: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?",
+        "usr: sorry , the hotel i am looking for also needs to be in the south area and have a 4 star rating . could you suggest anything that fills those requirement -s too ?"
+    ],
+    "all_completions": {
+        "    agent.state.hotel = agent.find_hotel(area=\"south\", stars=\"4\")": -0.1315965033405
+    },
+    "num_solutions": 1,
+    "prompt_counts": {
+        "hotel-area": 2,
+        "hotel-stars": 5,
+        "hotel-type": 2,
+        "hotel-name": 1,
+        "hotel-parking": 2,
+        "hotel-internet": 2,
+        "restaurant-food": 1,
+        "restaurant-pricerange": 1,
+        "restaurant-area": 1
+    },
+    "prompt": {
+        "10-shot": [
+            {
+                "role": "system",
+                "content": "You are an expert in Dialogue State Tracking(DST) and python coding.\n"
+            },
+            {
+                "role": "user",
+                "content": "import abc\nfrom dataclasses import dataclass\nfrom typing import Literal, Union\n\nPriceRange = Literal[\"dontcare\", \"cheap\", \"moderate\", \"expensive\"]\nHotelType = Literal[\"hotel\", \"guest house\", \"dontcare\"]\nOption = Literal[\"yes\", \"no\", \"dontcare\"]\nDayOfWeek = Literal[\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"]\nArea = Literal[\"dontcare\", \"centre\", \"east\", \"north\", \"south\", \"west\"]\n\n\n@dataclass\nclass Hotel:\n    name: str = None\n    price_range: PriceRange = None\n    type: HotelType = None\n    parking: Option = None\n    book_number_of_days: int = None\n    book_day: DayOfWeek = None\n    book_people: int = None\n    area: Area = None\n    stars: Union[int, Literal[\"dontcare\"]] = None  # between 0 and 5 or dontcare\n    internet: Option = None\n\n\n@dataclass\nclass Train:\n    destination: str = None\n    leave_from: str = None\n    day: DayOfWeek = None\n    book_people: int = None\n    depart_time: str = None  # hh:mm or dontcare\n    arrive_by_time: str = None  # hh:mm or dontcare\n\n\nAttractionType = Literal[\"architecture\", \"boat\", \"church\", \"cinema\", \"college\", \"concert hall\", \"entertainment\",\n                         \"hotspot\", \"multiple sports\", \"museum\", \"nightclub\", \"park\", \"special\", \"swimming pool\",\n                         \"theatre\", \"dontcare\"]\n\n\n@dataclass\nclass Attraction:\n    name: str = None\n    area: Area = None\n    type: AttractionType = None\n\n\n@dataclass\nclass Restaurant:\n    name: str = None\n    food_type: str = None\n    price_range: PriceRange = None\n    area: Area = None\n    book_time: str = None  # hh:mm or dontcare\n    book_day: DayOfWeek = None\n    book_people: int = None\n\n\n@dataclass\nclass Taxi:\n    destination: str = None\n    leave_from: str = None\n    depart_time: str = None  # hh:mm or dontcare\n    arrive_by_time: str = None  # hh:mm or dontcare\n\n\n@dataclass\nclass BeliefState:\n    hotel: Hotel = None\n    train: Train = None\n    attraction: Attraction = None\n    restaurant: Restaurant = None\n    taxi: Taxi = None\n\n\nclass DialogueAgent(abc.ABC):\n\n    state: BeliefState\n\n    @abc.abstractmethod\n    def find_hotel(self, name: str = None, price_range: PriceRange = None, type: HotelType = None,\n                    parking: Option = None, book_number_of_days: int = None, book_day: DayOfWeek = None,\n                    book_people: int = None, area: Area = None, stars: Union[int, Literal[\"dontcare\"]] = None,\n                    internet: Option = None) -> Hotel:\n        pass\n\n    @abc.abstractmethod\n    def find_train(self, destination: str = None, leave_from: str = None, day: DayOfWeek = None,\n                   book_people: int = None, depart_time: str = None, arrive_by_time: str = None) -> Train:\n        pass\n\n    @abc.abstractmethod\n    def find_attraction(self, name: str = None, area: Area = None, type: AttractionType = None) -> Attraction:\n        pass\n\n    @abc.abstractmethod\n    def find_restaurant(self, name: str = None, food_type: str = None, price_range: PriceRange = None,\n                        area: Area = None, book_time: str = None, book_day: DayOfWeek = None,\n                        book_people: int = None, ) -> Restaurant:\n        pass\n\n    @abc.abstractmethod\n    def find_taxi(self, destination: str = None, leave_from: str = None, depart_time: str = None,\n                  arrive_by_time: str = None) -> Taxi:\n        pass\n\n    def get_state(self) -> BeliefState:\n        return self.state\n\n\nif __name__ == '__main__':\n    agent = DialogueAgent()\n    state = BeliefState()\n\n    \n\n    #### Example 1 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"price_range\": \"cheap\", \"stars\": 0, \"internet\": \"yes\", \"type\": \"guest house\"}})\n    print(\"system: we have 2 of those . would you like a guest house in the north or centre ?\")\n    print(\"user: i would like a guest house in the north please . can you check if it has free parking ?\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.hotel = agent.find_hotel(area=\"north\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 2 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"stars\": 3, \"internet\": \"yes\", \"type\": \"guest house\"}})\n    print(\"system: i have 3 guest houses all in the moderate price range . would you like me to choose 1 for you ?\")\n    print(\"user: i am sorry . i changed my mind . i do not want a guest house . are there any hotel -s with 2 stars ?\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.hotel = agent.find_hotel(stars=\"2\", type=\"hotel\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 3 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"name\": state.hotel.name, \"area\": \"north\", \"parking\": \"yes\", \"price_range\": \"moderate\", \"stars\": 4}})\n    print(\"system: i am sorry , we actually do not have any hotel -s that fit your needs , however , acorn guest house meets your criteria . would you like to book that stay ?\")\n    print(\"user: okay , thank you ! what is the star rating ?\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.hotel = agent.find_hotel(name=\"acorn guest house\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 4 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"price_range\": \"moderate\"}})\n    print(\"system: yes , we have several options ! do you have a star rating you would like to have it be ?\")\n    print(\"user: yes , a 3 star guest house would be perfect . free parking too , please !\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.hotel = agent.find_hotel(parking=\"yes\", stars=\"3\", type=\"guest house\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 5 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"internet\": \"no\", \"type\": \"guest house\"}, \"attraction\": {\"type\": \"architecture\"}})\n    print(\"system: the alpha milton guest house is a guest house in the north area and is moderate -ly priced . it does not have parking or internet . would you like to book a room ?\")\n    print(\"user: no . i need free parking and a 4 star rating . would you possibly have a guest house with that .\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    del agent.state.hotel.internet\n    agent.state.hotel = agent.find_hotel(parking=\"yes\", stars=\"4\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 6 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"area\": \"south\", \"parking\": \"yes\", \"internet\": \"yes\", \"type\": \"guest house\"}})\n    print(\"system: it fills both of those criteria . do you want me to book it ?\")\n    print(\"user: can you tell me the price range ? i also need the address .\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.update({})  # no change\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 7 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"price_range\": \"cheap\", \"stars\": 4, \"internet\": \"yes\"}})\n    print(\"system: they do have free parking . they also have free wifi . would you like me to make a booking ?\")\n    print(\"user: i would like to think on it if possible . but perhaps . could you also help me find a chinese diner located in the centre ? it needs to be cheap also .\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.restaurant = agent.find_restaurant(food_type=\"chinese\", price_range=\"cheap\", area=\"centre\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 8 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"price_range\": \"expensive\", \"type\": \"hotel\"}, \"attraction\": {\"type\": \"museum\"}})\n    print(\"system: i have 5 hotel -s that meet those specification -s . do you have a area in town in mind ?\")\n    print(\"user: the area is flexible . but i am looking for something with a 3 star rating that offers free wifi .\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.hotel = agent.find_hotel(stars=\"3\", internet=\"yes\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 9 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"area\": \"north\"}})\n    print(\"system: the acorn guest house is a 4 star guest house in the north . it has free parking and wifi , and is in the moderate price range . would you like a room ?\")\n    print(\"user: that sounds like what i am looking for . yes , i would like to book a room .\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.update({})  # no change\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 10 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"internet\": \"yes\", \"type\": \"guest house\"}})\n    print(\"system: we have 23 guest houses that have free wifi , is there a particular area you want to stay in ?\")\n    print(\"user: no the area does not matter , and i know this sounds strange but i am looking for a guest house with a 1 star rating .\")\n"
+            },
+            {
+                "role": "assistant",
+                "content": "    agent.state.hotel = agent.find_hotel(area=\"dontcare\", stars=\"1\")\n"
+            },
+            {
+                "role": "user",
+                "content": "\n    #### Example 11 ####\n    agent.state = BeliefState.from_dict({\"hotel\": {\"price_range\": \"moderate\", \"internet\": \"yes\", \"name\": state.hotel.name}})\n    print(\"system: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?\")\n    print(\"user: sorry , the hotel i am looking for also needs to be in the south area and have a 4 star rating . could you suggest anything that fills those requirement -s too ?\")\n"
+            }
+        ]
+    },
+    "examples": [
+        [
+            "MUL0705.json",
+            2
+        ],
+        [
+            "SSNG0262.json",
+            3
+        ],
+        [
+            "PMUL4874.json",
+            5
+        ],
+        [
+            "PMUL3115.json",
+            1
+        ],
+        [
+            "MUL1089.json",
+            3
+        ],
+        [
+            "MUL0157.json",
+            2
+        ],
+        [
+            "MUL0127.json",
+            5
+        ],
+        [
+            "MUL2627.json",
+            4
+        ],
+        [
+            "SNG1025.json",
+            1
+        ],
+        [
+            "PMUL2828.json",
+            2
+        ]
+    ],
+    "iter_parse_pred_delta": {
+        "hotel-internet": "yes",
+        "hotel-name": "acorn guest house",
+        "hotel-pricerange": "moderate"
+    }
+}

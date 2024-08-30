@@ -1,0 +1,14 @@
+{
+    "train_fn": "/home/haesungpyun/my_refpydst/data/new_full_log.json",
+    "dev_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_dev.json",
+    "test_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_test.json",
+    "output_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/simple/mnsr",
+    "num_epochs": 3,
+    "top_k": 5,
+    "batch_size": 32,
+    "max_seq_length": 256,
+    "state_transformation_type": "ref_aware",
+    "mwdataloader_class": "MWmnrDataloader",
+    "loss_function": "MultipleNegativesSymmetricRankingLoss",
+    "score_type": "simple"
+  }

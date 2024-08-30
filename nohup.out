@@ -1,0 +1,51 @@
+nohup: ignoring input
+Started the experiments for topk_bm_5_fs_5_8B 5 and 3
+Waiting to kill... Current Hour: 13
+Sleeping for 30m
+Waiting to kill... Current Hour: 14
+Sleeping for 30m
+Waiting to kill... Current Hour: 14
+Sleeping for 30m
+Waiting to kill... Current Hour: 15
+Sleeping for 30m
+Waiting to kill... Current Hour: 15
+Sleeping for 30m
+Waiting to kill... Current Hour: 16
+Sleeping for 30m
+Waiting to kill... Current Hour: 16
+Sleeping for 30m
+Waiting to kill... Current Hour: 17
+Sleeping for 30m
+Waiting to kill... Current Hour: 17
+Sleeping for 30m
+Waiting to kill... Current Hour: 18
+Sleeping for 30m
+Waiting to kill... Current Hour: 18
+Sleeping for 30m
+Waiting to kill... Current Hour: 19
+Sleeping for 30m
+Waiting to kill... Current Hour: 19
+Sleeping for 30m
+Waiting to kill... Current Hour: 20
+Sleeping for 30m
+Waiting to kill... Current Hour: 20
+Sleeping for 30m
+or 30m
+Waiting to kill... Current Hour: 18
+Sleeping for 30m
+Waiting to kill... Current Hour: 18
+Sleeping for 30m
+Waiting to kill... Current Hour: 19
+Sleeping for 30m
+Waiting to kill... Current Hour: 19
+Sleeping for 30m
+Waiting to kill... Current Hour: 20
+Sleeping for 30m
+Waiting to kill... Current Hour: 20
+Sleeping for 30m
+run_exp.sh: line 33: kill: (2401530) - No such process
+o kill... Current Hour: 20
+Sleeping for 30m
+Waiting to kill... Current Hour: 20
+Sleeping for 30m
+run_exp.sh: line 33: kill: (2360617) - No such procesrun_exp.sh: line 33: kill: (2358140) - No such process

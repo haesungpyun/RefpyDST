@@ -1,0 +1,8 @@
+{
+  "train_fn": "mw21_5p_train_v1.json",
+  "retriever_dir": "no_retriever",
+  "test_fn": "log.json",
+  "prompt_format": "python-prompt",
+  "codex_engine":"meta-llama/Meta-Llama-3-8B-Instruct",
+  "retriever_type": "no_retriever"
+}

@@ -1,8 +1,8 @@
 {
-    "train_fn": "/home/pyun/RefPyDST-gpt-4/data/mw21_1p_train_v1.json",
-    "retriever_dir": "/home/pyun/RefPyDST-gpt-4/outputs/runs/retriever/mw21_1p_train/referred_states/split_v1",
-    "output_dir": "/home/pyun/RefPyDST-gpt-4/runs/codex/toy_test",
-    "test_fn": "/home/pyun/RefPyDST-gpt-4/data/mw24_100p_dev_100_sampled.json",
+    "train_fn": "/homehaesungpyun/my_refpydst/data/mw21_1p_train_v1.json",
+    "retriever_dir": "/homehaesungpyun/my_refpydst/outputs/runs/retriever/mw21_1p_train/referred_states/split_v1",
+    "output_dir": "/homehaesungpyun/my_refpydst/runs/codex/toy_test",
+    "test_fn": "/homehaesungpyun/my_refpydst/data/mw24_100p_dev_100_sampled.json",
     "prompt_format": "python-prompt",
     "mwz_ver": "2.4",
     "codex_engine": "gpt-3.5-turbo-0125",
@@ -31,6 +31,6 @@
         "retriever_args": {
             "state_transformation": "ref_aware"
         },
-        "run_name": "-home-pyun-RefPyDST-gpt-4-runs-codex-toy_test"
+        "run_name": "-home-pyun-my_refpydst-runs-codex-toy_test"
     }
 }

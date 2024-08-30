@@ -12,6 +12,10 @@ from refpydst.retriever.code.embed_based_retriever import EmbeddingRetriever
 class MixedTopK(AbstractExampleListDecoder):
     """
     An example selection decoder which simply takes the 10 highest scoring examples.
+
+    BM25 TF-IDF x/+ SBERT cos-sim => Similarity TOP K
+
+
     """
     from_n_possible: int
     discount_factor: float

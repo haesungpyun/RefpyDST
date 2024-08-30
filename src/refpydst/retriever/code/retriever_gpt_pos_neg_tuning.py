@@ -190,7 +190,7 @@ def main(train_fn: str, dev_fn: str, test_fn: str, output_dir: str, pretrained_i
 
 
 if __name__ == '__main__':
-    run_file = "/home/pyun/RefPyDST-gpt-4/runs/retriever/mw21_1p_train/referred_states/toy_test.json"
+    run_file = "/home/haesungpyun/my_refpydst/runs/retriever/mw21_1p_train/referred_states/toy_test.json"
     args: RetrieverFinetuneRunConfig = read_json(run_file)
     if 'output_dir' not in args:
         args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))

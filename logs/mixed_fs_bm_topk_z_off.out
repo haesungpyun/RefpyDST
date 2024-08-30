@@ -1,20 +1,68 @@
 nohup: ignoring input
-/home/pyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+/home/haesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
-/home/pyun/RefPyDST-gpt-4/src/refpydst/run_codex_experiment.py:319: UserWarning: This script is deprecated. Please use the `run_codex_experiment.py` script instead.
+/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py:319: UserWarning: This script is deprecated. Please use the `run_codex_experiment.py` script instead.
   warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
 wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.17.0 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/pyun/RefPyDST-gpt-4/wandb/run-20240522_024748-4ob1wrwa
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240522_024748-4ob1wrwa
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run -runs-table4-5p-mixed_retriever-split_v1_fs_bm_topk_z_off
 wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
 wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/4ob1wrwa
-mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<01:13, 37.01it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:34, 78.31it/s]mapping supervised_set surface forms...:   1%|▏         | 38/2731 [00:00<00:38, 69.07it/s]mapping supervised_set surface forms...:   2%|▏         | 66/2731 [00:00<00:22, 119.64it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:01<00:14, 178.28it/s]mapping supervised_set surface forms...:   7%|▋         | 203/2731 [00:01<00:23, 106.38it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:02<00:25, 97.59it/s] mapping supervised_set surface forms...:   9%|▊         | 238/2731 [00:02<00:30, 81.04it/s]mapping supervised_set surface forms...:   9%|▉         | 247/2731 [00:02<00:30, 80.36it/s]mapping supervised_set surface forms...:   9%|▉         | 255/2731 [00:02<00:36, 67.81it/s]mapping supervised_set surface forms...:  14%|█▎        | 372/2731 [00:02<00:10, 226.10it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 313.61it/s]mapping supervised_set surface forms...:  18%|█▊        | 498/2731 [00:03<00:07, 280.67it/s]mapping supervised_set surface forms...:  24%|██▍       | 661/2731 [00:03<00:03, 520.87it/s]mapping supervised_set surface forms...:  27%|██▋       | 737/2731 [00:03<00:03, 563.44it/s]mapping supervised_set surface forms...:  33%|███▎      | 892/2731 [00:03<00:02, 779.10it/s]mapping supervised_set surface forms...:  38%|███▊      | 1040/2731 [00:03<00:01, 948.14it/s]mapping supervised_set surface forms...:  42%|████▏     | 1153/2731 [00:04<00:03, 519.52it/s]mapping supervised_set surface forms...:  50%|████▉     | 1354/2731 [00:04<00:01, 758.72it/s]mapping supervised_set surface forms...:  54%|█████▍    | 1475/2731 [00:04<00:01, 697.90it/s]mapping supervised_set surface forms...:  58%|█████▊    | 1577/2731 [00:04<00:02, 415.24it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:05<00:02, 471.71it/s]mapping supervised_set surface forms...:  66%|██████▌   | 1809/2731 [00:05<00:01, 566.27it/s]mapping supervised_set surface forms...:  71%|███████   | 1938/2731 [00:05<00:01, 556.74it/s]mapping supervised_set surface forms...:  74%|███████▍  | 2015/2731 [00:05<00:01, 504.49it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2176/2731 [00:05<00:00, 667.48it/s]mapping supervised_set surface forms...:  83%|████████▎ | 2263/2731 [00:06<00:01, 329.02it/s]mapping supervised_set surface forms...:  85%|████████▌ | 2328/2731 [00:07<00:02, 188.04it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2375/2731 [00:07<00:01, 194.95it/s]mapping supervised_set surface forms...:  93%|█████████▎| 2545/2731 [00:07<00:00, 328.47it/s]mapping supervised_set surface forms...:  96%|█████████▌| 2619/2731 [00:07<00:00, 359.16it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:07<00:00, 342.64it/s]
-reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 49.91it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 40.71it/s]reading surface forms from ontology.json:  77%|███████▋  | 24/31 [00:00<00:00, 20.94it/s]reading surface forms from ontology.json:  87%|████████▋ | 27/31 [00:04<00:01,  3.41it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:04<00:00,  6.66it/s]
-0it [00:00, ?it/s]1it [00:03,  3.83s/it]2it [00:04,  2.08s/it]3it [00:05,  1.64s/it]4it [00:06,  1.26s/it]5it [00:07,  1.13s/it]6it [00:08,  1.09s/it]7it [00:09,  1.05s/it]8it [00:10,  1.05it/s]
+
+mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]
+mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<01:13, 37.01it/s]
+mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:34, 78.31it/s]
+mapping supervised_set surface forms...:   1%|▏         | 38/2731 [00:00<00:38, 69.07it/s]
+mapping supervised_set surface forms...:   2%|▏         | 66/2731 [00:00<00:22, 119.64it/s]
+mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:01<00:14, 178.28it/s]
+mapping supervised_set surface forms...:   7%|▋         | 203/2731 [00:01<00:23, 106.38it/s]
+mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:02<00:25, 97.59it/s] 
+mapping supervised_set surface forms...:   9%|▊         | 238/2731 [00:02<00:30, 81.04it/s]
+mapping supervised_set surface forms...:   9%|▉         | 247/2731 [00:02<00:30, 80.36it/s]
+mapping supervised_set surface forms...:   9%|▉         | 255/2731 [00:02<00:36, 67.81it/s]
+mapping supervised_set surface forms...:  14%|█▎        | 372/2731 [00:02<00:10, 226.10it/s]
+mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 313.61it/s]
+mapping supervised_set surface forms...:  18%|█▊        | 498/2731 [00:03<00:07, 280.67it/s]
+mapping supervised_set surface forms...:  24%|██▍       | 661/2731 [00:03<00:03, 520.87it/s]
+mapping supervised_set surface forms...:  27%|██▋       | 737/2731 [00:03<00:03, 563.44it/s]
+mapping supervised_set surface forms...:  33%|███▎      | 892/2731 [00:03<00:02, 779.10it/s]
+mapping supervised_set surface forms...:  38%|███▊      | 1040/2731 [00:03<00:01, 948.14it/s]
+mapping supervised_set surface forms...:  42%|████▏     | 1153/2731 [00:04<00:03, 519.52it/s]
+mapping supervised_set surface forms...:  50%|████▉     | 1354/2731 [00:04<00:01, 758.72it/s]
+mapping supervised_set surface forms...:  54%|█████▍    | 1475/2731 [00:04<00:01, 697.90it/s]
+mapping supervised_set surface forms...:  58%|█████▊    | 1577/2731 [00:04<00:02, 415.24it/s]
+mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:05<00:02, 471.71it/s]
+mapping supervised_set surface forms...:  66%|██████▌   | 1809/2731 [00:05<00:01, 566.27it/s]
+mapping supervised_set surface forms...:  71%|███████   | 1938/2731 [00:05<00:01, 556.74it/s]
+mapping supervised_set surface forms...:  74%|███████▍  | 2015/2731 [00:05<00:01, 504.49it/s]
+mapping supervised_set surface forms...:  80%|███████▉  | 2176/2731 [00:05<00:00, 667.48it/s]
+mapping supervised_set surface forms...:  83%|████████▎ | 2263/2731 [00:06<00:01, 329.02it/s]
+mapping supervised_set surface forms...:  85%|████████▌ | 2328/2731 [00:07<00:02, 188.04it/s]
+mapping supervised_set surface forms...:  87%|████████▋ | 2375/2731 [00:07<00:01, 194.95it/s]
+mapping supervised_set surface forms...:  93%|█████████▎| 2545/2731 [00:07<00:00, 328.47it/s]
+mapping supervised_set surface forms...:  96%|█████████▌| 2619/2731 [00:07<00:00, 359.16it/s]
+mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:07<00:00, 342.64it/s]
+
+reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]
+reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 49.91it/s]
+reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 40.71it/s]
+reading surface forms from ontology.json:  77%|███████▋  | 24/31 [00:00<00:00, 20.94it/s]
+reading surface forms from ontology.json:  87%|████████▋ | 27/31 [00:04<00:01,  3.41it/s]
+reading surface forms from ontology.json: 100%|██████████| 31/31 [00:04<00:00,  6.66it/s]
+
+0it [00:00, ?it/s]
+1it [00:03,  3.83s/it]
+2it [00:04,  2.08s/it]
+3it [00:05,  1.64s/it]
+4it [00:06,  1.26s/it]
+5it [00:07,  1.13s/it]
+6it [00:08,  1.09s/it]
+7it [00:09,  1.05s/it]
+8it [00:10,  1.05it/s]
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': -0.00264677291349}
 few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
 this is the 0th example. PMUL3470.json_turn_0
@@ -193,7 +241,12 @@ gold states: {'hotel-internet': 'yes',
 
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(area="south", stars="4", internet="yes")': -1.0371077889290998}
 few-shot best completion: hotel = agent.find_hotel(area="south", stars="4", internet="yes")
-9it [00:11,  1.05it/s]10it [00:11,  1.10it/s]11it [00:13,  1.01s/it]12it [00:14,  1.05s/it]13it [00:15,  1.04s/it]this is the 8th example. MUL0602.json_turn_2
+
+9it [00:11,  1.05it/s]
+10it [00:11,  1.10it/s]
+11it [00:13,  1.01s/it]
+12it [00:14,  1.05s/it]
+13it [00:15,  1.04s/it]this is the 8th example. MUL0602.json_turn_2
 system response: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?
 user response: sorry , the hotel i am looking for also needs to be in the south area and have a 4 star rating . could you suggest anything that fills those requirement -s too ?
 pred turn change: {'hotel-area': 'south',
@@ -409,7 +462,15 @@ pred states: {'hotel-area': 'south',
  'train-departure': 'peterborough',
  'train-destination': 'cambridge',
  'train-leaveat': '10:45'}
-14it [00:16,  1.04it/s]15it [00:16,  1.09it/s]16it [00:17,  1.19it/s]17it [00:18,  1.23it/s]18it [00:19,  1.24it/s]19it [00:20,  1.16it/s]20it [00:20,  1.19it/s]21it [00:22,  1.21s/it]gold states: {'hotel-area': 'south',
+
+14it [00:16,  1.04it/s]
+15it [00:16,  1.09it/s]
+16it [00:17,  1.19it/s]
+17it [00:18,  1.23it/s]
+18it [00:19,  1.24it/s]
+19it [00:20,  1.16it/s]
+20it [00:20,  1.19it/s]
+21it [00:22,  1.21s/it]gold states: {'hotel-area': 'south',
  'hotel-book day': 'sunday',
  'hotel-book people': '4',
  'hotel-book stay': '2',
@@ -629,7 +690,12 @@ few-shot best completion: hotel = agent.find_hotel(book_day="friday", book_peopl
 this is the 21th example. PMUL0134.json_turn_5
 system response: how many people will be staying with you ?
 user response: i need it booked for 3 people for 5 nights starting from friday .
-22it [00:23,  1.14s/it]23it [00:24,  1.06s/it]24it [00:25,  1.00s/it]25it [00:26,  1.07s/it]26it [00:27,  1.03it/s]pred turn change: {'hotel-area': 'south',
+
+22it [00:23,  1.14s/it]
+23it [00:24,  1.06s/it]
+24it [00:25,  1.00s/it]
+25it [00:26,  1.07s/it]
+26it [00:27,  1.03it/s]pred turn change: {'hotel-area': 'south',
  'hotel-book day': 'friday',
  'hotel-book people': '3',
  'hotel-book stay': '5',
@@ -854,7 +920,17 @@ gold states: {'hotel-area': 'south',
 
 few-shot completions: {'    agent.state.taxi = agent.find_taxi(depart_time="10:30")': -0.00274963131043}
 few-shot best completion: taxi = agent.find_taxi(depart_time="10:30")
-27it [00:28,  1.10it/s]28it [00:29,  1.12s/it]29it [00:31,  1.14s/it]30it [00:32,  1.24s/it]31it [00:33,  1.07s/it]32it [00:34,  1.00it/s]33it [00:34,  1.05it/s]34it [00:35,  1.10it/s]35it [00:36,  1.13it/s]36it [00:37,  1.17it/s]this is the 26th example. SNG0019.json_turn_0
+
+27it [00:28,  1.10it/s]
+28it [00:29,  1.12s/it]
+29it [00:31,  1.14s/it]
+30it [00:32,  1.24s/it]
+31it [00:33,  1.07s/it]
+32it [00:34,  1.00it/s]
+33it [00:34,  1.05it/s]
+34it [00:35,  1.10it/s]
+35it [00:36,  1.13it/s]
+36it [00:37,  1.17it/s]this is the 26th example. SNG0019.json_turn_0
 system response: 
 user response: hi , i need to book a taxi , please ? i need to leave sometime after 10:30 .
 pred turn change: {'taxi-leaveat': '10:30'}
@@ -1033,7 +1109,14 @@ gold states: {'restaurant-area': 'centre',
 =====================correct!=======================
 
 
-37it [00:38,  1.11it/s]38it [00:39,  1.11it/s]39it [00:40,  1.17it/s]40it [00:40,  1.18it/s]41it [00:41,  1.27it/s]42it [00:42,  1.20it/s]43it [00:43,  1.21it/s]
+
+37it [00:38,  1.11it/s]
+38it [00:39,  1.11it/s]
+39it [00:40,  1.17it/s]
+40it [00:40,  1.18it/s]
+41it [00:41,  1.27it/s]
+42it [00:42,  1.20it/s]
+43it [00:43,  1.21it/s]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_day="tuesday", book_people=1, book_time="20:00")': -0.0407779707815}
 few-shot best completion: restaurant = agent.find_restaurant(book_day="tuesday", book_people=1, book_time="20:00")
 this is the 36th example. SNG01172.json_turn_5
@@ -1234,7 +1317,13 @@ gold turn change: {'hotel-book day': 'saturday',
  'hotel-book people': '4',
  'hotel-book stay': '4',
  'hotel-name': 'avalon'}
-44it [00:44,  1.01it/s]45it [00:45,  1.03it/s]46it [00:46,  1.05it/s]47it [00:47,  1.10it/s]48it [00:47,  1.18it/s]49it [00:49,  1.15s/it]pred states: {'hotel-area': 'dontcare',
+
+44it [00:44,  1.01it/s]
+45it [00:45,  1.03it/s]
+46it [00:46,  1.05it/s]
+47it [00:47,  1.10it/s]
+48it [00:47,  1.18it/s]
+49it [00:49,  1.15s/it]pred states: {'hotel-area': 'dontcare',
  'hotel-book day': 'saturday',
  'hotel-book people': '4',
  'hotel-book stay': '4',
@@ -1469,7 +1558,15 @@ gold states: {'train-arriveby': '16:45',
 few-shot completions: {'    agent.state.train = agent.find_train(leave_from="birmingham new street")': -0.3259252699097}
 few-shot best completion: train = agent.find_train(leave_from="birmingham new street")
 this is the 49th example. PMUL1159.json_turn_1
-50it [00:50,  1.04s/it]51it [00:51,  1.06it/s]52it [00:52,  1.12it/s]53it [00:52,  1.19it/s]54it [00:53,  1.18it/s]55it [00:54,  1.29it/s]56it [00:54,  1.32it/s]57it [00:55,  1.27it/s]system response: where would you like to leave from ?
+
+50it [00:50,  1.04s/it]
+51it [00:51,  1.06it/s]
+52it [00:52,  1.12it/s]
+53it [00:52,  1.19it/s]
+54it [00:53,  1.18it/s]
+55it [00:54,  1.29it/s]
+56it [00:54,  1.32it/s]
+57it [00:55,  1.27it/s]system response: where would you like to leave from ?
 user response: i want to leave from the birmingham new street station .
 pred turn change: {'train-arriveby': '16:45',
  'train-day': 'monday',
@@ -1679,7 +1776,16 @@ pred turn change: {'hotel-area': 'east',
  'hotel-stars': '4',
  'hotel-type': 'guest house'}
 gold turn change: {'hotel-area': 'east', 'hotel-stars': '4'}
-58it [00:56,  1.22it/s]59it [00:57,  1.19it/s]60it [01:00,  1.36s/it]61it [01:01,  1.19s/it]62it [01:01,  1.04s/it]63it [01:02,  1.07it/s]64it [01:03,  1.05it/s]65it [01:03,  1.19it/s]66it [01:04,  1.22it/s]pred states: {'hotel-area': 'east',
+
+58it [00:56,  1.22it/s]
+59it [00:57,  1.19it/s]
+60it [01:00,  1.36s/it]
+61it [01:01,  1.19s/it]
+62it [01:01,  1.04s/it]
+63it [01:02,  1.07it/s]
+64it [01:03,  1.05it/s]
+65it [01:03,  1.19it/s]
+66it [01:04,  1.22it/s]pred states: {'hotel-area': 'east',
  'hotel-pricerange': 'moderate',
  'hotel-stars': '4',
  'hotel-type': 'guest house'}
@@ -1899,7 +2005,16 @@ gold states: {'restaurant-food': 'italian'}
 
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(area="centre")': -0.00257468317514}
 few-shot best completion: restaurant = agent.find_restaurant(area="centre")
-67it [01:05,  1.26it/s]68it [01:06,  1.33it/s]69it [01:07,  1.10it/s]70it [01:08,  1.17it/s]71it [01:09,  1.15it/s]72it [01:09,  1.24it/s]73it [01:11,  1.18s/it]74it [01:12,  1.06s/it]75it [01:13,  1.02s/it]this is the 66th example. PMUL0689.json_turn_2
+
+67it [01:05,  1.26it/s]
+68it [01:06,  1.33it/s]
+69it [01:07,  1.10it/s]
+70it [01:08,  1.17it/s]
+71it [01:09,  1.15it/s]
+72it [01:09,  1.24it/s]
+73it [01:11,  1.18s/it]
+74it [01:12,  1.06s/it]
+75it [01:13,  1.02s/it]this is the 66th example. PMUL0689.json_turn_2
 system response: there are numbers of italian restaurant -s . are you looking for 1 in any particular area or price range ?
 user response: i want 1 in the centre .
 pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
@@ -2093,7 +2208,17 @@ gold states: {'attraction-area': 'west', 'attraction-type': 'museum'}
 few-shot completions: {'    agent.state.update({})  #': -0.06496608263333}
 few-shot best completion: update({})  #
 this is the 75th example. PMUL3983.json_turn_1
-system response: we have a lot of those ! anything specific you need or just a recommendation ?76it [01:14,  1.09it/s]77it [01:14,  1.13it/s]78it [01:15,  1.15it/s]79it [01:16,  1.21it/s]80it [01:17,  1.28it/s]81it [01:17,  1.26it/s]82it [01:18,  1.35it/s]83it [01:19,  1.24it/s]84it [01:20,  1.29it/s]85it [01:20,  1.36it/s]
+system response: we have a lot of those ! anything specific you need or just a recommendation ?
+76it [01:14,  1.09it/s]
+77it [01:14,  1.13it/s]
+78it [01:15,  1.15it/s]
+79it [01:16,  1.21it/s]
+80it [01:17,  1.28it/s]
+81it [01:17,  1.26it/s]
+82it [01:18,  1.35it/s]
+83it [01:19,  1.24it/s]
+84it [01:20,  1.29it/s]
+85it [01:20,  1.36it/s]
 user response: nothing specific . can you make a recommendation and give me their address , postcode , and entrance fee ?
 pred turn change: {'attraction-area': 'west', 'attraction-type': 'museum'}
 gold turn change: {}
@@ -2290,7 +2415,15 @@ this is the 85th example. SNG0783.json_turn_0
 system response: 
 user response: hello . can you help me find a hotel in the north of town ?
 pred turn change: {'hotel-area': 'north'}
-86it [01:21,  1.37it/s]87it [01:22,  1.27it/s]88it [01:23,  1.18it/s]89it [01:24,  1.12it/s]90it [01:25,  1.14it/s]91it [01:26,  1.25it/s]92it [01:26,  1.23it/s]93it [01:27,  1.19it/s]gold turn change: {'hotel-area': 'north', 'hotel-type': 'hotel'}
+
+86it [01:21,  1.37it/s]
+87it [01:22,  1.27it/s]
+88it [01:23,  1.18it/s]
+89it [01:24,  1.12it/s]
+90it [01:25,  1.14it/s]
+91it [01:26,  1.25it/s]
+92it [01:26,  1.23it/s]
+93it [01:27,  1.19it/s]gold turn change: {'hotel-area': 'north', 'hotel-type': 'hotel'}
 pred states: {'hotel-area': 'north'}
 gold states: {'hotel-area': 'north', 'hotel-type': 'hotel'}
 
@@ -2485,7 +2618,13 @@ pred states: {'hotel-area': 'north',
  'hotel-internet': 'yes',
  'hotel-pricerange': 'moderate',
  'hotel-type': 'guest house'}
-94it [01:28,  1.11it/s]95it [01:30,  1.01it/s]96it [01:31,  1.24s/it]97it [01:32,  1.16s/it]98it [01:33,  1.01s/it]99it [01:34,  1.07it/s]gold states: {'hotel-area': 'north',
+
+94it [01:28,  1.11it/s]
+95it [01:30,  1.01it/s]
+96it [01:31,  1.24s/it]
+97it [01:32,  1.16s/it]
+98it [01:33,  1.01s/it]
+99it [01:34,  1.07it/s]gold states: {'hotel-area': 'north',
  'hotel-book people': '2',
  'hotel-book stay': '2',
  'hotel-internet': 'yes',
@@ -2705,7 +2844,14 @@ pred turn change: {'restaurant-food': 'christmas'}
 gold turn change: {'restaurant-food': 'christmas'}
 pred states: {'restaurant-food': 'christmas'}
 gold states: {'restaurant-food': 'christmas'}
-100it [01:35,  1.11it/s]101it [01:35,  1.14it/s]102it [01:36,  1.19it/s]103it [01:37,  1.02it/s]104it [01:38,  1.03it/s]105it [01:39,  1.06it/s]106it [01:40,  1.16it/s]
+
+100it [01:35,  1.11it/s]
+101it [01:35,  1.14it/s]
+102it [01:36,  1.19it/s]
+103it [01:37,  1.02it/s]
+104it [01:38,  1.03it/s]
+105it [01:39,  1.06it/s]
+106it [01:40,  1.16it/s]
 =====================correct!=======================
 
 
@@ -2895,7 +3041,15 @@ few-shot best completion: update({})  #
 this is the 106th example. PMUL0858.json_turn_7
 system response: booking was successful , the total fee is 92.96 gbp payable at the station . reference number is : 3epmfsfa .
 user response: i am all set , thank you for the help .
-107it [01:41,  1.20it/s]108it [01:42,  1.19it/s]109it [01:42,  1.25it/s]110it [01:44,  1.02s/it]111it [01:45,  1.06it/s]112it [01:45,  1.13it/s]113it [01:46,  1.13it/s]114it [01:47,  1.04it/s]pred turn change: {'restaurant-area': 'east',
+
+107it [01:41,  1.20it/s]
+108it [01:42,  1.19it/s]
+109it [01:42,  1.25it/s]
+110it [01:44,  1.02s/it]
+111it [01:45,  1.06it/s]
+112it [01:45,  1.13it/s]
+113it [01:46,  1.13it/s]
+114it [01:47,  1.04it/s]pred turn change: {'restaurant-area': 'east',
  'restaurant-book day': 'saturday',
  'restaurant-book people': '7',
  'restaurant-book time': '19:30',
@@ -3102,7 +3256,14 @@ gold states: {'hotel-internet': 'yes',
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_day="wednesday", book_number_of_days=2)': -0.44335198134753}
 few-shot best completion: hotel = agent.find_hotel(book_day="wednesday", book_number_of_days=2)
 this is the 114th example. PMUL1917.json_turn_7
-115it [01:48,  1.03it/s]116it [01:49,  1.06it/s]117it [01:50,  1.16it/s]118it [01:51,  1.13it/s]119it [01:52,  1.14it/s]120it [01:53,  1.11it/s]121it [01:54,  1.07it/s]system response: they do ! would you like for me to book a room for you ?
+
+115it [01:48,  1.03it/s]
+116it [01:49,  1.06it/s]
+117it [01:50,  1.16it/s]
+118it [01:51,  1.13it/s]
+119it [01:52,  1.14it/s]
+120it [01:53,  1.11it/s]
+121it [01:54,  1.07it/s]system response: they do ! would you like for me to book a room for you ?
 user response: sure ! i will be staying wednesday and thursday .
 pred turn change: {'hotel-area': 'west',
  'hotel-book day': 'wednesday',
@@ -3323,7 +3484,12 @@ gold states: {'hotel-area': 'south',
 =====================wrong!=======================
 
 
-122it [01:54,  1.10it/s]123it [01:55,  1.12it/s]124it [01:56,  1.08it/s]125it [01:57,  1.17it/s]126it [01:58,  1.21it/s]
+
+122it [01:54,  1.10it/s]
+123it [01:55,  1.12it/s]
+124it [01:56,  1.08it/s]
+125it [01:57,  1.17it/s]
+126it [01:58,  1.21it/s]
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_number_of_days=2)': -0.76432536257633}
 few-shot best completion: hotel = agent.find_hotel(book_number_of_days=2)
 this is the 121th example. MUL0754.json_turn_4
@@ -3553,7 +3719,16 @@ system response:
 user response: i feel like having italian for dinner . are there any cheap restaurant -s with good italian in town ?
 pred turn change: {'restaurant-food': 'italian', 'restaurant-pricerange': 'cheap'}
 gold turn change: {'restaurant-food': 'italian', 'restaurant-pricerange': 'cheap'}
-127it [01:59,  1.20it/s]128it [01:59,  1.20it/s]129it [02:00,  1.28it/s]130it [02:01,  1.32it/s]131it [02:02,  1.29it/s]132it [02:03,  1.25it/s]133it [02:03,  1.22it/s]134it [02:05,  1.13s/it]135it [02:06,  1.04s/it]pred states: {'restaurant-food': 'italian', 'restaurant-pricerange': 'cheap'}
+
+127it [01:59,  1.20it/s]
+128it [01:59,  1.20it/s]
+129it [02:00,  1.28it/s]
+130it [02:01,  1.32it/s]
+131it [02:02,  1.29it/s]
+132it [02:03,  1.25it/s]
+133it [02:03,  1.22it/s]
+134it [02:05,  1.13s/it]
+135it [02:06,  1.04s/it]pred states: {'restaurant-food': 'italian', 'restaurant-pricerange': 'cheap'}
 gold states: {'restaurant-food': 'italian', 'restaurant-pricerange': 'cheap'}
 
 =====================correct!=======================
@@ -3752,7 +3927,15 @@ few-shot best completion: update({})  #
 this is the 135th example. PMUL4482.json_turn_6
 system response: yes the parking is free .
 user response: could you provide me with the address and post code ?
-136it [02:07,  1.05it/s]137it [02:07,  1.14it/s]138it [02:08,  1.24it/s]139it [02:09,  1.20it/s]140it [02:10,  1.15it/s]141it [02:11,  1.19it/s]142it [02:13,  1.13s/it]143it [02:13,  1.04s/it]pred turn change: {'attraction-name': 'christ college',
+
+136it [02:07,  1.05it/s]
+137it [02:07,  1.14it/s]
+138it [02:08,  1.24it/s]
+139it [02:09,  1.20it/s]
+140it [02:10,  1.15it/s]
+141it [02:11,  1.19it/s]
+142it [02:13,  1.13s/it]
+143it [02:13,  1.04s/it]pred turn change: {'attraction-name': 'christ college',
  'attraction-type': 'college',
  'hotel-area': 'south',
  'hotel-internet': 'no',
@@ -3961,7 +4144,15 @@ few-shot best completion: train = agent.find_train(day="saturday", depart_time="
 this is the 143th example. MUL2173.json_turn_5
 system response: i have many trains going to cambridge . can you tell me where you are departing from ? also , how many tickets will you need ?
 user response: it is just for me and i need it for saturday leaving after 19:00 from ely and going to cambridge .
-144it [02:15,  1.07s/it]145it [02:15,  1.04it/s]146it [02:16,  1.09it/s]147it [02:17,  1.08it/s]148it [02:18,  1.09it/s]149it [02:19,  1.14it/s]150it [02:19,  1.21it/s]151it [02:20,  1.27it/s]pred turn change: {'hotel-area': 'dontcare',
+
+144it [02:15,  1.07s/it]
+145it [02:15,  1.04it/s]
+146it [02:16,  1.09it/s]
+147it [02:17,  1.08it/s]
+148it [02:18,  1.09it/s]
+149it [02:19,  1.14it/s]
+150it [02:19,  1.21it/s]
+151it [02:20,  1.27it/s]pred turn change: {'hotel-area': 'dontcare',
  'hotel-name': 'acorn guest house',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'moderate',
@@ -4167,7 +4358,13 @@ this is the 151th example. PMUL4302.json_turn_0
 system response: 
 user response: find me a moderate -ly priced place to eat in the south
 pred turn change: {'restaurant-area': 'south', 'restaurant-pricerange': 'moderate'}
-152it [02:21,  1.18it/s]153it [02:22,  1.06it/s]154it [02:23,  1.09it/s]155it [02:24,  1.08it/s]156it [02:25,  1.13it/s]157it [02:26,  1.18it/s]gold turn change: {'restaurant-area': 'south', 'restaurant-pricerange': 'moderate'}
+
+152it [02:21,  1.18it/s]
+153it [02:22,  1.06it/s]
+154it [02:23,  1.09it/s]
+155it [02:24,  1.08it/s]
+156it [02:25,  1.13it/s]
+157it [02:26,  1.18it/s]gold turn change: {'restaurant-area': 'south', 'restaurant-pricerange': 'moderate'}
 pred states: {'restaurant-area': 'south', 'restaurant-pricerange': 'moderate'}
 gold states: {'restaurant-area': 'south', 'restaurant-pricerange': 'moderate'}
 
@@ -4369,7 +4566,15 @@ few-shot completions: {'    agent.state.taxi = agent.find_taxi(depart_time="11:4
 few-shot best completion: taxi = agent.find_taxi(depart_time="11:45", leave_from="centre")
 this is the 157th example. PMUL0716.json_turn_0
 system response: 
-158it [02:27,  1.06it/s]159it [02:28,  1.11s/it]160it [02:29,  1.14s/it]161it [02:30,  1.04s/it]162it [02:31,  1.02s/it]163it [02:32,  1.04it/s]164it [02:33,  1.09it/s]165it [02:34,  1.09it/s]user response: i need a taxi to pick us up in centre at 11:45
+
+158it [02:27,  1.06it/s]
+159it [02:28,  1.11s/it]
+160it [02:29,  1.14s/it]
+161it [02:30,  1.04s/it]
+162it [02:31,  1.02s/it]
+163it [02:32,  1.04it/s]
+164it [02:33,  1.09it/s]
+165it [02:34,  1.09it/s]user response: i need a taxi to pick us up in centre at 11:45
 pred turn change: {'taxi-departure': 'centre', 'taxi-leaveat': '11:45'}
 gold turn change: {'taxi-leaveat': '11:45'}
 pred states: {'taxi-departure': 'centre', 'taxi-leaveat': '11:45'}
@@ -4585,7 +4790,14 @@ pred turn change: {'restaurant-area': 'centre',
  'train-departure': 'cambridge',
  'train-destination': 'leicester'}
 gold turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'moderate'}
-166it [02:35,  1.04it/s]167it [02:36,  1.03it/s]168it [02:37,  1.01it/s]169it [02:38,  1.00s/it]170it [02:39,  1.03it/s]171it [02:40,  1.05it/s]172it [02:41,  1.04it/s]pred states: {'restaurant-area': 'centre',
+
+166it [02:35,  1.04it/s]
+167it [02:36,  1.03it/s]
+168it [02:37,  1.01it/s]
+169it [02:38,  1.00s/it]
+170it [02:39,  1.03it/s]
+171it [02:40,  1.05it/s]
+172it [02:41,  1.04it/s]pred states: {'restaurant-area': 'centre',
  'restaurant-pricerange': 'moderate',
  'taxi-departure': 'centre',
  'taxi-leaveat': '11:45',
@@ -4803,7 +5015,12 @@ few-shot completions: {'    agent.state.update({})  #': -0.0043480177526500005}
 few-shot best completion: update({})  #
 this is the 172th example. MUL0326.json_turn_2
 system response: i can get you there at 16:44 , if you like . tr8860 will depart cambridge at 14:01 . would you like to book tickets on that train ?
-173it [02:42,  1.09it/s]174it [02:42,  1.12it/s]175it [02:43,  1.09it/s]176it [02:44,  1.03it/s]177it [02:45,  1.06it/s]WARNING:root:'NoneType' object has no attribute 'name'
+
+173it [02:42,  1.09it/s]
+174it [02:42,  1.12it/s]
+175it [02:43,  1.09it/s]
+176it [02:44,  1.03it/s]
+177it [02:45,  1.06it/s]WARNING:root:'NoneType' object has no attribute 'name'
 WARNING:root:'NoneType' object has no attribute 'name'
 user response: no . i require the travel time , price , and train id .
 pred turn change: {'train-arriveby': '16:45',
@@ -5003,7 +5220,16 @@ pred states: {'restaurant-area': 'centre',
  'train-day': 'wednesday',
  'train-departure': 'cambridge',
  'train-destination': 'birmingham new street'}
-178it [02:46,  1.07it/s]179it [02:47,  1.13it/s]180it [02:48,  1.19it/s]181it [02:49,  1.17it/s]182it [02:49,  1.18it/s]183it [02:50,  1.19it/s]184it [02:51,  1.21it/s]185it [02:52,  1.22it/s]186it [02:53,  1.22it/s]gold states: {'restaurant-area': 'centre',
+
+178it [02:46,  1.07it/s]
+179it [02:47,  1.13it/s]
+180it [02:48,  1.19it/s]
+181it [02:49,  1.17it/s]
+182it [02:49,  1.18it/s]
+183it [02:50,  1.19it/s]
+184it [02:51,  1.21it/s]
+185it [02:52,  1.22it/s]
+186it [02:53,  1.22it/s]gold states: {'restaurant-area': 'centre',
  'restaurant-book day': 'wednesday',
  'restaurant-book people': '1',
  'restaurant-book time': '11:15',
@@ -5212,7 +5438,14 @@ gold states: {'hotel-area': 'west', 'hotel-stars': '4', 'hotel-type': 'hotel'}
 few-shot completions: {'    agent.state.update({})  #': -0.31136352954333}
 few-shot best completion: update({})  #
 this is the 186th example. MUL2096.json_turn_1
-187it [02:56,  1.53s/it]188it [02:57,  1.41s/it]189it [02:58,  1.26s/it]190it [02:59,  1.13s/it]191it [03:00,  1.09s/it]192it [03:01,  1.01s/it]193it [03:01,  1.06it/s]system response: finches bed and breakfast is a guest house in the cheap range . huntingdon marriott hotel is in the expensive range and the cambridge belfry is a hotel in the cheap range .
+
+187it [02:56,  1.53s/it]
+188it [02:57,  1.41s/it]
+189it [02:58,  1.26s/it]
+190it [02:59,  1.13s/it]
+191it [03:00,  1.09s/it]
+192it [03:01,  1.01s/it]
+193it [03:01,  1.06it/s]system response: finches bed and breakfast is a guest house in the cheap range . huntingdon marriott hotel is in the expensive range and the cambridge belfry is a hotel in the cheap range .
 user response: which of these hotel -s include free parking ?
 pred turn change: {'hotel-area': 'west', 'hotel-stars': '4'}
 gold turn change: {'hotel-parking': 'yes'}
@@ -5445,7 +5678,14 @@ pred states: {'hotel-area': 'west',
  'train-day': 'monday',
  'train-departure': 'cambridge',
  'train-destination': 'leicester'}
-194it [03:02,  1.15it/s]195it [03:03,  1.15it/s]196it [03:04,  1.08it/s]197it [03:05,  1.08it/s]198it [03:07,  1.30s/it]199it [03:08,  1.13s/it]200it [03:09,  1.01s/it]gold states: {'hotel-area': 'west',
+
+194it [03:02,  1.15it/s]
+195it [03:03,  1.15it/s]
+196it [03:04,  1.08it/s]
+197it [03:05,  1.08it/s]
+198it [03:07,  1.30s/it]
+199it [03:08,  1.13s/it]
+200it [03:09,  1.01s/it]gold states: {'hotel-area': 'west',
  'hotel-book day': 'sunday',
  'hotel-book people': '4',
  'hotel-book stay': '1',
@@ -5643,7 +5883,17 @@ pred states: {'attraction-area': 'east',
  'restaurant-name': 'backstreet bistro',
  'taxi-destination': 'backstreet bistro',
  'taxi-leaveat': '15:15'}
-201it [03:10,  1.03s/it]202it [03:10,  1.04it/s]203it [03:11,  1.10it/s]204it [03:12,  1.19it/s]205it [03:13,  1.10it/s]206it [03:14,  1.01it/s]207it [03:15,  1.01s/it]208it [03:16,  1.08it/s]209it [03:17,  1.14it/s]210it [03:17,  1.22it/s]gold states: {'attraction-area': 'east',
+
+201it [03:10,  1.03s/it]
+202it [03:10,  1.04it/s]
+203it [03:11,  1.10it/s]
+204it [03:12,  1.19it/s]
+205it [03:13,  1.10it/s]
+206it [03:14,  1.01it/s]
+207it [03:15,  1.01s/it]
+208it [03:16,  1.08it/s]
+209it [03:17,  1.14it/s]
+210it [03:17,  1.22it/s]gold states: {'attraction-area': 'east',
  'attraction-name': 'cherry hinton water play',
  'attraction-type': 'park',
  'restaurant-book day': 'monday',
@@ -5858,7 +6108,14 @@ gold states: {}
 
 few-shot completions: {'    agent.state.attraction = agent.find_attraction(type="museum", area="dontcare")': -0.4012519154548998}
 few-shot best completion: attraction = agent.find_attraction(type="museum", area="dontcare")
-211it [03:20,  1.22s/it]212it [03:21,  1.23s/it]213it [03:21,  1.06s/it]214it [03:22,  1.01it/s]215it [03:23,  1.10it/s]216it [03:24,  1.07it/s]217it [03:25,  1.00it/s]this is the 210th example. PMUL4984.json_turn_2
+
+211it [03:20,  1.22s/it]
+212it [03:21,  1.23s/it]
+213it [03:21,  1.06s/it]
+214it [03:22,  1.01it/s]
+215it [03:23,  1.10it/s]
+216it [03:24,  1.07it/s]
+217it [03:25,  1.00it/s]this is the 210th example. PMUL4984.json_turn_2
 system response: is there an area or activity you prefer ? i have many options such as museums , architecture etc .
 user response: i would like to visit a museum . could you suggest 1 ? any area is fine .
 pred turn change: {'attraction-area': 'dontcare', 'attraction-type': 'museum'}
@@ -6060,7 +6317,13 @@ gold states: {'train-arriveby': '14:00',
  'train-departure': 'cambridge',
  'train-destination': 'stevenage',
  'train-leaveat': '14:00'}
-218it [03:26,  1.10it/s]219it [03:27,  1.02it/s]220it [03:28,  1.02it/s]221it [03:29,  1.12s/it]222it [03:30,  1.03s/it]223it [03:31,  1.07it/s]
+
+218it [03:26,  1.10it/s]
+219it [03:27,  1.02it/s]
+220it [03:28,  1.02it/s]
+221it [03:29,  1.12s/it]
+222it [03:30,  1.03s/it]
+223it [03:31,  1.07it/s]
 =====================correct!=======================
 
 
@@ -6285,7 +6548,14 @@ pred turn change: {}
 gold turn change: {}
 pred states: {}
 gold states: {}
-224it [03:32,  1.04it/s]225it [03:33,  1.06it/s]226it [03:34,  1.14it/s]227it [03:35,  1.06it/s]228it [03:36,  1.07it/s]229it [03:37,  1.04it/s]230it [03:37,  1.12it/s]
+
+224it [03:32,  1.04it/s]
+225it [03:33,  1.06it/s]
+226it [03:34,  1.14it/s]
+227it [03:35,  1.06it/s]
+228it [03:36,  1.07it/s]
+229it [03:37,  1.04it/s]
+230it [03:37,  1.12it/s]
 =====================correct!=======================
 
 
@@ -6484,7 +6754,14 @@ pred states: {'restaurant-area': 'east',
  'train-day': 'wednesday',
  'train-departure': 'cambridge',
  'train-destination': 'stevenage'}
-231it [03:38,  1.19it/s]232it [03:39,  1.22it/s]233it [03:40,  1.17it/s]234it [03:41,  1.06it/s]235it [03:42,  1.03it/s]236it [03:43,  1.04it/s]237it [03:44,  1.02s/it]gold states: {'restaurant-area': 'east',
+
+231it [03:38,  1.19it/s]
+232it [03:39,  1.22it/s]
+233it [03:40,  1.17it/s]
+234it [03:41,  1.06it/s]
+235it [03:42,  1.03it/s]
+236it [03:43,  1.04it/s]
+237it [03:44,  1.02s/it]gold states: {'restaurant-area': 'east',
  'restaurant-book day': 'tuesday',
  'restaurant-book people': '1',
  'restaurant-book time': '13:15',
@@ -6690,7 +6967,13 @@ pred turn change: {'hotel-area': 'east',
  'restaurant-area': 'north',
  'restaurant-food': 'british',
  'restaurant-pricerange': 'expensive'}
-238it [03:45,  1.05s/it]239it [03:46,  1.06s/it]240it [03:47,  1.04it/s]241it [03:48,  1.08it/s]242it [03:49,  1.16it/s]243it [03:49,  1.18it/s]gold turn change: {'restaurant-area': 'east|north', 'restaurant-food': 'eastern european|british'}
+
+238it [03:45,  1.05s/it]
+239it [03:46,  1.06s/it]
+240it [03:47,  1.04it/s]
+241it [03:48,  1.08it/s]
+242it [03:49,  1.16it/s]
+243it [03:49,  1.18it/s]gold turn change: {'restaurant-area': 'east|north', 'restaurant-food': 'eastern european|british'}
 pred states: {'hotel-area': 'east',
  'hotel-book day': 'monday',
  'hotel-book people': '1',
@@ -6902,7 +7185,14 @@ user response: yes , i need a place to stay with free wifi and in the north as w
 pred turn change: {'attraction-area': 'north', 'hotel-area': 'north', 'hotel-internet': 'yes'}
 gold turn change: {'hotel-area': 'north', 'hotel-internet': 'yes'}
 pred states: {'attraction-area': 'north', 'hotel-area': 'north', 'hotel-internet': 'yes'}
-244it [03:51,  1.04it/s]245it [03:52,  1.00s/it]246it [03:52,  1.09it/s]247it [03:54,  1.01s/it]248it [03:55,  1.08s/it]249it [03:56,  1.16s/it]250it [03:57,  1.08s/it]gold states: {'attraction-area': 'north',
+
+244it [03:51,  1.04it/s]
+245it [03:52,  1.00s/it]
+246it [03:52,  1.09it/s]
+247it [03:54,  1.01s/it]
+248it [03:55,  1.08s/it]
+249it [03:56,  1.16s/it]
+250it [03:57,  1.08s/it]gold states: {'attraction-area': 'north',
  'attraction-type': 'swimming pool',
  'hotel-area': 'north',
  'hotel-internet': 'yes'}
@@ -7132,7 +7422,16 @@ pred states: {'attraction-area': 'north',
  'hotel-internet': 'yes',
  'hotel-parking': 'yes',
  'taxi-leaveat': '03:30'}
-251it [03:58,  1.02it/s]252it [03:59,  1.00it/s]253it [04:00,  1.01it/s]254it [04:01,  1.03it/s]255it [04:02,  1.06it/s]256it [04:02,  1.17it/s]257it [04:03,  1.11it/s]258it [04:04,  1.11it/s]259it [04:05,  1.16it/s]gold states: {'attraction-area': 'north',
+
+251it [03:58,  1.02it/s]
+252it [03:59,  1.00it/s]
+253it [04:00,  1.01it/s]
+254it [04:01,  1.03it/s]
+255it [04:02,  1.06it/s]
+256it [04:02,  1.17it/s]
+257it [04:03,  1.11it/s]
+258it [04:04,  1.11it/s]
+259it [04:05,  1.16it/s]gold states: {'attraction-area': 'north',
  'attraction-type': 'swimming pool',
  'hotel-area': 'north',
  'hotel-book day': 'friday',
@@ -7329,7 +7628,13 @@ pred turn change: {'hotel-area': 'east',
  'train-day': 'sunday',
  'train-departure': 'birmingham new street',
  'train-destination': 'cambridge'}
-260it [04:06,  1.14it/s]261it [04:07,  1.13it/s]262it [04:08,  1.14it/s]263it [04:09,  1.16it/s]264it [04:10,  1.02it/s]265it [04:10,  1.12it/s]gold turn change: {'hotel-area': 'east', 'hotel-stars': '4'}
+
+260it [04:06,  1.14it/s]
+261it [04:07,  1.13it/s]
+262it [04:08,  1.14it/s]
+263it [04:09,  1.16it/s]
+264it [04:10,  1.02it/s]
+265it [04:10,  1.12it/s]gold turn change: {'hotel-area': 'east', 'hotel-stars': '4'}
 pred states: {'hotel-area': 'east',
  'hotel-stars': '4',
  'train-arriveby': '10:00',
@@ -7553,7 +7858,16 @@ few-shot completions: {'    agent.state.hotel = agent.find_hotel(area="south", p
 few-shot best completion: hotel = agent.find_hotel(area="south", parking="dontcare")
 this is the 265th example. SNG1043.json_turn_0
 system response: 
-266it [04:11,  1.13it/s]267it [04:12,  1.09it/s]268it [04:13,  1.08it/s]269it [04:14,  1.01it/s]270it [04:15,  1.07it/s]271it [04:16,  1.15it/s]272it [04:17,  1.07it/s]273it [04:19,  1.16s/it]274it [04:19,  1.05s/it]user response: i need a hotel in the south of the city , it is ok if the hotel does not has free parking .
+
+266it [04:11,  1.13it/s]
+267it [04:12,  1.09it/s]
+268it [04:13,  1.08it/s]
+269it [04:14,  1.01it/s]
+270it [04:15,  1.07it/s]
+271it [04:16,  1.15it/s]
+272it [04:17,  1.07it/s]
+273it [04:19,  1.16s/it]
+274it [04:19,  1.05s/it]user response: i need a hotel in the south of the city , it is ok if the hotel does not has free parking .
 pred turn change: {'hotel-area': 'south', 'hotel-parking': 'dontcare'}
 gold turn change: {'hotel-area': 'south', 'hotel-parking': 'dontcare', 'hotel-type': 'hotel'}
 pred states: {'hotel-area': 'south', 'hotel-parking': 'dontcare'}
@@ -7753,7 +8067,13 @@ gold states: {'train-arriveby': '08:45',
 =====================correct!=======================
 
 
-275it [04:20,  1.02s/it]276it [04:21,  1.00s/it]277it [04:22,  1.06it/s]278it [04:23,  1.07it/s]279it [04:24,  1.17it/s]280it [04:25,  1.15it/s]
+
+275it [04:20,  1.02s/it]
+276it [04:21,  1.00s/it]
+277it [04:22,  1.06it/s]
+278it [04:23,  1.07it/s]
+279it [04:24,  1.17it/s]
+280it [04:25,  1.15it/s]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="north indian", area="centre")': -0.20857839293469999}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="north indian", area="centre")
 this is the 274th example. MUL0311.json_turn_3
@@ -7946,7 +8266,12 @@ gold states: {'restaurant-area': 'west', 'restaurant-pricerange': 'expensive'}
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="indian")': -0.08036781390955}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="indian")
 this is the 280th example. MUL1655.json_turn_1
-system response: how about cambridge lodge restaurant located on cambridge lodge hotel 139 huntingdon road city centre .281it [04:26,  1.10it/s]282it [04:27,  1.03it/s]283it [04:28,  1.03s/it]284it [04:29,  1.02s/it]285it [04:31,  1.34s/it]
+system response: how about cambridge lodge restaurant located on cambridge lodge hotel 139 huntingdon road city centre .
+281it [04:26,  1.10it/s]
+282it [04:27,  1.03it/s]
+283it [04:28,  1.03s/it]
+284it [04:29,  1.02s/it]
+285it [04:31,  1.34s/it]
 user response: does it serve indian food ?
 pred turn change: {'restaurant-area': 'west',
  'restaurant-food': 'indian',
@@ -8153,7 +8478,15 @@ pred states: {'restaurant-area': 'west',
  'train-day': 'sunday',
  'train-departure': 'bishops stortford',
  'train-destination': 'cambridge'}
-286it [04:32,  1.16s/it]287it [04:33,  1.07s/it]288it [04:34,  1.01s/it]289it [04:34,  1.08it/s]290it [04:35,  1.12it/s]291it [04:36,  1.04it/s]292it [04:37,  1.08it/s]293it [04:38,  1.19it/s]gold states: {'restaurant-area': 'west',
+
+286it [04:32,  1.16s/it]
+287it [04:33,  1.07s/it]
+288it [04:34,  1.01s/it]
+289it [04:34,  1.08it/s]
+290it [04:35,  1.12it/s]
+291it [04:36,  1.04it/s]
+292it [04:37,  1.08it/s]
+293it [04:38,  1.19it/s]gold states: {'restaurant-area': 'west',
  'restaurant-book day': 'sunday',
  'restaurant-book people': '2',
  'restaurant-book time': '12:15',
@@ -8359,7 +8692,15 @@ pred turn change: {'attraction-area': 'west',
  'train-departure': 'norwich',
  'train-destination': 'cambridge'}
 gold turn change: {}
-294it [04:38,  1.22it/s]295it [04:39,  1.25it/s]296it [04:40,  1.18it/s]297it [04:41,  1.14it/s]298it [04:42,  1.10it/s]299it [04:43,  1.04it/s]300it [04:44,  1.07it/s]301it [04:45,  1.14it/s]pred states: {'attraction-area': 'west',
+
+294it [04:38,  1.22it/s]
+295it [04:39,  1.25it/s]
+296it [04:40,  1.18it/s]
+297it [04:41,  1.14it/s]
+298it [04:42,  1.10it/s]
+299it [04:43,  1.04it/s]
+300it [04:44,  1.07it/s]
+301it [04:45,  1.14it/s]pred states: {'attraction-area': 'west',
  'attraction-type': 'college',
  'train-arriveby': '11:30',
  'train-day': 'wednesday',
@@ -8578,7 +8919,14 @@ pred turn change: {'hotel-area': 'south',
  'train-day': 'sunday',
  'train-leaveat': '20:15'}
 gold turn change: {'train-day': 'sunday', 'train-leaveat': '20:15'}
-302it [04:46,  1.11it/s]303it [04:47,  1.08it/s]304it [04:48,  1.11it/s]305it [04:48,  1.17it/s]306it [04:49,  1.17it/s]307it [04:50,  1.18it/s]308it [04:51,  1.14it/s]pred states: {'hotel-area': 'south',
+
+302it [04:46,  1.11it/s]
+303it [04:47,  1.08it/s]
+304it [04:48,  1.11it/s]
+305it [04:48,  1.17it/s]
+306it [04:49,  1.17it/s]
+307it [04:50,  1.18it/s]
+308it [04:51,  1.14it/s]pred states: {'hotel-area': 'south',
  'hotel-book day': 'saturday',
  'hotel-book people': '2',
  'hotel-book stay': '4',
@@ -8798,7 +9146,13 @@ gold states: {'train-arriveby': '10:30',
 
 
 few-shot completions: {'    agent.state.train.book_people = 2\n    agent.state.attraction = agent.find_attraction(type="multiple sports", area="centre")': -0.5206905891349002}
-309it [04:52,  1.02s/it]310it [04:53,  1.08it/s]311it [04:54,  1.08it/s]312it [04:55,  1.07it/s]313it [04:56,  1.05it/s]314it [04:57,  1.04it/s]few-shot best completion: train.book_people = 2
+
+309it [04:52,  1.02s/it]
+310it [04:53,  1.08it/s]
+311it [04:54,  1.08it/s]
+312it [04:55,  1.07it/s]
+313it [04:56,  1.05it/s]
+314it [04:57,  1.04it/s]few-shot best completion: train.book_people = 2
 attraction = agent.find_attraction(type="multiple sports", area="centre")
 this is the 308th example. MUL1908.json_turn_3
 system response: i have 5 options for you . the latest to arrive would get you there at 09:52 . would that work for you ?
@@ -9002,7 +9356,14 @@ pred turn change: {'attraction-name': 'williams art and antiques',
  'train-departure': 'stansted airport',
  'train-destination': 'cambridge'}
 gold turn change: {}
-315it [04:58,  1.13it/s]316it [04:58,  1.16it/s]317it [04:59,  1.15it/s]318it [05:00,  1.09it/s]319it [05:01,  1.05it/s]320it [05:03,  1.02s/it]321it [05:03,  1.05it/s]pred states: {'attraction-name': 'williams art and antiques',
+
+315it [04:58,  1.13it/s]
+316it [04:58,  1.16it/s]
+317it [04:59,  1.15it/s]
+318it [05:00,  1.09it/s]
+319it [05:01,  1.05it/s]
+320it [05:03,  1.02s/it]
+321it [05:03,  1.05it/s]pred states: {'attraction-name': 'williams art and antiques',
  'attraction-type': 'museum',
  'train-arriveby': '10:30',
  'train-book people': '2',
@@ -9217,7 +9578,15 @@ pred states: {'hotel-book day': 'monday',
  'train-day': 'monday',
  'train-departure': 'stevenage',
  'train-destination': 'cambridge'}
-322it [05:04,  1.11it/s]323it [05:05,  1.22it/s]324it [05:06,  1.02s/it]325it [05:07,  1.03it/s]326it [05:08,  1.05it/s]327it [05:09,  1.06it/s]328it [05:10,  1.01it/s]329it [05:11,  1.08s/it]gold states: {'hotel-book day': 'monday',
+
+322it [05:04,  1.11it/s]
+323it [05:05,  1.22it/s]
+324it [05:06,  1.02s/it]
+325it [05:07,  1.03it/s]
+326it [05:08,  1.05it/s]
+327it [05:09,  1.06it/s]
+328it [05:10,  1.01it/s]
+329it [05:11,  1.08s/it]gold states: {'hotel-book day': 'monday',
  'hotel-book people': '1',
  'hotel-book stay': '5',
  'hotel-name': 'kirkwood house',
@@ -9417,7 +9786,14 @@ pred turn change: {'attraction-area': 'east',
  'taxi-arriveby': '14:30',
  'taxi-destination': 'cotto'}
 gold turn change: {}
-330it [05:12,  1.01it/s]331it [05:13,  1.07s/it]332it [05:14,  1.01it/s]333it [05:15,  1.01it/s]334it [05:16,  1.02s/it]335it [05:17,  1.05it/s]336it [05:18,  1.08it/s]pred states: {'attraction-area': 'east',
+
+330it [05:12,  1.01it/s]
+331it [05:13,  1.07s/it]
+332it [05:14,  1.01it/s]
+333it [05:15,  1.01it/s]
+334it [05:16,  1.02s/it]
+335it [05:17,  1.05it/s]
+336it [05:18,  1.08it/s]pred states: {'attraction-area': 'east',
  'attraction-name': 'funky fun house',
  'restaurant-book day': 'wednesday',
  'restaurant-book people': '4',
@@ -9617,7 +9993,17 @@ pred turn change: {'attraction-area': 'centre',
  'train-destination': 'cambridge',
  'train-leaveat': '17:45'}
 gold turn change: {}
-337it [05:18,  1.18it/s]338it [05:19,  1.13it/s]339it [05:20,  1.20it/s]340it [05:21,  1.13it/s]341it [05:22,  1.22it/s]342it [05:23,  1.23it/s]343it [05:24,  1.21it/s]344it [05:24,  1.26it/s]345it [05:25,  1.26it/s]346it [05:26,  1.20it/s]pred states: {'attraction-area': 'centre',
+
+337it [05:18,  1.18it/s]
+338it [05:19,  1.13it/s]
+339it [05:20,  1.20it/s]
+340it [05:21,  1.13it/s]
+341it [05:22,  1.22it/s]
+342it [05:23,  1.23it/s]
+343it [05:24,  1.21it/s]
+344it [05:24,  1.26it/s]
+345it [05:25,  1.26it/s]
+346it [05:26,  1.20it/s]pred states: {'attraction-area': 'centre',
  'attraction-name': 'all saints church',
  'attraction-type': 'architecture',
  'train-book people': '4',
@@ -9799,7 +10185,15 @@ pred states: {'attraction-area': 'north',
  'train-day': 'wednesday',
  'train-departure': 'bishops stortford',
  'train-destination': 'cambridge'}
-347it [05:27,  1.15it/s]348it [05:28,  1.18it/s]349it [05:29,  1.18it/s]350it [05:29,  1.26it/s]351it [05:30,  1.31it/s]352it [05:31,  1.15it/s]353it [05:32,  1.04s/it]354it [05:33,  1.01s/it]gold states: {'attraction-area': 'north',
+
+347it [05:27,  1.15it/s]
+348it [05:28,  1.18it/s]
+349it [05:29,  1.18it/s]
+350it [05:29,  1.26it/s]
+351it [05:30,  1.31it/s]
+352it [05:31,  1.15it/s]
+353it [05:32,  1.04s/it]
+354it [05:33,  1.01s/it]gold states: {'attraction-area': 'north',
  'attraction-type': 'boat',
  'train-arriveby': '11:30',
  'train-day': 'wednesday',
@@ -9988,7 +10382,14 @@ few-shot best completion: restaurant = agent.find_restaurant(book_day="friday", 
 this is the 354th example. MUL0806.json_turn_4
 system response: i would be happy to book that for you . which day would you like to dine and do you have a preferred time ?
 user response: i would like to dine at 16:00 on friday , please .
-355it [05:34,  1.01s/it]356it [05:35,  1.07it/s]357it [05:36,  1.13it/s]358it [05:37,  1.11it/s]359it [05:38,  1.10it/s]360it [05:39,  1.12it/s]361it [05:40,  1.12it/s]pred turn change: {'attraction-area': 'south',
+
+355it [05:34,  1.01s/it]
+356it [05:35,  1.07it/s]
+357it [05:36,  1.13it/s]
+358it [05:37,  1.11it/s]
+359it [05:38,  1.10it/s]
+360it [05:39,  1.12it/s]
+361it [05:40,  1.12it/s]pred turn change: {'attraction-area': 'south',
  'attraction-name': 'wandlebury country park',
  'attraction-type': 'park',
  'restaurant-book day': 'friday',
@@ -10191,7 +10592,13 @@ pred turn change: {'hotel-area': 'dontcare',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'cheap'}
 gold turn change: {'restaurant-area': 'north'}
-362it [05:40,  1.11it/s]363it [05:42,  1.11s/it]364it [05:43,  1.02s/it]365it [05:44,  1.20s/it]366it [05:46,  1.14s/it]367it [05:47,  1.11s/it]pred states: {'hotel-area': 'dontcare',
+
+362it [05:40,  1.11it/s]
+363it [05:42,  1.11s/it]
+364it [05:43,  1.02s/it]
+365it [05:44,  1.20s/it]
+366it [05:46,  1.14s/it]
+367it [05:47,  1.11s/it]pred states: {'hotel-area': 'dontcare',
  'hotel-internet': 'yes',
  'hotel-name': 'archway house',
  'hotel-parking': 'yes',
@@ -10403,7 +10810,12 @@ pred states: {'hotel-area': 'dontcare',
  'hotel-parking': 'no',
  'hotel-pricerange': 'expensive',
  'hotel-type': 'hotel'}
-368it [05:48,  1.12s/it]369it [05:49,  1.13s/it]370it [05:50,  1.02s/it]371it [05:51,  1.00s/it]372it [05:51,  1.05it/s]gold states: {'hotel-area': 'dontcare',
+
+368it [05:48,  1.12s/it]
+369it [05:49,  1.13s/it]
+370it [05:50,  1.02s/it]
+371it [05:51,  1.00s/it]
+372it [05:51,  1.05it/s]gold states: {'hotel-area': 'dontcare',
  'hotel-book day': 'wednesday',
  'hotel-book people': '5',
  'hotel-book stay': '4',
@@ -10629,7 +11041,17 @@ pred turn change: {'hotel-area': 'dontcare',
  'train-departure': 'cambridge',
  'train-destination': 'birmingham new street'}
 gold turn change: {}
-373it [05:52,  1.10it/s]374it [05:53,  1.01it/s]375it [05:54,  1.01s/it]376it [05:55,  1.06it/s]377it [05:56,  1.03it/s]378it [05:57,  1.14it/s]379it [05:58,  1.09it/s]380it [05:59,  1.10it/s]381it [06:00,  1.16it/s]382it [06:00,  1.16it/s]pred states: {'hotel-area': 'dontcare',
+
+373it [05:52,  1.10it/s]
+374it [05:53,  1.01it/s]
+375it [05:54,  1.01s/it]
+376it [05:55,  1.06it/s]
+377it [05:56,  1.03it/s]
+378it [05:57,  1.14it/s]
+379it [05:58,  1.09it/s]
+380it [05:59,  1.10it/s]
+381it [06:00,  1.16it/s]
+382it [06:00,  1.16it/s]pred states: {'hotel-area': 'dontcare',
  'hotel-book day': 'wednesday',
  'hotel-book people': '5',
  'hotel-book stay': '4',
@@ -10823,7 +11245,15 @@ gold states: {'train-destination': 'norwich', 'train-leaveat': '08:00'}
 =====================correct!=======================
 
 
-383it [06:01,  1.16it/s]384it [06:02,  1.06it/s]385it [06:03,  1.06it/s]386it [06:04,  1.05it/s]387it [06:05,  1.06it/s]388it [06:06,  1.14it/s]389it [06:07,  1.18it/s]390it [06:08,  1.09it/s]
+
+383it [06:01,  1.16it/s]
+384it [06:02,  1.06it/s]
+385it [06:03,  1.06it/s]
+386it [06:04,  1.05it/s]
+387it [06:05,  1.06it/s]
+388it [06:06,  1.14it/s]
+389it [06:07,  1.18it/s]
+390it [06:08,  1.09it/s]
 few-shot completions: {'    agent.state.train = agent.find_train(day="saturday")': -0.0045164997685}
 few-shot best completion: train = agent.find_train(day="saturday")
 this is the 382th example. MUL1881.json_turn_1
@@ -11036,7 +11466,13 @@ gold states: {'restaurant-area': 'south', 'restaurant-food': 'asian oriental'}
 =====================correct!=======================
 
 
-391it [06:09,  1.10it/s]392it [06:10,  1.11it/s]393it [06:11,  1.02it/s]394it [06:12,  1.04it/s]395it [06:13,  1.03it/s]396it [06:14,  1.05it/s]
+
+391it [06:09,  1.10it/s]
+392it [06:10,  1.11it/s]
+393it [06:11,  1.02it/s]
+394it [06:12,  1.04it/s]
+395it [06:13,  1.03it/s]
+396it [06:14,  1.05it/s]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="asian", price_range="cheap")': -0.1462632698444}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="asian", price_range="cheap")
 this is the 390th example. PMUL0912.json_turn_1
@@ -11236,7 +11672,13 @@ few-shot completions: {'    agent.state.train = agent.find_train(day=agent.state
 few-shot best completion: train = agent.find_train(day=agent.state.restaurant.book_day)
 this is the 396th example. PMUL0912.json_turn_7
 system response: tomorrow , as in sunday ?
-397it [06:15,  1.06it/s]398it [06:15,  1.11it/s]399it [06:16,  1.12it/s]400it [06:17,  1.16it/s]401it [06:18,  1.05it/s]402it [06:19,  1.08it/s]user response: i want to book it for the same day as the restaurant and the same party .
+
+397it [06:15,  1.06it/s]
+398it [06:15,  1.11it/s]
+399it [06:16,  1.12it/s]
+400it [06:17,  1.16it/s]
+401it [06:18,  1.05it/s]
+402it [06:19,  1.08it/s]user response: i want to book it for the same day as the restaurant and the same party .
 pred turn change: {'restaurant-area': 'south',
  'restaurant-book day': 'saturday',
  'restaurant-book people': '5',
@@ -11420,7 +11862,15 @@ pred states: {'attraction-area': 'west',
  'restaurant-book people': '6',
  'restaurant-book time': '12:15',
  'restaurant-pricerange': 'moderate'}
-403it [06:20,  1.03it/s]404it [06:21,  1.03it/s]405it [06:22,  1.13it/s]406it [06:23,  1.14it/s]407it [06:24,  1.10it/s]408it [06:25,  1.08it/s]409it [06:25,  1.10it/s]410it [06:27,  1.04it/s]gold states: {'attraction-area': 'west',
+
+403it [06:20,  1.03it/s]
+404it [06:21,  1.03it/s]
+405it [06:22,  1.13it/s]
+406it [06:23,  1.14it/s]
+407it [06:24,  1.10it/s]
+408it [06:25,  1.08it/s]
+409it [06:25,  1.10it/s]
+410it [06:27,  1.04it/s]gold states: {'attraction-area': 'west',
  'attraction-name': 'cambridge and county folk museum',
  'attraction-type': 'museum',
  'restaurant-area': 'west',
@@ -11613,7 +12063,15 @@ pred states: {'hotel-book day': 'wednesday',
  'hotel-internet': 'yes',
  'hotel-pricerange': 'moderate',
  'hotel-stars': '2'}
-411it [06:27,  1.10it/s]412it [06:28,  1.12it/s]413it [06:30,  1.27s/it]414it [06:31,  1.17s/it]415it [06:32,  1.08s/it]416it [06:33,  1.05it/s]417it [06:34,  1.04it/s]418it [06:35,  1.13it/s]gold states: {'hotel-book day': 'wednesday',
+
+411it [06:27,  1.10it/s]
+412it [06:28,  1.12it/s]
+413it [06:30,  1.27s/it]
+414it [06:31,  1.17s/it]
+415it [06:32,  1.08s/it]
+416it [06:33,  1.05it/s]
+417it [06:34,  1.04it/s]
+418it [06:35,  1.13it/s]gold states: {'hotel-book day': 'wednesday',
  'hotel-book people': '2',
  'hotel-book stay': '3',
  'hotel-internet': 'yes',
@@ -11819,7 +12277,16 @@ pred states: {'attraction-area': 'centre',
  'train-day': 'thursday',
  'train-departure': 'norwich',
  'train-leaveat': '11:45'}
-419it [06:35,  1.17it/s]420it [06:36,  1.15it/s]421it [06:40,  1.61s/it]422it [06:40,  1.36s/it]423it [06:41,  1.26s/it]424it [06:43,  1.32s/it]425it [06:44,  1.20s/it]426it [06:44,  1.05s/it]427it [06:45,  1.04s/it]gold states: {'attraction-area': 'centre',
+
+419it [06:35,  1.17it/s]
+420it [06:36,  1.15it/s]
+421it [06:40,  1.61s/it]
+422it [06:40,  1.36s/it]
+423it [06:41,  1.26s/it]
+424it [06:43,  1.32s/it]
+425it [06:44,  1.20s/it]
+426it [06:44,  1.05s/it]
+427it [06:45,  1.04s/it]gold states: {'attraction-area': 'centre',
  'attraction-name': 'cambridge university botanic gardens',
  'attraction-type': 'park',
  'train-day': 'thursday',
@@ -12003,7 +12470,15 @@ few-shot best completion: train = agent.find_train(book_people=7)
 this is the 427th example. MUL1722.json_turn_5
 system response: i can book you a train for friday leaving at 5:11 and arriving at 5:58 . would you like to book it ?
 user response: yes , please . i need 7 tickets .
-428it [06:46,  1.00it/s]429it [06:47,  1.08it/s]430it [06:48,  1.08it/s]431it [06:49,  1.19it/s]432it [06:50,  1.16it/s]433it [06:51,  1.11it/s]434it [06:51,  1.20it/s]435it [06:52,  1.17it/s]pred turn change: {'attraction-area': 'centre',
+
+428it [06:46,  1.00it/s]
+429it [06:47,  1.08it/s]
+430it [06:48,  1.08it/s]
+431it [06:49,  1.19it/s]
+432it [06:50,  1.16it/s]
+433it [06:51,  1.11it/s]
+434it [06:51,  1.20it/s]
+435it [06:52,  1.17it/s]pred turn change: {'attraction-area': 'centre',
  'attraction-type': 'architecture',
  'train-arriveby': '17:15',
  'train-book people': '7',
@@ -12210,7 +12685,15 @@ gold states: {'attraction-area': 'centre',
 =====================wrong!=======================
 
 
-436it [06:53,  1.19it/s]437it [06:54,  1.15it/s]438it [06:55,  1.17it/s]439it [06:56,  1.18it/s]440it [06:57,  1.11it/s]441it [06:58,  1.08it/s]442it [06:58,  1.14it/s]443it [06:59,  1.04it/s]
+
+436it [06:53,  1.19it/s]
+437it [06:54,  1.15it/s]
+438it [06:55,  1.17it/s]
+439it [06:56,  1.18it/s]
+440it [06:57,  1.11it/s]
+441it [06:58,  1.08it/s]
+442it [06:58,  1.14it/s]
+443it [06:59,  1.04it/s]
 few-shot completions: {'    agent.state.update({})  #': -0.0024036523289999996}
 few-shot best completion: update({})  #
 this is the 435th example. MUL0430.json_turn_6
@@ -12404,7 +12887,14 @@ few-shot completions: {'    agent.state.attraction = agent.find_attraction(name=
 few-shot best completion: attraction = agent.find_attraction(name="vue cinema")
 this is the 443th example. PMUL2594.json_turn_1
 system response: are you looking for 1 in a particular area ?
-444it [07:00,  1.09it/s]445it [07:01,  1.13it/s]446it [07:02,  1.01it/s]447it [07:04,  1.05s/it]448it [07:05,  1.06s/it]449it [07:06,  1.07s/it]450it [07:07,  1.09s/it]user response: yes , i am looking for the vue cinema . can you please tell me the attraction type , area , and address ?
+
+444it [07:00,  1.09it/s]
+445it [07:01,  1.13it/s]
+446it [07:02,  1.01it/s]
+447it [07:04,  1.05s/it]
+448it [07:05,  1.06s/it]
+449it [07:06,  1.07s/it]
+450it [07:07,  1.09s/it]user response: yes , i am looking for the vue cinema . can you please tell me the attraction type , area , and address ?
 pred turn change: {'attraction-name': 'vue cinema', 'attraction-type': 'museum'}
 gold turn change: {'attraction-name': 'vue cinema'}
 pred states: {'attraction-name': 'vue cinema', 'attraction-type': 'museum'}
@@ -12611,7 +13101,16 @@ gold states: {'attraction-name': 'vue cinema',
 =====================wrong!=======================
 
 
-451it [07:08,  1.04s/it]452it [07:09,  1.02it/s]453it [07:09,  1.06it/s]454it [07:10,  1.16it/s]455it [07:11,  1.22it/s]456it [07:12,  1.26it/s]457it [07:13,  1.15it/s]458it [07:14,  1.11it/s]459it [07:14,  1.17it/s]
+
+451it [07:08,  1.04s/it]
+452it [07:09,  1.02it/s]
+453it [07:09,  1.06it/s]
+454it [07:10,  1.16it/s]
+455it [07:11,  1.22it/s]
+456it [07:12,  1.26it/s]
+457it [07:13,  1.15it/s]
+458it [07:14,  1.11it/s]
+459it [07:14,  1.17it/s]
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="arbury lodge guest house")': -0.003524666776}
 few-shot best completion: hotel = agent.find_hotel(name="arbury lodge guest house")
 this is the 450th example. PMUL2520.json_turn_0
@@ -12787,7 +13286,14 @@ pred turn change: {'hotel-area': 'centre',
  'train-day': 'tuesday',
  'train-leaveat': '09:45'}
 gold turn change: {'train-day': 'tuesday', 'train-leaveat': '09:45'}
-460it [07:15,  1.14it/s]461it [07:16,  1.11it/s]462it [07:17,  1.09it/s]463it [07:18,  1.06it/s]464it [07:19,  1.07it/s]465it [07:20,  1.08it/s]466it [07:21,  1.08it/s]pred states: {'hotel-area': 'centre',
+
+460it [07:15,  1.14it/s]
+461it [07:16,  1.11it/s]
+462it [07:17,  1.09it/s]
+463it [07:18,  1.06it/s]
+464it [07:19,  1.07it/s]
+465it [07:20,  1.08it/s]
+466it [07:21,  1.08it/s]pred states: {'hotel-area': 'centre',
  'hotel-internet': 'yes',
  'hotel-pricerange': 'expensive',
  'hotel-stars': 'dontcare',
@@ -13023,7 +13529,14 @@ gold turn change: {'restaurant-pricerange': 'moderate'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-food': 'european',
  'restaurant-pricerange': 'moderate'}
-467it [07:22,  1.10it/s]468it [07:23,  1.00it/s]469it [07:24,  1.02s/it]470it [07:25,  1.01it/s]471it [07:26,  1.10it/s]472it [07:27,  1.12it/s]473it [07:28,  1.07it/s]gold states: {'restaurant-area': 'centre',
+
+467it [07:22,  1.10it/s]
+468it [07:23,  1.00it/s]
+469it [07:24,  1.02s/it]
+470it [07:25,  1.01it/s]
+471it [07:26,  1.10it/s]
+472it [07:27,  1.12it/s]
+473it [07:28,  1.07it/s]gold states: {'restaurant-area': 'centre',
  'restaurant-food': 'european',
  'restaurant-pricerange': 'moderate'}
 
@@ -13224,7 +13737,15 @@ few-shot completions: {'    agent.state.train = agent.find_train(day="tuesday", 
 few-shot best completion: train = agent.find_train(day="tuesday", book_people=8)
 this is the 473th example. MUL0478.json_turn_2
 system response: what day did you have in mind ?
-474it [07:29,  1.07it/s]475it [07:29,  1.09it/s]476it [07:30,  1.16it/s]477it [07:31,  1.23it/s]478it [07:32,  1.25it/s]479it [07:33,  1.07s/it]480it [07:34,  1.04s/it]481it [07:35,  1.02s/it]user response: i would like to leave on tuesday and book travel for 8 people . i will also need the reference number .
+
+474it [07:29,  1.07it/s]
+475it [07:29,  1.09it/s]
+476it [07:30,  1.16it/s]
+477it [07:31,  1.23it/s]
+478it [07:32,  1.25it/s]
+479it [07:33,  1.07s/it]
+480it [07:34,  1.04s/it]
+481it [07:35,  1.02s/it]user response: i would like to leave on tuesday and book travel for 8 people . i will also need the reference number .
 pred turn change: {'train-arriveby': '21:30',
  'train-book people': '8',
  'train-day': 'tuesday',
@@ -13419,7 +13940,15 @@ pred turn change: {'attraction-area': 'south',
  'train-day': 'wednesday',
  'train-departure': 'london kings cross',
  'train-destination': 'cambridge'}
-482it [07:36,  1.06s/it]483it [07:37,  1.04it/s]484it [07:38,  1.10it/s]485it [07:39,  1.10it/s]486it [07:40,  1.12it/s]487it [07:41,  1.10it/s]488it [07:42,  1.10it/s]489it [07:43,  1.03it/s]gold turn change: {'train-arriveby': '16:30', 'train-departure': 'london kings cross'}
+
+482it [07:36,  1.06s/it]
+483it [07:37,  1.04it/s]
+484it [07:38,  1.10it/s]
+485it [07:39,  1.10it/s]
+486it [07:40,  1.12it/s]
+487it [07:41,  1.10it/s]
+488it [07:42,  1.10it/s]
+489it [07:43,  1.03it/s]gold turn change: {'train-arriveby': '16:30', 'train-departure': 'london kings cross'}
 pred states: {'attraction-area': 'south',
  'attraction-name': 'the place',
  'attraction-type': 'nightclub',
@@ -13618,7 +14147,14 @@ gold states: {'attraction-area': 'dontcare',
  'hotel-book people': '4',
  'hotel-book stay': '4',
  'hotel-name': 'rosas bed and breakfast'}
-490it [07:43,  1.10it/s]491it [07:44,  1.12it/s]492it [07:46,  1.04s/it]493it [07:47,  1.08s/it]494it [07:48,  1.03s/it]495it [07:49,  1.07it/s]496it [07:49,  1.10it/s]
+
+490it [07:43,  1.10it/s]
+491it [07:44,  1.12it/s]
+492it [07:46,  1.04s/it]
+493it [07:47,  1.08s/it]
+494it [07:48,  1.03s/it]
+495it [07:49,  1.07it/s]
+496it [07:49,  1.10it/s]
 =====================correct!=======================
 
 
@@ -13821,7 +14357,14 @@ pred turn change: {'hotel-internet': 'yes',
  'restaurant-book time': '11:15',
  'restaurant-name': 'the lucky star'}
 gold turn change: {}
-497it [07:50,  1.09it/s]498it [07:51,  1.17it/s]499it [07:52,  1.16it/s]500it [07:53,  1.18it/s]501it [07:54,  1.17it/s]502it [07:54,  1.19it/s]503it [07:56,  1.07it/s]pred states: {'hotel-internet': 'yes',
+
+497it [07:50,  1.09it/s]
+498it [07:51,  1.17it/s]
+499it [07:52,  1.16it/s]
+500it [07:53,  1.18it/s]
+501it [07:54,  1.17it/s]
+502it [07:54,  1.19it/s]
+503it [07:56,  1.07it/s]pred states: {'hotel-internet': 'yes',
  'hotel-name': 'acorn guest house',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'moderate',
@@ -14034,7 +14577,12 @@ gold states: {'hotel-area': 'north',
  'hotel-type': 'guest house',
  'restaurant-area': 'north',
  'restaurant-food': 'chinese'}
-504it [07:57,  1.03it/s]505it [07:58,  1.04it/s]506it [07:58,  1.07it/s]507it [07:59,  1.02it/s]508it [08:01,  1.02s/it]
+
+504it [07:57,  1.03it/s]
+505it [07:58,  1.04it/s]
+506it [07:58,  1.07it/s]
+507it [07:59,  1.02it/s]
+508it [08:01,  1.02s/it]
 =====================correct!=======================
 
 
@@ -14252,7 +14800,13 @@ pred turn change: {'hotel-area': 'north',
  'taxi-destination': 'acorn guest house',
  'taxi-leaveat': '13:45'}
 gold turn change: {'taxi-departure': 'acorn guest house', 'taxi-destination': 'hakka'}
-509it [08:02,  1.08s/it]510it [08:03,  1.15s/it]511it [08:04,  1.07s/it]512it [08:05,  1.03s/it]513it [08:06,  1.01it/s]514it [08:07,  1.02s/it]pred states: {'hotel-area': 'north',
+
+509it [08:02,  1.08s/it]
+510it [08:03,  1.15s/it]
+511it [08:04,  1.07s/it]
+512it [08:05,  1.03s/it]
+513it [08:06,  1.01it/s]
+514it [08:07,  1.02s/it]pred states: {'hotel-area': 'north',
  'hotel-book day': 'thursday',
  'hotel-book people': '3',
  'hotel-book stay': '2',
@@ -14473,7 +15027,15 @@ pred turn change: {'hotel-parking': 'yes',
  'train-destination': 'peterborough',
  'train-leaveat': '17:00'}
 gold turn change: {'hotel-parking': 'yes', 'hotel-type': 'guest house'}
-515it [08:09,  1.40s/it]516it [08:10,  1.27s/it]517it [08:11,  1.14s/it]518it [08:12,  1.02s/it]519it [08:13,  1.07it/s]520it [08:13,  1.12it/s]521it [08:14,  1.18it/s]522it [08:15,  1.16it/s]pred states: {'hotel-parking': 'yes',
+
+515it [08:09,  1.40s/it]
+516it [08:10,  1.27s/it]
+517it [08:11,  1.14s/it]
+518it [08:12,  1.02s/it]
+519it [08:13,  1.07it/s]
+520it [08:13,  1.12it/s]
+521it [08:14,  1.18it/s]
+522it [08:15,  1.16it/s]pred states: {'hotel-parking': 'yes',
  'hotel-type': 'guest house',
  'train-day': 'tuesday',
  'train-departure': 'cambridge',
@@ -14671,7 +15233,15 @@ pred turn change: {'attraction-area': 'centre',
  'restaurant-food': 'christmas style',
  'restaurant-pricerange': 'moderate'}
 gold turn change: {'restaurant-food': 'christmas', 'restaurant-pricerange': 'moderate'}
-523it [08:16,  1.06s/it]524it [08:17,  1.03s/it]525it [08:18,  1.03s/it]526it [08:20,  1.08s/it]527it [08:21,  1.02s/it]528it [08:21,  1.01it/s]529it [08:22,  1.02it/s]530it [08:23,  1.01s/it]pred states: {'attraction-area': 'centre',
+
+523it [08:16,  1.06s/it]
+524it [08:17,  1.03s/it]
+525it [08:18,  1.03s/it]
+526it [08:20,  1.08s/it]
+527it [08:21,  1.02s/it]
+528it [08:21,  1.01it/s]
+529it [08:22,  1.02it/s]
+530it [08:23,  1.01s/it]pred states: {'attraction-area': 'centre',
  'attraction-type': 'museum',
  'restaurant-area': 'centre',
  'restaurant-food': 'christmas style',
@@ -14868,7 +15438,14 @@ gold states: {'attraction-area': 'south',
 =====================correct!=======================
 
 
-531it [08:25,  1.16s/it]532it [08:26,  1.11s/it]533it [08:28,  1.24s/it]534it [08:29,  1.20s/it]535it [08:30,  1.16s/it]536it [08:31,  1.07s/it]537it [08:31,  1.02s/it]
+
+531it [08:25,  1.16s/it]
+532it [08:26,  1.11s/it]
+533it [08:28,  1.24s/it]
+534it [08:29,  1.20s/it]
+535it [08:30,  1.16s/it]
+536it [08:31,  1.07s/it]
+537it [08:31,  1.02s/it]
 few-shot completions: {'    agent.state.train = agent.find_train(day="saturday", leave_from="cambridge", destination="kings lynn", arrive_by_time="19:30")': -0.8958121752072998}
 few-shot best completion: train = agent.find_train(day="saturday", leave_from="cambridge", destination="kings lynn", arrive_by_time="19:30")
 this is the 530th example. PMUL1310.json_turn_3
@@ -15063,7 +15640,17 @@ gold turn change: {}
 pred states: {'restaurant-food': 'chinese',
  'restaurant-name': 'ugly duckling',
  'restaurant-pricerange': 'expensive'}
-538it [08:32,  1.01s/it]539it [08:33,  1.01it/s]540it [08:34,  1.01it/s]541it [08:35,  1.09it/s]542it [08:36,  1.11it/s]543it [08:37,  1.15it/s]544it [08:38,  1.20it/s]545it [08:39,  1.15it/s]546it [08:39,  1.13it/s]547it [08:40,  1.14it/s]gold states: {'restaurant-area': 'dontcare',
+
+538it [08:32,  1.01s/it]
+539it [08:33,  1.01it/s]
+540it [08:34,  1.01it/s]
+541it [08:35,  1.09it/s]
+542it [08:36,  1.11it/s]
+543it [08:37,  1.15it/s]
+544it [08:38,  1.20it/s]
+545it [08:39,  1.15it/s]
+546it [08:39,  1.13it/s]
+547it [08:40,  1.14it/s]gold states: {'restaurant-area': 'dontcare',
  'restaurant-food': 'chinese',
  'restaurant-name': 'ugly duckling',
  'restaurant-pricerange': 'expensive'}
@@ -15265,7 +15852,13 @@ few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price
 few-shot best completion: restaurant = agent.find_restaurant(price_range="moderate", area="centre")
 this is the 547th example. PMUL0984.json_turn_3
 system response: 1 ticket to london kings cross will cost 23.60 pounds . would you like me to book the ticket for you ?
-548it [08:41,  1.08it/s]549it [08:42,  1.09it/s]550it [08:44,  1.05s/it]551it [08:45,  1.01s/it]552it [08:45,  1.08it/s]553it [08:46,  1.06it/s]user response: yes . can you also find a place to dine in the centre . i would like a restaurant in the moderate price range .
+
+548it [08:41,  1.08it/s]
+549it [08:42,  1.09it/s]
+550it [08:44,  1.05s/it]
+551it [08:45,  1.01s/it]
+552it [08:45,  1.08it/s]
+553it [08:46,  1.06it/s]user response: yes . can you also find a place to dine in the centre . i would like a restaurant in the moderate price range .
 pred turn change: {'restaurant-area': 'centre',
  'restaurant-pricerange': 'moderate',
  'train-arriveby': '20:00',
@@ -15478,7 +16071,12 @@ gold states: {'restaurant-area': 'centre',
 =====================correct!=======================
 
 
-554it [08:47,  1.02it/s]555it [08:48,  1.04s/it]556it [08:49,  1.07it/s]557it [08:51,  1.21s/it]558it [08:52,  1.07s/it]
+
+554it [08:47,  1.02it/s]
+555it [08:48,  1.04s/it]
+556it [08:49,  1.07it/s]
+557it [08:51,  1.21s/it]
+558it [08:52,  1.07s/it]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_day="sunday", book_people=8, book_time="12:45")': -0.1284418850067}
 few-shot best completion: restaurant = agent.find_restaurant(book_day="sunday", book_people=8, book_time="12:45")
 this is the 553th example. PMUL4688.json_turn_1
@@ -15661,7 +16259,17 @@ gold states: {'attraction-name': 'sheeps green and lammas land park fen causeway
 
 
 few-shot completions: {'    agent.state.train = agent.find_train(depart_time="21:45", day="friday")': -0.00488851653655}
-559it [08:53,  1.02s/it]560it [08:54,  1.03it/s]561it [08:54,  1.07it/s]562it [08:55,  1.13it/s]563it [08:56,  1.17it/s]564it [08:57,  1.19it/s]565it [08:58,  1.19it/s]566it [08:59,  1.15it/s]567it [08:59,  1.13it/s]568it [09:01,  1.00s/it]few-shot best completion: train = agent.find_train(depart_time="21:45", day="friday")
+
+559it [08:53,  1.02s/it]
+560it [08:54,  1.03it/s]
+561it [08:54,  1.07it/s]
+562it [08:55,  1.13it/s]
+563it [08:56,  1.17it/s]
+564it [08:57,  1.19it/s]
+565it [08:58,  1.19it/s]
+566it [08:59,  1.15it/s]
+567it [08:59,  1.13it/s]
+568it [09:01,  1.00s/it]few-shot best completion: train = agent.find_train(depart_time="21:45", day="friday")
 this is the 558th example. SNG0331.json_turn_0
 system response: 
 user response: i am looking for a train on friday that leaves after 21:45 .
@@ -15865,7 +16473,12 @@ gold states: {'hotel-area': 'south',
 
 
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="bridge guest house", internet="yes")': -0.684885543878}
-569it [09:02,  1.01s/it]570it [09:03,  1.18s/it]571it [09:04,  1.17s/it]572it [09:06,  1.14s/it]573it [09:07,  1.11s/it]few-shot best completion: hotel = agent.find_hotel(name="bridge guest house", internet="yes")
+
+569it [09:02,  1.01s/it]
+570it [09:03,  1.18s/it]
+571it [09:04,  1.17s/it]
+572it [09:06,  1.14s/it]
+573it [09:07,  1.11s/it]few-shot best completion: hotel = agent.find_hotel(name="bridge guest house", internet="yes")
 this is the 568th example. MUL2259.json_turn_4
 system response: the bridge guest house is the cheap -er option . would you like me to book that for you ?
 user response: before i say yes , does it have free wifi ? i would like to bring my laptop .
@@ -16096,7 +16709,15 @@ pred turn change: {'hotel-area': 'south',
  'train-destination': 'norwich',
  'train-leaveat': '11:00'}
 gold turn change: {}
-574it [09:07,  1.03s/it]575it [09:08,  1.03it/s]576it [09:09,  1.02s/it]577it [09:11,  1.08s/it]578it [09:12,  1.03s/it]579it [09:13,  1.04s/it]580it [09:14,  1.02s/it]581it [09:14,  1.03it/s]pred states: {'hotel-area': 'south',
+
+574it [09:07,  1.03s/it]
+575it [09:08,  1.03it/s]
+576it [09:09,  1.02s/it]
+577it [09:11,  1.08s/it]
+578it [09:12,  1.03s/it]
+579it [09:13,  1.04s/it]
+580it [09:14,  1.02s/it]
+581it [09:14,  1.03it/s]pred states: {'hotel-area': 'south',
  'hotel-book day': 'sunday',
  'hotel-book people': '5',
  'hotel-book stay': '5',
@@ -16299,7 +16920,13 @@ few-shot best completion: restaurant = agent.find_restaurant(food_type="eastern 
 this is the 581th example. MUL1590.json_turn_3
 system response: your booking was successful . that is 132 gbp at the station . is there anything else i can do for you today ?
 user response: can you find me a place to eat ? i would like an expensive eastern european restaurant . thanks .
-582it [09:16,  1.03s/it]583it [09:17,  1.05s/it]584it [09:18,  1.09s/it]585it [09:19,  1.04s/it]586it [09:20,  1.02it/s]587it [09:20,  1.08it/s]pred turn change: {'restaurant-food': 'eastern european',
+
+582it [09:16,  1.03s/it]
+583it [09:17,  1.05s/it]
+584it [09:18,  1.09s/it]
+585it [09:19,  1.04s/it]
+586it [09:20,  1.02it/s]
+587it [09:20,  1.08it/s]pred turn change: {'restaurant-food': 'eastern european',
  'restaurant-pricerange': 'expensive',
  'train-book people': '8',
  'train-day': 'wednesday',
@@ -16507,7 +17134,17 @@ few-shot best completion: update({})  #
 this is the 587th example. MUL1590.json_turn_9
 system response: if we can help you with anything else in the future , please contact us .
 user response: i will not be needing anything else , thank you .
-588it [09:21,  1.13it/s]589it [09:22,  1.14it/s]590it [09:23,  1.17it/s]591it [09:24,  1.04it/s]592it [09:25,  1.00it/s]593it [09:26,  1.07it/s]594it [09:27,  1.06it/s]595it [09:28,  1.07it/s]596it [09:29,  1.13it/s]597it [09:30,  1.12it/s]pred turn change: {'restaurant-area': 'centre',
+
+588it [09:21,  1.13it/s]
+589it [09:22,  1.14it/s]
+590it [09:23,  1.17it/s]
+591it [09:24,  1.04it/s]
+592it [09:25,  1.00it/s]
+593it [09:26,  1.07it/s]
+594it [09:27,  1.06it/s]
+595it [09:28,  1.07it/s]
+596it [09:29,  1.13it/s]
+597it [09:30,  1.12it/s]pred turn change: {'restaurant-area': 'centre',
  'restaurant-food': 'italian',
  'restaurant-pricerange': 'expensive',
  'train-book people': '8',
@@ -16711,7 +17348,13 @@ gold states: {'hotel-pricerange': 'moderate'}
 
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(stars="4", internet="yes")': -0.006847225566600001}
 few-shot best completion: hotel = agent.find_hotel(stars="4", internet="yes")
-598it [09:30,  1.12it/s]599it [09:31,  1.08it/s]600it [09:32,  1.06it/s]601it [09:34,  1.01s/it]602it [09:34,  1.06it/s]603it [09:35,  1.05it/s]this is the 597th example. PMUL1624.json_turn_1
+
+598it [09:30,  1.12it/s]
+599it [09:31,  1.08it/s]
+600it [09:32,  1.06it/s]
+601it [09:34,  1.01s/it]
+602it [09:34,  1.06it/s]
+603it [09:35,  1.05it/s]this is the 597th example. PMUL1624.json_turn_1
 system response: is there a particular area of town you would like to stay in ?
 user response: no . however i would like for the hotel to be 4 star and include free wifi .
 pred turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate', 'hotel-stars': '4'}
@@ -16925,7 +17568,15 @@ pred states: {'hotel-area': 'dontcare',
  'train-day': 'saturday',
  'train-departure': 'cambridge',
  'train-destination': 'peterborough'}
-604it [09:36,  1.03it/s]605it [09:37,  1.05it/s]606it [09:38,  1.13it/s]607it [09:39,  1.20it/s]608it [09:40,  1.12it/s]609it [09:41,  1.10it/s]610it [09:42,  1.11it/s]611it [09:43,  1.06s/it]gold states: {'hotel-area': 'dontcare',
+
+604it [09:36,  1.03it/s]
+605it [09:37,  1.05it/s]
+606it [09:38,  1.13it/s]
+607it [09:39,  1.20it/s]
+608it [09:40,  1.12it/s]
+609it [09:41,  1.10it/s]
+610it [09:42,  1.11it/s]
+611it [09:43,  1.06s/it]gold states: {'hotel-area': 'dontcare',
  'hotel-book day': 'monday',
  'hotel-book people': '7',
  'hotel-book stay': '5',
@@ -17160,7 +17811,13 @@ gold states: {'train-arriveby': '14:45',
 
 
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(price_range="cheap", type="guest house")': -0.03241270994395}
-612it [09:44,  1.04s/it]613it [09:45,  1.10s/it]614it [09:46,  1.08s/it]615it [09:47,  1.00it/s]616it [09:48,  1.02it/s]617it [09:49,  1.01it/s]few-shot best completion: hotel = agent.find_hotel(price_range="cheap", type="guest house")
+
+612it [09:44,  1.04s/it]
+613it [09:45,  1.10s/it]
+614it [09:46,  1.08s/it]
+615it [09:47,  1.00it/s]
+616it [09:48,  1.02it/s]
+617it [09:49,  1.01it/s]few-shot best completion: hotel = agent.find_hotel(price_range="cheap", type="guest house")
 this is the 611th example. PMUL1712.json_turn_5
 system response: of course . your booking of 4 tickets for the train tr9462 was successful . the cost will be 240.32 payable at the station . your reference number is go1l3w48 .
 user response: ok , i am also looking for a cheap guest house to stay in . can you tell me what s available ?
@@ -17362,7 +18019,16 @@ pred turn change: {'train-arriveby': '18:30',
  'train-departure': 'peterborough',
  'train-destination': 'cambridge'}
 gold turn change: {'train-book people': '1'}
-618it [09:50,  1.06it/s]619it [09:51,  1.10it/s]620it [09:52,  1.06it/s]621it [09:52,  1.13it/s]622it [09:54,  1.06it/s]623it [09:55,  1.01s/it]624it [09:56,  1.04s/it]625it [09:57,  1.03s/it]626it [09:58,  1.15s/it]pred states: {'train-arriveby': '18:30',
+
+618it [09:50,  1.06it/s]
+619it [09:51,  1.10it/s]
+620it [09:52,  1.06it/s]
+621it [09:52,  1.13it/s]
+622it [09:54,  1.06it/s]
+623it [09:55,  1.01s/it]
+624it [09:56,  1.04s/it]
+625it [09:57,  1.03s/it]
+626it [09:58,  1.15s/it]pred states: {'train-arriveby': '18:30',
  'train-book people': '1',
  'train-day': 'monday',
  'train-departure': 'peterborough',
@@ -17557,7 +18223,15 @@ pred states: {'hotel-book day': 'friday',
  'train-arriveby': '09:00',
  'train-day': 'friday',
  'train-departure': 'birmingham new street'}
-627it [09:59,  1.09s/it]628it [10:00,  1.02s/it]629it [10:01,  1.03it/s]630it [10:02,  1.00s/it]631it [10:03,  1.02it/s]632it [10:04,  1.01it/s]633it [10:05,  1.06it/s]634it [10:06,  1.06it/s]gold states: {'hotel-book day': 'friday',
+
+627it [09:59,  1.09s/it]
+628it [10:00,  1.02s/it]
+629it [10:01,  1.03it/s]
+630it [10:02,  1.00s/it]
+631it [10:03,  1.02it/s]
+632it [10:04,  1.01it/s]
+633it [10:05,  1.06it/s]
+634it [10:06,  1.06it/s]gold states: {'hotel-book day': 'friday',
  'hotel-book people': '2',
  'hotel-book stay': '1',
  'hotel-name': 'university arms hotel',
@@ -17757,9 +18431,16 @@ few-shot best completion: hotel = agent.find_hotel(area="east", price_range="che
 this is the 634th example. PMUL1791.json_turn_5
 system response: 3 hotel -s pop up for you would you like expensive or cheap ?
 user response: cheap hotel on the east side of town
-635it [10:07,  1.06it/s]636it [10:08,  1.01s/it]WARNING:root:invalid syntax (<string>, line 1)
+
+635it [10:07,  1.06it/s]
+636it [10:08,  1.01s/it]WARNING:root:invalid syntax (<string>, line 1)
 WARNING:root:invalid syntax (<string>, line 1)
-637it [10:09,  1.03s/it]638it [10:10,  1.14s/it]639it [10:11,  1.02s/it]640it [10:12,  1.04it/s]641it [10:13,  1.02it/s]pred turn change: {'hotel-area': 'east',
+
+637it [10:09,  1.03s/it]
+638it [10:10,  1.14s/it]
+639it [10:11,  1.02s/it]
+640it [10:12,  1.04it/s]
+641it [10:13,  1.02it/s]pred turn change: {'hotel-area': 'east',
  'hotel-internet': 'yes',
  'hotel-pricerange': 'cheap',
  'hotel-stars': '4',
@@ -17988,7 +18669,14 @@ gold states: {'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
 
 
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(type="guest house")': -0.41140365167610005}
-642it [10:14,  1.05it/s]643it [10:15,  1.05it/s]644it [10:17,  1.26s/it]645it [10:18,  1.32s/it]646it [10:19,  1.23s/it]647it [10:20,  1.15s/it]648it [10:21,  1.05s/it]few-shot best completion: hotel = agent.find_hotel(type="guest house")
+
+642it [10:14,  1.05it/s]
+643it [10:15,  1.05it/s]
+644it [10:17,  1.26s/it]
+645it [10:18,  1.32s/it]
+646it [10:19,  1.23s/it]
+647it [10:20,  1.15s/it]
+648it [10:21,  1.05s/it]few-shot best completion: hotel = agent.find_hotel(type="guest house")
 this is the 641th example. MUL0095.json_turn_1
 system response: i found 5 expensive hotel -s with free parking . what part of town are you wanting to stay in ?
 user response: are any of them guest houses ?
@@ -18192,7 +18880,15 @@ pred turn change: {'hotel-area': 'centre',
  'restaurant-food': 'international',
  'restaurant-pricerange': 'expensive'}
 gold turn change: {'restaurant-pricerange': 'moderate'}
-649it [10:22,  1.03it/s]650it [10:23,  1.01s/it]651it [10:24,  1.06it/s]652it [10:24,  1.08it/s]653it [10:26,  1.02it/s]654it [10:27,  1.05it/s]655it [10:27,  1.11it/s]656it [10:28,  1.10it/s]pred states: {'hotel-area': 'centre',
+
+649it [10:22,  1.03it/s]
+650it [10:23,  1.01s/it]
+651it [10:24,  1.06it/s]
+652it [10:24,  1.08it/s]
+653it [10:26,  1.02it/s]
+654it [10:27,  1.05it/s]
+655it [10:27,  1.11it/s]
+656it [10:28,  1.10it/s]pred states: {'hotel-area': 'centre',
  'hotel-name': 'archway house',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'moderate',
@@ -18405,7 +19101,13 @@ gold states: {'restaurant-food': 'indian'}
 
 
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price_range="expensive", area="west")': -0.62665605513084}
-657it [10:29,  1.00it/s]658it [10:30,  1.03it/s]659it [10:31,  1.01it/s]660it [10:32,  1.00s/it]661it [10:36,  1.88s/it]662it [10:38,  1.71s/it]few-shot best completion: restaurant = agent.find_restaurant(price_range="expensive", area="west")
+
+657it [10:29,  1.00it/s]
+658it [10:30,  1.03it/s]
+659it [10:31,  1.01it/s]
+660it [10:32,  1.00s/it]
+661it [10:36,  1.88s/it]
+662it [10:38,  1.71s/it]few-shot best completion: restaurant = agent.find_restaurant(price_range="expensive", area="west")
 this is the 656th example. MUL2360.json_turn_1
 system response: great ! there are many outstanding indian restaurant -s in cambridge . what area of town do you prefer to visit ?
 user response: i am looking for something in the west , and it should be expensive .
@@ -18585,7 +19287,14 @@ few-shot best completion: update({})  #
 this is the 662th example. MUL2360.json_turn_7
 system response: of course , i have booked a yellow ford for you at that time , and the contact number is 07870520690 . anything else today ?
 user response: no thanks . that will be it for today . have a great night . goodbye .
-663it [10:38,  1.43s/it]664it [10:39,  1.22s/it]665it [10:41,  1.29s/it]666it [10:42,  1.23s/it]667it [10:43,  1.19s/it]668it [10:44,  1.14s/it]669it [10:45,  1.18s/it]pred turn change: {'attraction-area': 'west',
+
+663it [10:38,  1.43s/it]
+664it [10:39,  1.22s/it]
+665it [10:41,  1.29s/it]
+666it [10:42,  1.23s/it]
+667it [10:43,  1.19s/it]
+668it [10:44,  1.14s/it]
+669it [10:45,  1.18s/it]pred turn change: {'attraction-area': 'west',
  'attraction-name': 'museum of classical archaeology',
  'attraction-type': 'museum',
  'restaurant-area': 'west',
@@ -18789,7 +19498,16 @@ pred turn change: {'attraction-name': 'funky fun house',
  'taxi-destination': 'lovell lodge',
  'taxi-leaveat': '16:30'}
 gold turn change: {'taxi-leaveat': '16:30'}
-670it [10:46,  1.24s/it]671it [10:47,  1.15s/it]672it [10:48,  1.07s/it]673it [10:49,  1.01it/s]674it [10:51,  1.13s/it]675it [10:51,  1.01s/it]676it [10:52,  1.01it/s]677it [10:53,  1.04it/s]678it [10:54,  1.05it/s]pred states: {'attraction-name': 'funky fun house',
+
+670it [10:46,  1.24s/it]
+671it [10:47,  1.15s/it]
+672it [10:48,  1.07s/it]
+673it [10:49,  1.01it/s]
+674it [10:51,  1.13s/it]
+675it [10:51,  1.01s/it]
+676it [10:52,  1.01it/s]
+677it [10:53,  1.04it/s]
+678it [10:54,  1.05it/s]pred states: {'attraction-name': 'funky fun house',
  'attraction-type': 'entertainment',
  'hotel-book day': 'thursday',
  'hotel-book people': '6',
@@ -19012,7 +19730,16 @@ gold states: {'restaurant-food': 'northern european'}
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="modern european")': -0.00406912262728}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="modern european")
 this is the 678th example. SNG01699.json_turn_1
-679it [10:55,  1.04it/s]680it [10:56,  1.02it/s]681it [10:57,  1.05it/s]682it [10:58,  1.11it/s]683it [10:59,  1.13it/s]684it [11:00,  1.10it/s]685it [11:00,  1.09it/s]686it [11:01,  1.08it/s]687it [11:02,  1.06it/s]system response: unfortunately , i was unable to find a restaurant that serves northern european food . is there anything else i can help you with ?
+
+679it [10:55,  1.04it/s]
+680it [10:56,  1.02it/s]
+681it [10:57,  1.05it/s]
+682it [10:58,  1.11it/s]
+683it [10:59,  1.13it/s]
+684it [11:00,  1.10it/s]
+685it [11:00,  1.09it/s]
+686it [11:01,  1.08it/s]
+687it [11:02,  1.06it/s]system response: unfortunately , i was unable to find a restaurant that serves northern european food . is there anything else i can help you with ?
 user response: okay , what about a restaurant that serves modern european food ?
 pred turn change: {'restaurant-food': 'modern european'}
 gold turn change: {'restaurant-food': 'modern european'}
@@ -19187,7 +19914,13 @@ gold states: {'attraction-area': 'centre',
 
 
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price_range="expensive")': -0.0143288473332}
-688it [11:03,  1.07it/s]689it [11:05,  1.07s/it]690it [11:06,  1.00s/it]691it [11:07,  1.01s/it]692it [11:07,  1.02it/s]693it [11:09,  1.09s/it]few-shot best completion: restaurant = agent.find_restaurant(price_range="expensive")
+
+688it [11:03,  1.07it/s]
+689it [11:05,  1.07s/it]
+690it [11:06,  1.00s/it]
+691it [11:07,  1.01s/it]
+692it [11:07,  1.02it/s]
+693it [11:09,  1.09s/it]few-shot best completion: restaurant = agent.find_restaurant(price_range="expensive")
 this is the 687th example. PMUL2386.json_turn_4
 system response: sure , do you have a price preference ?
 user response: i would prefer an expensive restaurant .
@@ -19383,7 +20116,12 @@ pred turn change: {'restaurant-area': 'centre',
  'restaurant-pricerange': 'expensive',
  'train-day': 'friday',
  'train-destination': 'broxbourne'}
-694it [11:10,  1.07s/it]695it [11:11,  1.05s/it]696it [11:12,  1.05s/it]697it [11:13,  1.08s/it]698it [11:14,  1.11s/it]gold turn change: {'train-day': 'friday', 'train-destination': 'broxbourne'}
+
+694it [11:10,  1.07s/it]
+695it [11:11,  1.05s/it]
+696it [11:12,  1.05s/it]
+697it [11:13,  1.08s/it]
+698it [11:14,  1.11s/it]gold turn change: {'train-day': 'friday', 'train-destination': 'broxbourne'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-book day': 'thursday',
  'restaurant-book people': '6',
@@ -19596,7 +20334,13 @@ few-shot best completion: update({})  #
 this is the 698th example. MUL0272.json_turn_8
 system response: your train is booked for 6 and the reference number is tdipdcjw . can i help you with anything else ?
 user response: that will be all , thank you .
-699it [11:15,  1.01s/it]700it [11:16,  1.03it/s]701it [11:17,  1.01it/s]702it [11:18,  1.02it/s]703it [11:19,  1.04it/s]704it [11:20,  1.03s/it]pred turn change: {'restaurant-area': 'centre',
+
+699it [11:15,  1.01s/it]
+700it [11:16,  1.03it/s]
+701it [11:17,  1.01it/s]
+702it [11:18,  1.02it/s]
+703it [11:19,  1.04it/s]
+704it [11:20,  1.03s/it]pred turn change: {'restaurant-area': 'centre',
  'restaurant-book day': 'thursday',
  'restaurant-book people': '6',
  'restaurant-book time': '12:15',
@@ -19803,9 +20547,16 @@ pred turn change: {'attraction-name': 'sheeps green and lammas land park fen cau
  'train-destination': 'broxbourne',
  'train-leaveat': '09:00'}
 gold turn change: {}
-705it [11:21,  1.01s/it]706it [11:22,  1.08it/s]707it [11:22,  1.13it/s]708it [11:24,  1.07s/it]709it [11:25,  1.15s/it]WARNING:root:invalid syntax (<string>, line 1)
+
+705it [11:21,  1.01s/it]
+706it [11:22,  1.08it/s]
+707it [11:22,  1.13it/s]
+708it [11:24,  1.07s/it]
+709it [11:25,  1.15s/it]WARNING:root:invalid syntax (<string>, line 1)
 WARNING:root:invalid syntax (<string>, line 1)
-710it [11:26,  1.15s/it]711it [11:28,  1.19s/it]pred states: {'attraction-name': 'sheeps green and lammas land park fen causeway',
+
+710it [11:26,  1.15s/it]
+711it [11:28,  1.19s/it]pred states: {'attraction-name': 'sheeps green and lammas land park fen causeway',
  'train-book people': '3',
  'train-day': 'monday',
  'train-departure': 'cambridge',
@@ -19993,7 +20744,13 @@ gold states: {'restaurant-book day': 'saturday',
 few-shot completions: {'    agent.state.update({})  #': -0.1264325475773}
 few-shot best completion: update({})  #
 this is the 711th example. PMUL0705.json_turn_5
-712it [11:29,  1.11s/it]713it [11:30,  1.20s/it]714it [11:31,  1.14s/it]715it [11:32,  1.08s/it]716it [11:33,  1.04s/it]717it [11:34,  1.00s/it]system response: okay dining or train . i am doing my best to help but i cannot get you to specify what you need .
+
+712it [11:29,  1.11s/it]
+713it [11:30,  1.20s/it]
+714it [11:31,  1.14s/it]
+715it [11:32,  1.08s/it]
+716it [11:33,  1.04s/it]
+717it [11:34,  1.00s/it]system response: okay dining or train . i am doing my best to help but i cannot get you to specify what you need .
 user response: listen . book the restaurant anatoli for 2 people on saturday at 16:30 right now .
 pred turn change: {'restaurant-book day': 'saturday',
  'restaurant-book people': '2',
@@ -20209,7 +20966,14 @@ gold states: {'train-destination': 'cambridge'}
 =====================correct!=======================
 
 
-718it [11:35,  1.02it/s]719it [11:36,  1.00it/s]720it [11:37,  1.04s/it]721it [11:38,  1.10s/it]722it [11:39,  1.02s/it]723it [11:40,  1.04it/s]724it [11:41,  1.02it/s]
+
+718it [11:35,  1.02it/s]
+719it [11:36,  1.00it/s]
+720it [11:37,  1.04s/it]
+721it [11:38,  1.10s/it]
+722it [11:39,  1.02s/it]
+723it [11:40,  1.04it/s]
+724it [11:41,  1.02it/s]
 few-shot completions: {'    agent.state.train = agent.find_train(leave_from="bishops stortford")': -0.004371599807269999}
 few-shot best completion: train = agent.find_train(leave_from="bishops stortford")
 this is the 717th example. MUL0517.json_turn_1
@@ -20389,7 +21153,14 @@ few-shot best completion: restaurant = agent.find_restaurant(name="thanh binh")
 this is the 724th example. PMUL0119.json_turn_1
 system response: there s two: la margherita , a italian place , and thanh binh , which serves vietnamese food . can i provide you more information ?
 user response: can i get the postcode of that ?
-725it [11:42,  1.07it/s]726it [11:43,  1.05it/s]727it [11:44,  1.20s/it]728it [11:45,  1.07s/it]729it [11:46,  1.07s/it]730it [11:48,  1.13s/it]731it [11:49,  1.08s/it]pred turn change: {'restaurant-area': 'west',
+
+725it [11:42,  1.07it/s]
+726it [11:43,  1.05it/s]
+727it [11:44,  1.20s/it]
+728it [11:45,  1.07s/it]
+729it [11:46,  1.07s/it]
+730it [11:48,  1.13s/it]
+731it [11:49,  1.08s/it]pred turn change: {'restaurant-area': 'west',
  'restaurant-name': 'thanh binh',
  'restaurant-pricerange': 'cheap'}
 gold turn change: {'restaurant-name': 'la margherita|thanh binh'}
@@ -20589,7 +21360,15 @@ few-shot best completion: update({})  #
 this is the 731th example. PMUL0119.json_turn_8
 system response: it looks like you are already booked at a hotel . would you like help with something else ?
 user response: you are right , i am sorry . i actually have all that i need from you at this time . have a good day !
-732it [11:50,  1.08s/it]733it [11:51,  1.02s/it]734it [11:52,  1.05s/it]735it [11:52,  1.02it/s]736it [11:53,  1.00s/it]737it [11:55,  1.04s/it]738it [11:56,  1.00it/s]739it [11:57,  1.00s/it]pred turn change: {'hotel-area': 'west',
+
+732it [11:50,  1.08s/it]
+733it [11:51,  1.02s/it]
+734it [11:52,  1.05s/it]
+735it [11:52,  1.02it/s]
+736it [11:53,  1.00s/it]
+737it [11:55,  1.04s/it]
+738it [11:56,  1.00it/s]
+739it [11:57,  1.00s/it]pred turn change: {'hotel-area': 'west',
  'hotel-book day': 'saturday',
  'hotel-book people': '8',
  'hotel-book stay': '4',
@@ -20784,7 +21563,12 @@ gold states: {'hotel-internet': 'yes',
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_day="monday", book_people=6, book_number_of_days=3, name="archway house")': -0.23056416866256002}
 few-shot best completion: hotel = agent.find_hotel(book_day="monday", book_people=6, book_number_of_days=3, name="archway house")
 this is the 739th example. PMUL2617.json_turn_4
-740it [11:58,  1.18s/it]741it [12:01,  1.60s/it]742it [12:02,  1.38s/it]743it [12:03,  1.33s/it]744it [12:04,  1.24s/it]system response: the archway house is a popular 4 star guest house in the north part of town in the moderate price range with free internet and parking . should i book it ?
+
+740it [11:58,  1.18s/it]
+741it [12:01,  1.60s/it]
+742it [12:02,  1.38s/it]
+743it [12:03,  1.33s/it]
+744it [12:04,  1.24s/it]system response: the archway house is a popular 4 star guest house in the north part of town in the moderate price range with free internet and parking . should i book it ?
 user response: yes . please book it for monday . 3 nights , 6 people . i'll also need the reference number .
 pred turn change: {'hotel-book day': 'monday',
  'hotel-book people': '6',
@@ -21004,7 +21788,15 @@ pred turn change: {'attraction-name': 'saint catharines college',
  'taxi-destination': 'saint catharines college',
  'taxi-leaveat': '07:00'}
 gold turn change: {}
-745it [12:05,  1.15s/it]746it [12:06,  1.10s/it]747it [12:07,  1.09s/it]748it [12:08,  1.01s/it]749it [12:09,  1.16s/it]750it [12:10,  1.05s/it]751it [12:11,  1.01it/s]752it [12:12,  1.05s/it]pred states: {'attraction-name': 'saint catharines college',
+
+745it [12:05,  1.15s/it]
+746it [12:06,  1.10s/it]
+747it [12:07,  1.09s/it]
+748it [12:08,  1.01s/it]
+749it [12:09,  1.16s/it]
+750it [12:10,  1.05s/it]
+751it [12:11,  1.01it/s]
+752it [12:12,  1.05s/it]pred states: {'attraction-name': 'saint catharines college',
  'hotel-book day': 'monday',
  'hotel-book people': '6',
  'hotel-book stay': '3',
@@ -21217,7 +22009,16 @@ pred states: {'train-arriveby': '15:45',
  'train-day': 'thursday',
  'train-departure': 'cambridge',
  'train-destination': 'ely'}
-753it [12:13,  1.01it/s]754it [12:14,  1.00s/it]755it [12:15,  1.12s/it]756it [12:16,  1.06s/it]757it [12:17,  1.06s/it]758it [12:18,  1.02it/s]759it [12:19,  1.03s/it]760it [12:20,  1.00s/it]761it [12:21,  1.06it/s]gold states: {'train-arriveby': '15:45',
+
+753it [12:13,  1.01it/s]
+754it [12:14,  1.00s/it]
+755it [12:15,  1.12s/it]
+756it [12:16,  1.06s/it]
+757it [12:17,  1.06s/it]
+758it [12:18,  1.02it/s]
+759it [12:19,  1.03s/it]
+760it [12:20,  1.00s/it]
+761it [12:21,  1.06it/s]gold states: {'train-arriveby': '15:45',
  'train-day': 'thursday',
  'train-departure': 'cambridge',
  'train-destination': 'ely'}
@@ -21421,7 +22222,16 @@ gold states: {'hotel-book day': 'monday',
 
 
 few-shot completions: {'    agent.state.update({})  #': -0.00213405501465}
-762it [12:22,  1.09it/s]763it [12:23,  1.06it/s]764it [12:24,  1.03it/s]765it [12:25,  1.01it/s]766it [12:26,  1.07s/it]767it [12:27,  1.00s/it]768it [12:28,  1.11s/it]769it [12:31,  1.73s/it]770it [12:32,  1.49s/it]few-shot best completion: update({})  #
+
+762it [12:22,  1.09it/s]
+763it [12:23,  1.06it/s]
+764it [12:24,  1.03it/s]
+765it [12:25,  1.01it/s]
+766it [12:26,  1.07s/it]
+767it [12:27,  1.00s/it]
+768it [12:28,  1.11s/it]
+769it [12:31,  1.73s/it]
+770it [12:32,  1.49s/it]few-shot best completion: update({})  #
 this is the 761th example. SNG0922.json_turn_0
 system response: 
 user response: i am coming to town for an overdue visit with my relatives . can you help me find a place to stay ?
@@ -21639,7 +22449,15 @@ gold states: {'attraction-area': 'east', 'attraction-type': 'museum'}
 =====================correct!=======================
 
 
-771it [12:33,  1.34s/it]772it [12:34,  1.25s/it]773it [12:35,  1.13s/it]774it [12:36,  1.05s/it]775it [12:37,  1.00s/it]776it [12:38,  1.03s/it]777it [12:39,  1.09s/it]778it [12:40,  1.00it/s]
+
+771it [12:33,  1.34s/it]
+772it [12:34,  1.25s/it]
+773it [12:35,  1.13s/it]
+774it [12:36,  1.05s/it]
+775it [12:37,  1.00s/it]
+776it [12:38,  1.03s/it]
+777it [12:39,  1.09s/it]
+778it [12:40,  1.00it/s]
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(price_range="cheap", parking="yes")': -0.9928994891166301}
 few-shot best completion: hotel = agent.find_hotel(price_range="cheap", parking="yes")
 this is the 770th example. PMUL3702.json_turn_2
@@ -21844,7 +22662,15 @@ few-shot best completion: restaurant = agent.find_restaurant(price_range="cheap"
 this is the 778th example. PMUL4439.json_turn_3
 system response: the phone number is 01223336233 .
 user response: thanks so much . now , i guess i will need to find a cheap place to eat in the centre .
-779it [12:41,  1.01it/s]780it [12:42,  1.02it/s]781it [12:45,  1.44s/it]782it [12:46,  1.31s/it]783it [12:47,  1.22s/it]784it [12:48,  1.13s/it]785it [12:49,  1.12s/it]786it [12:49,  1.05s/it]pred turn change: {'restaurant-area': 'centre',
+
+779it [12:41,  1.01it/s]
+780it [12:42,  1.02it/s]
+781it [12:45,  1.44s/it]
+782it [12:46,  1.31s/it]
+783it [12:47,  1.22s/it]
+784it [12:48,  1.13s/it]
+785it [12:49,  1.12s/it]
+786it [12:49,  1.05s/it]pred turn change: {'restaurant-area': 'centre',
  'restaurant-food': 'chinese',
  'restaurant-name': 'yu garden',
  'restaurant-pricerange': 'cheap'}
@@ -22024,7 +22850,17 @@ pred states: {'attraction-area': 'centre', 'restaurant-name': 'jinling noodle ba
 gold states: {'attraction-area': 'centre',
  'attraction-type': 'dontcare',
  'restaurant-name': 'jinling noodle bar'}
-787it [12:50,  1.03s/it]788it [12:51,  1.02s/it]789it [12:52,  1.02it/s]790it [12:53,  1.00it/s]791it [12:54,  1.01s/it]792it [12:55,  1.02s/it]793it [12:58,  1.37s/it]794it [12:59,  1.23s/it]795it [12:59,  1.11s/it]796it [13:00,  1.09s/it]
+
+787it [12:50,  1.03s/it]
+788it [12:51,  1.02s/it]
+789it [12:52,  1.02it/s]
+790it [12:53,  1.00it/s]
+791it [12:54,  1.01s/it]
+792it [12:55,  1.02s/it]
+793it [12:58,  1.37s/it]
+794it [12:59,  1.23s/it]
+795it [12:59,  1.11s/it]
+796it [13:00,  1.09s/it]
 =====================wrong!=======================
 
 
@@ -22230,7 +23066,16 @@ gold states: {'restaurant-food': 'turkish', 'restaurant-pricerange': 'moderate'}
 
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(name="efes")': -0.0140678193137}
 few-shot best completion: restaurant = agent.find_restaurant(name="efes")
-797it [13:01,  1.05s/it]798it [13:03,  1.07s/it]799it [13:04,  1.09s/it]800it [13:05,  1.12s/it]801it [13:06,  1.06s/it]802it [13:07,  1.07s/it]803it [13:08,  1.08s/it]804it [13:09,  1.05s/it]805it [13:10,  1.06s/it]this is the 796th example. MUL2309.json_turn_1
+
+797it [13:01,  1.05s/it]
+798it [13:03,  1.07s/it]
+799it [13:04,  1.09s/it]
+800it [13:05,  1.12s/it]
+801it [13:06,  1.06s/it]
+802it [13:07,  1.07s/it]
+803it [13:08,  1.08s/it]
+804it [13:09,  1.05s/it]
+805it [13:10,  1.06s/it]this is the 796th example. MUL2309.json_turn_1
 system response: alright how about either the anatolia or efes restaurant ?
 user response: i would like the efes . may i have their phone number , area and postcode ?
 pred turn change: {'restaurant-food': 'turkish',
@@ -22418,7 +23263,13 @@ gold states: {'restaurant-area': 'centre',
 =====================correct!=======================
 
 
-806it [13:11,  1.02s/it]807it [13:12,  1.14s/it]808it [13:13,  1.05s/it]809it [13:14,  1.01s/it]810it [13:15,  1.03s/it]811it [13:16,  1.00it/s]
+
+806it [13:11,  1.02s/it]
+807it [13:12,  1.14s/it]
+808it [13:13,  1.05s/it]
+809it [13:14,  1.01s/it]
+810it [13:15,  1.03s/it]
+811it [13:16,  1.00it/s]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_day="saturday", book_people=4, book_time="18:30", name="don pasquale pizzeria")': -0.0121557393645}
 few-shot best completion: restaurant = agent.find_restaurant(book_day="saturday", book_people=4, book_time="18:30", name="don pasquale pizzeria")
 this is the 806th example. PMUL4612.json_turn_3
@@ -22610,7 +23461,12 @@ pred turn change: {'attraction-area': 'centre',
  'restaurant-name': 'don pasquale pizzeria',
  'restaurant-pricerange': 'dontcare'}
 gold turn change: {}
-812it [13:17,  1.05s/it]813it [13:19,  1.13s/it]814it [13:19,  1.03s/it]815it [13:20,  1.00it/s]816it [13:21,  1.04s/it]pred states: {'attraction-area': 'centre',
+
+812it [13:17,  1.05s/it]
+813it [13:19,  1.13s/it]
+814it [13:19,  1.03s/it]
+815it [13:20,  1.00it/s]
+816it [13:21,  1.04s/it]pred states: {'attraction-area': 'centre',
  'attraction-type': 'college',
  'restaurant-area': 'centre',
  'restaurant-book day': 'saturday',
@@ -22813,7 +23669,15 @@ pred turn change: {'attraction-area': 'centre',
  'restaurant-pricerange': 'dontcare',
  'taxi-departure': 'downing college',
  'taxi-destination': 'don pasquale pizzeria'}
-817it [13:23,  1.16s/it]818it [13:24,  1.05s/it]819it [13:25,  1.02s/it]820it [13:26,  1.07s/it]821it [13:27,  1.01it/s]822it [13:28,  1.05it/s]823it [13:28,  1.05it/s]824it [13:29,  1.08it/s]gold turn change: {'taxi-arriveby': '18:30',
+
+817it [13:23,  1.16s/it]
+818it [13:24,  1.05s/it]
+819it [13:25,  1.02s/it]
+820it [13:26,  1.07s/it]
+821it [13:27,  1.01it/s]
+822it [13:28,  1.05it/s]
+823it [13:28,  1.05it/s]
+824it [13:29,  1.08it/s]gold turn change: {'taxi-arriveby': '18:30',
  'taxi-departure': 'downing college',
  'taxi-destination': 'don pasquale pizzeria'}
 pred states: {'attraction-area': 'centre',
@@ -23013,7 +23877,14 @@ gold states: {'hotel-name': 'home from home', 'hotel-parking': 'yes'}
 
 
 few-shot completions: {'    agent.state.train = agent.find_train(destination="cambridge", depart_time="21:15")': -0.009390058813999999}
-825it [13:31,  1.19s/it]826it [13:32,  1.12s/it]827it [13:33,  1.05s/it]828it [13:34,  1.01it/s]829it [13:35,  1.01it/s]830it [13:36,  1.03s/it]831it [13:37,  1.04s/it]few-shot best completion: train = agent.find_train(destination="cambridge", depart_time="21:15")
+
+825it [13:31,  1.19s/it]
+826it [13:32,  1.12s/it]
+827it [13:33,  1.05s/it]
+828it [13:34,  1.01it/s]
+829it [13:35,  1.01it/s]
+830it [13:36,  1.03s/it]
+831it [13:37,  1.04s/it]few-shot best completion: train = agent.find_train(destination="cambridge", depart_time="21:15")
 this is the 824th example. PMUL3379.json_turn_2
 system response: they do have free parking yes
 user response: i am also looking for a train that goes to cambridge and leaves after 21:15 .
@@ -23205,7 +24076,15 @@ pred turn change: {'restaurant-book day': 'monday',
  'train-departure': 'stevenage',
  'train-destination': 'cambridge'}
 gold turn change: {'train-arriveby': '12:30', 'train-destination': 'cambridge'}
-832it [13:38,  1.02s/it]833it [13:39,  1.02it/s]834it [13:40,  1.04s/it]835it [13:41,  1.01it/s]836it [13:42,  1.04it/s]837it [13:43,  1.13it/s]838it [13:44,  1.03s/it]839it [13:45,  1.00it/s]pred states: {'restaurant-book day': 'monday',
+
+832it [13:38,  1.02s/it]
+833it [13:39,  1.02it/s]
+834it [13:40,  1.04s/it]
+835it [13:41,  1.01it/s]
+836it [13:42,  1.04it/s]
+837it [13:43,  1.13it/s]
+838it [13:44,  1.03s/it]
+839it [13:45,  1.00it/s]pred states: {'restaurant-book day': 'monday',
  'restaurant-book people': '5',
  'restaurant-book time': '16:00',
  'restaurant-name': 'maharajah tandoori restaurant',
@@ -23417,7 +24296,15 @@ gold states: {'taxi-departure': 'cambridge university botanic gardens',
 =====================correct!=======================
 
 
-840it [13:46,  1.02it/s]841it [13:47,  1.00s/it]842it [13:48,  1.01it/s]843it [13:49,  1.04it/s]844it [13:50,  1.05it/s]845it [13:51,  1.02it/s]846it [13:52,  1.08s/it]847it [13:53,  1.14s/it]
+
+840it [13:46,  1.02it/s]
+841it [13:47,  1.00s/it]
+842it [13:48,  1.01it/s]
+843it [13:49,  1.04it/s]
+844it [13:50,  1.05it/s]
+845it [13:51,  1.02it/s]
+846it [13:52,  1.08s/it]
+847it [13:53,  1.14s/it]
 few-shot completions: {'    agent.state.update({})  #': -0.0031177301747}
 few-shot best completion: update({})  #
 this is the 839th example. SNG0041.json_turn_3
@@ -23613,7 +24500,13 @@ few-shot best completion: update({})  #
 this is the 847th example. PMUL2792.json_turn_7
 system response: could you please choose an attraction first ?
 user response: the old schools attraction is fine .
-848it [13:54,  1.06s/it]849it [13:56,  1.36s/it]850it [13:57,  1.28s/it]851it [13:58,  1.15s/it]852it [13:59,  1.07s/it]853it [14:00,  1.12s/it]pred turn change: {'attraction-area': 'centre',
+
+848it [13:54,  1.06s/it]
+849it [13:56,  1.36s/it]
+850it [13:57,  1.28s/it]
+851it [13:58,  1.15s/it]
+852it [13:59,  1.07s/it]
+853it [14:00,  1.12s/it]pred turn change: {'attraction-area': 'centre',
  'attraction-type': 'architecture',
  'hotel-area': 'north',
  'hotel-name': 'kirkwood house',
@@ -23868,7 +24761,13 @@ gold states: {'attraction-area': 'centre',
 few-shot completions: {'    agent.state.update({})  #': -0.00330501176365}
 few-shot best completion: update({})  #
 this is the 853th example. PMUL2792.json_turn_13
-854it [14:01,  1.07s/it]855it [14:03,  1.22s/it]856it [14:04,  1.10s/it]857it [14:06,  1.61s/it]858it [14:08,  1.47s/it]859it [14:08,  1.28s/it]system response: i booked you a blue skoda and the driver can be reached at 07347836479 . is there anything else i can help you with ?
+
+854it [14:01,  1.07s/it]
+855it [14:03,  1.22s/it]
+856it [14:04,  1.10s/it]
+857it [14:06,  1.61s/it]
+858it [14:08,  1.47s/it]
+859it [14:08,  1.28s/it]system response: i booked you a blue skoda and the driver can be reached at 07347836479 . is there anything else i can help you with ?
 user response: thank you for the booking . that will be all for now .
 pred turn change: {'attraction-area': 'centre',
  'attraction-type': 'architecture',
@@ -24088,7 +24987,18 @@ gold states: {'hotel-area': 'east',
  'train-departure': 'leicester',
  'train-destination': 'cambridge',
  'train-leaveat': '17:45'}
-860it [14:09,  1.13s/it]861it [14:10,  1.05s/it]862it [14:11,  1.03s/it]863it [14:12,  1.05s/it]864it [14:13,  1.05s/it]865it [14:14,  1.03it/s]866it [14:15,  1.05it/s]867it [14:16,  1.02it/s]868it [14:17,  1.04it/s]869it [14:18,  1.07it/s]870it [14:19,  1.05it/s]
+
+860it [14:09,  1.13s/it]
+861it [14:10,  1.05s/it]
+862it [14:11,  1.03s/it]
+863it [14:12,  1.05s/it]
+864it [14:13,  1.05s/it]
+865it [14:14,  1.03it/s]
+866it [14:15,  1.05it/s]
+867it [14:16,  1.02it/s]
+868it [14:17,  1.04it/s]
+869it [14:18,  1.07it/s]
+870it [14:19,  1.05it/s]
 =====================wrong!=======================
 
 
@@ -24290,7 +25200,16 @@ few-shot completions: {'    agent.state.update({})  #': -0.00305083587065}
 few-shot best completion: update({})  #
 this is the 870th example. SNG0442.json_turn_4
 system response: i have train tr9839 that leaves cambridge at 15:21 and arrives in leicester at 17:06 . would that suit your needs ? if so , i can book you a ticket .
-871it [14:20,  1.08it/s]872it [14:20,  1.11it/s]873it [14:21,  1.09it/s]874it [14:22,  1.05it/s]875it [14:24,  1.03s/it]876it [14:24,  1.01it/s]877it [14:25,  1.00it/s]878it [14:27,  1.03s/it]879it [14:27,  1.03it/s]user response: what is the total travel time and price on that ?
+
+871it [14:20,  1.08it/s]
+872it [14:20,  1.11it/s]
+873it [14:21,  1.09it/s]
+874it [14:22,  1.05it/s]
+875it [14:24,  1.03s/it]
+876it [14:24,  1.01it/s]
+877it [14:25,  1.00it/s]
+878it [14:27,  1.03s/it]
+879it [14:27,  1.03it/s]user response: what is the total travel time and price on that ?
 pred turn change: {'train-arriveby': '17:45',
  'train-day': 'thursday',
  'train-departure': 'cambridge',
@@ -24505,7 +25424,15 @@ this is the 879th example. PMUL2248.json_turn_0
 system response: 
 user response: hi , yes , i am trying to find a restaurant to go to .
 pred turn change: {}
-880it [14:28,  1.08it/s]881it [14:29,  1.04it/s]882it [14:30,  1.02it/s]883it [14:31,  1.03s/it]884it [14:33,  1.03s/it]885it [14:33,  1.01s/it]886it [14:34,  1.04it/s]887it [14:35,  1.04it/s]gold turn change: {}
+
+880it [14:28,  1.08it/s]
+881it [14:29,  1.04it/s]
+882it [14:30,  1.02it/s]
+883it [14:31,  1.03s/it]
+884it [14:33,  1.03s/it]
+885it [14:33,  1.01s/it]
+886it [14:34,  1.04it/s]
+887it [14:35,  1.04it/s]gold turn change: {}
 pred states: {}
 gold states: {}
 
@@ -24707,7 +25634,13 @@ gold states: {'hotel-internet': 'yes', 'hotel-stars': '4', 'hotel-type': 'hotel'
 =====================wrong!=======================
 
 
-888it [14:36,  1.06it/s]889it [14:38,  1.11s/it]890it [14:39,  1.09s/it]891it [14:40,  1.04s/it]892it [14:41,  1.01s/it]893it [14:42,  1.00it/s]
+
+888it [14:36,  1.06it/s]
+889it [14:38,  1.11s/it]
+890it [14:39,  1.09s/it]
+891it [14:40,  1.04s/it]
+892it [14:41,  1.01s/it]
+893it [14:42,  1.00it/s]
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(price_range="cheap")': -0.0560397008683}
 few-shot best completion: hotel = agent.find_hotel(price_range="cheap")
 this is the 887th example. PMUL1644.json_turn_1
@@ -24937,7 +25870,15 @@ few-shot best completion: update({})  #
 this is the 893th example. PMUL1644.json_turn_7
 system response: the price for that train is 4.40 pounds . would you like to book a ticket ?
 user response: not at this time but thank you .
-894it [14:42,  1.07it/s]895it [14:43,  1.06it/s]896it [14:45,  1.07s/it]897it [14:47,  1.51s/it]898it [14:48,  1.31s/it]899it [14:49,  1.17s/it]900it [14:50,  1.07s/it]901it [14:51,  1.00s/it]pred turn change: {'hotel-book day': 'saturday',
+
+894it [14:42,  1.07it/s]
+895it [14:43,  1.06it/s]
+896it [14:45,  1.07s/it]
+897it [14:47,  1.51s/it]
+898it [14:48,  1.31s/it]
+899it [14:49,  1.17s/it]
+900it [14:50,  1.07s/it]
+901it [14:51,  1.00s/it]pred turn change: {'hotel-book day': 'saturday',
  'hotel-book people': '6',
  'hotel-book stay': '4',
  'hotel-internet': 'yes',
@@ -25144,7 +26085,13 @@ this is the 901th example. MUL2587.json_turn_1
 system response: i can definitely help you find 1 . we have nearly 80 attractions around . can you tell me what type of attraction you prefer or an area you would like to go ?
 user response: i am looking for the best museum in the centre of town . please let me know what it is and how much i should expect to pay to get in .
 pred turn change: {'attraction-area': 'centre', 'attraction-type': 'museum'}
-902it [14:52,  1.00s/it]903it [14:52,  1.02it/s]904it [14:53,  1.01it/s]905it [14:55,  1.08s/it]906it [14:58,  1.62s/it]907it [14:58,  1.38s/it]gold turn change: {'attraction-area': 'centre', 'attraction-type': 'museum'}
+
+902it [14:52,  1.00s/it]
+903it [14:52,  1.02it/s]
+904it [14:53,  1.01it/s]
+905it [14:55,  1.08s/it]
+906it [14:58,  1.62s/it]
+907it [14:58,  1.38s/it]gold turn change: {'attraction-area': 'centre', 'attraction-type': 'museum'}
 pred states: {'attraction-area': 'centre', 'attraction-type': 'museum'}
 gold states: {'attraction-area': 'centre', 'attraction-type': 'museum'}
 
@@ -25353,7 +26300,16 @@ this is the 907th example. MUL1897.json_turn_0
 system response: 
 user response: i am looking for place -s to go in town centre , should be of multiple sports
 pred turn change: {'attraction-area': 'centre', 'attraction-type': 'multiple sports'}
-908it [14:59,  1.27s/it]909it [15:00,  1.18s/it]910it [15:01,  1.10s/it]911it [15:02,  1.07s/it]912it [15:03,  1.08s/it]913it [15:04,  1.05s/it]914it [15:05,  1.01it/s]915it [15:06,  1.03it/s]916it [15:08,  1.12s/it]gold turn change: {'attraction-area': 'centre', 'attraction-type': 'multiple sports'}
+
+908it [14:59,  1.27s/it]
+909it [15:00,  1.18s/it]
+910it [15:01,  1.10s/it]
+911it [15:02,  1.07s/it]
+912it [15:03,  1.08s/it]
+913it [15:04,  1.05s/it]
+914it [15:05,  1.01it/s]
+915it [15:06,  1.03it/s]
+916it [15:08,  1.12s/it]gold turn change: {'attraction-area': 'centre', 'attraction-type': 'multiple sports'}
 pred states: {'attraction-area': 'centre', 'attraction-type': 'multiple sports'}
 gold states: {'attraction-area': 'centre', 'attraction-type': 'multiple sports'}
 
@@ -25535,7 +26491,16 @@ user response: can you tell me how much the entrance fee is ?
 pred turn change: {'attraction-name': 'gallery at 12 a high street'}
 gold turn change: {}
 pred states: {'attraction-name': 'gallery at 12 a high street'}
-gold states: {'attraction-name': 'gallery at 12 a high street'}917it [15:09,  1.05s/it]918it [15:10,  1.04s/it]919it [15:11,  1.07s/it]920it [15:12,  1.07s/it]921it [15:13,  1.00s/it]922it [15:13,  1.05it/s]923it [15:15,  1.01s/it]924it [15:16,  1.04s/it]925it [15:19,  1.58s/it]
+gold states: {'attraction-name': 'gallery at 12 a high street'}
+917it [15:09,  1.05s/it]
+918it [15:10,  1.04s/it]
+919it [15:11,  1.07s/it]
+920it [15:12,  1.07s/it]
+921it [15:13,  1.00s/it]
+922it [15:13,  1.05it/s]
+923it [15:15,  1.01s/it]
+924it [15:16,  1.04s/it]
+925it [15:19,  1.58s/it]
 
 =====================correct!=======================
 
@@ -25718,7 +26683,15 @@ pred turn change: {'hotel-name': 'rosas bed and breakfast',
  'restaurant-name': 'the hotpot',
  'restaurant-pricerange': 'expensive'}
 gold turn change: {'hotel-name': 'rosas bed and breakfast'}
-926it [15:20,  1.42s/it]927it [15:21,  1.44s/it]928it [15:22,  1.26s/it]929it [15:23,  1.24s/it]930it [15:24,  1.18s/it]931it [15:25,  1.11s/it]932it [15:26,  1.13s/it]933it [15:27,  1.04s/it]pred states: {'hotel-name': 'rosas bed and breakfast',
+
+926it [15:20,  1.42s/it]
+927it [15:21,  1.44s/it]
+928it [15:22,  1.26s/it]
+929it [15:23,  1.24s/it]
+930it [15:24,  1.18s/it]
+931it [15:25,  1.11s/it]
+932it [15:26,  1.13s/it]
+933it [15:27,  1.04s/it]pred states: {'hotel-name': 'rosas bed and breakfast',
  'restaurant-area': 'north',
  'restaurant-name': 'the hotpot',
  'restaurant-pricerange': 'expensive'}
@@ -25914,7 +26887,14 @@ pred states: {'restaurant-pricerange': 'cheap',
  'train-departure': 'london liverpool street',
  'train-destination': 'ely',
  'train-leaveat': '18:30'}
-934it [15:28,  1.03s/it]935it [15:29,  1.03s/it]936it [15:31,  1.15s/it]937it [15:31,  1.05s/it]938it [15:32,  1.00s/it]939it [15:33,  1.02s/it]940it [15:34,  1.05s/it]gold states: {'restaurant-pricerange': 'cheap',
+
+934it [15:28,  1.03s/it]
+935it [15:29,  1.03s/it]
+936it [15:31,  1.15s/it]
+937it [15:31,  1.05s/it]
+938it [15:32,  1.00s/it]
+939it [15:33,  1.02s/it]
+940it [15:34,  1.05s/it]gold states: {'restaurant-pricerange': 'cheap',
  'train-day': 'saturday',
  'train-departure': 'london liverpool street',
  'train-destination': 'cambridge',
@@ -26106,7 +27086,14 @@ pred turn change: {'attraction-area': 'centre',
  'restaurant-area': 'centre',
  'restaurant-food': 'british'}
 gold turn change: {'attraction-name': 'adc theatre'}
-941it [15:36,  1.04s/it]942it [15:36,  1.01s/it]943it [15:37,  1.01s/it]944it [15:38,  1.03it/s]945it [15:39,  1.00it/s]946it [15:41,  1.04s/it]947it [15:42,  1.12s/it]pred states: {'attraction-area': 'centre',
+
+941it [15:36,  1.04s/it]
+942it [15:36,  1.01s/it]
+943it [15:37,  1.01s/it]
+944it [15:38,  1.03it/s]
+945it [15:39,  1.00it/s]
+946it [15:41,  1.04s/it]
+947it [15:42,  1.12s/it]pred states: {'attraction-area': 'centre',
  'attraction-name': 'adc theatre',
  'attraction-type': 'theatre',
  'restaurant-area': 'centre',
@@ -26277,7 +27264,13 @@ few-shot best completion: taxi = agent.find_taxi(destination=agent.state.restaur
 this is the 947th example. PMUL2320.json_turn_5
 system response: i have booked your table here is the information:booking was successful . the table will be reserved for 15 minutes . reference number is : cykhqp7b .
 user response: great , thanks . would you be able to book me a taxi from the museum to the restaurant that can get me there by 16:15 please ?
-948it [15:43,  1.21s/it]949it [15:44,  1.10s/it]950it [15:45,  1.05s/it]951it [15:46,  1.07s/it]952it [15:47,  1.10s/it]953it [15:48,  1.03s/it]pred turn change: {'attraction-area': 'east',
+
+948it [15:43,  1.21s/it]
+949it [15:44,  1.10s/it]
+950it [15:45,  1.05s/it]
+951it [15:46,  1.07s/it]
+952it [15:47,  1.10s/it]
+953it [15:48,  1.03s/it]pred turn change: {'attraction-area': 'east',
  'attraction-name': 'gallery at 12 a high street',
  'attraction-type': 'museum',
  'restaurant-area': 'east',
@@ -26483,7 +27476,14 @@ gold states: {'train-arriveby': '18:30',
 =====================correct!=======================
 
 
-954it [15:49,  1.05s/it]955it [15:50,  1.06s/it]956it [15:51,  1.00it/s]957it [15:52,  1.00it/s]958it [15:53,  1.05s/it]959it [15:54,  1.03it/s]960it [15:55,  1.02it/s]
+
+954it [15:49,  1.05s/it]
+955it [15:50,  1.06s/it]
+956it [15:51,  1.00it/s]
+957it [15:52,  1.00it/s]
+958it [15:53,  1.05s/it]
+959it [15:54,  1.03it/s]
+960it [15:55,  1.02it/s]
 few-shot completions: {'    agent.state.attraction = agent.find_attraction(type="park", area="south")': -0.0253541093617}
 few-shot best completion: attraction = agent.find_attraction(type="park", area="south")
 this is the 953th example. MUL1854.json_turn_3
@@ -26679,7 +27679,15 @@ pred turn change: {'hotel-book day': 'sunday',
  'train-departure': 'cambridge',
  'train-destination': 'stansted airport'}
 gold turn change: {'train-departure': 'cambridge'}
-961it [15:56,  1.01it/s]962it [15:57,  1.01s/it]963it [15:59,  1.08s/it]964it [15:59,  1.04s/it]965it [16:01,  1.13s/it]966it [16:02,  1.13s/it]967it [16:03,  1.09s/it]968it [16:04,  1.06s/it]pred states: {'hotel-book day': 'sunday',
+
+961it [15:56,  1.01it/s]
+962it [15:57,  1.01s/it]
+963it [15:59,  1.08s/it]
+964it [15:59,  1.04s/it]
+965it [16:01,  1.13s/it]
+966it [16:02,  1.13s/it]
+967it [16:03,  1.09s/it]
+968it [16:04,  1.06s/it]pred states: {'hotel-book day': 'sunday',
  'hotel-book people': '8',
  'hotel-book stay': '3',
  'hotel-name': 'hobsons house',
@@ -26871,7 +27879,15 @@ gold states: {'restaurant-food': 'mediterranean',
 few-shot completions: {'    agent.state.update({})  #': -0.0031416960169999997}
 few-shot best completion: update({})  #
 this is the 968th example. PMUL3464.json_turn_6
-969it [16:05,  1.01s/it]970it [16:06,  1.07s/it]971it [16:07,  1.06s/it]972it [16:08,  1.04s/it]973it [16:09,  1.07s/it]974it [16:10,  1.03s/it]975it [16:11,  1.04s/it]976it [16:12,  1.02s/it]system response: booking was successful . reference number is : blzulwir .
+
+969it [16:05,  1.01s/it]
+970it [16:06,  1.07s/it]
+971it [16:07,  1.06s/it]
+972it [16:08,  1.04s/it]
+973it [16:09,  1.07s/it]
+974it [16:10,  1.03s/it]
+975it [16:11,  1.04s/it]
+976it [16:12,  1.02s/it]system response: booking was successful . reference number is : blzulwir .
 user response: thanks . nothing further .
 pred turn change: {'restaurant-food': 'mediterranean',
  'restaurant-name': 'shiraz',
@@ -27043,9 +28059,16 @@ few-shot best completion: update({})  #
 this is the 976th example. PMUL4244.json_turn_4
 system response: the tr3602 train arrives at london liverpool street at 17:27 . can i book it for you ?
 user response: you've already given me the train id . i just need the departure time .
-977it [16:13,  1.03s/it]978it [16:14,  1.01it/s]979it [16:15,  1.01it/s]WARNING:root:invalid syntax (<string>, line 1)
+
+977it [16:13,  1.03s/it]
+978it [16:14,  1.01it/s]
+979it [16:15,  1.01it/s]WARNING:root:invalid syntax (<string>, line 1)
 WARNING:root:invalid syntax (<string>, line 1)
-980it [16:16,  1.01s/it]981it [16:17,  1.01s/it]982it [16:19,  1.22s/it]983it [16:20,  1.24s/it]pred turn change: {'attraction-area': 'centre',
+
+980it [16:16,  1.01s/it]
+981it [16:17,  1.01s/it]
+982it [16:19,  1.22s/it]
+983it [16:20,  1.24s/it]pred turn change: {'attraction-area': 'centre',
  'attraction-name': 'soul tree nightclub',
  'attraction-type': 'nightclub',
  'train-arriveby': '18:00',
@@ -27223,7 +28246,11 @@ hotel = agent.find_hotel(internet="yes")
 this is the 983th example. MUL0047.json_turn_5
 system response: i was unable to complete your booking . would you like to try and book for another day or for another time slot ?
 user response: yes , can you see if there is a booking available at 18:00 instead ? i will also need to make a hotel reservation in a hotel that offers free wifi .
-984it [16:21,  1.23s/it]985it [16:23,  1.31s/it]986it [16:24,  1.27s/it]987it [16:25,  1.26s/it]pred turn change: {'restaurant-area': 'centre',
+
+984it [16:21,  1.23s/it]
+985it [16:23,  1.31s/it]
+986it [16:24,  1.27s/it]
+987it [16:25,  1.26s/it]pred turn change: {'restaurant-area': 'centre',
  'restaurant-book day': 'sunday',
  'restaurant-book people': '7',
  'restaurant-book time': '18:00',
@@ -27423,7 +28450,14 @@ pred states: {'hotel-name': 'university arms hotel',
  'taxi-arriveby': '18:00',
  'taxi-departure': 'university arms hotel',
  'taxi-destination': 'bedouin'}
-988it [16:26,  1.17s/it]989it [16:27,  1.09s/it]990it [16:28,  1.04s/it]991it [16:29,  1.01it/s]992it [16:30,  1.00it/s]993it [16:31,  1.01s/it]994it [16:32,  1.13s/it]gold states: {'hotel-internet': 'yes',
+
+988it [16:26,  1.17s/it]
+989it [16:27,  1.09s/it]
+990it [16:28,  1.04s/it]
+991it [16:29,  1.01it/s]
+992it [16:30,  1.00it/s]
+993it [16:31,  1.01s/it]
+994it [16:32,  1.13s/it]gold states: {'hotel-internet': 'yes',
  'hotel-name': 'university arms hotel',
  'hotel-pricerange': 'expensive',
  'hotel-stars': '4',
@@ -27633,7 +28667,15 @@ gold states: {'hotel-area': 'dontcare',
  'hotel-pricerange': 'moderate',
  'hotel-type': 'guest house',
  'restaurant-name': 'golden house'}
-995it [16:33,  1.07s/it]996it [16:34,  1.05s/it]997it [16:35,  1.01s/it]998it [16:36,  1.04s/it]999it [16:37,  1.06s/it]1000it [16:38,  1.02s/it]1001it [16:40,  1.31s/it]1002it [16:42,  1.28s/it]
+
+995it [16:33,  1.07s/it]
+996it [16:34,  1.05s/it]
+997it [16:35,  1.01s/it]
+998it [16:36,  1.04s/it]
+999it [16:37,  1.06s/it]
+1000it [16:38,  1.02s/it]
+1001it [16:40,  1.31s/it]
+1002it [16:42,  1.28s/it]
 =====================wrong!=======================
 
 
@@ -27814,7 +28856,15 @@ pred turn change: {'attraction-name': 'cambridge university botanic gardens',
  'train-destination': 'birmingham new street',
  'train-leaveat': '05:01'}
 gold turn change: {}
-1003it [16:42,  1.14s/it]1004it [16:43,  1.06s/it]1005it [16:44,  1.06s/it]1006it [16:45,  1.00it/s]1007it [16:46,  1.01it/s]1008it [16:47,  1.08s/it]1009it [16:48,  1.04s/it]1010it [16:50,  1.26s/it]pred states: {'attraction-name': 'cambridge university botanic gardens',
+
+1003it [16:42,  1.14s/it]
+1004it [16:43,  1.06s/it]
+1005it [16:44,  1.06s/it]
+1006it [16:45,  1.00it/s]
+1007it [16:46,  1.01it/s]
+1008it [16:47,  1.08s/it]
+1009it [16:48,  1.04s/it]
+1010it [16:50,  1.26s/it]pred states: {'attraction-name': 'cambridge university botanic gardens',
  'train-arriveby': '07:44',
  'train-book people': '1',
  'train-day': 'wednesday',
@@ -28016,7 +29066,12 @@ gold states: {'attraction-area': 'centre',
 =====================correct!=======================
 
 
-1011it [16:51,  1.24s/it]1012it [16:52,  1.13s/it]1013it [16:53,  1.10s/it]1014it [16:54,  1.04s/it]1015it [16:55,  1.04s/it]
+
+1011it [16:51,  1.24s/it]
+1012it [16:52,  1.13s/it]
+1013it [16:53,  1.10s/it]
+1014it [16:54,  1.04s/it]
+1015it [16:55,  1.04s/it]
 few-shot completions: {'    agent.state.taxi = agent.find_taxi(destination=agent.state.restaurant.name, arrive_by_time="18:15")': -0.20649077947660005}
 few-shot best completion: taxi = agent.find_taxi(destination=agent.state.restaurant.name, arrive_by_time="18:15")
 this is the 1010th example. PMUL2259.json_turn_7
@@ -28222,7 +29277,13 @@ pred turn change: {'restaurant-area': 'centre',
  'restaurant-food': 'caribbean',
  'restaurant-pricerange': 'expensive'}
 gold turn change: {'restaurant-food': 'caribbean'}
-1016it [16:56,  1.06s/it]1017it [16:57,  1.05s/it]1018it [16:59,  1.13s/it]1019it [17:00,  1.14s/it]1020it [17:01,  1.10s/it]1021it [17:02,  1.15s/it]pred states: {'restaurant-area': 'centre',
+
+1016it [16:56,  1.06s/it]
+1017it [16:57,  1.05s/it]
+1018it [16:59,  1.13s/it]
+1019it [17:00,  1.14s/it]
+1020it [17:01,  1.10s/it]
+1021it [17:02,  1.15s/it]pred states: {'restaurant-area': 'centre',
  'restaurant-food': 'caribbean',
  'restaurant-pricerange': 'expensive'}
 gold states: {'restaurant-area': 'centre',
@@ -28426,7 +29487,14 @@ gold states: {'restaurant-area': 'centre',
  'train-day': 'tuesday',
  'train-departure': 'stansted airport',
  'train-destination': 'cambridge'}
-1022it [17:03,  1.21s/it]1023it [17:04,  1.12s/it]1024it [17:05,  1.12s/it]1025it [17:07,  1.10s/it]1026it [17:08,  1.07s/it]1027it [17:09,  1.09s/it]1028it [17:10,  1.03s/it]
+
+1022it [17:03,  1.21s/it]
+1023it [17:04,  1.12s/it]
+1024it [17:05,  1.12s/it]
+1025it [17:07,  1.10s/it]
+1026it [17:08,  1.07s/it]
+1027it [17:09,  1.09s/it]
+1028it [17:10,  1.03s/it]
 =====================correct!=======================
 
 
@@ -28626,7 +29694,13 @@ pred turn change: {'restaurant-food': 'british',
  'train-departure': 'cambridge',
  'train-destination': 'london liverpool street',
  'train-leaveat': '07:27'}
-1029it [17:11,  1.12s/it]1030it [17:12,  1.04s/it]1031it [17:13,  1.05s/it]1032it [17:14,  1.05s/it]1033it [17:15,  1.01it/s]1034it [17:16,  1.03it/s]gold turn change: {'restaurant-food': 'british', 'restaurant-pricerange': 'moderate'}
+
+1029it [17:11,  1.12s/it]
+1030it [17:12,  1.04s/it]
+1031it [17:13,  1.05s/it]
+1032it [17:14,  1.05s/it]
+1033it [17:15,  1.01it/s]
+1034it [17:16,  1.03it/s]gold turn change: {'restaurant-food': 'british', 'restaurant-pricerange': 'moderate'}
 pred states: {'restaurant-food': 'british',
  'restaurant-pricerange': 'moderate',
  'train-book people': '5',
@@ -28845,7 +29919,17 @@ few-shot completions: {'    agent.state.train = agent.find_train(depart_time="9:
 few-shot best completion: train = agent.find_train(depart_time="9:30", leave_from="leicester")
 this is the 1034th example. SNG0344.json_turn_0
 system response: 
-1035it [17:17,  1.01s/it]1036it [17:18,  1.03s/it]1037it [17:19,  1.01it/s]1038it [17:20,  1.05it/s]1039it [17:21,  1.05it/s]1040it [17:21,  1.08it/s]1041it [17:23,  1.04s/it]1042it [17:24,  1.03it/s]1043it [17:25,  1.02s/it]1044it [17:27,  1.45s/it]user response: i need a train from leicester sometime after 9:30 .
+
+1035it [17:17,  1.01s/it]
+1036it [17:18,  1.03s/it]
+1037it [17:19,  1.01it/s]
+1038it [17:20,  1.05it/s]
+1039it [17:21,  1.05it/s]
+1040it [17:21,  1.08it/s]
+1041it [17:23,  1.04s/it]
+1042it [17:24,  1.03it/s]
+1043it [17:25,  1.02s/it]
+1044it [17:27,  1.45s/it]user response: i need a train from leicester sometime after 9:30 .
 pred turn change: {'train-departure': 'leicester', 'train-leaveat': '09:30'}
 gold turn change: {'train-departure': 'leicester', 'train-leaveat': '09:30'}
 pred states: {'train-departure': 'leicester', 'train-leaveat': '09:30'}
@@ -29043,7 +30127,11 @@ gold states: {'hotel-area': 'south',
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_day="friday", book_people=7, book_number_of_days=5, name="bridge guest house")': -0.018278648015480004}
 few-shot best completion: hotel = agent.find_hotel(book_day="friday", book_people=7, book_number_of_days=5, name="bridge guest house")
 this is the 1044th example. MUL1347.json_turn_2
-1045it [17:28,  1.43s/it]1046it [17:30,  1.34s/it]1047it [17:31,  1.40s/it]1048it [17:32,  1.37s/it]system response: bridge guest house has a 3 star rating and is in the moderate price range and is located in the south . would you like me to book a room ?
+
+1045it [17:28,  1.43s/it]
+1046it [17:30,  1.34s/it]
+1047it [17:31,  1.40s/it]
+1048it [17:32,  1.37s/it]system response: bridge guest house has a 3 star rating and is in the moderate price range and is located in the south . would you like me to book a room ?
 user response: can you book that for 7 people for 5 nights starting on friday ?
 pred turn change: {'hotel-area': 'south',
  'hotel-book day': 'friday',
@@ -29244,7 +30332,13 @@ few-shot best completion: update({})  #
 this is the 1048th example. MUL1347.json_turn_6
 system response: sure it has been reserved the car type will be a red volvo , contact number 07709680182
 user response: thank you have a great day .
-1049it [17:33,  1.24s/it]1050it [17:35,  1.21s/it]1051it [17:36,  1.18s/it]1052it [17:37,  1.24s/it]1053it [17:38,  1.25s/it]1054it [17:39,  1.22s/it]pred turn change: {'hotel-area': 'south',
+
+1049it [17:33,  1.24s/it]
+1050it [17:35,  1.21s/it]
+1051it [17:36,  1.18s/it]
+1052it [17:37,  1.24s/it]
+1053it [17:38,  1.25s/it]
+1054it [17:39,  1.22s/it]pred turn change: {'hotel-area': 'south',
  'hotel-book day': 'friday',
  'hotel-book people': '7',
  'hotel-book stay': '5',
@@ -29456,7 +30550,14 @@ pred states: {'hotel-area': 'south',
  'train-day': 'friday',
  'train-departure': 'leicester',
  'train-destination': 'cambridge'}
-1055it [17:41,  1.20s/it]1056it [17:41,  1.12s/it]1057it [17:42,  1.03s/it]1058it [17:43,  1.01s/it]1059it [17:44,  1.03s/it]1060it [17:45,  1.03s/it]1061it [17:47,  1.07s/it]gold states: {'hotel-area': 'south',
+
+1055it [17:41,  1.20s/it]
+1056it [17:41,  1.12s/it]
+1057it [17:42,  1.03s/it]
+1058it [17:43,  1.01s/it]
+1059it [17:44,  1.03s/it]
+1060it [17:45,  1.03s/it]
+1061it [17:47,  1.07s/it]gold states: {'hotel-area': 'south',
  'hotel-book day': 'friday',
  'hotel-book people': '8',
  'hotel-book stay': '2',
@@ -29665,7 +30766,12 @@ pred states: {'hotel-internet': 'yes',
  'restaurant-area': 'centre',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'expensive'}
-1062it [17:48,  1.14s/it]1063it [17:49,  1.12s/it]1064it [17:51,  1.35s/it]1065it [17:52,  1.26s/it]1066it [17:53,  1.36s/it]gold states: {'hotel-internet': 'yes',
+
+1062it [17:48,  1.14s/it]
+1063it [17:49,  1.12s/it]
+1064it [17:51,  1.35s/it]
+1065it [17:52,  1.26s/it]
+1066it [17:53,  1.36s/it]gold states: {'hotel-internet': 'yes',
  'hotel-name': 'university arms hotel',
  'hotel-pricerange': 'expensive',
  'hotel-stars': '4',
@@ -29862,7 +30968,15 @@ few-shot best completion: taxi = agent.find_taxi(arrive_by_time=agent.state.rest
 this is the 1066th example. MUL1288.json_turn_9
 system response: can you tell me what time you would like to leave or arrive by ?
 user response: i would like to arrive at the restaurant at the booked time , please .
-1067it [17:55,  1.32s/it]1068it [17:56,  1.21s/it]1069it [17:57,  1.14s/it]1070it [17:58,  1.12s/it]1071it [17:59,  1.12s/it]1072it [18:00,  1.15s/it]1073it [18:01,  1.11s/it]1074it [18:02,  1.13s/it]pred turn change: {'hotel-internet': 'yes',
+
+1067it [17:55,  1.32s/it]
+1068it [17:56,  1.21s/it]
+1069it [17:57,  1.14s/it]
+1070it [17:58,  1.12s/it]
+1071it [17:59,  1.12s/it]
+1072it [18:00,  1.15s/it]
+1073it [18:01,  1.11s/it]
+1074it [18:02,  1.13s/it]pred turn change: {'hotel-internet': 'yes',
  'hotel-name': 'university arms hotel',
  'hotel-pricerange': 'expensive',
  'hotel-stars': '4',
@@ -30064,7 +31178,15 @@ gold states: {'attraction-name': 'kettles yard',
 =====================correct!=======================
 
 
-1075it [18:03,  1.11s/it]1076it [18:04,  1.05s/it]1077it [18:05,  1.07s/it]1078it [18:06,  1.01s/it]1079it [18:08,  1.11s/it]1080it [18:09,  1.08s/it]1081it [18:09,  1.01s/it]1082it [18:11,  1.07s/it]
+
+1075it [18:03,  1.11s/it]
+1076it [18:04,  1.05s/it]
+1077it [18:05,  1.07s/it]
+1078it [18:06,  1.01s/it]
+1079it [18:08,  1.11s/it]
+1080it [18:09,  1.08s/it]
+1081it [18:09,  1.01s/it]
+1082it [18:11,  1.07s/it]
 few-shot completions: {'    agent.state.train = agent.find_train(arrive_by_time="11:30", book_people=7)': -0.8568210619083001}
 few-shot best completion: train = agent.find_train(arrive_by_time="11:30", book_people=7)
 this is the 1074th example. MUL1976.json_turn_6
@@ -30257,9 +31379,17 @@ few-shot best completion: taxi = agent.find_taxi(leave_from="cafe jello gallery"
 this is the 1082th example. SNG01935.json_turn_1
 system response: can you tell me where you will be leaving from ?
 user response: i will be leaving from the cafe jello gallery .
-1083it [18:12,  1.09s/it]1084it [18:13,  1.05s/it]1085it [18:14,  1.04s/it]1086it [18:15,  1.05s/it]1087it [18:16,  1.13s/it]WARNING:root:invalid syntax (<string>, line 1)
+
+1083it [18:12,  1.09s/it]
+1084it [18:13,  1.05s/it]
+1085it [18:14,  1.04s/it]
+1086it [18:15,  1.05s/it]
+1087it [18:16,  1.13s/it]WARNING:root:invalid syntax (<string>, line 1)
 WARNING:root:invalid syntax (<string>, line 1)
-1088it [18:17,  1.06s/it]1089it [18:18,  1.18s/it]1090it [18:20,  1.41s/it]pred turn change: {'taxi-departure': 'cafe jello gallery',
+
+1088it [18:17,  1.06s/it]
+1089it [18:18,  1.18s/it]
+1090it [18:20,  1.41s/it]pred turn change: {'taxi-departure': 'cafe jello gallery',
  'taxi-destination': 'carolina bed and breakfast',
  'taxi-leaveat': '07:00'}
 gold turn change: {'taxi-departure': 'cafe jello gallery'}
@@ -30463,7 +31593,14 @@ gold states: {'hotel-book day': 'wednesday',
 =====================wrong!=======================
 
 
-1091it [18:21,  1.26s/it]1092it [18:22,  1.15s/it]1093it [18:23,  1.11s/it]1094it [18:24,  1.11s/it]1095it [18:27,  1.51s/it]1096it [18:29,  1.65s/it]1097it [18:30,  1.46s/it]
+
+1091it [18:21,  1.26s/it]
+1092it [18:22,  1.15s/it]
+1093it [18:23,  1.11s/it]
+1094it [18:24,  1.11s/it]
+1095it [18:27,  1.51s/it]
+1096it [18:29,  1.65s/it]
+1097it [18:30,  1.46s/it]
 few-shot completions: {'    agent.state.update({})  #': -0.00460334701233}
 few-shot best completion: update({})  #
 this is the 1090th example. SNG0913.json_turn_6
@@ -30673,7 +31810,16 @@ pred turn change: {'attraction-name': 'cineworld cinema',
  'train-destination': 'norwich',
  'train-leaveat': '19:00'}
 gold turn change: {}
-1098it [18:31,  1.28s/it]1099it [18:33,  1.51s/it]1100it [18:34,  1.36s/it]1101it [18:35,  1.26s/it]1102it [18:36,  1.22s/it]1103it [18:37,  1.33s/it]1104it [18:38,  1.24s/it]1105it [18:40,  1.18s/it]1106it [18:40,  1.11s/it]pred states: {'attraction-name': 'cineworld cinema',
+
+1098it [18:31,  1.28s/it]
+1099it [18:33,  1.51s/it]
+1100it [18:34,  1.36s/it]
+1101it [18:35,  1.26s/it]
+1102it [18:36,  1.22s/it]
+1103it [18:37,  1.33s/it]
+1104it [18:38,  1.24s/it]
+1105it [18:40,  1.18s/it]
+1106it [18:40,  1.11s/it]pred states: {'attraction-name': 'cineworld cinema',
  'attraction-type': 'cinema',
  'train-book people': '2',
  'train-day': 'tuesday',
@@ -30880,7 +32026,16 @@ gold states: {'attraction-name': 'trinity college',
 =====================wrong!=======================
 
 
-1107it [18:41,  1.08s/it]1108it [18:43,  1.07s/it]1109it [18:44,  1.10s/it]1110it [18:45,  1.10s/it]1111it [18:46,  1.05s/it]1112it [18:47,  1.13s/it]1113it [18:48,  1.11s/it]1114it [18:49,  1.08s/it]1115it [18:50,  1.06s/it]
+
+1107it [18:41,  1.08s/it]
+1108it [18:43,  1.07s/it]
+1109it [18:44,  1.10s/it]
+1110it [18:45,  1.10s/it]
+1111it [18:46,  1.05s/it]
+1112it [18:47,  1.13s/it]
+1113it [18:48,  1.11s/it]
+1114it [18:49,  1.08s/it]
+1115it [18:50,  1.06s/it]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="german", price_range="expensive")': -0.01302118310329}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="german", price_range="expensive")
 this is the 1106th example. SNG0554.json_turn_0
@@ -31066,7 +32221,14 @@ gold states: {'hotel-area': 'south',
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(price_range="moderate", stars="4", type="guest house")': -0.5373732148997}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", stars="4", type="guest house")
 this is the 1115th example. PMUL3607.json_turn_5
-1116it [18:51,  1.10s/it]1117it [18:52,  1.10s/it]1118it [18:53,  1.09s/it]1119it [18:54,  1.05s/it]1120it [18:56,  1.09s/it]1121it [18:57,  1.04s/it]1122it [18:58,  1.21s/it]system response: there is 1 expensive hotel and 3 less costly guest houses in the south . do you have a preference ?
+
+1116it [18:51,  1.10s/it]
+1117it [18:52,  1.10s/it]
+1118it [18:53,  1.09s/it]
+1119it [18:54,  1.05s/it]
+1120it [18:56,  1.09s/it]
+1121it [18:57,  1.04s/it]
+1122it [18:58,  1.21s/it]system response: there is 1 expensive hotel and 3 less costly guest houses in the south . do you have a preference ?
 user response: i want a 4 star moderate -ly priced guest house .
 pred turn change: {'hotel-area': 'south',
  'hotel-pricerange': 'moderate',
@@ -31287,7 +32449,13 @@ gold turn change: {'hotel-name': 'lensfield hotel', 'hotel-parking': 'yes'}
 pred states: {'hotel-area': 'south',
  'restaurant-area': 'east',
  'restaurant-food': 'international'}
-1123it [18:59,  1.14s/it]1124it [19:00,  1.12s/it]1125it [19:02,  1.19s/it]1126it [19:03,  1.11s/it]1127it [19:04,  1.08s/it]1128it [19:05,  1.17s/it]gold states: {'hotel-area': 'south',
+
+1123it [18:59,  1.14s/it]
+1124it [19:00,  1.12s/it]
+1125it [19:02,  1.19s/it]
+1126it [19:03,  1.11s/it]
+1127it [19:04,  1.08s/it]
+1128it [19:05,  1.17s/it]gold states: {'hotel-area': 'south',
  'hotel-name': 'lensfield hotel',
  'hotel-parking': 'yes',
  'hotel-type': 'hotel',
@@ -31497,7 +32665,14 @@ few-shot best completion: update({})  #
 this is the 1128th example. MUL1318.json_turn_9
 system response: sure , i found you a blue tesla , their contact number is 07980198100 . can i assist you with anything else ?
 user response: no , thank you . goodbye .
-1129it [19:06,  1.09s/it]1130it [19:07,  1.05s/it]1131it [19:08,  1.06s/it]1132it [19:09,  1.00s/it]1133it [19:10,  1.02it/s]1134it [19:11,  1.00s/it]1135it [19:12,  1.03s/it]pred turn change: {'hotel-area': 'south',
+
+1129it [19:06,  1.09s/it]
+1130it [19:07,  1.05s/it]
+1131it [19:08,  1.06s/it]
+1132it [19:09,  1.00s/it]
+1133it [19:10,  1.02it/s]
+1134it [19:11,  1.00s/it]
+1135it [19:12,  1.03s/it]pred turn change: {'hotel-area': 'south',
  'hotel-book day': 'tuesday',
  'hotel-book people': '1',
  'hotel-book stay': '5',
@@ -31684,7 +32859,14 @@ pred states: {'hotel-area': 'north',
  'restaurant-food': 'european',
  'restaurant-name': 'city stop restaurant',
  'restaurant-pricerange': 'expensive'}
-1136it [19:13,  1.12s/it]1137it [19:14,  1.06s/it]1138it [19:15,  1.06s/it]1139it [19:17,  1.39s/it]1140it [19:18,  1.32s/it]1141it [19:20,  1.27s/it]1142it [19:21,  1.28s/it]gold states: {'hotel-area': 'north',
+
+1136it [19:13,  1.12s/it]
+1137it [19:14,  1.06s/it]
+1138it [19:15,  1.06s/it]
+1139it [19:17,  1.39s/it]
+1140it [19:18,  1.32s/it]
+1141it [19:20,  1.27s/it]
+1142it [19:21,  1.28s/it]gold states: {'hotel-area': 'north',
  'hotel-name': 'ashley hotel',
  'hotel-parking': 'yes',
  'hotel-type': 'hotel',
@@ -31877,7 +33059,15 @@ pred states: {'restaurant-area': 'centre',
  'train-arriveby': '15:30',
  'train-day': 'friday',
  'train-departure': 'stevenage'}
-1143it [19:22,  1.23s/it]1144it [19:23,  1.16s/it]1145it [19:24,  1.08s/it]1146it [19:25,  1.06s/it]1147it [19:26,  1.06s/it]1148it [19:27,  1.01s/it]1149it [19:28,  1.02s/it]1150it [19:29,  1.04s/it]gold states: {'restaurant-area': 'centre',
+
+1143it [19:22,  1.23s/it]
+1144it [19:23,  1.16s/it]
+1145it [19:24,  1.08s/it]
+1146it [19:25,  1.06s/it]
+1147it [19:26,  1.06s/it]
+1148it [19:27,  1.01s/it]
+1149it [19:28,  1.02s/it]
+1150it [19:29,  1.04s/it]gold states: {'restaurant-area': 'centre',
  'restaurant-food': 'european',
  'restaurant-name': 'darrys cookhouse and wine shop',
  'restaurant-pricerange': 'expensive',
@@ -32079,7 +33269,15 @@ few-shot best completion: hotel = agent.find_hotel(book_day="sunday", book_peopl
 this is the 1150th example. MUL0729.json_turn_5
 system response: there are 18 guest houses to choose from , do you have a preference to the area you would like to stay ?
 user response: i need a 4 star , and in the east with free wifi for 4 people , 5 nights . i'll need a reference number .
-1151it [19:31,  1.24s/it]1152it [19:32,  1.28s/it]1153it [19:33,  1.18s/it]1154it [19:34,  1.16s/it]1155it [19:35,  1.18s/it]1156it [19:36,  1.10s/it]1157it [19:37,  1.11s/it]1158it [19:38,  1.09s/it]pred turn change: {'hotel-area': 'east',
+
+1151it [19:31,  1.24s/it]
+1152it [19:32,  1.28s/it]
+1153it [19:33,  1.18s/it]
+1154it [19:34,  1.16s/it]
+1155it [19:35,  1.18s/it]
+1156it [19:36,  1.10s/it]
+1157it [19:37,  1.11s/it]
+1158it [19:38,  1.09s/it]pred turn change: {'hotel-area': 'east',
  'hotel-book day': 'sunday',
  'hotel-book people': '4',
  'hotel-book stay': '5',
@@ -32302,7 +33500,14 @@ gold states: {'train-departure': 'birmingham new street', 'train-destination': '
 
 few-shot completions: {'    agent.state.train = agent.find_train(depart_time="11:30", day="wednesday")': -0.02132739438443}
 few-shot best completion: train = agent.find_train(depart_time="11:30", day="wednesday")
-1159it [19:39,  1.07s/it]1160it [19:40,  1.01it/s]1161it [19:41,  1.05it/s]1162it [19:42,  1.01s/it]1163it [19:43,  1.01it/s]1164it [19:44,  1.05it/s]1165it [19:45,  1.04s/it]this is the 1158th example. MUL0293.json_turn_1
+
+1159it [19:39,  1.07s/it]
+1160it [19:40,  1.01it/s]
+1161it [19:41,  1.05it/s]
+1162it [19:42,  1.01s/it]
+1163it [19:43,  1.01it/s]
+1164it [19:44,  1.05it/s]
+1165it [19:45,  1.04s/it]this is the 1158th example. MUL0293.json_turn_1
 system response: there are 133 trains traveling that path . what day would you like to travel on ?
 user response: i would like to leave on wednesday sometime after 11:30 .
 pred turn change: {'train-day': 'wednesday',
@@ -32505,7 +33710,13 @@ gold states: {'restaurant-area': 'centre',
 few-shot completions: {'    agent.state.update({})  #': -0.0013656559064999998}
 few-shot best completion: update({})  #
 this is the 1165th example. MUL0293.json_turn_8
-1166it [19:46,  1.01s/it]1167it [19:47,  1.06s/it]1168it [19:49,  1.12s/it]1169it [19:50,  1.23s/it]1170it [19:51,  1.24s/it]1171it [19:53,  1.21s/it]system response: they are located at 40270 king street city centre . postcode is cb11ln . phone number is 01223505015 . can i book a table for you ?
+
+1166it [19:46,  1.01s/it]
+1167it [19:47,  1.06s/it]
+1168it [19:49,  1.12s/it]
+1169it [19:50,  1.23s/it]
+1170it [19:51,  1.24s/it]
+1171it [19:53,  1.21s/it]system response: they are located at 40270 king street city centre . postcode is cb11ln . phone number is 01223505015 . can i book a table for you ?
 user response: no thank you . i will go ahead and book myself . thank you so much . this was all the info i needed . have a good day .
 pred turn change: {'restaurant-area': 'centre',
  'restaurant-food': 'modern european',
@@ -32692,7 +33903,14 @@ few-shot completions: {'    agent.state.train = agent.find_train(book_people=7, 
 few-shot best completion: train = agent.find_train(book_people=7, depart_time="21:29")
 this is the 1171th example. MUL0338.json_turn_5
 system response: i have 2 trains meeting your criteria . 1 leaves at 21:29 and the other at 23:29 . would you like me to book either 1 of those for you ?
-1172it [19:54,  1.19s/it]1173it [19:55,  1.13s/it]1174it [19:56,  1.10s/it]1175it [19:57,  1.13s/it]1176it [19:58,  1.10s/it]1177it [19:59,  1.04s/it]1178it [20:00,  1.15s/it]user response: i will take the earlier 1 , can you reserve me 7 tickets and provide me with the reference number ?
+
+1172it [19:54,  1.19s/it]
+1173it [19:55,  1.13s/it]
+1174it [19:56,  1.10s/it]
+1175it [19:57,  1.13s/it]
+1176it [19:58,  1.10s/it]
+1177it [19:59,  1.04s/it]
+1178it [20:00,  1.15s/it]user response: i will take the earlier 1 , can you reserve me 7 tickets and provide me with the reference number ?
 pred turn change: {'restaurant-area': 'centre',
  'restaurant-book day': 'saturday',
  'restaurant-book people': '7',
@@ -32895,7 +34113,14 @@ pred turn change: {'restaurant-book day': 'monday',
  'train-departure': 'birmingham new street',
  'train-destination': 'cambridge',
  'train-leaveat': '17:00'}
-1179it [20:02,  1.18s/it]1180it [20:03,  1.13s/it]1181it [20:03,  1.06s/it]1182it [20:04,  1.05s/it]1183it [20:06,  1.20s/it]1184it [20:07,  1.12s/it]1185it [20:08,  1.14s/it]gold turn change: {'restaurant-book day': 'monday',
+
+1179it [20:02,  1.18s/it]
+1180it [20:03,  1.13s/it]
+1181it [20:03,  1.06s/it]
+1182it [20:04,  1.05s/it]
+1183it [20:06,  1.20s/it]
+1184it [20:07,  1.12s/it]
+1185it [20:08,  1.14s/it]gold turn change: {'restaurant-book day': 'monday',
  'restaurant-book people': '5',
  'restaurant-book time': '21:00'}
 pred states: {'restaurant-book day': 'monday',
@@ -33105,7 +34330,18 @@ gold states: {'restaurant-area': 'centre',
  'train-departure': 'cambridge',
  'train-destination': 'london kings cross',
  'train-leaveat': '18:15'}
-1186it [20:09,  1.09s/it]1187it [20:10,  1.06s/it]1188it [20:11,  1.03s/it]1189it [20:12,  1.03s/it]1190it [20:14,  1.15s/it]1191it [20:15,  1.15s/it]1192it [20:16,  1.13s/it]1193it [20:17,  1.07s/it]1194it [20:18,  1.02s/it]1195it [20:19,  1.05s/it]1196it [20:20,  1.04s/it]
+
+1186it [20:09,  1.09s/it]
+1187it [20:10,  1.06s/it]
+1188it [20:11,  1.03s/it]
+1189it [20:12,  1.03s/it]
+1190it [20:14,  1.15s/it]
+1191it [20:15,  1.15s/it]
+1192it [20:16,  1.13s/it]
+1193it [20:17,  1.07s/it]
+1194it [20:18,  1.02s/it]
+1195it [20:19,  1.05s/it]
+1196it [20:20,  1.04s/it]
 =====================wrong!=======================
 
 
@@ -33316,7 +34552,15 @@ gold states: {'attraction-area': 'dontcare', 'attraction-type': 'boat'}
 
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="indian", area="centre")': -0.0042404065741}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="indian", area="centre")
-1197it [20:21,  1.08s/it]1198it [20:22,  1.17s/it]1199it [20:24,  1.19s/it]1200it [20:25,  1.14s/it]1201it [20:26,  1.12s/it]1202it [20:27,  1.11s/it]1203it [20:28,  1.09s/it]1204it [20:29,  1.06s/it]this is the 1196th example. MUL2486.json_turn_2
+
+1197it [20:21,  1.08s/it]
+1198it [20:22,  1.17s/it]
+1199it [20:24,  1.19s/it]
+1200it [20:25,  1.14s/it]
+1201it [20:26,  1.12s/it]
+1202it [20:27,  1.11s/it]
+1203it [20:28,  1.09s/it]
+1204it [20:29,  1.06s/it]this is the 1196th example. MUL2486.json_turn_2
 system response: i would recommend riverboat georgina in the north area . they are located at cambridge passenger cruisers , jubilee house and can be reached at 01223902091
 user response: thank you , i am also looking for a restaurant that serves indian in the centre area .
 pred turn change: {'attraction-type': 'boat',
@@ -33509,9 +34753,16 @@ few-shot completions: {'    agent.state.attraction = agent.find_attraction(type=
 few-shot best completion: attraction = agent.find_attraction(type="college")
 this is the 1204th example. MUL0827.json_turn_0
 system response: 
-1205it [20:30,  1.03s/it]1206it [20:31,  1.01s/it]1207it [20:32,  1.19s/it]1208it [20:34,  1.26s/it]WARNING:root:invalid syntax (<string>, line 1)
+
+1205it [20:30,  1.03s/it]
+1206it [20:31,  1.01s/it]
+1207it [20:32,  1.19s/it]
+1208it [20:34,  1.26s/it]WARNING:root:invalid syntax (<string>, line 1)
 WARNING:root:invalid syntax (<string>, line 1)
-1209it [20:35,  1.26s/it]1210it [20:36,  1.20s/it]1211it [20:37,  1.13s/it]user response: i am looking for place -s to go , is there a college i could see ?
+
+1209it [20:35,  1.26s/it]
+1210it [20:36,  1.20s/it]
+1211it [20:37,  1.13s/it]user response: i am looking for place -s to go , is there a college i could see ?
 pred turn change: {'attraction-type': 'college'}
 gold turn change: {'attraction-type': 'college'}
 pred states: {'attraction-type': 'college'}
@@ -33700,7 +34951,14 @@ few-shot best completion: update({})  #
 this is the 1211th example. MUL0827.json_turn_7
 system response: i have booked you with a red lexus . the contact number is 07986413859 . can i assist you with anything else ?
 user response: that is all i need , thank you for the help .
-1212it [20:38,  1.07s/it]1213it [20:39,  1.16s/it]1214it [20:40,  1.15s/it]1215it [20:41,  1.12s/it]1216it [20:43,  1.15s/it]1217it [20:44,  1.13s/it]1218it [20:45,  1.11s/it]pred turn change: {'attraction-type': 'college',
+
+1212it [20:38,  1.07s/it]
+1213it [20:39,  1.16s/it]
+1214it [20:40,  1.15s/it]
+1215it [20:41,  1.12s/it]
+1216it [20:43,  1.15s/it]
+1217it [20:44,  1.13s/it]
+1218it [20:45,  1.11s/it]pred turn change: {'attraction-type': 'college',
  'restaurant-area': 'east',
  'restaurant-book day': 'sunday',
  'restaurant-book people': '3',
@@ -33905,7 +35163,14 @@ few-shot best completion: hotel = agent.find_hotel(name="acorn guest house")
 this is the 1218th example. MUL2004.json_turn_6
 system response: how about the acorn guest house ? it is rated 4 stars and is on the north side of town . they offer free parking and internet .
 user response: yes this is perferect please book it for me .
-1219it [20:46,  1.13s/it]1220it [20:47,  1.09s/it]1221it [20:48,  1.02s/it]1222it [20:49,  1.06s/it]1223it [20:50,  1.07s/it]1224it [20:51,  1.12s/it]1225it [20:52,  1.13s/it]pred turn change: {'hotel-internet': 'yes',
+
+1219it [20:46,  1.13s/it]
+1220it [20:47,  1.09s/it]
+1221it [20:48,  1.02s/it]
+1222it [20:49,  1.06s/it]
+1223it [20:50,  1.07s/it]
+1224it [20:51,  1.12s/it]
+1225it [20:52,  1.13s/it]pred turn change: {'hotel-internet': 'yes',
  'hotel-name': 'acorn guest house',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'moderate',
@@ -34134,7 +35399,16 @@ gold states: {'hotel-area': 'north',
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="acorn guest house")': -0.02269419540565}
 few-shot best completion: hotel = agent.find_hotel(name="acorn guest house")
 this is the 1225th example. MUL2644.json_turn_3
-system response: 7 place -s still have that , can i suggest the acorn guest house for you ?1226it [20:54,  1.15s/it]1227it [20:55,  1.06s/it]1228it [20:56,  1.10s/it]1229it [20:57,  1.03s/it]1230it [20:58,  1.06s/it]1231it [20:59,  1.02s/it]1232it [21:00,  1.03s/it]1233it [21:01,  1.00s/it]1234it [21:02,  1.01s/it]
+system response: 7 place -s still have that , can i suggest the acorn guest house for you ?
+1226it [20:54,  1.15s/it]
+1227it [20:55,  1.06s/it]
+1228it [20:56,  1.10s/it]
+1229it [20:57,  1.03s/it]
+1230it [20:58,  1.06s/it]
+1231it [20:59,  1.02s/it]
+1232it [21:00,  1.03s/it]
+1233it [21:01,  1.00s/it]
+1234it [21:02,  1.01s/it]
 user response: can i get the postcode of that place ?
 pred turn change: {'hotel-area': 'north',
  'hotel-internet': 'yes',
@@ -34330,7 +35604,13 @@ gold states: {'hotel-area': 'east', 'hotel-pricerange': 'moderate', 'hotel-type'
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house", area="east")': -0.6620947014514998}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house", area="east")
 this is the 1234th example. PMUL1722.json_turn_5
-1235it [21:03,  1.06s/it]1236it [21:04,  1.07s/it]1237it [21:05,  1.07s/it]1238it [21:06,  1.13s/it]1239it [21:07,  1.16s/it]1240it [21:09,  1.13s/it]system response: there are no moderate hotel -s in the east . however , there is an expensive hotel in the east called express by holiday inn cambridge . do you want to book ?
+
+1235it [21:03,  1.06s/it]
+1236it [21:04,  1.07s/it]
+1237it [21:05,  1.07s/it]
+1238it [21:06,  1.13s/it]
+1239it [21:07,  1.16s/it]
+1240it [21:09,  1.13s/it]system response: there are no moderate hotel -s in the east . however , there is an expensive hotel in the east called express by holiday inn cambridge . do you want to book ?
 user response: i apologize . i am looking for an moderate -ly priced guest house .
 pred turn change: {'hotel-area': 'east',
  'hotel-pricerange': 'moderate',
@@ -34539,7 +35819,15 @@ pred turn change: {'hotel-area': 'east',
  'train-day': 'wednesday',
  'train-destination': 'cambridge'}
 gold turn change: {}
-1241it [21:09,  1.08s/it]1242it [21:11,  1.10s/it]1243it [21:12,  1.15s/it]1244it [21:13,  1.17s/it]1245it [21:14,  1.13s/it]1246it [21:15,  1.15s/it]1247it [21:16,  1.08s/it]1248it [21:17,  1.12s/it]pred states: {'hotel-area': 'east',
+
+1241it [21:09,  1.08s/it]
+1242it [21:11,  1.10s/it]
+1243it [21:12,  1.15s/it]
+1244it [21:13,  1.17s/it]
+1245it [21:14,  1.13s/it]
+1246it [21:15,  1.15s/it]
+1247it [21:16,  1.08s/it]
+1248it [21:17,  1.12s/it]pred states: {'hotel-area': 'east',
  'hotel-book day': 'wednesday',
  'hotel-book people': '1',
  'hotel-book stay': '3',
@@ -34725,7 +36013,15 @@ pred states: {'restaurant-area': 'centre',
  'train-day': 'saturday',
  'train-departure': 'cambridge',
  'train-destination': 'stevenage'}
-1249it [21:20,  1.49s/it]1250it [21:21,  1.36s/it]1251it [21:22,  1.25s/it]1252it [21:23,  1.18s/it]1253it [21:24,  1.21s/it]1254it [21:25,  1.19s/it]1255it [21:26,  1.16s/it]1256it [21:28,  1.16s/it]gold states: {'restaurant-area': 'centre',
+
+1249it [21:20,  1.49s/it]
+1250it [21:21,  1.36s/it]
+1251it [21:22,  1.25s/it]
+1252it [21:23,  1.18s/it]
+1253it [21:24,  1.21s/it]
+1254it [21:25,  1.19s/it]
+1255it [21:26,  1.16s/it]
+1256it [21:28,  1.16s/it]gold states: {'restaurant-area': 'centre',
  'restaurant-food': 'modern european',
  'restaurant-name': 'riverside brasserie',
  'restaurant-pricerange': 'moderate',
@@ -34934,7 +36230,13 @@ gold states: {'hotel-book day': 'monday',
 =====================correct!=======================
 
 
-1257it [21:29,  1.23s/it]1258it [21:30,  1.15s/it]1259it [21:31,  1.14s/it]1260it [21:32,  1.11s/it]1261it [21:34,  1.25s/it]1262it [21:35,  1.19s/it]
+
+1257it [21:29,  1.23s/it]
+1258it [21:30,  1.15s/it]
+1259it [21:31,  1.14s/it]
+1260it [21:32,  1.11s/it]
+1261it [21:34,  1.25s/it]
+1262it [21:35,  1.19s/it]
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_day="monday", book_people=7, book_time="17:45", name="curry garden")': -0.6398773929163001}
 few-shot best completion: restaurant = agent.find_restaurant(book_day="monday", book_people=7, book_time="17:45", name="curry garden")
 this is the 1256th example. MUL1256.json_turn_5
@@ -35140,7 +36442,15 @@ few-shot completions: {'    agent.state.train = agent.find_train(depart_time="19
 few-shot best completion: train = agent.find_train(depart_time="19:00", day="saturday")
 this is the 1262th example. PMUL1346.json_turn_0
 system response: 
-1263it [21:36,  1.18s/it]1264it [21:37,  1.14s/it]1265it [21:38,  1.17s/it]1266it [21:40,  1.22s/it]1267it [21:41,  1.25s/it]1268it [21:42,  1.16s/it]1269it [21:43,  1.14s/it]1270it [21:44,  1.17s/it]user response: hello looking for a good train that leaves on saturday after 19:00 .
+
+1263it [21:36,  1.18s/it]
+1264it [21:37,  1.14s/it]
+1265it [21:38,  1.17s/it]
+1266it [21:40,  1.22s/it]
+1267it [21:41,  1.25s/it]
+1268it [21:42,  1.16s/it]
+1269it [21:43,  1.14s/it]
+1270it [21:44,  1.17s/it]user response: hello looking for a good train that leaves on saturday after 19:00 .
 pred turn change: {'train-day': 'saturday', 'train-leaveat': '19:00'}
 gold turn change: {'train-day': 'saturday', 'train-leaveat': '19:00'}
 pred states: {'train-day': 'saturday', 'train-leaveat': '19:00'}
@@ -35325,7 +36635,13 @@ gold states: {'restaurant-area': 'centre',
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_time="14:15")': -0.1396315898187}
 few-shot best completion: restaurant = agent.find_restaurant(book_time="14:15")
 this is the 1270th example. MUL0312.json_turn_2
-1271it [21:45,  1.15s/it]1272it [21:46,  1.15s/it]1273it [21:48,  1.19s/it]1274it [21:49,  1.15s/it]1275it [21:50,  1.11s/it]1276it [21:51,  1.07s/it]system response: it seems there are no tables for 7 available at 15:15 , did you want to book for something later in the day ?
+
+1271it [21:45,  1.15s/it]
+1272it [21:46,  1.15s/it]
+1273it [21:48,  1.19s/it]
+1274it [21:49,  1.15s/it]
+1275it [21:50,  1.11s/it]
+1276it [21:51,  1.07s/it]system response: it seems there are no tables for 7 available at 15:15 , did you want to book for something later in the day ?
 user response: actually , let s try a little earlier . is there anything at 14:15 ?
 pred turn change: {'restaurant-area': 'centre',
  'restaurant-book day': 'friday',
@@ -35535,7 +36851,14 @@ pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'chinese'}
 gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'chinese'}
 pred states: {'restaurant-area': 'centre', 'restaurant-food': 'chinese'}
 gold states: {'restaurant-area': 'centre', 'restaurant-food': 'chinese'}
-1277it [21:52,  1.08s/it]1278it [21:53,  1.15s/it]1279it [21:54,  1.10s/it]1280it [21:56,  1.20s/it]1281it [21:57,  1.19s/it]1282it [21:59,  1.41s/it]1283it [22:00,  1.29s/it]
+
+1277it [21:52,  1.08s/it]
+1278it [21:53,  1.15s/it]
+1279it [21:54,  1.10s/it]
+1280it [21:56,  1.20s/it]
+1281it [21:57,  1.19s/it]
+1282it [21:59,  1.41s/it]
+1283it [22:00,  1.29s/it]
 =====================correct!=======================
 
 
@@ -35723,7 +37046,13 @@ few-shot best completion: update({})  #
 this is the 1283th example. MUL1457.json_turn_7
 system response: do you need help with anything else ?
 user response: i am good , thanks for your help !
-1284it [22:01,  1.21s/it]1285it [22:02,  1.16s/it]1286it [22:03,  1.15s/it]1287it [22:04,  1.24s/it]1288it [22:06,  1.28s/it]1289it [22:07,  1.26s/it]pred turn change: {'restaurant-area': 'centre',
+
+1284it [22:01,  1.21s/it]
+1285it [22:02,  1.16s/it]
+1286it [22:03,  1.15s/it]
+1287it [22:04,  1.24s/it]
+1288it [22:06,  1.28s/it]
+1289it [22:07,  1.26s/it]pred turn change: {'restaurant-area': 'centre',
  'restaurant-food': 'chinese',
  'restaurant-name': 'jinling noodle bar',
  'restaurant-pricerange': 'moderate',
@@ -35912,9 +37241,18 @@ few-shot best completion: update({})  #
 this is the 1289th example. PMUL4719.json_turn_5
 system response: would you like me to book a train for you leaving at 5:50 and arriving by 6:07 ?
 user response: yes that time looks good . how much will it cost and what is the train id ?
-1290it [22:08,  1.15s/it]1291it [22:09,  1.09s/it]1292it [22:11,  1.37s/it]1293it [22:12,  1.34s/it]1294it [22:13,  1.32s/it]1295it [22:14,  1.28s/it]1296it [22:15,  1.19s/it]WARNING:root:invalid syntax (<string>, line 1)
+
+1290it [22:08,  1.15s/it]
+1291it [22:09,  1.09s/it]
+1292it [22:11,  1.37s/it]
+1293it [22:12,  1.34s/it]
+1294it [22:13,  1.32s/it]
+1295it [22:14,  1.28s/it]
+1296it [22:15,  1.19s/it]WARNING:root:invalid syntax (<string>, line 1)
 WARNING:root:invalid syntax (<string>, line 1)
-1297it [22:17,  1.19s/it]1298it [22:18,  1.16s/it]pred turn change: {'restaurant-area': 'centre',
+
+1297it [22:17,  1.19s/it]
+1298it [22:18,  1.16s/it]pred turn change: {'restaurant-area': 'centre',
  'restaurant-book day': 'sunday',
  'restaurant-book people': '4',
  'restaurant-book time': '13:00',
@@ -36117,7 +37455,15 @@ gold states: {'attraction-area': 'centre', 'attraction-type': 'museum'}
 
 
 few-shot completions: {'    agent.state.update({})  #': -0.00193744218865}
-1299it [22:19,  1.08s/it]1300it [22:20,  1.08s/it]1301it [22:21,  1.13s/it]1302it [22:22,  1.10s/it]1303it [22:23,  1.08s/it]1304it [22:24,  1.13s/it]1305it [22:26,  1.21s/it]1306it [22:27,  1.20s/it]few-shot best completion: update({})  #
+
+1299it [22:19,  1.08s/it]
+1300it [22:20,  1.08s/it]
+1301it [22:21,  1.13s/it]
+1302it [22:22,  1.10s/it]
+1303it [22:23,  1.08s/it]
+1304it [22:24,  1.13s/it]
+1305it [22:26,  1.21s/it]
+1306it [22:27,  1.20s/it]few-shot best completion: update({})  #
 this is the 1298th example. PMUL1100.json_turn_3
 system response: i have listings for 5 , can i recommend 1 ?
 user response: yes please , and i am going to need the address .
@@ -36319,7 +37665,15 @@ gold states: {'train-arriveby': '08:30',
 
 
 few-shot completions: {'    agent.state.attraction = agent.find_attraction(area="west")': -0.0047458813432}
-1307it [22:28,  1.16s/it]1308it [22:29,  1.14s/it]1309it [22:30,  1.13s/it]1310it [22:31,  1.05s/it]1311it [22:32,  1.09s/it]1312it [22:33,  1.15s/it]1313it [22:34,  1.12s/it]1314it [22:37,  1.48s/it]few-shot best completion: attraction = agent.find_attraction(area="west")
+
+1307it [22:28,  1.16s/it]
+1308it [22:29,  1.14s/it]
+1309it [22:30,  1.13s/it]
+1310it [22:31,  1.05s/it]
+1311it [22:32,  1.09s/it]
+1312it [22:33,  1.15s/it]
+1313it [22:34,  1.12s/it]
+1314it [22:37,  1.48s/it]few-shot best completion: attraction = agent.find_attraction(area="west")
 this is the 1306th example. PMUL1257.json_turn_3
 system response: you are all set , the total fee is 105.6 gbp payable at the station , your reference number is ylbt17ja , anything else that i can help with ?
 user response: yes , i am looking for place -s to go in the west part of town .
@@ -36526,7 +37880,17 @@ pred turn change: {'taxi-departure': 'wandlebury country park',
  'taxi-destination': 'meze bar',
  'taxi-leaveat': '19:30'}
 gold turn change: {}
-1315it [22:38,  1.34s/it]1316it [22:39,  1.22s/it]1317it [22:40,  1.20s/it]1318it [22:41,  1.24s/it]1319it [22:42,  1.13s/it]1320it [22:43,  1.11s/it]1321it [22:44,  1.07s/it]1322it [22:45,  1.11s/it]1323it [22:46,  1.11s/it]1324it [22:47,  1.08s/it]pred states: {'taxi-departure': 'wandlebury country park',
+
+1315it [22:38,  1.34s/it]
+1316it [22:39,  1.22s/it]
+1317it [22:40,  1.20s/it]
+1318it [22:41,  1.24s/it]
+1319it [22:42,  1.13s/it]
+1320it [22:43,  1.11s/it]
+1321it [22:44,  1.07s/it]
+1322it [22:45,  1.11s/it]
+1323it [22:46,  1.11s/it]
+1324it [22:47,  1.08s/it]pred states: {'taxi-departure': 'wandlebury country park',
  'taxi-destination': 'meze bar',
  'taxi-leaveat': '19:30'}
 gold states: {'taxi-departure': 'wandlebury country park',
@@ -36724,7 +38088,15 @@ pred turn change: {'taxi-arriveby': '18:00',
  'taxi-departure': 'jesus college',
  'taxi-destination': 'scott polar museum'}
 gold turn change: {}
-1325it [22:49,  1.13s/it]1326it [22:50,  1.09s/it]1327it [22:51,  1.20s/it]1328it [22:52,  1.24s/it]1329it [22:54,  1.19s/it]1330it [22:55,  1.15s/it]1331it [22:56,  1.14s/it]1332it [22:57,  1.13s/it]pred states: {'taxi-arriveby': '18:00',
+
+1325it [22:49,  1.13s/it]
+1326it [22:50,  1.09s/it]
+1327it [22:51,  1.20s/it]
+1328it [22:52,  1.24s/it]
+1329it [22:54,  1.19s/it]
+1330it [22:55,  1.15s/it]
+1331it [22:56,  1.14s/it]
+1332it [22:57,  1.13s/it]pred states: {'taxi-arriveby': '18:00',
  'taxi-departure': 'jesus college',
  'taxi-destination': 'scott polar museum'}
 gold states: {'taxi-arriveby': '18:00',
@@ -36936,7 +38308,12 @@ few-shot best completion: hotel = agent.find_hotel(book_day="thursday", book_peo
 this is the 1332th example. PMUL1828.json_turn_7
 system response: i would be happy to i just need to know for which nights and for how many people .
 user response: just for myself . and say , 2 nights ought to do it .
-1333it [22:58,  1.19s/it]1334it [22:59,  1.11s/it]1335it [23:00,  1.08s/it]1336it [23:01,  1.16s/it]1337it [23:02,  1.10s/it]pred turn change: {'hotel-area': 'north',
+
+1333it [22:58,  1.19s/it]
+1334it [22:59,  1.11s/it]
+1335it [23:00,  1.08s/it]
+1336it [23:01,  1.16s/it]
+1337it [23:02,  1.10s/it]pred turn change: {'hotel-area': 'north',
  'hotel-book day': 'thursday',
  'hotel-book people': '1',
  'hotel-book stay': '2',
@@ -37180,7 +38557,16 @@ pred turn change: {'hotel-area': 'north',
  'train-departure': 'cambridge',
  'train-destination': 'stevenage'}
 gold turn change: {'hotel-stars': 'dontcare'}
-1338it [23:03,  1.04s/it]1339it [23:04,  1.03s/it]1340it [23:06,  1.12s/it]1341it [23:07,  1.10s/it]1342it [23:08,  1.12s/it]1343it [23:09,  1.07s/it]1344it [23:10,  1.04s/it]1345it [23:11,  1.05s/it]1346it [23:12,  1.01s/it]pred states: {'hotel-area': 'north',
+
+1338it [23:03,  1.04s/it]
+1339it [23:04,  1.03s/it]
+1340it [23:06,  1.12s/it]
+1341it [23:07,  1.10s/it]
+1342it [23:08,  1.12s/it]
+1343it [23:09,  1.07s/it]
+1344it [23:10,  1.04s/it]
+1345it [23:11,  1.05s/it]
+1346it [23:12,  1.01s/it]pred states: {'hotel-area': 'north',
  'hotel-book day': 'thursday',
  'hotel-book people': '1',
  'hotel-book stay': '2',
@@ -37408,7 +38794,18 @@ gold states: {}
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(name="nandos", book_time="23:15")': -0.03254331006925}
 few-shot best completion: restaurant = agent.find_restaurant(name="nandos", book_time="23:15")
 this is the 1346th example. SNG01684.json_turn_1
-1347it [23:13,  1.06s/it]1348it [23:14,  1.15s/it]1349it [23:15,  1.14s/it]1350it [23:18,  1.50s/it]1351it [23:19,  1.33s/it]1352it [23:20,  1.39s/it]1353it [23:21,  1.29s/it]1354it [23:22,  1.15s/it]1355it [23:23,  1.12s/it]1356it [23:24,  1.12s/it]1357it [23:25,  1.08s/it]system response: sure ! when would you like to arrive ?
+
+1347it [23:13,  1.06s/it]
+1348it [23:14,  1.15s/it]
+1349it [23:15,  1.14s/it]
+1350it [23:18,  1.50s/it]
+1351it [23:19,  1.33s/it]
+1352it [23:20,  1.39s/it]
+1353it [23:21,  1.29s/it]
+1354it [23:22,  1.15s/it]
+1355it [23:23,  1.12s/it]
+1356it [23:24,  1.12s/it]
+1357it [23:25,  1.08s/it]system response: sure ! when would you like to arrive ?
 user response: i must arrive to nandos by 23:15
 pred turn change: {'restaurant-book time': '23:15', 'restaurant-name': 'nandos'}
 gold turn change: {'taxi-arriveby': '23:15', 'taxi-destination': 'nandos'}
@@ -37609,7 +39006,13 @@ gold states: {'attraction-name': 'cambridge artworks',
 few-shot completions: {'    agent.state.update({})  #': -0.04814579270000001}
 few-shot best completion: update({})  #
 this is the 1357th example. MUL1003.json_turn_5
-1358it [23:26,  1.09s/it]1359it [23:28,  1.25s/it]1360it [23:29,  1.24s/it]1361it [23:30,  1.22s/it]1362it [23:31,  1.17s/it]1363it [23:33,  1.14s/it]system response: i am showing 3 guest house type vacancies in the east area , all with wifi . would you like me to book 1 ?
+
+1358it [23:26,  1.09s/it]
+1359it [23:28,  1.25s/it]
+1360it [23:29,  1.24s/it]
+1361it [23:30,  1.22s/it]
+1362it [23:31,  1.17s/it]
+1363it [23:33,  1.14s/it]system response: i am showing 3 guest house type vacancies in the east area , all with wifi . would you like me to book 1 ?
 user response: i am sorry , i need a cheap hotel not guest house . it should be in the east , and i do not need internet .
 pred turn change: {'attraction-name': 'cambridge artworks',
  'hotel-area': 'east',
@@ -37819,7 +39222,13 @@ pred turn change: {'attraction-name': 'cambridge artworks',
  'hotel-pricerange': 'cheap',
  'hotel-type': 'guest house'}
 gold turn change: {'hotel-name': '[DELETE]', 'hotel-type': 'hotel'}
-1364it [23:34,  1.11s/it]1365it [23:35,  1.17s/it]1366it [23:36,  1.18s/it]1367it [23:37,  1.17s/it]1368it [23:39,  1.28s/it]1369it [23:40,  1.18s/it]pred states: {'attraction-name': 'cambridge artworks',
+
+1364it [23:34,  1.11s/it]
+1365it [23:35,  1.17s/it]
+1366it [23:36,  1.18s/it]
+1367it [23:37,  1.17s/it]
+1368it [23:39,  1.28s/it]
+1369it [23:40,  1.18s/it]pred states: {'attraction-name': 'cambridge artworks',
  'hotel-area': 'east',
  'hotel-book day': 'wednesday',
  'hotel-book people': '1',
@@ -38035,7 +39444,17 @@ pred turn change: {'hotel-internet': 'yes', 'hotel-type': 'guest house'}
 gold turn change: {'hotel-internet': 'yes', 'hotel-type': 'guest house'}
 pred states: {'hotel-internet': 'yes', 'hotel-type': 'guest house'}
 gold states: {'hotel-internet': 'yes', 'hotel-type': 'guest house'}
-1370it [23:41,  1.16s/it]1371it [23:42,  1.16s/it]1372it [23:43,  1.09s/it]1373it [23:44,  1.05s/it]1374it [23:45,  1.05s/it]1375it [23:46,  1.04s/it]1376it [23:47,  1.05s/it]1377it [23:48,  1.00s/it]1378it [23:49,  1.02s/it]1379it [23:50,  1.02s/it]
+
+1370it [23:41,  1.16s/it]
+1371it [23:42,  1.16s/it]
+1372it [23:43,  1.09s/it]
+1373it [23:44,  1.05s/it]
+1374it [23:45,  1.05s/it]
+1375it [23:46,  1.04s/it]
+1376it [23:47,  1.05s/it]
+1377it [23:48,  1.00s/it]
+1378it [23:49,  1.02s/it]
+1379it [23:50,  1.02s/it]
 =====================correct!=======================
 
 
@@ -38229,7 +39648,14 @@ gold states: {'restaurant-area': 'centre',
 
 
 few-shot completions: {'    agent.state.train = agent.find_train(depart_time="21:00", leave_from="birmingham new street")': -0.04649822005947}
-1380it [23:51,  1.06s/it]1381it [23:53,  1.15s/it]1382it [23:54,  1.25s/it]1383it [23:55,  1.18s/it]1384it [23:56,  1.16s/it]1385it [23:57,  1.16s/it]1386it [23:58,  1.10s/it]few-shot best completion: train = agent.find_train(depart_time="21:00", leave_from="birmingham new street")
+
+1380it [23:51,  1.06s/it]
+1381it [23:53,  1.15s/it]
+1382it [23:54,  1.25s/it]
+1383it [23:55,  1.18s/it]
+1384it [23:56,  1.16s/it]
+1385it [23:57,  1.16s/it]
+1386it [23:58,  1.10s/it]few-shot best completion: train = agent.find_train(depart_time="21:00", leave_from="birmingham new street")
 this is the 1379th example. MUL1576.json_turn_2
 system response: shiraz restaurant serves mediterranean cuisine . would that work for you ?
 user response: yes also i need a train that departs from birmingham new street and should leave after 21:00
@@ -38413,7 +39839,15 @@ few-shot best completion: restaurant = agent.find_restaurant(book_day="wednesday
 this is the 1386th example. SNG01698.json_turn_3
 system response: i found 4 different expensive chinese restaurant -s that you could try . how does hk fusion sound to you ?
 user response: that sounds good . can you book a table for 5 people at 11:15 on wednesday please ?
-1387it [24:00,  1.19s/it]1388it [24:01,  1.16s/it]1389it [24:02,  1.10s/it]1390it [24:03,  1.05s/it]1391it [24:04,  1.07s/it]1392it [24:05,  1.11s/it]1393it [24:06,  1.06s/it]1394it [24:07,  1.08s/it]pred turn change: {'restaurant-area': 'centre',
+
+1387it [24:00,  1.19s/it]
+1388it [24:01,  1.16s/it]
+1389it [24:02,  1.10s/it]
+1390it [24:03,  1.05s/it]
+1391it [24:04,  1.07s/it]
+1392it [24:05,  1.11s/it]
+1393it [24:06,  1.06s/it]
+1394it [24:07,  1.08s/it]pred turn change: {'restaurant-area': 'centre',
  'restaurant-book day': 'wednesday',
  'restaurant-book people': '5',
  'restaurant-book time': '11:15',
@@ -38612,7 +40046,14 @@ few-shot completions: {'    agent.state.train = agent.find_train(arrive_by_time=
 few-shot best completion: train = agent.find_train(arrive_by_time="15:45", leave_from="cambridge")
 this is the 1394th example. MUL1462.json_turn_1
 system response: yes i can help . the tickets cost 16.60 pounds and the trip is 88 minutes long . when you you like to leave ?
-1395it [24:08,  1.14s/it]1396it [24:09,  1.14s/it]1397it [24:11,  1.20s/it]1398it [24:12,  1.21s/it]1399it [24:13,  1.15s/it]1400it [24:14,  1.09s/it]1401it [24:15,  1.11s/it]user response: i just need to arrive by 15:45 leaving from cambridge .
+
+1395it [24:08,  1.14s/it]
+1396it [24:09,  1.14s/it]
+1397it [24:11,  1.20s/it]
+1398it [24:12,  1.21s/it]
+1399it [24:13,  1.15s/it]
+1400it [24:14,  1.09s/it]
+1401it [24:15,  1.11s/it]user response: i just need to arrive by 15:45 leaving from cambridge .
 pred turn change: {'train-arriveby': '15:45',
  'train-day': 'friday',
  'train-departure': 'cambridge',
@@ -38638,7 +40079,7 @@ system response: how many tickets will you need ?
 user response: just 1 . can you give me the train id , please ?
 pred turn change: {'train-arriveby': '15:45',
  'train-day': 'friday',
- 'train-departure': 'cambridge',
+ 'train-departure': 'cambridge',my_refpydst
  'train-destination': 'london liverpool street'}
 gold turn change: {'train-book people': '1'}
 pred states: {'train-arriveby': '15:45',
@@ -38810,7 +40251,15 @@ gold turn change: {'train-day': 'saturday'}
 pred states: {'train-day': 'saturday',
  'train-departure': 'cambridge',
  'train-destination': 'london kings cross'}
-1402it [24:16,  1.08s/it]1403it [24:18,  1.20s/it]1404it [24:19,  1.12s/it]1405it [24:20,  1.15s/it]1406it [24:21,  1.09s/it]1407it [24:22,  1.09s/it]1408it [24:23,  1.11s/it]1409it [24:25,  1.40s/it]gold states: {'train-day': 'saturday',
+
+1402it [24:16,  1.08s/it]
+1403it [24:18,  1.20s/it]
+1404it [24:19,  1.12s/it]
+1405it [24:20,  1.15s/it]
+1406it [24:21,  1.09s/it]
+1407it [24:22,  1.09s/it]
+1408it [24:23,  1.11s/it]
+1409it [24:25,  1.40s/it]gold states: {'train-day': 'saturday',
  'train-departure': 'cambridge',
  'train-destination': 'london kings cross'}
 
@@ -39023,7 +40472,15 @@ few-shot best completion: update({})  #
 this is the 1409th example. PMUL1071.json_turn_0
 system response: 
 user response: i need help with attractions ! can you help me out ?
-pred turn change: {}1410it [24:26,  1.24s/it]1411it [24:27,  1.20s/it]1412it [24:28,  1.12s/it]1413it [24:29,  1.15s/it]1414it [24:30,  1.06s/it]1415it [24:32,  1.23s/it]1416it [24:33,  1.18s/it]1417it [24:34,  1.10s/it]
+pred turn change: {}
+1410it [24:26,  1.24s/it]
+1411it [24:27,  1.20s/it]
+1412it [24:28,  1.12s/it]
+1413it [24:29,  1.15s/it]
+1414it [24:30,  1.06s/it]
+1415it [24:32,  1.23s/it]
+1416it [24:33,  1.18s/it]
+1417it [24:34,  1.10s/it]
 gold turn change: {}
 pred states: {}
 gold states: {}
@@ -39207,7 +40664,15 @@ gold states: {'attraction-area': 'centre',
 
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price_range="expensive", area="east")': -0.0229157608248}
 few-shot best completion: restaurant = agent.find_restaurant(price_range="expensive", area="east")
-1418it [24:35,  1.09s/it]1419it [24:36,  1.10s/it]1420it [24:37,  1.09s/it]1421it [24:38,  1.20s/it]1422it [24:40,  1.21s/it]1423it [24:41,  1.17s/it]1424it [24:42,  1.18s/it]1425it [24:43,  1.13s/it]this is the 1417th example. PMUL3050.json_turn_0
+
+1418it [24:35,  1.09s/it]
+1419it [24:36,  1.10s/it]
+1420it [24:37,  1.09s/it]
+1421it [24:38,  1.20s/it]
+1422it [24:40,  1.21s/it]
+1423it [24:41,  1.17s/it]
+1424it [24:42,  1.18s/it]
+1425it [24:43,  1.13s/it]this is the 1417th example. PMUL3050.json_turn_0
 system response: 
 user response: looking for information in cambridge a restaurant in the expensive price range and should be in the east
 pred turn change: {'restaurant-area': 'east', 'restaurant-pricerange': 'expensive'}
@@ -39386,7 +40851,16 @@ few-shot best completion: train = agent.find_train(leave_from="peterborough")
 this is the 1425th example. MUL1904.json_turn_2
 system response: ballare is postcode cb23na , club salsa is postcode cb12jb , kambar is postcode cb23qb , the fez club is cb23hx and soul tree nightclub is cb23qf
 user response: perfect thank you ! i also need to find a train leaving from peterborough , can you help me with that too ?
-1426it [24:44,  1.14s/it]1427it [24:45,  1.15s/it]1428it [24:46,  1.13s/it]1429it [24:47,  1.09s/it]1430it [24:49,  1.36s/it]1431it [24:51,  1.33s/it]1432it [24:52,  1.28s/it]1433it [24:53,  1.23s/it]1434it [24:54,  1.19s/it]pred turn change: {'attraction-area': 'centre',
+
+1426it [24:44,  1.14s/it]
+1427it [24:45,  1.15s/it]
+1428it [24:46,  1.13s/it]
+1429it [24:47,  1.09s/it]
+1430it [24:49,  1.36s/it]
+1431it [24:51,  1.33s/it]
+1432it [24:52,  1.28s/it]
+1433it [24:53,  1.23s/it]
+1434it [24:54,  1.19s/it]pred turn change: {'attraction-area': 'centre',
  'attraction-type': 'nightclub',
  'train-departure': 'peterborough'}
 gold turn change: {'train-departure': 'peterborough'}
@@ -39586,7 +41060,12 @@ pred turn change: {'restaurant-area': 'centre',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'cheap'}
 gold turn change: {'restaurant-pricerange': 'cheap'}
-1435it [24:55,  1.15s/it]1436it [24:56,  1.21s/it]1437it [24:58,  1.22s/it]1438it [24:59,  1.23s/it]1439it [25:00,  1.36s/it]pred states: {'restaurant-area': 'centre',
+
+1435it [24:55,  1.15s/it]
+1436it [24:56,  1.21s/it]
+1437it [24:58,  1.22s/it]
+1438it [24:59,  1.23s/it]
+1439it [25:00,  1.36s/it]pred states: {'restaurant-area': 'centre',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'cheap'}
 gold states: {'restaurant-area': 'centre',
@@ -39789,7 +41268,13 @@ pred states: {'hotel-book day': 'saturday',
  'restaurant-book time': '16:00',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'cheap'}
-1440it [25:01,  1.25s/it]1441it [25:03,  1.38s/it]1442it [25:04,  1.33s/it]1443it [25:05,  1.22s/it]1444it [25:06,  1.20s/it]1445it [25:08,  1.25s/it]gold states: {'hotel-book people': '3',
+
+1440it [25:01,  1.25s/it]
+1441it [25:03,  1.38s/it]
+1442it [25:04,  1.33s/it]
+1443it [25:05,  1.22s/it]
+1444it [25:06,  1.20s/it]
+1445it [25:08,  1.25s/it]gold states: {'hotel-book people': '3',
  'hotel-book stay': '5',
  'hotel-internet': 'yes',
  'hotel-name': 'alexander bed and breakfast',
@@ -40009,7 +41494,10 @@ few-shot completions: {'    agent.state.update({})  #': -0.0016094743953300001}
 few-shot best completion: update({})  #
 this is the 1445th example. SNG0835.json_turn_2
 system response: i was able to successfully book that for you . your reference number is mxws56bv . is there anything else i can assist you with ?
-1446it [25:09,  1.22s/it]1447it [25:10,  1.15s/it]1447it [25:10,  1.04s/it]
+
+1446it [25:09,  1.22s/it]
+1447it [25:10,  1.15s/it]
+1447it [25:10,  1.04s/it]
 user response: nope , that'll do it ! thank you for all your help !
 pred turn change: {'hotel-book day': 'thursday',
  'hotel-book people': '8',
@@ -40051,7 +41539,9 @@ gold states: {'hotel-book day': 'thursday',
 =====================correct!=======================
 
 
-0it [00:00, ?it/s]1447it [00:00, 131134.30it/s]
+
+0it [00:00, ?it/s]
+1447it [00:00, 131134.30it/s]
 correct (JGA) 859/1447  =  0.5936
 Slot Acc 0.9779
 Joint F1 0.9230
@@ -40073,13 +41563,25 @@ accuracy of turn 13 is 0/4 = 0.0000
 accuracy of turn 14 is 0/2 = 0.0000
 accuracy of turn 15 is 0/2 = 0.0000
 accuracy of turn 16 is 0/1 = 0.0000
-calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]calculating slot-level F1: 100%|██████████| 1447/1447 [00:00<00:00, 267104.92it/s]
-0it [00:00, ?it/s]1447it [00:00, 345584.67it/s]
-0it [00:00, ?it/s]1447it [00:00, 247994.03it/s]
-0it [00:00, ?it/s]1447it [00:00, 623821.35it/s]
-0it [00:00, ?it/s]1447it [00:00, 234720.11it/s]
-0it [00:00, ?it/s]1447it [00:00, 270329.07it/s]
-wandb: Adding directory to artifact (/home/pyun/RefPyDST-gpt-4/outputs/runs/table4/5p/mixed_retriever/split_v1_fs_bm_topk_z_off_0522_1147)... Done. 0.1s
+
+calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]
+calculating slot-level F1: 100%|██████████| 1447/1447 [00:00<00:00, 267104.92it/s]
+
+0it [00:00, ?it/s]
+1447it [00:00, 345584.67it/s]
+
+0it [00:00, ?it/s]
+1447it [00:00, 247994.03it/s]
+
+0it [00:00, ?it/s]
+1447it [00:00, 623821.35it/s]
+
+0it [00:00, ?it/s]
+1447it [00:00, 234720.11it/s]
+
+0it [00:00, ?it/s]
+1447it [00:00, 270329.07it/s]
+wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/table4/5p/mixed_retriever/split_v1_fs_bm_topk_z_off_0522_1147)... Done. 0.1s
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:

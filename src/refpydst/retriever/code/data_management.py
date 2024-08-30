@@ -79,7 +79,12 @@ def input_to_string(context_dict, sys_utt, usr_utt):
     return history
 
 
-def data_item_to_string(data_item: Turn, string_transformation=input_to_string, full_history: bool = False) -> str:
+def data_item_to_string(
+    data_item: Turn, 
+    string_transformation=input_to_string, 
+    full_history: bool = False, 
+    **kwargs
+) -> str:
     """
     Converts a turn to a string with the context, system utterance, and user utterance in order
 
@@ -96,19 +101,66 @@ def data_item_to_string(data_item: Turn, string_transformation=input_to_string, 
           can i help you with anything else ?
     [USER] is there an exact address , like a street number ? thanks !
     """
+    input_type = kwargs.get('input_type', 'dialog_context')
+    only_slot = kwargs.get('only_slot', False)
+    
+    if input_type == 'dialog_context':
+        # use full history, depend on retriever training (for ablation)
+        # orginal code
+        if full_history:
+            history = ""
+            for sys_utt, usr_utt in zip(data_item['dialog']['sys'], data_item['dialog']['usr']):
+                history += string_transformation({}, sys_utt, usr_utt)
+            return history
 
-    # use full history, depend on retriever training (for ablation)
-    if full_history:
-        history = ""
-        for sys_utt, usr_utt in zip(data_item['dialog']['sys'], data_item['dialog']['usr']):
-            history += string_transformation({}, sys_utt, usr_utt)
+        # if full_history:
+        #     history = "[CONTEXT] "
+        #     for sys_utt, usr_utt in zip(data_item['dialog']['sys'], data_item['dialog']['usr']):
+        #         history += f" [SYS] {sys_utt} [USER] {usr_utt}"
+        #     return history
+        
+        # Use only slots in the context
+        if only_slot:
+            context = list(data_item['last_slot_values'].keys())
+            sys_utt = data_item['dialog']['sys'][-1]
+            usr_utt = data_item['dialog']['usr'][-1]
+            history = "[CONTEXT] " + ', '.join(context)
+            if sys_utt == 'none':
+                sys_utt = ''
+            if usr_utt == 'none':
+                usr_utt = ''
+            history += f" [SYS] {sys_utt} [USER] {usr_utt}"
+            return history
+
+        # use single turn
+        context = data_item['last_slot_values']
+        sys_utt = data_item['dialog']['sys'][-1]
+        usr_utt = data_item['dialog']['usr'][-1]
+        history = string_transformation(context, sys_utt, usr_utt)
         return history
-
-    # use single turn
-    context = data_item['last_slot_values']
-    sys_utt = data_item['dialog']['sys'][-1]
-    usr_utt = data_item['dialog']['usr'][-1]
-    history = string_transformation(context, sys_utt, usr_utt)
+    
+    elif input_type == 'context':
+        if full_history:
+            history = ""
+            for sys_utt, usr_utt in zip(data_item['dialog']['sys'][:-1], data_item['dialog']['usr'][:-1]):
+                history += string_transformation({}, sys_utt, usr_utt)
+            return history
+         
+        if only_slot:
+            context = list(data_item['last_slot_values'].keys())
+            history = "[CONTEXT] " + ', '.join(context)
+            return history
+        
+        context = data_item['last_slot_values']
+        history = string_transformation(context, '', '')
+        return history
+    
+    elif input_type == 'dialog':
+        sys_utt = data_item['dialog']['sys'][-1]
+        usr_utt = data_item['dialog']['usr'][-1]
+        history = string_transformation({}, sys_utt, usr_utt)
+        return history
+    
     return history
 
 

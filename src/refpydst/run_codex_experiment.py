@@ -70,20 +70,25 @@ class CodexExperiment(AbstractLMPromptingExperiment):
             retriever_type=retriever_type,  # EmbeddingRetriever
             decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
             **kwargs    # {'artifact_cache': None, 
-                        # 'output_dir': '/home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2', 
+                        # 'output_dir': '/home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2', 
                         # 'retriever_args': {'state_transformation': 'ref_aware'}, 
                         # 'run_name': '-runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
         )
         self.lm_decoding_config = lm_decoding_config
+        self.beam_search_config = None
+        if self.lm_decoding_config is not None:
+            self.beam_search_config = {'beam_size': lm_decoding_config.pop('beam_size')} if lm_decoding_config.get('beam_size') else None
         
         min_null_token_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_token_null_probability', 0) or 0
         self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
         min_null_sequence_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_null_probability', 0) or 0
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
         if codex_engine.startswith('gpt'):
-            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
-        elif codex_engine.startswith('llama') or codex_engine.startswith('meta'):
-            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
+            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+        elif "llama" in codex_engine.lower():
+            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+
+        self.add_guidelines = kwargs.get("add_guidelines", True)
 
     def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn]) -> Tuple[
         Dict[str, float], List[Turn]]:
@@ -94,7 +99,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         completions: Dict[str, float] = {}
         while not complete_flag and parse_error_count < 5 and other_error_cnt < 5:
             try:
-                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") == "greedy":
+                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") in ["greedy", "beam_search"]:
                     completions = self.codex_client.greedy_lm_completion(prompt_text)
                 elif self.lm_decoding_config["method"] == "top_p":
                     completions = self.codex_client.top_p_lm_completion(prompt_text, **self.lm_decoding_config)
@@ -243,6 +248,8 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     # check if CODEX is crazy
                     predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
                     # for now, just verify our best completion is parse-able
+                    if isinstance(completions, list):
+                        completions = completions[0]
                     temp_parse = self.completion_parser(max(completions, key=completions.get).strip().replace('agent.state.', ''), predicted_context)
                     # temp_parse = self.completion_parser(max(completions, key=completions.get), predicted_context)
                     complete_flag = True
@@ -291,7 +298,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         retriever_type=retriever_type,  # EmbeddingRetriever
         decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
         lm_decoding_config=lm_decoding_config,  # {'method': 'top_p', 'top_p': 0.9, 'stop_token': ';', 'max_mi_candidates': 100, 'null_prompt_format': 'python-prompt', 'null_prompt_weight': 1.0, 'min_null_probability': 0.0, 'min_token_null_probability': 0.0}
-        output_dir=output_dir,  # /home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
+        output_dir=output_dir,  # /home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
         format_example=format_example,  # None
         **kwargs    # {'retriever_args': {'state_transformation': 'ref_aware'}, 'run_name': 'runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
     )
@@ -305,7 +312,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
 
     # write out running log
     with open(os.path.join(output_dir, "running_log.json"), 'w') as f:
-        json.dump(running_log, f)
+        json.dump(running_log, f, indent=2)
 
     if len(running_log) == len(experiment.test_set):
         run = wandb.Api().run(f"{wandb.run.entity}/{wandb.run.project}/{wandb.run.id}")
@@ -314,19 +321,20 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
 
 
 if __name__ == "__main__":
-    os.environ['REFPYDST_DATA_DIR'] = "/home/pyun/RefPyDST-gpt-4/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/pyun/RefPyDST-gpt-4/outputs"    
+    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
+    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
     # import warnings
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
-    # raise ValueError
+    # # # raise ValueError
     
-    # run_file: str ='runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
+    # run_file: str = 'runs/preliminary/retriever_input/bm25/8B_python/dialog_context_text.json'
+    # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
+    # # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
     # # "runs/table4/5p/bm25/mixed.json"
     # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # # 'runs/table4/5p/pretrained_sbert/split_v1.json'
-
     # # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
     # # 'runs/codex/zero_shot/python/split_v1.json'
     # # "runs/codex/toy_test.json"
@@ -346,6 +354,7 @@ if __name__ == "__main__":
     #                  name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
     #                  group=args.get("run_group", default_run_group),
     #                  tags=args.get("run_tags", None))
+    # main(**args)
     
 
     if os.path.exists(sys.argv[1]):

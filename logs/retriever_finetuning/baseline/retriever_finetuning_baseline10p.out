@@ -1,0 +1,39 @@
+=====train set is loaded=====
+there are 5480 turns in this dataset
+<InputExample> label: 1.0, texts: [CONTEXT] hotel-book day, hotel-book people, hotel-book stay, hotel-name, hotel-area, hotel-pricerange, hotel-stars, hotel-internet, hotel-type [SYS] your room at the express by holiday inn cambridge is all set up for friday . the reference is 7f6zihsz . is there anything else i can help you with today ? [USER] thank you ! i am also looking for a place to go in town . i am thinking a college in the centre .; [CONTEXT] hotel-book day, hotel-book people, hotel-book stay, hotel-name [SYS] i have got it booked ! here s your reference number: 8qbuv7um . can i help you with anything else ? [USER] yes , i am also looking for place -s to go on the west side of town . can you suggest some place -s ?
+
+<InputExample> label: 1.0, texts: [CONTEXT] hotel-book day, hotel-book people, hotel-name, hotel-area, hotel-pricerange, hotel-stars, hotel-internet, hotel-type [SYS] and how many nights ? [USER] 5 nights please . and i would need the reference number also .; [CONTEXT] hotel-name, hotel-parking, hotel-pricerange, hotel-internet, hotel-type [SYS] sounds like a plan . may please get the number of guests , the day of arrival , and how many nights you will be staying ? [USER] i would like it for 2 people and 4 nights starting from monday .
+=====number of batches 3425=====
+{'loss': 1.2533, 'grad_norm': 10.765243530273438, 'learning_rate': 1.9213759213759217e-05, 'epoch': 0.15}
+{'loss': 0.8196, 'grad_norm': 0.0, 'learning_rate': 1.8230958230958235e-05, 'epoch': 0.29}
+{'eval_evaluator': 1.3739800995024876, 'eval_runtime': 22.0794, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 0.33}
+{'loss': 0.6675, 'grad_norm': 6.658627033233643, 'learning_rate': 1.724815724815725e-05, 'epoch': 0.44}
+{'loss': 0.5362, 'grad_norm': 8.508148193359375, 'learning_rate': 1.6265356265356267e-05, 'epoch': 0.58}
+{'eval_evaluator': 1.356582671060283, 'eval_runtime': 24.0634, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 0.67}
+{'loss': 0.4368, 'grad_norm': 2.943552255630493, 'learning_rate': 1.5282555282555285e-05, 'epoch': 0.73}
+{'loss': 0.3528, 'grad_norm': 7.244268894195557, 'learning_rate': 1.42997542997543e-05, 'epoch': 0.88}
+{'eval_evaluator': 1.36620737320873, 'eval_runtime': 24.6878, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.0}
+{'loss': 0.3066, 'grad_norm': 4.728942394256592, 'learning_rate': 1.3316953316953318e-05, 'epoch': 1.02}
+{'loss': 0.2488, 'grad_norm': 4.0419769287109375, 'learning_rate': 1.2334152334152336e-05, 'epoch': 1.17}
+{'loss': 0.2082, 'grad_norm': 6.806399345397949, 'learning_rate': 1.1351351351351352e-05, 'epoch': 1.31}
+{'eval_evaluator': 1.3723617645734336, 'eval_runtime': 25.162, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.33}
+{'loss': 0.1828, 'grad_norm': 3.9504151344299316, 'learning_rate': 1.036855036855037e-05, 'epoch': 1.46}
+{'loss': 0.186, 'grad_norm': 5.795266628265381, 'learning_rate': 9.385749385749387e-06, 'epoch': 1.61}
+{'eval_evaluator': 1.3806012049159948, 'eval_runtime': 22.9772, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.67}
+{'loss': 0.1772, 'grad_norm': 0.0, 'learning_rate': 8.402948402948403e-06, 'epoch': 1.75}
+{'loss': 0.1665, 'grad_norm': 0.0, 'learning_rate': 7.420147420147421e-06, 'epoch': 1.9}
+{'eval_evaluator': 1.3684755874308112, 'eval_runtime': 24.2548, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.0}
+{'loss': 0.1463, 'grad_norm': 2.554710626602173, 'learning_rate': 6.437346437346438e-06, 'epoch': 2.04}
+{'loss': 0.1284, 'grad_norm': 3.308220624923706, 'learning_rate': 5.4545454545454545e-06, 'epoch': 2.19}
+{'eval_evaluator': 1.3970929884227035, 'eval_runtime': 28.8456, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.33}
+{'loss': 0.1145, 'grad_norm': 2.955188512802124, 'learning_rate': 4.471744471744472e-06, 'epoch': 2.34}
+{'loss': 0.0997, 'grad_norm': 0.0, 'learning_rate': 3.488943488943489e-06, 'epoch': 2.48}
+{'loss': 0.1099, 'grad_norm': 2.9641542434692383, 'learning_rate': 2.5061425061425064e-06, 'epoch': 2.63}
+{'eval_evaluator': 1.3900081841872887, 'eval_runtime': 23.5913, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.67}
+{'loss': 0.106, 'grad_norm': 2.2727742195129395, 'learning_rate': 1.5233415233415235e-06, 'epoch': 2.77}
+{'loss': 0.0969, 'grad_norm': 2.8980112075805664, 'learning_rate': 5.405405405405406e-07, 'epoch': 2.92}
+{'eval_evaluator': 1.3918935624905773, 'eval_runtime': 23.9381, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 3.0}
+{'train_runtime': 3295.4228, 'train_samples_per_second': 99.775, 'train_steps_per_second': 3.118, 'train_loss': 0.31093226950244024, 'epoch': 3.0}
+=====saving embedding is completed=====
+=====test set is loaded=====
+=====Now evaluating retriever ...=====

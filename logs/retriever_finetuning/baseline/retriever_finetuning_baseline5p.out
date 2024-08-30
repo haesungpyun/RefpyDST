@@ -1,0 +1,29 @@
+=====train set is loaded=====
+there are 2731 turns in this dataset
+<InputExample> label: 1.0, texts: [CONTEXT] restaurant-book day, restaurant-book people, restaurant-book time, restaurant-pricerange, restaurant-name, restaurant-area, hotel-name, hotel-area, hotel-parking, hotel-stars [SYS] el shaddai s phone number is 01223327978 . did you want to book a room ? [USER] no thank you that was all i needed today .; [CONTEXT] restaurant-book day, restaurant-book people, restaurant-book time, restaurant-food, restaurant-pricerange, restaurant-name, restaurant-area, hotel-book day, hotel-book people, hotel-book stay, hotel-name [SYS] your booking is complete and the reference number is vvbm497n . [USER] i will also need a taxi , please .
+
+<InputExample> label: 1.0, texts: [CONTEXT] restaurant-book day, restaurant-book people, restaurant-book time, restaurant-pricerange, restaurant-name, restaurant-area, hotel-name, hotel-area, hotel-parking, hotel-stars [SYS] yes i can but i need to know when your stay is how many people and for the number of rooms . [USER] do you have their phone numbers ?; [CONTEXT] restaurant-book day, restaurant-book people, restaurant-book time, restaurant-food, restaurant-pricerange, restaurant-area, hotel-area, hotel-parking, hotel-stars, hotel-internet [SYS] yes , both the establishments offer free internet as well . [USER] give me the address and phone number for the 1 you most recommend
+=====number of batches 1707=====
+{'loss': 1.1458, 'grad_norm': 7.362964630126953, 'learning_rate': 1.8405739338381828e-05, 'epoch': 0.29}
+{'eval_evaluator': 1.2586054575606815, 'eval_runtime': 16.1206, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 0.33}
+{'loss': 0.6589, 'grad_norm': 4.078635215759277, 'learning_rate': 1.641291351135911e-05, 'epoch': 0.59}
+{'eval_evaluator': 1.2779927203807802, 'eval_runtime': 18.0231, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 0.67}
+{'loss': 0.4404, 'grad_norm': 6.477820873260498, 'learning_rate': 1.442008768433639e-05, 'epoch': 0.88}
+{'eval_evaluator': 1.3042094721199198, 'eval_runtime': 17.088, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.0}
+{'loss': 0.3064, 'grad_norm': 7.543910503387451, 'learning_rate': 1.2427261857313673e-05, 'epoch': 1.17}
+{'eval_evaluator': 1.3043722943722944, 'eval_runtime': 18.8043, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.33}
+{'loss': 0.232, 'grad_norm': 5.044449329376221, 'learning_rate': 1.0434436030290953e-05, 'epoch': 1.46}
+{'eval_evaluator': 1.3398908057117014, 'eval_runtime': 16.5183, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.67}
+{'loss': 0.197, 'grad_norm': 0.0, 'learning_rate': 8.441610203268234e-06, 'epoch': 1.76}
+{'eval_evaluator': 1.325160345458853, 'eval_runtime': 17.953, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.0}
+{'loss': 0.1646, 'grad_norm': 3.8370022773742676, 'learning_rate': 6.448784376245517e-06, 'epoch': 2.05}
+{'eval_evaluator': 1.328190002369107, 'eval_runtime': 17.5489, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.33}
+{'loss': 0.1333, 'grad_norm': 0.0, 'learning_rate': 4.455958549222798e-06, 'epoch': 2.34}
+{'loss': 0.1112, 'grad_norm': 0.0, 'learning_rate': 2.46313272220008e-06, 'epoch': 2.64}
+{'eval_evaluator': 1.322810191466908, 'eval_runtime': 17.6728, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.67}
+{'loss': 0.1155, 'grad_norm': 0.0, 'learning_rate': 4.7030689517736155e-07, 'epoch': 2.93}
+{'eval_evaluator': 1.3270200943335273, 'eval_runtime': 16.8847, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 3.0}
+{'train_runtime': 1691.8128, 'train_samples_per_second': 96.855, 'train_steps_per_second': 3.027, 'train_loss': 0.3441884169888622, 'epoch': 3.0}
+=====saving embedding is completed=====
+=====test set is loaded=====
+=====Now evaluating retriever ...=====

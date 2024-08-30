@@ -1,0 +1,34 @@
+=====train set is loaded=====
+there are 54971 turns in this dataset
+Number of positive samples: 89260
+Number of negative samples: 89260
+=====number of batches 2790=====
+{'loss': 4.4686, 'grad_norm': 6.731013298034668, 'learning_rate': 1.903229708479497e-05, 'epoch': 0.18}
+{'eval_evaluator': 0.9616888207525928, 'eval_runtime': 116.22, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 0.33}
+{'loss': 4.2861, 'grad_norm': 7.140172004699707, 'learning_rate': 1.782266844078868e-05, 'epoch': 0.36}
+{'loss': 4.181, 'grad_norm': 8.547286033630371, 'learning_rate': 1.6613039796782387e-05, 'epoch': 0.54}
+{'eval_evaluator': 0.9262242898063794, 'eval_runtime': 105.901, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 0.67}
+{'loss': 4.139, 'grad_norm': 8.601848602294922, 'learning_rate': 1.54034111527761e-05, 'epoch': 0.72}
+{'loss': 4.1792, 'grad_norm': 8.714186668395996, 'learning_rate': 1.4193782508769808e-05, 'epoch': 0.9}
+{'eval_evaluator': 1.0011309254592837, 'eval_runtime': 104.2464, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.0}
+{'loss': 4.0416, 'grad_norm': 8.122882843017578, 'learning_rate': 1.2984153864763519e-05, 'epoch': 1.08}
+{'loss': 3.9901, 'grad_norm': 9.648096084594727, 'learning_rate': 1.1774525220757229e-05, 'epoch': 1.25}
+{'eval_evaluator': 1.0142510391764124, 'eval_runtime': 106.5954, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.33}
+{'loss': 3.9378, 'grad_norm': 12.930200576782227, 'learning_rate': 1.0564896576750938e-05, 'epoch': 1.43}
+{'loss': 3.8993, 'grad_norm': 11.505387306213379, 'learning_rate': 9.355267932744648e-06, 'epoch': 1.61}
+{'eval_evaluator': 1.0108080808080808, 'eval_runtime': 103.934, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 1.67}
+{'loss': 3.9009, 'grad_norm': 12.0387601852417, 'learning_rate': 8.145639288738358e-06, 'epoch': 1.79}
+{'loss': 3.8835, 'grad_norm': 9.606358528137207, 'learning_rate': 6.936010644732067e-06, 'epoch': 1.97}
+{'eval_evaluator': 1.0665997638724911, 'eval_runtime': 101.3616, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.0}
+{'loss': 3.8151, 'grad_norm': 13.106636047363281, 'learning_rate': 5.7263820007257775e-06, 'epoch': 2.15}
+{'loss': 3.7547, 'grad_norm': 14.773261070251465, 'learning_rate': 4.516753356719488e-06, 'epoch': 2.33}
+{'eval_evaluator': 1.0372949694659328, 'eval_runtime': 100.9428, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.33}
+{'loss': 3.725, 'grad_norm': 14.084627151489258, 'learning_rate': 3.3071247127131974e-06, 'epoch': 2.51}
+{'eval_evaluator': 1.0474408555412626, 'eval_runtime': 101.2546, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 2.67}
+{'loss': 3.7534, 'grad_norm': 14.688926696777344, 'learning_rate': 2.097496068706907e-06, 'epoch': 2.69}
+{'loss': 3.7523, 'grad_norm': 11.07542610168457, 'learning_rate': 8.878674247006169e-07, 'epoch': 2.87}
+{'eval_evaluator': 1.0672074691477675, 'eval_runtime': 103.2146, 'eval_samples_per_second': 0.0, 'eval_steps_per_second': 0.0, 'epoch': 3.0}
+{'train_runtime': 4519.1864, 'train_samples_per_second': 59.254, 'train_steps_per_second': 1.852, 'train_loss': 3.970140595248096, 'epoch': 3.0}
+=====saving embedding is completed=====
+=====test set is loaded=====
+=====Now evaluating retriever ...=====

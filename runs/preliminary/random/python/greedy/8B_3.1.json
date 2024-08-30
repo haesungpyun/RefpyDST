@@ -1,0 +1,8 @@
+{
+  "train_fn": "mw21_5p_train_v1.json", 
+  "retriever_dir": "none",
+  "test_fn": "mw24_20p_dev.json",
+  "prompt_format": "python-prompt",
+  "retriever_type": "random",
+  "codex_engine":"meta-llama/Meta-Llama-3.1-8B-Instruct"
+}
