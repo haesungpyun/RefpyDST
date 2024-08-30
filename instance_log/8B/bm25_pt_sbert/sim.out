@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/llro_shot_grtrainut
 nohup: ignoring input
 /homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
@@ -8,6 +9,10 @@ nohup: ignoring input
 /home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:instance_log/8B/bm25_pt_sbert/sim.out
+=======
+/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 usage: run_codex_experiment.py [-h] --train_fn TRAIN_FN
                                [--prompt_format {IC-DST,IC-DST-NULL,python-prompt,python-prompt-NULL}]
                                --retriever_dir RETRIEVER_DIR

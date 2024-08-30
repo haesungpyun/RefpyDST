@@ -1,19 +1,27 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_top16.out
 nohup: ignoring input
 /homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
 =======
 /home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/retriever_input/bm25/8B/dialog_context_bs.out
+=======
+/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.17.7 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_top16.out
 wandb: Run data is saved locally in /homehaesungpyun/my_refpydst/wandb/run-20240412_050648-nnk79p6i
 =======
 wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240828_001638-9hhtxkyb
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/retriever_input/bm25/8B/dialog_context_bs.out
+=======
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240828_001638-9hhtxkyb
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run -runs-preliminary-retriever_input-bm25-8B-dialog_context_bs
 wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
@@ -30,6 +38,7 @@ INFO 08-28 00:16:59 weight_utils.py:223] Using model weights format ['*.safetens
 Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:43<00:00,  8.35s/it]
 Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:43<00:00, 10.82s/it]
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_top16.out
 mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]
 mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:49, 54.75it/s]bm25_max_emb_distance
@@ -145,6 +154,8 @@ reading surface forms from ontology.json: 100%|██████████| 3
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': -0.0038213181983999993}
 few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 INFO 08-28 00:17:44 model_runner.py:692] Loading model weights took 14.9595 GB
 INFO 08-28 00:17:46 gpu_executor.py:102] # GPU blocks: 27955, # CPU blocks: 2048
 0it [00:00, ?it/s]
@@ -153,7 +164,10 @@ INFO 08-28 00:17:46 gpu_executor.py:102] # GPU blocks: 27955, # CPU blocks: 2048
 1it [00:02,  2.42s/it]
 few-shot completions: {"{'hotel-name': 'express by holiday inn cambridge'}": 1}
 few-shot best completion: {'hotel-name': 'express by holiday inn cambridge'}
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/retriever_input/bm25/8B/dialog_context_bs.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 0th example. PMUL3470.json_turn_0
 system response: 
 user response: i am looking for a specific hotel , its name is express by holiday inn cambridge
@@ -38283,6 +38297,7 @@ accuracy of turn 13 is 0/4 = 0.0000
 accuracy of turn 14 is 0/2 = 0.0000
 accuracy of turn 15 is 0/2 = 0.0000
 accuracy of turn 16 is 0/1 = 0.0000
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_top16.out
 
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]
@@ -38304,6 +38319,8 @@ calculating slot-level F1: 100%|██████████| 1447/1447 [00:00
 1447it [00:00, 224584.00it/s]
 wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/table4/5p/bm25/split_v1_top16_0412_1407)... Done. 0.1s
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]calculating slot-level F1: 100%|██████████| 1447/1447 [00:00<00:00, 227915.35it/s]
 0it [00:00, ?it/s]1447it [00:00, 298400.01it/s]
 0it [00:00, ?it/s]1447it [00:00, 237828.99it/s]
@@ -38311,7 +38328,10 @@ wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/t
 0it [00:00, ?it/s]1447it [00:00, 222150.73it/s]
 0it [00:00, ?it/s]1447it [00:00, 272293.86it/s]
 wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/preliminary/retriever_input/bm25/8B/dialog_context_bs_0828_0016)... Done. 0.1s
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/retriever_input/bm25/8B/dialog_context_bs.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:

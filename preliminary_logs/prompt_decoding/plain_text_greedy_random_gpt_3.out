@@ -1,4 +1,5 @@
 nohup: ignoring input
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_div2_retrieved.out
 /homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
@@ -16,6 +17,9 @@ nohup: ignoring input
 =======
 /home/haesungpyun/anaconda3/envs/refpydst/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_3.out
+=======
+/home/haesungpyun/anaconda3/envs/refpydst/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 /home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py:323: UserWarning: This script is deprecated. Please use the `run_codex_experiment.py` script instead.
   warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
@@ -23,6 +27,7 @@ wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force 
 wandb: wandb version 0.17.7 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_div2_retrieved.out
 wandb: Run data is saved locally in /homehaesungpyun/my_refpydst/wandb/run-20240412_081357-vhhvtu0h
 =======
@@ -88,13 +93,22 @@ reading surface forms from ontology.json: 100%|██████████| 3
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': -0.0019608323638999996}
 few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
 =======
+=======
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240825_194941-pcocllkw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run -runs-preliminary-prompt_format-plain_text_gpt
+wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/pcocllkw
 mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:52, 52.34it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:24, 109.85it/s]mapping supervised_set surface forms...:   2%|▏         | 41/2731 [00:00<00:25, 107.00it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 239.20it/s]mapping supervised_set surface forms...:   7%|▋         | 204/2731 [00:01<00:16, 150.71it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:18, 137.32it/s]mapping supervised_set surface forms...:   9%|▉         | 239/2731 [00:01<00:21, 115.87it/s]mapping supervised_set surface forms...:   9%|▉         | 249/2731 [00:01<00:26, 92.48it/s] mapping supervised_set surface forms...:  10%|▉         | 273/2731 [00:02<00:21, 113.85it/s]mapping supervised_set surface forms...:  14%|█▎        | 374/2731 [00:02<00:08, 269.55it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:06, 353.17it/s]mapping supervised_set surface forms...:  18%|█▊        | 496/2731 [00:02<00:07, 282.13it/s]mapping supervised_set surface forms...:  24%|██▍       | 660/2731 [00:02<00:03, 528.41it/s]mapping supervised_set surface forms...:  27%|██▋       | 734/2731 [00:02<00:03, 542.30it/s]mapping supervised_set surface forms...:  32%|███▏      | 883/2731 [00:02<00:02, 748.68it/s]mapping supervised_set surface forms...:  36%|███▌      | 976/2731 [00:03<00:02, 765.01it/s]mapping supervised_set surface forms...:  39%|███▉      | 1065/2731 [00:03<00:02, 568.40it/s]mapping supervised_set surface forms...:  42%|████▏     | 1138/2731 [00:03<00:03, 434.83it/s]mapping supervised_set surface forms...:  50%|████▉     | 1353/2731 [00:03<00:01, 725.78it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:03<00:01, 701.07it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1548/2731 [00:04<00:03, 349.50it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:02, 458.78it/s]mapping supervised_set surface forms...:  69%|██████▊   | 1877/2731 [00:04<00:01, 649.00it/s]mapping supervised_set surface forms...:  73%|███████▎  | 1987/2731 [00:05<00:01, 550.20it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2177/2731 [00:05<00:00, 736.11it/s]mapping supervised_set surface forms...:  84%|████████▍ | 2288/2731 [00:06<00:01, 236.18it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2368/2731 [00:06<00:01, 258.94it/s]mapping supervised_set surface forms...:  94%|█████████▎| 2555/2731 [00:06<00:00, 393.13it/s]mapping supervised_set surface forms...:  98%|█████████▊| 2680/2731 [00:07<00:00, 484.80it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:07<00:00, 388.08it/s]
 reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 69.75it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 57.40it/s]reading surface forms from ontology.json:  81%|████████  | 25/31 [00:01<00:00, 11.41it/s]reading surface forms from ontology.json:  94%|█████████▎| 29/31 [00:03<00:00,  5.87it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:03<00:00,  9.28it/s]
 0it [00:00, ?it/s]1it [00:01,  1.02s/it]2it [00:01,  1.28it/s]3it [00:02,  1.32it/s]4it [00:03,  1.36it/s]5it [00:03,  1.37it/s]6it [00:04,  1.32it/s]7it [00:05,  1.35it/s]8it [00:05,  1.38it/s]9it [00:06,  1.38it/s]
 few-shot completions: {"            {'hotel-name': 'express by holiday inn cambridge'}": -0.01149922299155}
 few-shot best completion: {'hotel-name': 'express by holiday inn cambridge'}
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_3.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 0th example. PMUL3470.json_turn_0
 system response: 
 user response: i am looking for a specific hotel , its name is express by holiday inn cambridge
@@ -34747,6 +34761,7 @@ accuracy of turn 13 is 0/4 = 0.0000
 accuracy of turn 14 is 0/2 = 0.0000
 accuracy of turn 15 is 0/2 = 0.0000
 accuracy of turn 16 is 0/1 = 0.0000
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_10_shot_bm25_div2_retrieved.out
 
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]
@@ -34768,6 +34783,8 @@ calculating slot-level F1: 100%|██████████| 1447/1447 [00:00
 1447it [00:00, 249882.98it/s]
 wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/table4/5p/bm25/split_v1_div_retrieved)... Done. 0.1s
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]calculating slot-level F1: 100%|██████████| 1447/1447 [00:00<00:00, 164775.01it/s]
 0it [00:00, ?it/s]1447it [00:00, 220744.81it/s]
 0it [00:00, ?it/s]1447it [00:00, 156866.32it/s]
@@ -34775,7 +34792,10 @@ wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/t
 0it [00:00, ?it/s]1447it [00:00, 150461.31it/s]
 0it [00:00, ?it/s]1447it [00:00, 173078.14it/s]
 wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/preliminary/prompt_format/plain_text_gpt_0825_1949)... Done. 0.1s
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_3.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:

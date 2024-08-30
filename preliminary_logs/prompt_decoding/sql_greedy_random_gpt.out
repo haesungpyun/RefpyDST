@@ -1,4 +1,5 @@
 nohup: ignoring input
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_0_shot.out
 /homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
@@ -8,11 +9,17 @@ nohup: ignoring input
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 /home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py:326: UserWarning: This script is deprecated. Please use the `run_codex_experiment.py` script instead.
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/sql_greedy_random_gpt.out
+=======
+/home/haesungpyun/anaconda3/envs/refpydst/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py:326: UserWarning: This script is deprecated. Please use the `run_codex_experiment.py` script instead.
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
   warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
 wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.17.7 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_0_shot.out
 wandb: Run data is saved locally in /homehaesungpyun/my_refpydst/wandb/run-20240503_022250-dvgw21ba
 =======
@@ -79,13 +86,22 @@ reading surface forms from ontology.json: 100%|██████████| 3
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': -0.0022191651136000004}
 few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
 =======
+=======
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240826_134422-4zpvben2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run -runs-preliminary-prompt_format_greedy-sql_gpt
+wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/4zpvben2
 mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:49, 54.97it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:23, 114.98it/s]mapping supervised_set surface forms...:   2%|▏         | 41/2731 [00:00<00:24, 111.96it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 247.80it/s]mapping supervised_set surface forms...:   8%|▊         | 205/2731 [00:01<00:16, 157.77it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:17, 142.91it/s]mapping supervised_set surface forms...:   9%|▉         | 240/2731 [00:01<00:20, 121.78it/s]mapping supervised_set surface forms...:   9%|▉         | 251/2731 [00:01<00:27, 89.03it/s] mapping supervised_set surface forms...:  13%|█▎        | 368/2731 [00:02<00:09, 241.45it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 323.25it/s]mapping supervised_set surface forms...:  18%|█▊        | 498/2731 [00:02<00:07, 280.34it/s]mapping supervised_set surface forms...:  24%|██▍       | 660/2731 [00:02<00:04, 508.36it/s]mapping supervised_set surface forms...:  27%|██▋       | 735/2731 [00:02<00:03, 530.37it/s]mapping supervised_set surface forms...:  32%|███▏      | 883/2731 [00:02<00:02, 730.40it/s]mapping supervised_set surface forms...:  36%|███▌      | 977/2731 [00:02<00:02, 758.99it/s]mapping supervised_set surface forms...:  39%|███▉      | 1068/2731 [00:03<00:02, 576.61it/s]mapping supervised_set surface forms...:  42%|████▏     | 1143/2731 [00:03<00:03, 445.40it/s]mapping supervised_set surface forms...:  50%|████▉     | 1353/2731 [00:03<00:01, 729.86it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1457/2731 [00:03<00:02, 634.50it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1544/2731 [00:04<00:02, 451.77it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:01, 573.85it/s]mapping supervised_set surface forms...:  68%|██████▊   | 1849/2731 [00:04<00:01, 736.21it/s]mapping supervised_set surface forms...:  71%|███████▏  | 1951/2731 [00:04<00:01, 586.49it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2177/2731 [00:04<00:00, 827.89it/s]mapping supervised_set surface forms...:  84%|████████▎ | 2287/2731 [00:05<00:01, 298.43it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2367/2731 [00:06<00:01, 312.74it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2564/2731 [00:06<00:00, 471.85it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:06<00:00, 430.99it/s]
 reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 82.57it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 64.17it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  7.95it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:03<00:00,  7.67it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:03<00:00, 10.31it/s]
 0it [00:00, ?it/s]1it [00:01,  1.24s/it]2it [00:01,  1.12it/s]3it [00:02,  1.31it/s]4it [00:03,  1.16it/s]5it [00:04,  1.36it/s]6it [00:05,  1.16it/s]7it [00:05,  1.29it/s]8it [00:06,  1.34it/s]9it [00:07,  1.31it/s]
 few-shot completions: {'': 0}
 few-shot best completion: 
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/sql_greedy_random_gpt.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 0th example. PMUL3470.json_turn_0
 system response: 
 user response: i am looking for a specific hotel , its name is express by holiday inn cambridge
@@ -31020,6 +31036,7 @@ accuracy of turn 13 is 0/4 = 0.0000
 accuracy of turn 14 is 0/2 = 0.0000
 accuracy of turn 15 is 0/2 = 0.0000
 accuracy of turn 16 is 0/1 = 0.0000
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/5p_0_shot.out
 
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]
@@ -31041,6 +31058,8 @@ calculating slot-level F1: 100%|██████████| 1447/1447 [00:00
 1447it [00:00, 270884.08it/s]
 wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/table4/5p/bm25/split_v1_10_all_sim_div_0503_1122)... Done. 0.1s
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]calculating slot-level F1: 100%|██████████| 1447/1447 [00:00<00:00, 171653.64it/s]
 0it [00:00, ?it/s]1447it [00:00, 219348.65it/s]
 0it [00:00, ?it/s]1447it [00:00, 159266.22it/s]
@@ -31048,7 +31067,10 @@ wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/t
 0it [00:00, ?it/s]1447it [00:00, 151252.50it/s]
 0it [00:00, ?it/s]1447it [00:00, 179629.97it/s]
 wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/preliminary/prompt_format_greedy/sql_gpt_0826_1344)... Done. 0.1s
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/sql_greedy_random_gpt.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:

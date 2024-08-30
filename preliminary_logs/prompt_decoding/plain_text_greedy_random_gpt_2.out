@@ -1,9 +1,13 @@
 nohup: ignoring input
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 /homehaesungpyun/anaconda3/envs/torch2.1_clone/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
 =======
 /home/haesungpyun/anaconda3/envs/refpydst/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+/home/haesungpyun/anaconda3/envs/refpydst/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
 /home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py:323: UserWarning: This script is deprecated. Please use the `run_codex_experiment.py` script instead.
   warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
@@ -11,6 +15,7 @@ wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force 
 wandb: wandb version 0.17.7 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 wandb: Run data is saved locally in /homehaesungpyun/my_refpydst/wandb/run-20240520_155650-0tqjxe2a
 =======
@@ -80,13 +85,22 @@ reading surface forms from ontology.json: 100%|██████████| 3
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': -0.00427362695877}
 few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
 =======
+=======
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240825_194939-fmarjdnp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run -runs-preliminary-prompt_format-plain_text_gpt
+wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/fmarjdnp
 mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 7/2731 [00:00<00:52, 52.36it/s]mapping supervised_set surface forms...:   1%|          | 31/2731 [00:00<00:22, 122.54it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:07, 363.32it/s]mapping supervised_set surface forms...:   8%|▊         | 215/2731 [00:00<00:10, 250.15it/s]mapping supervised_set surface forms...:   9%|▊         | 237/2731 [00:01<00:13, 184.54it/s]mapping supervised_set surface forms...:   9%|▉         | 254/2731 [00:01<00:16, 152.82it/s]mapping supervised_set surface forms...:  16%|█▌        | 442/2731 [00:01<00:05, 438.86it/s]mapping supervised_set surface forms...:  19%|█▊        | 508/2731 [00:01<00:05, 403.64it/s]mapping supervised_set surface forms...:  25%|██▍       | 670/2731 [00:01<00:03, 623.87it/s]mapping supervised_set surface forms...:  32%|███▏      | 883/2731 [00:01<00:01, 938.02it/s]mapping supervised_set surface forms...:  38%|███▊      | 1042/2731 [00:01<00:01, 1015.36it/s]mapping supervised_set surface forms...:  43%|████▎     | 1166/2731 [00:02<00:02, 740.85it/s] mapping supervised_set surface forms...:  52%|█████▏    | 1418/2731 [00:02<00:01, 1075.77it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1564/2731 [00:02<00:01, 624.85it/s] mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:03<00:01, 693.46it/s]mapping supervised_set surface forms...:  69%|██████▉   | 1878/2731 [00:03<00:00, 879.02it/s]mapping supervised_set surface forms...:  74%|███████▎  | 2009/2731 [00:03<00:01, 712.45it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2177/2731 [00:03<00:00, 847.45it/s]mapping supervised_set surface forms...:  84%|████████▍ | 2294/2731 [00:04<00:01, 308.78it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2379/2731 [00:04<00:01, 339.41it/s]mapping supervised_set surface forms...:  94%|█████████▎| 2555/2731 [00:04<00:00, 484.55it/s]mapping supervised_set surface forms...:  98%|█████████▊| 2680/2731 [00:05<00:00, 581.89it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:05<00:00, 543.84it/s]
 reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 71.11it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 58.41it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  7.37it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:03<00:00,  7.19it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:03<00:00,  9.62it/s]
 0it [00:00, ?it/s]1it [00:00,  1.08it/s]2it [00:01,  1.30it/s]3it [00:02,  1.32it/s]4it [00:02,  1.46it/s]5it [00:03,  1.39it/s]6it [00:04,  1.32it/s]7it [00:05,  1.34it/s]8it [00:05,  1.40it/s]9it [00:06,  1.21it/s]
 few-shot completions: {"            {'hotel-name': 'express by holiday inn cambridge'}": -0.006266880714279999}
 few-shot best completion: {'hotel-name': 'express by holiday inn cambridge'}
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 0th example. PMUL3470.json_turn_0
 system response: 
 user response: i am looking for a specific hotel , its name is express by holiday inn cambridge
@@ -242,6 +256,7 @@ gold states: {'hotel-internet': 'yes',
 few-shot completions: {"            {'hotel-area': 'south', 'hotel-stars': '4'}": -0.3712299552343}
 few-shot best completion: {'hotel-area': 'south', 'hotel-stars': '4'}
 this is the 8th example. MUL0602.json_turn_2
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 9it [00:18,  1.67s/it]
@@ -253,6 +268,9 @@ this is the 8th example. MUL0602.json_turn_2
 =======
 system response: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: sorry , the hotel i am looking for also needs to be in the south area and have a 4 star rating . could you suggest anything that fills those requirement -s too ?
 pred turn change: {'hotel-area': 'south', 'hotel-stars': '4'}
 gold turn change: {'hotel-area': 'south', 'hotel-name': '[DELETE]', 'hotel-stars': '4'}
@@ -437,6 +455,7 @@ gold states: {'hotel-area': 'south',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 15it [00:31,  2.18s/it]
 16it [00:32,  2.01s/it]
@@ -451,6 +470,10 @@ few-shot best completion: train = agent.find_train(book_people=4)
 few-shot completions: {"            {'train-book people': '4'}": -0.8653226860220001}
 few-shot best completion: {'train-book people': '4'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-book people': '4'}": -0.8653226860220001}
+few-shot best completion: {'train-book people': '4'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 14th example. MUL0602.json_turn_8
 system response: the price is 13.20 pounds and the travel time is 50 minutes .
 user response: book 4 seats for me please .
@@ -624,6 +647,7 @@ pred states: {'hotel-area': 'south',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'expensive',
  'hotel-type': 'hotel'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 22it [00:43,  1.89s/it]
@@ -635,6 +659,9 @@ pred states: {'hotel-area': 'south',
 =======
 gold states: {'hotel-area': 'south',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'hotel-area': 'south',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'friday',
  'hotel-book people': '3',
  'hotel-book stay': '5',
@@ -807,6 +834,7 @@ gold states: {'taxi-leaveat': '10:30'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.taxi = agent.find_taxi(leave_from="cambridge belfy", destination="cambridge shop")': -0.84621357598535}
 
@@ -823,6 +851,10 @@ few-shot completions: {'    agent.state.taxi = agent.find_taxi(leave_from="cambr
 few-shot completions: {"            {'taxi-departure': 'cambridge belfy', 'taxi-destination': 'cambridge shop'}": -0.8250545028762399}
 few-shot best completion: {'taxi-departure': 'cambridge belfy', 'taxi-destination': 'cambridge shop'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'taxi-departure': 'cambridge belfy', 'taxi-destination': 'cambridge shop'}": -0.8250545028762399}
+few-shot best completion: {'taxi-departure': 'cambridge belfy', 'taxi-destination': 'cambridge shop'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 27th example. SNG0019.json_turn_1
 system response: i would love to help you with that . where would you like to be picked up , and where are you going ?
 user response: i would like to be picked up at the cambridge belfy and go to the cambridge shop .
@@ -986,6 +1018,7 @@ pred turn change: {'restaurant-book day': 'tuesday',
 gold turn change: {'restaurant-book day': 'tuesday',
  'restaurant-book people': '1',
  'restaurant-book time': '20:00'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 37it [01:10,  1.84s/it]
@@ -999,6 +1032,9 @@ gold turn change: {'restaurant-book day': 'tuesday',
 =======
 pred states: {'restaurant-area': 'dontcare',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'dontcare',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'tuesday',
  'restaurant-book people': '1',
  'restaurant-book time': '20:00',
@@ -1184,6 +1220,7 @@ system response: booking was successful . reference number is : kpbdlexw . anyth
 user response: yes , i need to find a train from leicester to get to the hotel .
 pred turn change: {'train-departure': 'leicester'}
 gold turn change: {'train-departure': 'leicester'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 45it [01:23,  1.78s/it]
@@ -1197,6 +1234,10 @@ gold turn change: {'train-departure': 'leicester'}
 pred states: {'hotel-area': 'dontcare',
  'hotel-book day': 'saturday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book people': '4',
  'hotel-book stay': '4',
  'hotel-internet': 'yes',
@@ -1396,6 +1437,7 @@ gold states: {'train-arriveby': '16:45',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.attraction = agent.find_attraction(area="centre")': -0.0527698107945}
 few-shot best completion: attraction = agent.find_attraction(area="centre")
@@ -1410,11 +1452,16 @@ this is the 51th example. PMUL1159.json_turn_3
 58it [01:45,  1.62s/it]
 59it [01:47,  1.78s/it]system response: the train id is tr3387 and the price is 75.10 pounds per ticket . would you like me to book you a ticket ?
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 few-shot completions: {"            {'attraction-area': 'centre'}": -0.06579409797915}
 few-shot best completion: {'attraction-area': 'centre'}
 52it [00:40,  1.28it/s]53it [00:41,  1.32it/s]54it [00:42,  1.34it/s]55it [00:42,  1.40it/s]56it [00:43,  1.47it/s]57it [00:44,  1.38it/s]58it [00:45,  1.23it/s]59it [00:45,  1.22it/s]60it [00:46,  1.24it/s]this is the 51th example. PMUL1159.json_turn_3
 system response: the train id is tr3387 and the price is 75.10 pounds per ticket . would you like me to book you a ticket ?
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: no but i need an attraction in the center part of town .
 pred turn change: {'attraction-area': 'centre'}
 gold turn change: {'attraction-area': 'centre'}
@@ -1586,6 +1633,7 @@ few-shot best completion: {'hotel-parking': 'yes', 'hotel-pricerange': 'moderate
 this is the 59th example. PMUL2748.json_turn_3
 system response: actually , there are 64 star guest houses in the east . do you have a price preference ?
 user response: i need 1 that is moderate -ly priced and does it have free parking ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 60it [01:49,  1.90s/it]
@@ -1604,6 +1652,9 @@ user response: i need 1 that is moderate -ly priced and does it have free parkin
 =======
 pred turn change: {'hotel-parking': 'yes', 'hotel-pricerange': 'moderate'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-parking': 'yes', 'hotel-pricerange': 'moderate'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-area': 'east', 'hotel-parking': 'yes'}
 pred states: {'hotel-area': 'east',
  'hotel-parking': 'yes',
@@ -1785,6 +1836,7 @@ gold states: {'restaurant-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(destination="leicester", arrive_by_time="10:15")': -1.2984825876504003}
 few-shot best completion: train = agent.find_train(destination="leicester", arrive_by_time="10:15")
@@ -1802,6 +1854,11 @@ few-shot completions: {"            {'train-arriveby': '10:15', 'train-destinati
 few-shot best completion: {'train-arriveby': '10:15', 'train-destination': 'leicester'}
 this is the 68th example. PMUL0689.json_turn_4
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-arriveby': '10:15', 'train-destination': 'leicester'}": -2.2674656964363002}
+few-shot best completion: {'train-arriveby': '10:15', 'train-destination': 'leicester'}
+this is the 68th example. PMUL0689.json_turn_4
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: the phone number is 01223324033 .
 user response: great . i am also looking for a train departing leicester and arriving before 10:15 at my destination .
 pred turn change: {'train-arriveby': '10:15', 'train-destination': 'leicester'}
@@ -1969,6 +2026,7 @@ pred states: {'attraction-area': 'west',
  'attraction-type': 'museum',
  'train-arriveby': '19:00',
  'train-destination': 'cambridge'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 77it [02:17,  1.63s/it]
@@ -1985,6 +2043,9 @@ pred states: {'attraction-area': 'west',
 =======
 gold states: {'attraction-area': 'west',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'attraction-area': 'west',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'museum',
  'train-arriveby': '19:00',
  'train-destination': 'cambridge'}
@@ -2168,6 +2229,7 @@ gold states: {'hotel-area': 'north',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 88it [02:34,  1.62s/it]
 89it [02:36,  1.74s/it]
@@ -2182,6 +2244,10 @@ few-shot best completion: hotel = agent.find_hotel()  #
 few-shot completions: {"            {'hotel-type': 'hotel'}": -0.31000091676130004}
 few-shot best completion: {'hotel-type': 'hotel'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-type': 'hotel'}": -0.31000091676130004}
+few-shot best completion: {'hotel-type': 'hotel'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 87th example. SNG0783.json_turn_2
 system response: we have 2 hotel -s and 8 guest houses that match your needs . do you have additional requirement -s ?
 user response: could you book me into 1 of the 2 hotel -s please .
@@ -2357,6 +2423,7 @@ gold turn change: {'hotel-book day': 'saturday',
  'hotel-book people': '1',
  'hotel-book stay': '4',
  'hotel-name': 'limehouse'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 95it [02:47,  1.86s/it]
@@ -2369,6 +2436,9 @@ gold turn change: {'hotel-book day': 'saturday',
 =======
 pred states: {'hotel-area': 'north',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'north',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'saturday',
  'hotel-book people': '1',
  'hotel-book stay': '4',
@@ -2560,6 +2630,7 @@ few-shot best completion: {'restaurant-area': 'east'}
 this is the 101th example. PMUL0858.json_turn_2
 system response: i show 11 restaurant -s that serve british food . do you have a certain price range or area ?
 user response: it should be in the east .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred turn change: {'restaurant-area': 'east', 'restaurant-food': 'british'}
 
@@ -2573,6 +2644,10 @@ pred turn change: {'restaurant-area': 'east', 'restaurant-food': 'british'}
 pred turn change: {'restaurant-area': 'east'}
 gold turn change: {'restaurant-area': 'east'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'east'}
+gold turn change: {'restaurant-area': 'east'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {'restaurant-area': 'east', 'restaurant-food': 'british'}
 gold states: {'restaurant-area': 'east', 'restaurant-food': 'british'}
 
@@ -2742,6 +2817,7 @@ gold states: {'restaurant-area': 'east',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 108it [03:09,  1.58s/it]
 109it [03:11,  1.74s/it]
@@ -2758,6 +2834,10 @@ few-shot best completion: train = agent.find_train(day="wednesday", leave_from="
 few-shot completions: {"            {'train-day': 'wednesday', 'train-departure': 'peterborough'}": -0.36097983033257997}
 few-shot best completion: {'train-day': 'wednesday', 'train-departure': 'peterborough'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-day': 'wednesday', 'train-departure': 'peterborough'}": -0.36097983033257997}
+few-shot best completion: {'train-day': 'wednesday', 'train-departure': 'peterborough'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 107th example. PMUL1917.json_turn_0
 system response: 
 user response: yes i am looking for a train that departs on wednesday from peterborough .
@@ -2925,6 +3005,7 @@ gold states: {'hotel-book day': 'wednesday',
  'train-destination': 'cambridge',
  'train-leaveat': '13:00'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 115it [03:21,  1.68s/it]
 116it [03:23,  1.60s/it]
@@ -2936,6 +3017,8 @@ gold states: {'hotel-book day': 'wednesday',
 122it [03:33,  1.69s/it]
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 =====================wrong!=======================
 
 
@@ -3123,6 +3206,7 @@ gold states: {'hotel-area': 'south',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(leave_from="cambridge", day="saturday")': -0.5678758968926}
 
@@ -3136,6 +3220,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(leave_from="cam
 few-shot completions: {"            {'train-departure': 'cambridge', 'train-day': 'saturday'}": -0.2719625684116}
 few-shot best completion: {'train-departure': 'cambridge', 'train-day': 'saturday'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-departure': 'cambridge', 'train-day': 'saturday'}": -0.2719625684116}
+few-shot best completion: {'train-departure': 'cambridge', 'train-day': 'saturday'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 122th example. MUL0754.json_turn_5
 123it [01:40,  1.07it/s]124it [01:41,  1.10it/s]125it [01:41,  1.20it/s]126it [01:42,  1.27it/s]127it [01:43,  1.31it/s]128it [01:43,  1.35it/s]129it [01:44,  1.43it/s]130it [01:45,  1.40it/s]system response: rosa s now has a room reserved for your party for 2 nights . your reference number is uxr0pyqd .
 user response: thank you i also need a train departing from cambridge on saturday .
@@ -3314,6 +3402,7 @@ gold states: {'restaurant-food': 'italian',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.update({})  #': -0.0027318057480000004}
 few-shot best completion: update({})  #
@@ -3331,6 +3420,11 @@ few-shot completions: {'            {}': -0.00266763991}
 few-shot best completion: {}
 this is the 128th example. SNG0566.json_turn_2
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {'            {}': -0.00266763991}
+few-shot best completion: {}
+this is the 128th example. SNG0566.json_turn_2
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: certainly , the phone number at zizzi cambridge is 01223365599 . may i help with anything else ?
 user response: no i think that s all i need . thanks for the help !
 pred turn change: {}
@@ -3502,6 +3596,7 @@ few-shot best completion: {}
 this is the 136th example. PMUL4482.json_turn_7
 system response: the address and postcode is cb28rj 151 hills road .
 user response: great thank you for your help thats all i needed today .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 137it [03:59,  1.70s/it]
@@ -3522,6 +3617,9 @@ user response: great thank you for your help thats all i needed today .
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'attraction-name': 'christ college',
  'attraction-type': 'college',
@@ -3705,6 +3803,7 @@ gold states: {'hotel-name': 'acorn guest house',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 145it [04:13,  1.72s/it]
 146it [04:15,  1.73s/it]
@@ -3720,6 +3819,10 @@ few-shot best completion: update({})  #
 few-shot completions: {"            {'train-leaveat': '19:35'}": -0.233334243773}
 few-shot best completion: {'train-leaveat': '19:35'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-leaveat': '19:35'}": -0.233334243773}
+few-shot best completion: {'train-leaveat': '19:35'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 144th example. MUL2173.json_turn_6
 system response: there are 3 trains available . the earliest leaves at 19:35 . would that work for you ?
 user response: yes , that 1 sounds like it will work . can you tell me the train id and the total travel time ?
@@ -3886,6 +3989,7 @@ few-shot completions: {"            {'restaurant-name': 'restaurant alimentum', 
 few-shot best completion: {'restaurant-name': 'restaurant alimentum', 'restaurant-book time': '14:45', 'restaurant-book day': 'friday', 'restaurant-book people': '3'}
 this is the 152th example. PMUL4302.json_turn_1
 system response: i have 2 options available pizza hut cherry hinton serving italian and restaurant alimentum which serves modern european . which would you prefer ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 153it [04:26,  1.71s/it]
@@ -3900,6 +4004,10 @@ pred turn change: {'restaurant-area': 'south',
 user response: restaurant alimentum sounds interesting . can you get me a table for 3 at 14:45 on friday ?
 pred turn change: {'restaurant-book day': 'friday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: restaurant alimentum sounds interesting . can you get me a table for 3 at 14:45 on friday ?
+pred turn change: {'restaurant-book day': 'friday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book people': '3',
  'restaurant-book time': '14:45',
  'restaurant-name': 'restaurant alimentum'}
@@ -4066,6 +4174,7 @@ few-shot completions: {"            {'taxi-destination': 'leicester'}": -0.90294
 few-shot best completion: {'taxi-destination': 'leicester'}
 this is the 158th example. PMUL0716.json_turn_1
 system response: sure , i can help you find a taxi . first i need a specific location the taxi will pick you up at .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 159it [04:36,  1.64s/it]
@@ -4084,6 +4193,10 @@ pred turn change: {'taxi-departure': 'centre',
 user response: im sorry , my wife was confused on what we were doing , disregard that last request . i really need a train from cambridge to leicester
 pred turn change: {'taxi-destination': 'leicester'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: im sorry , my wife was confused on what we were doing , disregard that last request . i really need a train from cambridge to leicester
+pred turn change: {'taxi-destination': 'leicester'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'taxi-leaveat': '[DELETE]',
  'train-departure': 'cambridge',
  'train-destination': 'leicester'}
@@ -4264,6 +4377,7 @@ gold states: {'restaurant-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="british")': -0.0627768269335}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="british")
@@ -4280,6 +4394,11 @@ few-shot completions: {"            {'restaurant-food': 'british'}": -0.30870812
 few-shot best completion: {'restaurant-food': 'british'}
 this is the 166th example. PMUL0716.json_turn_9
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-food': 'british'}": -0.3087081214194}
+few-shot best completion: {'restaurant-food': 'british'}
+this is the 166th example. PMUL0716.json_turn_9
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: i have many options . what type of food interests you ?
 user response: i would like to try some british food , i think .
 pred turn change: {'restaurant-food': 'british'}
@@ -4451,6 +4570,7 @@ gold states: {'train-arriveby': '16:45',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="indian")': -0.0405625156657}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="indian")
@@ -4465,6 +4585,11 @@ few-shot completions: {"            {'restaurant-food': 'indian'}": -0.114987860
 few-shot best completion: {'restaurant-food': 'indian'}
 this is the 173th example. MUL0326.json_turn_3
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-food': 'indian'}": -0.1149878609325}
+few-shot best completion: {'restaurant-food': 'indian'}
+this is the 173th example. MUL0326.json_turn_3
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: that s train tr8860 . travel time is 163 minutes . the ticket costs 75.10 pounds . can i help with anything else ?
 user response: i am looking for a place to dine , preferably an indian restaurant .
 pred turn change: {'restaurant-food': 'indian'}
@@ -4632,6 +4757,7 @@ pred states: {'restaurant-area': 'centre',
  'train-arriveby': '16:45',
  'train-day': 'wednesday',
  'train-destination': 'birmingham new street'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 179it [05:14,  2.28s/it]
@@ -4646,6 +4772,9 @@ pred states: {'restaurant-area': 'centre',
 =======
 gold states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'wednesday',
  'restaurant-book people': '1',
  'restaurant-book time': '11:15',
@@ -4817,6 +4946,7 @@ system response: they all have free parking and free wifi .
 user response: i would like to book 1 for 4 people for 3 nights starting sunday . will that be possible ?
 pred turn change: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '3'}
 gold turn change: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '3'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 188it [05:29,  1.80s/it]
@@ -4829,6 +4959,9 @@ gold turn change: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-
 =======
 pred states: {'hotel-area': 'west',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'west',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'sunday',
  'hotel-book people': '4',
  'hotel-book stay': '3',
@@ -5027,6 +5160,7 @@ system response:
 user response: can you help me with finding a restaurant called backstreet bistro ?
 pred turn change: {'restaurant-name': 'backstreet bistro'}
 gold turn change: {'restaurant-name': 'backstreet bistro'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 195it [05:42,  1.71s/it]
@@ -5039,6 +5173,9 @@ gold turn change: {'restaurant-name': 'backstreet bistro'}
 =======
 pred states: {'restaurant-name': 'backstreet bistro'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-name': 'backstreet bistro'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold states: {'restaurant-name': 'backstreet bistro'}
 
 =====================correct!=======================
@@ -5223,6 +5360,7 @@ few-shot completions: {'            {}': -0.07296559799999999}
 few-shot best completion: {}
 this is the 201th example. MUL2319.json_turn_7
 system response: booked car type is white volkswagen and the contact number 07087762820 .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 202it [05:56,  2.14s/it]
@@ -5247,6 +5385,10 @@ pred turn change: {'attraction-area': 'east',
 user response: fantastic , thank you very much .
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: fantastic , thank you very much .
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'attraction-area': 'east',
  'attraction-name': 'cherry hinton water play',
@@ -5438,6 +5580,7 @@ gold states: {'attraction-area': 'dontcare', 'attraction-type': 'museum'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 212it [06:15,  1.90s/it]
 213it [06:17,  1.82s/it]
@@ -5452,6 +5595,10 @@ few-shot best completion: train = agent.find_train(destination="norwich", day="m
 few-shot completions: {"            {'attraction-name': 'cafe jello gallery', 'attraction-area': 'west', 'train-departure': 'cambridge', 'train-destination': 'norwich', 'train-day': 'monday', 'train-arriveby': '14:15'}": -1.0674991817140504}
 few-shot best completion: {'attraction-name': 'cafe jello gallery', 'attraction-area': 'west', 'train-departure': 'cambridge', 'train-destination': 'norwich', 'train-day': 'monday', 'train-arriveby': '14:15'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'attraction-name': 'cafe jello gallery', 'attraction-area': 'west', 'train-departure': 'cambridge', 'train-destination': 'norwich', 'train-day': 'monday', 'train-arriveby': '14:15'}": -1.0674991817140504}
+few-shot best completion: {'attraction-name': 'cafe jello gallery', 'attraction-area': 'west', 'train-departure': 'cambridge', 'train-destination': 'norwich', 'train-day': 'monday', 'train-arriveby': '14:15'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 211th example. PMUL4984.json_turn_3
 system response: how about cafe jello gallery in the west ?
 user response: that sounds good . what area is it in ? i am also looking for a train leaving cambridge on monday going to norwich . i would like to arrive by 14:15 . can you help me ?
@@ -5633,6 +5780,7 @@ few-shot best completion: {'restaurant-pricerange': 'expensive', 'restaurant-are
 this is the 218th example. MUL1472.json_turn_3
 system response: it will be 10.24 pounds .
 user response: can you tell me the travel time as well please ? also , i am looking for an expensive restaurant in the centre for lunch .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 219it [06:26,  1.61s/it]
@@ -5650,6 +5798,9 @@ user response: can you tell me the travel time as well please ? also , i am look
 =======
 pred turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-pricerange': 'expensive',
@@ -5831,6 +5982,7 @@ few-shot best completion: {'restaurant-food': 'scandinavian', 'restaurant-area':
 this is the 224th example. PMUL4431.json_turn_1
 system response: we have lots to explore ! i can help you find 1 , if you would like .
 user response: great ! the restaurant should serve scandinavian food and should be in the east .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 225it [06:39,  2.46s/it]
@@ -5842,6 +5994,9 @@ user response: great ! the restaurant should serve scandinavian food and should 
 =======
 pred turn change: {'restaurant-area': 'east', 'restaurant-food': 'scandinavian'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'east', 'restaurant-food': 'scandinavian'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-area': 'east', 'restaurant-food': 'scandinavian'}
 pred states: {'restaurant-area': 'east', 'restaurant-food': 'scandinavian'}
 gold states: {'restaurant-area': 'east', 'restaurant-food': 'scandinavian'}
@@ -6003,6 +6158,7 @@ pred states: {'restaurant-area': 'east',
  'train-day': 'wednesday',
  'train-departure': 'cambridge',
  'train-destination': 'stevenage'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 231it [06:50,  1.74s/it]
@@ -6017,6 +6173,9 @@ gold states: {'restaurant-area': 'east',
 =======
 231it [03:10,  1.26it/s]232it [03:10,  1.30it/s]233it [03:12,  1.11it/s]234it [03:13,  1.03it/s]235it [03:13,  1.10it/s]236it [03:14,  1.17it/s]237it [03:15,  1.11it/s]238it [03:16,  1.12it/s]gold states: {'restaurant-area': 'east',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+231it [03:10,  1.26it/s]232it [03:10,  1.30it/s]233it [03:12,  1.11it/s]234it [03:13,  1.03it/s]235it [03:13,  1.10it/s]236it [03:14,  1.17it/s]237it [03:15,  1.11it/s]238it [03:16,  1.12it/s]gold states: {'restaurant-area': 'east',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'tuesday',
  'restaurant-book people': '1',
  'restaurant-book time': '13:15',
@@ -6170,6 +6329,7 @@ few-shot best completion: {'restaurant-area': 'north', 'restaurant-food': 'briti
 this is the 237th example. PMUL0142.json_turn_6
 system response: i have 5 to choose from . would you prefer centre , west , or north area ?
 user response: i want a place in the east , but if there is none , are there any british expensive place -s in the north ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 238it [07:05,  2.08s/it]
@@ -6189,6 +6349,10 @@ user response: i want a place in the east , but if there is none , are there any
 pred turn change: {'restaurant-area': 'north',
  'restaurant-food': 'british',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'north',
+ 'restaurant-food': 'british',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-pricerange': 'expensive'}
 gold turn change: {'restaurant-area': 'east|north', 'restaurant-food': 'eastern european|british'}
 pred states: {'hotel-area': 'east',
@@ -6357,6 +6521,7 @@ system response: there are 2 swimming pools but i will recommend the jesus green
 user response: yes , i need a place to stay with free wifi and in the north as well .
 pred turn change: {'hotel-area': 'north', 'hotel-internet': 'yes'}
 gold turn change: {'hotel-area': 'north', 'hotel-internet': 'yes'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred states: {'attraction-area': 'north', 'hotel-area': 'north', 'hotel-internet': 'yes'}
 
@@ -6368,12 +6533,17 @@ pred states: {'attraction-area': 'north', 'hotel-area': 'north', 'hotel-internet
 249it [07:26,  2.16s/it]
 250it [07:27,  2.05s/it]gold states: {'attraction-area': 'north',
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {'attraction-area': 'north',
  'attraction-type': 'swimming pool',
  'hotel-area': 'north',
  'hotel-internet': 'yes'}
 gold states: {'attraction-area': 'north',
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'swimming pool',
  'hotel-area': 'north',
  'hotel-internet': 'yes'}
@@ -6591,6 +6761,7 @@ gold states: {'attraction-area': 'north',
  'taxi-destination': 'jesus green outdoor pool',
  'taxi-leaveat': '03:30'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 251it [07:29,  1.91s/it]
 252it [07:31,  1.95s/it]
@@ -6603,6 +6774,8 @@ gold states: {'attraction-area': 'north',
 259it [07:43,  1.63s/it]
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 =====================wrong!=======================
 
 
@@ -6778,6 +6951,7 @@ pred states: {'hotel-area': 'east',
  'train-arriveby': '10:00',
  'train-day': 'sunday',
  'train-departure': 'birmingham new street',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-destination': 'cambridge'}
 
@@ -6793,6 +6967,11 @@ pred states: {'hotel-area': 'east',
  'train-leaveat': '07:45'}
 gold states: {'hotel-area': 'east',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '07:45'}
+gold states: {'hotel-area': 'east',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-stars': '4',
  'train-arriveby': '10:00',
  'train-day': 'sunday',
@@ -6989,6 +7168,7 @@ few-shot completions: {"            {'hotel-name': 'lensfield hotel'}": -0.78720
 few-shot best completion: {'hotel-name': 'lensfield hotel'}
 this is the 266th example. SNG1043.json_turn_1
 system response: i have 1 hotel that meets your needs . it s the lensfield hotel that offers free wifi and parking . they have a 3 star rating . would you like more info on it ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 267it [07:56,  1.64s/it]
@@ -7004,6 +7184,10 @@ pred turn change: {'hotel-area': 'south', 'hotel-name': 'lensfield hotel', 'hote
 user response: what is the price of the lensfield ?
 pred turn change: {'hotel-name': 'lensfield hotel'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: what is the price of the lensfield ?
+pred turn change: {'hotel-name': 'lensfield hotel'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-name': 'lensfield hotel'}
 pred states: {'hotel-area': 'south', 'hotel-name': 'lensfield hotel', 'hotel-parking': 'no'}
 gold states: {'hotel-area': 'south',
@@ -7167,6 +7351,7 @@ system response: i have booked 8 tickets for you on the train leaving at 7:54 an
 user response: thank you , i am also looking for a north indian restaurant in the centre area .
 pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'north indian'}
 gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'north indian'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 275it [08:10,  1.76s/it]
@@ -7179,6 +7364,9 @@ gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'north indian
 =======
 pred states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-food': 'north indian',
  'train-arriveby': '08:45',
  'train-book people': '8',
@@ -7355,6 +7543,7 @@ gold states: {'restaurant-area': 'west',
 few-shot completions: {"            {'restaurant-name': 'cocum', 'restaurant-book time': '12:15', 'restaurant-book day': 'sunday', 'restaurant-book people': 2}": -0.17290315414134}
 few-shot best completion: {'restaurant-name': 'cocum', 'restaurant-book time': '12:15', 'restaurant-book day': 'sunday', 'restaurant-book people': 2}
 this is the 281th example. MUL1655.json_turn_2
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 282it [08:21,  1.70s/it]
@@ -7365,6 +7554,9 @@ this is the 281th example. MUL1655.json_turn_2
 =======
 system response: no it doesnt but the tandoori palace and the cocum does . would you like me to book a table there .
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: no it doesnt but the tandoori palace and the cocum does . would you like me to book a table there .
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: i think i will try the cocum . can i book a table there for 2 on sunday at 12:15 ? and will you please give me the reference # ?
 pred turn change: {'restaurant-book day': 'sunday',
  'restaurant-book people': '2',
@@ -7532,6 +7724,7 @@ system response:
 user response: i need a way to get to cambridge from norwich
 pred turn change: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
 gold turn change: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred states: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
 
@@ -7547,6 +7740,10 @@ pred states: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
 287it [03:56,  1.23it/s]288it [03:57,  1.16it/s]289it [03:58,  1.10it/s]290it [03:59,  1.12it/s]291it [04:00,  1.05it/s]292it [04:01,  1.11it/s]293it [04:02,  1.19it/s]294it [04:02,  1.26it/s]295it [04:03,  1.33it/s]pred states: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
 gold states: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+287it [03:56,  1.23it/s]288it [03:57,  1.16it/s]289it [03:58,  1.10it/s]290it [03:59,  1.12it/s]291it [04:00,  1.05it/s]292it [04:01,  1.11it/s]293it [04:02,  1.19it/s]294it [04:02,  1.26it/s]295it [04:03,  1.33it/s]pred states: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
+gold states: {'train-departure': 'norwich', 'train-destination': 'cambridge'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 =====================correct!=======================
 
@@ -7731,6 +7928,7 @@ system response: will you be needing anything else today ?
 user response: no , that s everything . thanks again .
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 295it [08:45,  1.65s/it]
@@ -7744,6 +7942,9 @@ gold turn change: {}
 =======
 pred states: {'attraction-area': 'west',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-area': 'west',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'college',
  'train-arriveby': '11:30',
  'train-day': 'wednesday',
@@ -7927,6 +8128,7 @@ gold states: {'hotel-area': 'south',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(destination="stansted airport", leave_from="cambridge", day="sunday")': -1.0165518616095999}
 
@@ -7940,6 +8142,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(destination="st
 few-shot completions: {"            {'train-destination': 'stansted airport', 'train-departure': 'cambridge'}": -0.1685992039561}
 few-shot best completion: {'train-destination': 'stansted airport', 'train-departure': 'cambridge'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-destination': 'stansted airport', 'train-departure': 'cambridge'}": -0.1685992039561}
+few-shot best completion: {'train-destination': 'stansted airport', 'train-departure': 'cambridge'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 302th example. PMUL4881.json_turn_7
 system response: of course , i can help with that . what is your destination ?
 user response: i need to go from cambridge to stansted airport .
@@ -8102,6 +8308,7 @@ few-shot best completion: {'train-arriveby': '09:52', 'train-book people': '2', 
 this is the 308th example. MUL1908.json_turn_3
 system response: i have 5 options for you . the latest to arrive would get you there at 09:52 . would that work for you ?
 user response: yes i would like to book for 2 and need the reference number . i am also looking for attractions in the centre , anything to do with multiple sports .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 309it [09:11,  2.12s/it]
@@ -8115,11 +8322,16 @@ user response: yes i would like to book for 2 and need the reference number . i 
  'train-departure': 'stansted airport',
  'train-destination': 'cambridge'}
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred turn change: {'attraction-area': 'centre',
  'attraction-type': 'multiple sports',
  'train-arriveby': '09:52',
  'train-book people': '2'}
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'attraction-area': 'centre',
  'attraction-type': 'multiple sports',
  'train-book people': '2'}
@@ -8295,6 +8507,7 @@ few-shot best completion: {'attraction-postcode': 'unknown'}
 this is the 314th example. MUL1908.json_turn_9
 system response: there is no entrance fee to williams art and antiques . it is a beautiful , free museum . is there anything else i can help you with ?
 user response: can i also get the postcode ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred turn change: {'attraction-area': 'centre',
  'attraction-name': 'williams art and antiques',
@@ -8350,6 +8563,9 @@ pred turn change: {'attraction-area': 'centre',
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'attraction-area': 'centre',
  'attraction-name': 'williams art and antiques',
@@ -8547,6 +8763,7 @@ system response: sure . your booking was successful . the total fee is 12.8 gbp 
 user response: no , that s all i needed help with .
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 322it [09:35,  1.78s/it]
@@ -8561,6 +8778,10 @@ gold turn change: {}
 pred states: {'hotel-area': 'north',
  'hotel-book day': 'monday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'north',
+ 'hotel-book day': 'monday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book people': '1',
  'hotel-book stay': '5',
  'hotel-name': 'kirkwood house',
@@ -8735,6 +8956,7 @@ few-shot best completion: {}
 this is the 329th example. PMUL2382.json_turn_7
 system response: not a problem . your taxi will be a yellow toyota . contact number is 07266630947 .
 user response: thank you that is all i needed .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 330it [09:49,  1.84s/it]
@@ -8756,6 +8978,9 @@ user response: thank you that is all i needed .
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'attraction-area': 'east',
  'attraction-name': 'funky fun house',
@@ -8926,6 +9151,7 @@ system response: will that be all for today ?
 user response: yes . thanks and goodbye .
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 337it [10:01,  1.73s/it]
@@ -8941,6 +9167,9 @@ gold turn change: {}
 =======
 pred states: {'attraction-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-name': 'all saints church',
  'attraction-type': 'architecture',
  'train-book people': '4',
@@ -9129,6 +9358,7 @@ pred states: {'attraction-area': 'north',
  'train-day': 'wednesday',
  'train-departure': 'bishops stortford',
  'train-destination': 'cambridge'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 347it [10:18,  1.73s/it]
@@ -9144,6 +9374,9 @@ WARNING:root:name 'update' is not defined
 =======
 gold states: {'attraction-area': 'north',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'attraction-area': 'north',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'boat',
  'train-arriveby': '11:30',
  'train-day': 'wednesday',
@@ -9305,6 +9538,7 @@ few-shot best completion: {'restaurant-book time': '16:00', 'restaurant-book day
 this is the 354th example. MUL0806.json_turn_4
 system response: i would be happy to book that for you . which day would you like to dine and do you have a preferred time ?
 user response: i would like to dine at 16:00 on friday , please .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 355it [10:33,  1.86s/it]
@@ -9323,6 +9557,9 @@ user response: i would like to dine at 16:00 on friday , please .
 =======
 pred turn change: {'restaurant-book day': 'friday', 'restaurant-book time': '16:00'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-book day': 'friday', 'restaurant-book time': '16:00'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-book day': 'friday', 'restaurant-book time': '16:00'}
 355it [04:59,  1.09it/s]356it [04:59,  1.17it/s]357it [05:00,  1.20it/s]358it [05:01,  1.15it/s]359it [05:02,  1.18it/s]360it [05:03,  1.22it/s]361it [05:03,  1.21it/s]362it [05:04,  1.25it/s]pred states: {'attraction-area': 'south',
  'attraction-type': 'park',
@@ -9486,6 +9723,7 @@ pred states: {'hotel-internet': 'yes',
  'restaurant-area': 'north',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'cheap'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 362it [10:45,  1.74s/it]
@@ -9498,6 +9736,9 @@ pred states: {'hotel-internet': 'yes',
 =======
 gold states: {'hotel-area': 'dontcare',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'hotel-area': 'dontcare',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-internet': 'yes',
  'hotel-name': 'archway house',
  'hotel-parking': 'yes',
@@ -9676,6 +9917,7 @@ gold states: {'hotel-area': 'dontcare',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(arrive_by_time="10:45", leave_from="cambridge")': -0.2472648644917}
 few-shot best completion: train = agent.find_train(arrive_by_time="10:45", leave_from="cambridge")
@@ -9690,6 +9932,11 @@ few-shot completions: {"            {'train-departure': 'cambridge', 'train-arri
 few-shot best completion: {'train-departure': 'cambridge', 'train-arriveby': '10:45'}
 this is the 368th example. MUL0691.json_turn_4
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-departure': 'cambridge', 'train-arriveby': '10:45'}": -0.39170386350859987}
+few-shot best completion: {'train-departure': 'cambridge', 'train-arriveby': '10:45'}
+this is the 368th example. MUL0691.json_turn_4
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: booking was successful at huntingdon marriott hotel starting wednesday . your feference number is : 5nvygfm1 . is there any further assistance needed ?
 user response: yes . i am also looking for a train departing cambridge and arrives by 10:45 .
 pred turn change: {'train-arriveby': '10:45', 'train-departure': 'cambridge'}
@@ -9865,6 +10112,7 @@ gold states: {'hotel-area': 'dontcare',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 374it [11:08,  1.73s/it]
 375it [11:10,  1.79s/it]
@@ -9882,6 +10130,10 @@ few-shot best completion: hotel = agent.find_hotel(name="kirkwood house")
 few-shot completions: {"            {'hotel-name': 'kirkwood house'}": -0.00480787604055}
 few-shot best completion: {'hotel-name': 'kirkwood house'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-name': 'kirkwood house'}": -0.00480787604055}
+few-shot best completion: {'hotel-name': 'kirkwood house'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 373th example. PMUL4076.json_turn_0
 system response: 
 user response: i am looking for information on a hotel called kirkwood house .
@@ -10051,6 +10303,7 @@ gold states: {'train-day': 'saturday',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(destination="norwich", depart_time="08:00", leave_from="cambridge")': -0.9020745369562999}
 
@@ -10065,6 +10318,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(destination="no
 few-shot completions: {"            {'train-leaveat': '08:00', 'train-departure': 'cambridge'}": -1.4229649233863}
 few-shot best completion: {'train-leaveat': '08:00', 'train-departure': 'cambridge'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-leaveat': '08:00', 'train-departure': 'cambridge'}": -1.4229649233863}
+few-shot best completion: {'train-leaveat': '08:00', 'train-departure': 'cambridge'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 383th example. MUL1881.json_turn_2
 system response: we have 16 trains that meet that request do you need to arrive by a certain time ?
 user response: i need it to depart from cambridge after 8:00 and go to norwich .
@@ -10241,6 +10498,7 @@ gold states: {'restaurant-area': 'south',
  'restaurant-food': 'asian oriental',
  'restaurant-pricerange': 'cheap'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 391it [11:37,  1.67s/it]
 392it [11:39,  1.68s/it]
@@ -10250,6 +10508,8 @@ gold states: {'restaurant-area': 'south',
 396it [11:47,  1.98s/it]
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 =====================wrong!=======================
 
 
@@ -10405,6 +10665,7 @@ system response: tomorrow , as in sunday ?
 user response: i want to book it for the same day as the restaurant and the same party .
 pred turn change: {'train-book people': '5', 'train-day': 'saturday', 'train-leaveat': '18:45'}
 gold turn change: {'train-book people': '5', 'train-day': 'saturday'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 397it [11:48,  1.90s/it]
@@ -10417,6 +10678,9 @@ gold turn change: {'train-book people': '5', 'train-day': 'saturday'}
 =======
 pred states: {'restaurant-area': 'south',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'south',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'saturday',
  'restaurant-book people': '5',
  'restaurant-book time': '18:45',
@@ -10589,6 +10853,7 @@ few-shot best completion: {'restaurant-pricerange': 'moderate', 'restaurant-area
 this is the 403th example. PMUL2255.json_turn_5
 system response: your booking at the prezzo was successful . the reference number is ouhskng7 . your table will be reserved for 15 minutes .
 user response: are there any moderate restaurant -s in the same area as the concert hall in the west side of cambridge ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 404it [12:00,  1.68s/it]
@@ -10609,6 +10874,10 @@ user response: are there any moderate restaurant -s in the same area as the conc
 pred turn change: {'restaurant-area': 'west',
  'restaurant-book time': '[DELETE]',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'west',
+ 'restaurant-book time': '[DELETE]',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-pricerange': 'moderate'}
 gold turn change: {}
 pred states: {'attraction-area': 'west',
@@ -10780,6 +11049,7 @@ user response: hi , i am looking for a park in the town centre .
 pred turn change: {'attraction-area': 'centre', 'attraction-type': 'park'}
 gold turn change: {'attraction-area': 'centre', 'attraction-type': 'park'}
 pred states: {'attraction-area': 'centre', 'attraction-type': 'park'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 gold states: {'attraction-area': 'centre', 'attraction-type': 'park'}
 
@@ -10796,6 +11066,10 @@ gold states: {'attraction-area': 'centre', 'attraction-type': 'park'}
 412it [05:48,  1.21it/s]413it [05:49,  1.24it/s]414it [05:50,  1.03it/s]415it [05:51,  1.11it/s]416it [05:52,  1.15it/s]417it [05:52,  1.22it/s]418it [05:53,  1.28it/s]419it [05:54,  1.34it/s]420it [05:55,  1.32it/s]421it [05:56,  1.08it/s]gold states: {'attraction-area': 'centre', 'attraction-type': 'park'}
 
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+412it [05:48,  1.21it/s]413it [05:49,  1.24it/s]414it [05:50,  1.03it/s]415it [05:51,  1.11it/s]416it [05:52,  1.15it/s]417it [05:52,  1.22it/s]418it [05:53,  1.28it/s]419it [05:54,  1.34it/s]420it [05:55,  1.32it/s]421it [05:56,  1.08it/s]gold states: {'attraction-area': 'centre', 'attraction-type': 'park'}
+
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 =====================correct!=======================
 
 
@@ -10974,6 +11248,7 @@ gold states: {'hotel-name': 'arbury lodge guest house'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 421it [12:32,  2.00s/it]
 422it [12:33,  1.85s/it]
@@ -10989,6 +11264,10 @@ few-shot best completion: hotel = agent.find_hotel(book_day="monday", book_peopl
 few-shot completions: {"            {'hotel-name': 'super 5', 'hotel-book people': '8', 'hotel-book stay': '5', 'hotel-book day': 'monday'}": -0.0918284635287}
 few-shot best completion: {'hotel-name': 'super 5', 'hotel-book people': '8', 'hotel-book stay': '5', 'hotel-book day': 'monday'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-name': 'super 5', 'hotel-book people': '8', 'hotel-book stay': '5', 'hotel-book day': 'monday'}": -0.0918284635287}
+few-shot best completion: {'hotel-name': 'super 5', 'hotel-book people': '8', 'hotel-book stay': '5', 'hotel-book day': 'monday'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 420th example. SNG1018.json_turn_1
 system response: i am sorry , but this hotel is not in my records . there is another hotel that is very nice it calls super 5 .
 user response: are you sure , but if not , book the super 5 for 8 people for 5 nights starting monday . i will need the reference number .
@@ -11166,6 +11445,7 @@ pred states: {'attraction-area': 'centre',
  'attraction-type': 'architecture',
  'train-arriveby': '17:58',
  'train-book people': '7',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-day': 'friday'}
 
@@ -11178,12 +11458,17 @@ pred states: {'attraction-area': 'centre',
 435it [12:55,  1.70s/it]
 436it [12:57,  1.66s/it]gold states: {'attraction-area': 'centre',
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-day': 'friday',
  'train-departure': 'kings lynn',
  'train-destination': 'cambridge',
  'train-leaveat': '17:11'}
 gold states: {'attraction-area': 'centre',
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-name': 'old schools',
  'attraction-type': 'architecture',
  'train-arriveby': '17:15',
@@ -11360,6 +11645,7 @@ this is the 436th example. SNG01196.json_turn_0
 system response: 
 user response: i am looking for a restaurant . the restaurant should serve world food and should be in the centre
 pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'world'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 437it [12:58,  1.67s/it]
@@ -11374,6 +11660,9 @@ pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'world'}
 =======
 gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'world'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'world'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {'restaurant-area': 'centre', 'restaurant-food': 'world'}
 gold states: {'restaurant-area': 'centre', 'restaurant-food': 'world'}
 
@@ -11535,6 +11824,7 @@ gold states: {'attraction-name': 'vue cinema',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_day="thursday", book_people=7, book_number_of_days=2)': -0.13545537894383}
 few-shot best completion: hotel = agent.find_hotel(book_day="thursday", book_people=7, book_number_of_days=2)
@@ -11550,6 +11840,11 @@ few-shot completions: {"            {'hotel-book people': '7', 'hotel-book stay'
 few-shot best completion: {'hotel-book people': '7', 'hotel-book stay': '2', 'hotel-area': 'north', 'hotel-pricerange': 'cheap', 'hotel-stars': '4', 'hotel-internet': 'yes', 'hotel-parking': 'yes', 'hotel-book day': 'thursday', 'hotel-name': 'worth house'}
 this is the 445th example. PMUL2594.json_turn_3
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-book people': '7', 'hotel-book stay': '2', 'hotel-area': 'north', 'hotel-pricerange': 'cheap', 'hotel-stars': '4', 'hotel-internet': 'yes', 'hotel-parking': 'yes', 'hotel-book day': 'thursday', 'hotel-name': 'worth house'}": -2.1879962992784807}
+few-shot best completion: {'hotel-book people': '7', 'hotel-book stay': '2', 'hotel-area': 'north', 'hotel-pricerange': 'cheap', 'hotel-stars': '4', 'hotel-internet': 'yes', 'hotel-parking': 'yes', 'hotel-book day': 'thursday', 'hotel-name': 'worth house'}
+this is the 445th example. PMUL2594.json_turn_3
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: no problem , also , vue is located in the city centre . worth house is a cheap -ly priced guest house in the north with a 4 star rating . they provide free internet and parking .
 user response: thank you . please book the hotel for 7 people and 2 nights starting from thursday .
 pred turn change: {'hotel-area': 'north',
@@ -11745,6 +12040,7 @@ pred turn change: {'hotel-internet': 'dontcare', 'hotel-parking': 'dontcare'}
 gold turn change: {'hotel-internet': 'yes', 'hotel-parking': 'yes'}
 pred states: {'hotel-internet': 'dontcare',
  'hotel-name': 'arbury lodge guest house',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'hotel-parking': 'yes'}
 
@@ -11761,6 +12057,10 @@ pred states: {'hotel-internet': 'dontcare',
  'hotel-parking': 'dontcare'}
 gold states: {'hotel-internet': 'yes',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'hotel-parking': 'dontcare'}
+gold states: {'hotel-internet': 'yes',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-name': 'arbury lodge guest house',
  'hotel-parking': 'yes'}
 
@@ -11939,6 +12239,7 @@ few-shot best completion: {'train-departure': 'ely', 'train-destination': 'cambr
 this is the 460th example. PMUL3314.json_turn_4
 system response: where are you heading to and departing from please ?
 user response: i am leaving from ely heading to cambridge .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 461it [13:41,  1.64s/it]
@@ -11958,6 +12259,9 @@ user response: i am leaving from ely heading to cambridge .
 =======
 pred turn change: {'train-departure': 'ely', 'train-destination': 'cambridge'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'train-departure': 'ely', 'train-destination': 'cambridge'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'train-departure': 'ely', 'train-destination': 'cambridge'}
 pred states: {'hotel-area': 'centre',
  'hotel-internet': 'yes',
@@ -12147,6 +12451,7 @@ few-shot best completion: {'restaurant-book time': '19:15', 'restaurant-book day
 this is the 467th example. PMUL2307.json_turn_2
 system response: the galleria meets these requirement -s , would you like a reservation ?
 user response: yes , i would like to book a table for 6 people at 19:15 on monday , please .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 468it [13:53,  1.89s/it]
@@ -12160,6 +12465,9 @@ user response: yes , i would like to book a table for 6 people at 19:15 on monda
 =======
 pred turn change: {'restaurant-book day': 'monday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-book day': 'monday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book people': '6',
  'restaurant-book time': '19:15'}
 gold turn change: {'restaurant-book day': 'monday',
@@ -12323,6 +12631,7 @@ gold states: {'train-arriveby': '21:30',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 475it [14:06,  1.87s/it]
 476it [14:08,  1.81s/it]
@@ -12338,6 +12647,10 @@ few-shot best completion: attraction = agent.find_attraction(name="cambridge art
 few-shot completions: {"            {'attraction-name': 'cambridge artworks'}": -0.1729070723363}
 few-shot best completion: {'attraction-name': 'cambridge artworks'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'attraction-name': 'cambridge artworks'}": -0.1729070723363}
+few-shot best completion: {'attraction-name': 'cambridge artworks'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 474th example. MUL0478.json_turn_3
 system response: i have booked 8 tickets for you on the train arriving at 21:01 . your reference number is 4n4r9kbi . can i help you with anything else today ?
 user response: yes . i would like to go to the cambridge artworks . can you provide the address ?
@@ -12509,6 +12822,7 @@ gold states: {'attraction-area': 'south',
 few-shot completions: {"            {'train-leaveat': '15:17', 'train-arriveby': '16:08'}": -0.6712096274076002}
 few-shot best completion: {'train-leaveat': '15:17', 'train-arriveby': '16:08'}
 this is the 482th example. MUL1975.json_turn_5
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 483it [14:21,  1.86s/it]
@@ -12523,6 +12837,9 @@ this is the 482th example. MUL1975.json_turn_5
 =======
 system response: i have train tr0397 that will be departing at 15:17 and will arrive by 16:08 . do you think that would work for you ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: i have train tr0397 that will be departing at 15:17 and will arrive by 16:08 . do you think that would work for you ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: possibly . i could probably figure it out from the times , but could you just tell me how long the train trip is ?
 pred turn change: {'train-arriveby': '16:08', 'train-leaveat': '15:17'}
 gold turn change: {}
@@ -12698,6 +13015,7 @@ gold states: {'restaurant-name': 'the lucky star'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 492it [14:40,  1.97s/it]
 493it [14:42,  2.07s/it]
@@ -12711,6 +13029,10 @@ few-shot best completion: restaurant = agent.find_restaurant(book_day="monday", 
 few-shot completions: {"            {'restaurant-book day': 'monday', 'restaurant-book people': '5', 'restaurant-book time': '11:15', 'restaurant-name': 'the lucky star'}": -0.048882695419850006}
 few-shot best completion: {'restaurant-book day': 'monday', 'restaurant-book people': '5', 'restaurant-book time': '11:15', 'restaurant-name': 'the lucky star'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-book day': 'monday', 'restaurant-book people': '5', 'restaurant-book time': '11:15', 'restaurant-name': 'the lucky star'}": -0.048882695419850006}
+few-shot best completion: {'restaurant-book day': 'monday', 'restaurant-book people': '5', 'restaurant-book time': '11:15', 'restaurant-name': 'the lucky star'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 491th example. MUL0093.json_turn_1
 system response: the lucky star is located at leisure park clifton way cherry hinton . would you like to book there ?
 user response: yes . please reserve table for 5 at monday on 11:15 and get me the reference number
@@ -12882,6 +13204,7 @@ gold states: {'hotel-area': 'dontcare',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.update({})  #': -0.00265102302665}
 few-shot best completion: update({})  #
@@ -12898,6 +13221,11 @@ few-shot completions: {'            {}': -0.0004883190040000001}
 few-shot best completion: {}
 this is the 497th example. MUL0093.json_turn_7
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {'            {}': -0.0004883190040000001}
+few-shot best completion: {}
+this is the 497th example. MUL0093.json_turn_7
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: of course , will that be all for today ?
 user response: yes ! thank you for your help .
 pred turn change: {}
@@ -13070,6 +13398,7 @@ system response: there are 3 chinese restaurant -s in the north . do you have a 
 user response: i like my food expensive .
 pred turn change: {'restaurant-pricerange': 'expensive'}
 gold turn change: {'restaurant-pricerange': 'expensive'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 505it [15:04,  1.89s/it]
@@ -13080,6 +13409,9 @@ gold turn change: {'restaurant-pricerange': 'expensive'}
 =======
 pred states: {'hotel-area': 'north',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'north',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'thursday',
  'hotel-book people': '3',
  'hotel-book stay': '2',
@@ -13271,6 +13603,7 @@ few-shot best completion: {'taxi-leaveat': '17:00'}
 this is the 509th example. PMUL4522.json_turn_11
 system response: sure , i can book that for you . what time would you like to leave at ?
 user response: i need to make sure i leave by 17:00 .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 510it [15:15,  2.21s/it]
@@ -13296,6 +13629,9 @@ user response: i need to make sure i leave by 17:00 .
 =======
 pred turn change: {'taxi-leaveat': '17:00'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'taxi-leaveat': '17:00'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'taxi-leaveat': '17:00'}
 pred states: {'hotel-area': 'north',
  'hotel-book day': 'thursday',
@@ -13464,6 +13800,7 @@ system response: we have many guest house hotel -s with free parking . do you ha
 user response: i would like something in the moderate price range , i am on a budget .
 pred turn change: {'hotel-pricerange': 'moderate'}
 gold turn change: {'hotel-pricerange': 'moderate'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 516it [15:26,  1.93s/it]
@@ -13477,6 +13814,9 @@ gold turn change: {'hotel-pricerange': 'moderate'}
 =======
 pred states: {'hotel-parking': 'yes',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-parking': 'yes',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-pricerange': 'moderate',
  'hotel-type': 'guest house',
  'train-day': 'tuesday',
@@ -13646,6 +13986,7 @@ system response: that is not odd at all , who does not like a festive feast ! un
 user response: are there any turkish restaurant -s in the centre of town ?
 pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'turkish'}
 gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'turkish'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 524it [15:40,  1.81s/it]
@@ -13659,6 +14000,9 @@ gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'turkish'}
 =======
 pred states: {'attraction-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'museum',
  'restaurant-area': 'centre',
  'restaurant-food': 'turkish',
@@ -13833,6 +14177,7 @@ gold states: {'attraction-area': 'south',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 532it [15:54,  1.82s/it]
 533it [15:56,  1.72s/it]
@@ -13848,6 +14193,10 @@ few-shot best completion: train = agent.find_train(depart_time="18:00")
 few-shot completions: {"            {'train-leaveat': '18:00'}": -0.0210867323255}
 few-shot best completion: {'train-leaveat': '18:00'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-leaveat': '18:00'}": -0.0210867323255}
+few-shot best completion: {'train-leaveat': '18:00'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 531th example. PMUL1310.json_turn_4
 system response: there are 14 trains that fit your criteria . the first departs at 5:11 and the last train train departs at 18:11 . what would be your preference for departure time ?
 user response: i would like to leave at 18:00 please .
@@ -14019,6 +14368,7 @@ system response: what day would you like to leave and is there a particular time
 user response: i would like to leave on tuesday and arrive by 13:30 .
 pred turn change: {'train-arriveby': '13:30', 'train-day': 'tuesday'}
 gold turn change: {'train-arriveby': '13:30', 'train-day': 'tuesday'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 540it [16:09,  1.76s/it]
@@ -14033,6 +14383,9 @@ gold turn change: {'train-arriveby': '13:30', 'train-day': 'tuesday'}
 =======
 540it [07:45,  1.05it/s]541it [07:46,  1.05it/s]542it [07:48,  1.02s/it]543it [07:48,  1.02it/s]544it [07:49,  1.08it/s]545it [07:50,  1.06it/s]546it [07:51,  1.05it/s]547it [07:52,  1.04it/s]548it [07:53,  1.00it/s]549it [07:54,  1.04it/s]pred states: {'train-arriveby': '13:30',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+540it [07:45,  1.05it/s]541it [07:46,  1.05it/s]542it [07:48,  1.02s/it]543it [07:48,  1.02it/s]544it [07:49,  1.08it/s]545it [07:50,  1.06it/s]546it [07:51,  1.05it/s]547it [07:52,  1.04it/s]548it [07:53,  1.00it/s]549it [07:54,  1.04it/s]pred states: {'train-arriveby': '13:30',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-day': 'tuesday',
  'train-departure': 'norwich',
  'train-destination': 'cambridge'}
@@ -14212,6 +14565,7 @@ few-shot best completion: {'restaurant-food': 'italian'}
 this is the 548th example. PMUL0984.json_turn_4
 system response: ok , i have 21 options for you ! any particular cuisine ?
 user response: italian would be nice thank you
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 549it [16:25,  1.99s/it]
@@ -14228,6 +14582,9 @@ user response: italian would be nice thank you
 =======
 pred turn change: {'restaurant-food': 'italian'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-food': 'italian'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-food': 'italian'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-food': 'italian',
@@ -14398,6 +14755,7 @@ pred states: {'restaurant-area': 'centre',
  'restaurant-food': 'italian',
  'restaurant-name': 'cafe uno',
  'restaurant-pricerange': 'expensive'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 554it [16:35,  2.08s/it]
@@ -14409,6 +14767,9 @@ pred states: {'restaurant-area': 'centre',
 =======
 gold states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'sunday',
  'restaurant-book people': '8',
  'restaurant-book time': '12:45',
@@ -14559,6 +14920,7 @@ gold states: {'train-day': 'friday', 'train-leaveat': '21:45'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(destination="stansted airport", leave_from="cambridge")': -0.0521804941104}
 
@@ -14575,6 +14937,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(destination="st
 few-shot completions: {"            {'train-departure': 'cambridge', 'train-destination': 'stansted airport'}": -0.5740381116529899}
 few-shot best completion: {'train-departure': 'cambridge', 'train-destination': 'stansted airport'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-departure': 'cambridge', 'train-destination': 'stansted airport'}": -0.5740381116529899}
+few-shot best completion: {'train-departure': 'cambridge', 'train-destination': 'stansted airport'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 559th example. SNG0331.json_turn_1
 system response: sure . where are you leaving from ?
 user response: i'll be leaving from cambridge and i want to go to stansted airport .
@@ -14752,6 +15118,7 @@ few-shot best completion: {'hotel-internet': 'yes'}
 this is the 568th example. MUL2259.json_turn_4
 system response: the bridge guest house is the cheap -er option . would you like me to book that for you ?
 user response: before i say yes , does it have free wifi ? i would like to bring my laptop .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred turn change: {'hotel-area': 'south',
  'hotel-book day': 'sunday',
@@ -14772,6 +15139,10 @@ pred turn change: {'hotel-area': 'south',
 pred turn change: {'hotel-internet': 'yes'}
 gold turn change: {'hotel-internet': 'yes', 'hotel-name': 'bridge guest house'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-internet': 'yes'}
+gold turn change: {'hotel-internet': 'yes', 'hotel-name': 'bridge guest house'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {'hotel-area': 'south',
  'hotel-book day': 'sunday',
  'hotel-book people': '5',
@@ -14952,6 +15323,7 @@ pred states: {'hotel-area': 'south',
  'train-day': 'friday',
  'train-departure': 'cambridge',
  'train-destination': 'norwich',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-leaveat': '11:00'}
 
@@ -15017,6 +15389,9 @@ pred states: {'hotel-area': 'south',
 =======
  'train-leaveat': '10:36'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-leaveat': '10:36'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold states: {'hotel-area': 'south',
  'hotel-book day': 'sunday',
  'hotel-book people': '5',
@@ -15186,6 +15561,7 @@ system response: your booking was successful . that is 132 gbp at the station . 
 582it [08:33,  1.12s/it]583it [08:34,  1.10s/it]584it [08:35,  1.00it/s]585it [08:35,  1.07it/s]586it [08:36,  1.12it/s]587it [08:37,  1.21it/s]588it [08:37,  1.29it/s]589it [08:38,  1.29it/s]user response: can you find me a place to eat ? i would like an expensive eastern european restaurant . thanks .
 pred turn change: {'restaurant-food': 'eastern european', 'restaurant-pricerange': 'expensive'}
 gold turn change: {'restaurant-food': 'eastern european', 'restaurant-pricerange': 'expensive'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 582it [17:27,  1.77s/it]
@@ -15197,6 +15573,9 @@ gold turn change: {'restaurant-food': 'eastern european', 'restaurant-pricerange
 =======
 pred states: {'restaurant-food': 'eastern european',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-food': 'eastern european',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-pricerange': 'expensive',
  'train-book people': '8',
  'train-day': 'wednesday',
@@ -15366,6 +15745,7 @@ system response: if we can help you with anything else in the future , please co
 user response: i will not be needing anything else , thank you .
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 588it [17:37,  1.72s/it]
@@ -15381,6 +15761,9 @@ gold turn change: {}
 =======
 pred states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-food': 'italian',
  'restaurant-name': 'cafe uno',
  'restaurant-pricerange': 'expensive',
@@ -15604,6 +15987,7 @@ few-shot best completion: {'hotel-stars': '4', 'hotel-internet': 'yes'}
 this is the 597th example. PMUL1624.json_turn_1
 system response: is there a particular area of town you would like to stay in ?
 user response: no . however i would like for the hotel to be 4 star and include free wifi .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 598it [17:55,  1.67s/it]
@@ -15618,6 +16002,9 @@ user response: no . however i would like for the hotel to be 4 star and include 
 =======
 pred turn change: {'hotel-internet': 'yes', 'hotel-stars': '4'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-internet': 'yes', 'hotel-stars': '4'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-area': 'dontcare',
  'hotel-internet': 'yes',
  'hotel-stars': '4',
@@ -15798,6 +16185,7 @@ pred states: {'hotel-book day': 'monday',
  'train-day': 'saturday',
  'train-departure': 'cambridge',
  'train-destination': 'peterborough'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 604it [18:07,  1.87s/it]
@@ -15811,6 +16199,9 @@ pred states: {'hotel-book day': 'monday',
 =======
 gold states: {'hotel-area': 'dontcare',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'hotel-area': 'dontcare',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'monday',
  'hotel-book people': '7',
  'hotel-book stay': '5',
@@ -16009,6 +16400,7 @@ gold states: {'train-arriveby': '14:45',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 612it [18:21,  1.88s/it]
 613it [18:24,  1.97s/it]
@@ -16022,6 +16414,10 @@ few-shot best completion: hotel = agent.find_hotel(price_range="cheap", type="gu
 few-shot completions: {"            {'hotel-pricerange': 'cheap', 'hotel-type': 'guest house'}": -0.04775011979468001}
 few-shot best completion: {'hotel-pricerange': 'cheap', 'hotel-type': 'guest house'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-pricerange': 'cheap', 'hotel-type': 'guest house'}": -0.04775011979468001}
+few-shot best completion: {'hotel-pricerange': 'cheap', 'hotel-type': 'guest house'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 611th example. PMUL1712.json_turn_5
 system response: of course . your booking of 4 tickets for the train tr9462 was successful . the cost will be 240.32 payable at the station . your reference number is go1l3w48 .
 user response: ok , i am also looking for a cheap guest house to stay in . can you tell me what s available ?
@@ -16184,6 +16580,7 @@ few-shot best completion: {'train-leaveat': '5:19', 'train-arriveby': '6:09', 't
 this is the 617th example. SNG0374.json_turn_2
 system response: i have a train that leaves at 5:19 and arrives by 6:09 . does this work for you ?
 user response: okay , can you book that for me ? i am traveling alone .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 618it [18:32,  1.73s/it]
@@ -16202,6 +16599,9 @@ user response: okay , can you book that for me ? i am traveling alone .
 =======
 pred turn change: {'train-arriveby': '6:09', 'train-book people': '1', 'train-leaveat': '5:19'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'train-arriveby': '6:09', 'train-book people': '1', 'train-leaveat': '5:19'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'train-book people': '1'}
 pred states: {'train-arriveby': '6:09',
  'train-book people': '1',
@@ -16379,6 +16779,7 @@ system response: certainly , where will you be departing from for your train to 
 user response: i will be departing from birmingham new street .
 pred turn change: {'train-departure': 'birmingham new street'}
 gold turn change: {'train-departure': 'birmingham new street'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 627it [18:50,  2.02s/it]
@@ -16392,6 +16793,9 @@ gold turn change: {'train-departure': 'birmingham new street'}
 =======
 pred states: {'hotel-book day': 'friday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-book day': 'friday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book people': '2',
  'hotel-book stay': '1',
  'hotel-name': 'university arms hotel',
@@ -16573,6 +16977,7 @@ gold states: {'hotel-internet': 'yes',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 635it [19:04,  1.89s/it]
 636it [19:06,  1.92s/it]WARNING:root:invalid syntax (<string>, line 1)
@@ -16588,6 +16993,10 @@ few-shot best completion: hotel = agent.find_hotel(price_range="cheap", area="ea
 few-shot completions: {"            {'hotel-pricerange': 'cheap', 'hotel-area': 'east'}": -0.09463829017954001}
 few-shot best completion: {'hotel-pricerange': 'cheap', 'hotel-area': 'east'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-pricerange': 'cheap', 'hotel-area': 'east'}": -0.09463829017954001}
+few-shot best completion: {'hotel-pricerange': 'cheap', 'hotel-area': 'east'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 634th example. PMUL1791.json_turn_5
 system response: 3 hotel -s pop up for you would you like expensive or cheap ?
 user response: cheap hotel on the east side of town
@@ -16764,6 +17173,7 @@ pred states: {'hotel-area': 'west',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(area="cambridge", parking="yes", price_range="expensive", type="hotel")': -1.4683479523665004}
 few-shot best completion: hotel = agent.find_hotel(area="cambridge", parking="yes", price_range="expensive", type="hotel")
@@ -16781,6 +17191,11 @@ few-shot completions: {"            {'hotel-area': 'cambridge', 'hotel-parking':
 few-shot best completion: {'hotel-area': 'cambridge', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
 this is the 640th example. MUL0095.json_turn_0
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-area': 'cambridge', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}": -0.09252304471468997}
+few-shot best completion: {'hotel-area': 'cambridge', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
+this is the 640th example. MUL0095.json_turn_0
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: 
 user response: i am looking for a hotel in cambridge that has free parking and is in the expensive price range .
 pred turn change: {'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
@@ -16942,6 +17357,7 @@ gold states: {'hotel-name': 'archway house',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price_range="moderate")': -0.0545342124264}
 
@@ -16956,6 +17372,10 @@ few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price
 few-shot completions: {"            {'restaurant-pricerange': 'moderate'}": -0.041653734108580004}
 few-shot best completion: {'restaurant-pricerange': 'moderate'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-pricerange': 'moderate'}": -0.041653734108580004}
+few-shot best completion: {'restaurant-pricerange': 'moderate'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 648th example. MUL0095.json_turn_8
 system response: sure i have 3 restaurant -s to choose from . do you have a price range preference ?
 user response: yes , it should also be moderate priced .
@@ -17134,6 +17554,7 @@ user response: hi , i am looking for an indian restaurant .
 pred turn change: {'restaurant-food': 'indian'}
 gold turn change: {'restaurant-food': 'indian'}
 pred states: {'restaurant-food': 'indian'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 656it [19:51,  2.78s/it]
@@ -17146,6 +17567,9 @@ pred states: {'restaurant-food': 'indian'}
 =======
 gold states: {'restaurant-food': 'indian'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'restaurant-food': 'indian'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 =====================correct!=======================
 
@@ -17303,6 +17727,7 @@ gold states: {'attraction-area': 'west',
 few-shot completions: {'            {}': -0.00528990563}
 few-shot best completion: {}
 this is the 662th example. MUL2360.json_turn_7
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 663it [20:03,  1.88s/it]
@@ -17315,6 +17740,9 @@ this is the 662th example. MUL2360.json_turn_7
 =======
 system response: of course , i have booked a yellow ford for you at that time , and the contact number is 07870520690 . anything else today ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: of course , i have booked a yellow ford for you at that time , and the contact number is 07870520690 . anything else today ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: no thanks . that will be it for today . have a great night . goodbye .
 pred turn change: {}
 gold turn change: {}
@@ -17484,6 +17912,7 @@ few-shot best completion: {'taxi-leaveat': '16:30'}
 this is the 669th example. MUL2683.json_turn_6
 system response: when do you want to leave or arrive by ?
 user response: thanks for asking . i want to leave the attraction by 16:30 to the hotel .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 670it [20:17,  1.91s/it]
@@ -17505,6 +17934,9 @@ user response: thanks for asking . i want to leave the attraction by 16:30 to th
 =======
 pred turn change: {'taxi-leaveat': '16:30'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'taxi-leaveat': '16:30'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'taxi-leaveat': '16:30'}
 pred states: {'attraction-name': 'funky fun house',
  'hotel-book day': 'thursday',
@@ -17696,6 +18128,7 @@ gold states: {'hotel-internet': 'yes',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(food_type="northern european")': -0.0023912168839}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="northern european")
@@ -17714,6 +18147,11 @@ few-shot completions: {"            {'restaurant-food': 'northern european'}": -
 few-shot best completion: {'restaurant-food': 'northern european'}
 this is the 677th example. SNG01699.json_turn_0
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-food': 'northern european'}": -0.05541266560315}
+few-shot best completion: {'restaurant-food': 'northern european'}
+this is the 677th example. SNG01699.json_turn_0
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: 
 user response: i would like to find a place that i can get some northern european food .
 pred turn change: {'restaurant-food': 'northern european'}
@@ -17864,6 +18302,7 @@ few-shot best completion: {'restaurant-area': 'centre', 'restaurant-food': 'ital
 this is the 686th example. PMUL2386.json_turn_3
 system response: the castle galleries if located at unit su43 , grande arcade , saint andrews street , phone is 01223307402 and postcode is cb23bj . anything else i can help you with today ?
 user response: yes , please . i am looking for a restaurant in the same area as the attraction that serves italian food .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 687it [20:50,  2.09s/it]
@@ -17879,6 +18318,9 @@ user response: yes , please . i am looking for a restaurant in the same area as 
 =======
 pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
 pred states: {'attraction-area': 'centre',
  'attraction-name': 'castle galleries',
@@ -18050,6 +18492,7 @@ gold states: {'restaurant-area': 'centre',
  'restaurant-name': 'bedouin',
  'restaurant-pricerange': 'expensive'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 693it [21:02,  2.18s/it]
 694it [21:04,  2.02s/it]
@@ -18060,6 +18503,9 @@ gold states: {'restaurant-area': 'centre',
 =======
 =====================wrong!=======================
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+=====================wrong!=======================
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 
 
@@ -18215,6 +18661,7 @@ pred states: {'restaurant-area': 'centre',
  'train-departure': 'cambridge',
  'train-destination': 'broxbourne',
  'train-leaveat': '16:01'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 698it [21:11,  1.96s/it]
@@ -18227,6 +18674,9 @@ pred states: {'restaurant-area': 'centre',
 =======
 gold states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'thursday',
  'restaurant-book people': '6',
  'restaurant-book time': '12:15',
@@ -18405,6 +18855,7 @@ few-shot completions: {"            {'attraction-area': 'south'}": -0.5811723662
 few-shot best completion: {'attraction-area': 'south'}
 this is the 704th example. MUL0512.json_turn_4
 system response: sheep s green and lammas land park fen causeway is located south . the address is fen causeway , newnham road . the entry fee is free . anything else i can help with ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 705it [21:24,  1.90s/it]
@@ -18423,6 +18874,10 @@ pred turn change: {'attraction-name': 'sheeps green and lammas land park fen cau
 user response: can i get the entrance fee and phone number please ?
 pred turn change: {'attraction-area': 'south'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: can i get the entrance fee and phone number please ?
+pred turn change: {'attraction-area': 'south'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'attraction-area': 'south',
  'attraction-name': 'sheeps green and lammas land park fen causeway',
@@ -18597,6 +19052,7 @@ gold states: {'restaurant-book day': 'saturday',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(name="anatoli", book_day="saturday", book_people=2, book_time="16:30")': -1.31623149281874}
 
@@ -18610,6 +19066,10 @@ few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(name=
 few-shot completions: {"            {'restaurant-name': 'anatoli', 'restaurant-book time': '16:30', 'restaurant-book day': 'saturday', 'restaurant-book people': '2'}": -1.2497849888904}
 few-shot best completion: {'restaurant-name': 'anatoli', 'restaurant-book time': '16:30', 'restaurant-book day': 'saturday', 'restaurant-book people': '2'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-name': 'anatoli', 'restaurant-book time': '16:30', 'restaurant-book day': 'saturday', 'restaurant-book people': '2'}": -1.2497849888904}
+few-shot best completion: {'restaurant-name': 'anatoli', 'restaurant-book time': '16:30', 'restaurant-book day': 'saturday', 'restaurant-book people': '2'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 711th example. PMUL0705.json_turn_5
 system response: okay dining or train . i am doing my best to help but i cannot get you to specify what you need .
 user response: listen . book the restaurant anatoli for 2 people on saturday at 16:30 right now .
@@ -18791,6 +19251,7 @@ gold states: {'train-destination': 'cambridge'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(destination="cambridge", leave_from="bishops stortford")': -0.052408564032539996}
 
@@ -18805,6 +19266,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(destination="ca
 few-shot completions: {"            {'train-departure': 'bishops stortford'}": -0.0061820211551}
 few-shot best completion: {'train-departure': 'bishops stortford'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-departure': 'bishops stortford'}": -0.0061820211551}
+few-shot best completion: {'train-departure': 'bishops stortford'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 717th example. MUL0517.json_turn_1
 system response: there are 1414 trains heading to cambridge , what is your departure location ?
 user response: i would like to leave from bishops stortford .
@@ -18961,6 +19426,7 @@ few-shot completions: {'            {}': -0.40725591394000005}
 few-shot best completion: {}
 this is the 724th example. PMUL0119.json_turn_1
 system response: there s two: la margherita , a italian place , and thanh binh , which serves vietnamese food . can i provide you more information ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 725it [22:05,  1.84s/it]
@@ -18975,6 +19441,10 @@ pred turn change: {'restaurant-area': 'west', 'restaurant-pricerange': 'cheap'}
 user response: can i get the postcode of that ?
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: can i get the postcode of that ?
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-name': 'la margherita|thanh binh'}
 pred states: {'restaurant-area': 'west', 'restaurant-pricerange': 'cheap'}
 gold states: {'restaurant-area': 'west',
@@ -19153,6 +19623,7 @@ few-shot best completion: {}
 this is the 731th example. PMUL0119.json_turn_8
 system response: it looks like you are already booked at a hotel . would you like help with something else ?
 user response: you are right , i am sorry . i actually have all that i need from you at this time . have a good day !
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 732it [22:19,  1.94s/it]
@@ -19174,6 +19645,9 @@ user response: you are right , i am sorry . i actually have all that i need from
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'hotel-area': 'west',
  'hotel-book day': 'saturday',
@@ -19345,6 +19819,7 @@ gold states: {'hotel-internet': 'yes',
 few-shot completions: {"            {'hotel-name': 'archway house', 'hotel-area': 'north', 'hotel-pricerange': 'moderate', 'hotel-internet': 'yes', 'hotel-parking': 'yes', 'hotel-book day': 'monday', 'hotel-book stay': '3', 'hotel-book people': '6'}": -2.19480901552601}
 few-shot best completion: {'hotel-name': 'archway house', 'hotel-area': 'north', 'hotel-pricerange': 'moderate', 'hotel-internet': 'yes', 'hotel-parking': 'yes', 'hotel-book day': 'monday', 'hotel-book stay': '3', 'hotel-book people': '6'}
 this is the 739th example. PMUL2617.json_turn_4
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 740it [22:35,  2.04s/it]
@@ -19355,6 +19830,9 @@ this is the 739th example. PMUL2617.json_turn_4
 =======
 system response: the archway house is a popular 4 star guest house in the north part of town in the moderate price range with free internet and parking . should i book it ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: the archway house is a popular 4 star guest house in the north part of town in the moderate price range with free internet and parking . should i book it ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: yes . please book it for monday . 3 nights , 6 people . i'll also need the reference number .
 pred turn change: {'hotel-area': 'north',
  'hotel-book day': 'monday',
@@ -19532,6 +20010,7 @@ this is the 744th example. PMUL2617.json_turn_9
 user response: thank you , that s all i need for today .
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 745it [22:45,  2.09s/it]
@@ -19546,6 +20025,10 @@ gold turn change: {}
 pred states: {'attraction-name': 'saint catharines college',
  'hotel-area': 'north',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-name': 'saint catharines college',
+ 'hotel-area': 'north',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'monday',
  'hotel-book people': '6',
  'hotel-book stay': '3',
@@ -19740,6 +20223,7 @@ gold turn change: {}
 pred states: {'train-arriveby': '15:45',
  'train-day': 'thursday',
  'train-departure': 'cambridge',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-destination': 'ely'}
 
@@ -19758,6 +20242,11 @@ pred states: {'train-arriveby': '15:45',
  'train-leaveat': '15:45'}
 gold states: {'train-arriveby': '15:45',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-destination': 'ely',
+ 'train-leaveat': '15:45'}
+gold states: {'train-arriveby': '15:45',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-day': 'thursday',
  'train-departure': 'cambridge',
  'train-destination': 'ely'}
@@ -19952,6 +20441,7 @@ gold states: {}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 763it [23:22,  2.33s/it]
 764it [23:23,  2.14s/it]
@@ -19967,6 +20457,10 @@ few-shot best completion: hotel = agent.find_hotel(internet="yes", type="guest h
 few-shot completions: {"            {'hotel-type': 'guest house', 'hotel-internet': 'yes'}": -0.01188956434354}
 few-shot best completion: {'hotel-type': 'guest house', 'hotel-internet': 'yes'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-type': 'guest house', 'hotel-internet': 'yes'}": -0.01188956434354}
+few-shot best completion: {'hotel-type': 'guest house', 'hotel-internet': 'yes'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 762th example. SNG0922.json_turn_1
 system response: i can definitely help with that . are you leaning toward a guest house or hotel ?
 user response: i prefer a guest house with free wifi .
@@ -20157,6 +20651,7 @@ pred states: {'attraction-area': 'east',
  'attraction-type': 'museum',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'cheap'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 771it [23:35,  1.69s/it]
@@ -20170,6 +20665,9 @@ pred states: {'attraction-area': 'east',
 =======
 gold states: {'attraction-area': 'east',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'attraction-area': 'east',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-name': 'cambridge artworks',
  'attraction-type': 'museum',
  'hotel-parking': 'yes',
@@ -20343,6 +20841,7 @@ few-shot best completion: {'restaurant-pricerange': 'cheap', 'restaurant-area': 
 this is the 778th example. PMUL4439.json_turn_3
 system response: the phone number is 01223336233 .
 user response: thanks so much . now , i guess i will need to find a cheap place to eat in the centre .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 779it [23:52,  2.16s/it]
@@ -20361,6 +20860,9 @@ user response: thanks so much . now , i guess i will need to find a cheap place 
 =======
 pred turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'cheap'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'cheap'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-area': 'centre',
  'restaurant-food': '[DELETE]',
  'restaurant-pricerange': 'cheap'}
@@ -20534,6 +21036,7 @@ gold states: {'attraction-area': 'centre',
 few-shot completions: {'            {}': -0.0028361277999999998}
 few-shot best completion: {}
 this is the 786th example. MUL2421.json_turn_4
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 787it [24:07,  1.86s/it]
@@ -20548,6 +21051,9 @@ this is the 786th example. MUL2421.json_turn_4
 =======
 system response: i am a fan of ballare , it s a nightclub in the centre . is there anything else i can help you with today ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: i am a fan of ballare , it s a nightclub in the centre . is there anything else i can help you with today ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: no thank you . that is everything i need today .
 pred turn change: {}
 gold turn change: {}
@@ -20732,6 +21238,7 @@ few-shot completions: {"            {'restaurant-food': 'turkish', 'restaurant-p
 few-shot best completion: {'restaurant-food': 'turkish', 'restaurant-pricerange': 'moderate'}
 this is the 795th example. MUL2309.json_turn_0
 system response: 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 796it [24:25,  1.85s/it]
@@ -20749,6 +21256,9 @@ WARNING:root:invalid syntax (<string>, line 1)
 =======
 user response: i am looking for a moderate -ly priced turkish restaurant .
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: i am looking for a moderate -ly priced turkish restaurant .
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred turn change: {'restaurant-food': 'turkish', 'restaurant-pricerange': 'moderate'}
 gold turn change: {'restaurant-food': 'turkish', 'restaurant-pricerange': 'moderate'}
 pred states: {'restaurant-food': 'turkish', 'restaurant-pricerange': 'moderate'}
@@ -20917,6 +21427,7 @@ gold states: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price_range="dontcare")': -0.0195024501598}
 few-shot best completion: restaurant = agent.find_restaurant(price_range="dontcare")
@@ -20932,6 +21443,11 @@ few-shot completions: {"            {'restaurant-pricerange': 'dontcare'}": -0.2
 few-shot best completion: {'restaurant-pricerange': 'dontcare'}
 this is the 805th example. PMUL4612.json_turn_2
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-pricerange': 'dontcare'}": -0.277800919332}
+few-shot best completion: {'restaurant-pricerange': 'dontcare'}
+this is the 805th example. PMUL4612.json_turn_2
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: there are plenty of location -s for italian ! do you have a specific price range in mind ?
 user response: no any place will do .
 pred turn change: {'restaurant-pricerange': 'dontcare'}
@@ -21097,6 +21613,7 @@ gold states: {'attraction-area': 'centre',
 few-shot completions: {"            {'restaurant-pricerange': 'expensive'}": -1.8026864668604996}
 few-shot best completion: {'restaurant-pricerange': 'expensive'}
 this is the 811th example. PMUL4612.json_turn_8
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 812it [24:54,  1.84s/it]
@@ -21107,6 +21624,9 @@ this is the 811th example. PMUL4612.json_turn_8
 =======
 system response: there are quite a few . were you looking for anything specific pricewise ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: there are quite a few . were you looking for anything specific pricewise ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: can you give me the name of a popular 1 ? i would also like the postcode , entrance fee and phone number .
 pred turn change: {'restaurant-pricerange': 'expensive'}
 gold turn change: {}
@@ -21226,6 +21746,7 @@ gold states: {'attraction-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.taxi = agent.find_taxi(destination=agent.state.restaurant.name, leave_from=agent.state.attraction.name)': -0.4088693966613}
 few-shot best completion: taxi = agent.find_taxi(destination=agent.state.restaurant.name, leave_from=agent.state.attraction.name)
@@ -21241,6 +21762,8 @@ user response: i'll need picked up at the college to go to the restaurant .
 822it [25:12,  1.83s/it]
 823it [25:15,  1.95s/it]pred turn change: {'attraction-area': 'centre',
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 few-shot completions: {"            {'taxi-departure': 'downing college', 'taxi-destination': 'don pasquale pizzeria'}": -1.1538098282343499}
 few-shot best completion: {'taxi-departure': 'downing college', 'taxi-destination': 'don pasquale pizzeria'}
 this is the 815th example. PMUL4612.json_turn_12
@@ -21250,7 +21773,10 @@ pred turn change: {'taxi-departure': 'downing college',
  'taxi-destination': 'don pasquale pizzeria'}
 gold turn change: {}
 pred states: {'attraction-area': 'centre',
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-name': 'downing college',
  'attraction-type': 'college',
  'restaurant-area': 'centre',
@@ -21450,6 +21976,7 @@ gold states: {'hotel-name': 'home from home'}
 few-shot completions: {"            {'hotel-parking': 'yes'}": -0.30350931500965}
 few-shot best completion: {'hotel-parking': 'yes'}
 this is the 823th example. PMUL3379.json_turn_1
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 824it [25:16,  1.89s/it]
@@ -21463,6 +21990,9 @@ this is the 823th example. PMUL3379.json_turn_1
 =======
 system response: sure ! it is a guest house and has free wifi ! what other information do you need ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: sure ! it is a guest house and has free wifi ! what other information do you need ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: do they have free parking ?
 pred turn change: {'hotel-parking': 'yes'}
 gold turn change: {'hotel-parking': 'yes'}
@@ -21636,6 +22166,7 @@ few-shot best completion: {'train-leaveat': '12:30'}
 this is the 831th example. MUL1669.json_turn_3
 system response: train tr9013 will get you from stevenage to cambridge at 14:43 . it departs at 13.54 . would you like to book a ticket ?
 user response: i would prefer something earlier , actually . i need to be in cambridge by 12:30 .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 832it [25:32,  1.96s/it]
@@ -21655,6 +22186,9 @@ user response: i would prefer something earlier , actually . i need to be in cam
 =======
 pred turn change: {'train-leaveat': '12:30'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'train-leaveat': '12:30'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'train-arriveby': '12:30', 'train-destination': 'cambridge'}
 pred states: {'restaurant-book day': 'monday',
  'restaurant-book people': '5',
@@ -21838,6 +22372,7 @@ gold states: {'taxi-departure': 'cambridge university botanic gardens',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 840it [25:47,  1.80s/it]
 841it [25:49,  1.83s/it]
@@ -21853,6 +22388,10 @@ few-shot best completion: update({})  #
 few-shot completions: {'            {}': -0.0007928643}
 few-shot best completion: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {'            {}': -0.0007928643}
+few-shot best completion: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 839th example. SNG0041.json_turn_3
 system response: a red volkswagen will pick you up . the contact number is 07597996556 .
 user response: thanks . that s all i needed to know .
@@ -22027,6 +22566,7 @@ few-shot best completion: {'attraction-name': 'the old schools'}
 this is the 847th example. PMUL2792.json_turn_7
 system response: could you please choose an attraction first ?
 user response: the old schools attraction is fine .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 848it [26:02,  1.88s/it]
@@ -22046,6 +22586,9 @@ user response: the old schools attraction is fine .
 =======
 pred turn change: {'attraction-name': 'old schools'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'attraction-name': 'old schools'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'attraction-name': 'old schools'}
 pred states: {'attraction-area': 'centre',
  'attraction-name': 'old schools',
@@ -22223,6 +22766,7 @@ pred states: {'attraction-area': 'centre',
  'hotel-area': 'north',
  'hotel-name': 'kirkwood house',
  'hotel-parking': 'yes',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'hotel-stars': '4',
  'hotel-type': 'guest house',
@@ -22244,6 +22788,8 @@ pred states: {'attraction-area': 'centre',
  'hotel-parking': 'yes',
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-pricerange': 'moderate',
  'hotel-stars': '4',
  'hotel-type': 'guest house',
@@ -22434,6 +22980,7 @@ few-shot best completion: {'hotel-name': 'allenbell', 'hotel-type': 'guest house
 this is the 859th example. MUL0657.json_turn_5
 system response: the allenbell is a guest house located at 517a coldham lane . how many days would you like me to book your stay for ?
 user response: actually , i just need the address and hotel type , if you do not mind .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 860it [26:24,  1.90s/it]
@@ -22455,6 +23002,9 @@ user response: actually , i just need the address and hotel type , if you do not
 =======
 pred turn change: {'hotel-name': 'allenbell', 'hotel-type': 'guest house'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-name': 'allenbell', 'hotel-type': 'guest house'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'hotel-area': 'east',
  'hotel-name': 'allenbell',
@@ -22644,6 +23194,7 @@ system response: okay , and is there a particular departure or arrival time you 
 user response: i just need to arrive by 17:45
 pred turn change: {'train-arriveby': '17:45'}
 gold turn change: {'train-arriveby': '17:45'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 870it [26:43,  1.75s/it]
@@ -22659,6 +23210,10 @@ gold turn change: {'train-arriveby': '17:45'}
 pred states: {'train-arriveby': '17:45',
  'train-day': 'thursday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'train-arriveby': '17:45',
+ 'train-day': 'thursday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-departure': 'cambridge',
  'train-destination': 'leicester'}
 gold states: {'train-arriveby': '17:45',
@@ -22861,6 +23416,7 @@ pred states: {'attraction-area': 'centre',
  'hotel-book day': 'saturday',
  'hotel-book people': '4',
  'hotel-book stay': '4',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'hotel-name': 'el shaddia guest house'}
 
@@ -22877,6 +23433,11 @@ pred states: {'attraction-area': 'centre',
  'hotel-type': 'guest house'}
 gold states: {'attraction-area': 'dontcare',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'hotel-name': 'el shaddia guest house',
+ 'hotel-type': 'guest house'}
+gold states: {'attraction-area': 'dontcare',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'nightclub',
  'hotel-book day': 'saturday',
  'hotel-book people': '4',
@@ -23055,6 +23616,7 @@ gold states: {'attraction-type': 'college',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(stars="4", internet="yes")': -0.024253219838000002}
 
@@ -23068,6 +23630,10 @@ few-shot completions: {'    agent.state.hotel = agent.find_hotel(stars="4", inte
 few-shot completions: {"            {'hotel-stars': '4', 'hotel-internet': 'yes'}": -0.22141938971860003}
 few-shot best completion: {'hotel-stars': '4', 'hotel-internet': 'yes'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-stars': '4', 'hotel-internet': 'yes'}": -0.22141938971860003}
+few-shot best completion: {'hotel-stars': '4', 'hotel-internet': 'yes'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 886th example. PMUL1644.json_turn_0
 system response: 
 user response: i want to find a 4 star hotel that has free internet .
@@ -23235,6 +23801,7 @@ pred states: {'hotel-book day': 'wednesday',
  'hotel-name': 'cambridge belfry',
  'hotel-pricerange': 'cheap',
  'hotel-stars': '4',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-book people': '1',
  'train-day': 'wednesday',
@@ -23299,6 +23866,9 @@ pred states: {'hotel-book day': 'saturday',
 =======
  'train-destination': 'ely'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-destination': 'ely'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold states: {'hotel-book day': 'saturday',
  'hotel-book people': '6',
  'hotel-book stay': '4',
@@ -23481,6 +24051,7 @@ gold states: {'attraction-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 901it [27:42,  1.63s/it]
 902it [27:44,  1.75s/it]
@@ -23494,6 +24065,10 @@ few-shot best completion: update({})  #
 few-shot completions: {'            {}': -0.048281165699999996}
 few-shot best completion: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {'            {}': -0.048281165699999996}
+few-shot best completion: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 900th example. MUL2587.json_turn_0
 system response: 
 user response: i will be visiting cambridge soon and definitely want to see some local attractions . can you help me ?
@@ -23662,6 +24237,7 @@ pred states: {'attraction-area': 'centre',
  'taxi-departure': 'acorn guest house',
  'taxi-destination': 'castle galleries',
  'taxi-leaveat': '05:15'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 907it [27:54,  2.02s/it]
@@ -23676,6 +24252,9 @@ pred states: {'attraction-area': 'centre',
 =======
 gold states: {'attraction-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'attraction-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-name': 'castle galleries',
  'attraction-type': 'museum',
  'hotel-book day': 'sunday',
@@ -23847,6 +24426,7 @@ few-shot completions: {"            {'attraction-name': 'gallery', 'attraction-a
 few-shot best completion: {'attraction-name': 'gallery', 'attraction-area': 'high street'}
 this is the 915th example. MUL2507.json_turn_0
 system response: 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 916it [28:12,  2.15s/it]
@@ -23864,6 +24444,10 @@ pred turn change: {'attraction-name': 'gallery at 12 a high street'}
 user response: yes , can you provide me with information on the attraction gallery at 12 and high street ?
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: yes , can you provide me with information on the attraction gallery at 12 and high street ?
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'attraction-name': 'gallery at 12 a high street'}
 pred states: {}
 gold states: {'attraction-name': 'gallery at 12 a high street'}
@@ -24025,6 +24609,7 @@ gold states: {'restaurant-area': 'north',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(name="hotpot")': -0.6521587271520001}
 926it [28:31,  1.85s/it]
@@ -24040,6 +24625,10 @@ few-shot best completion: restaurant = agent.find_restaurant(name="hotpot")
 few-shot completions: {"            {'hotel-name': 'rosa s bed and breakfast'}": -0.5303744291881999}
 few-shot best completion: {'hotel-name': 'rosa s bed and breakfast'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-name': 'rosa s bed and breakfast'}": -0.5303744291881999}
+few-shot best completion: {'hotel-name': 'rosa s bed and breakfast'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 925th example. PMUL3544.json_turn_3
 system response: the hotpot serves chinese foods and the phone number is 01223366552 while their zip code is cb41ep . is there another thing you might want to know ?
 user response: i would like some information about rosa s bed and breakfast .
@@ -24217,6 +24806,7 @@ gold states: {'train-day': 'saturday',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(price_range="cheap")': -0.0064660963828}
 few-shot best completion: restaurant = agent.find_restaurant(price_range="cheap")
@@ -24233,6 +24823,11 @@ few-shot completions: {"            {'restaurant-pricerange': 'cheap'}": -0.0124
 934it [14:41,  1.67s/it]935it [14:42,  1.51s/it]936it [14:45,  1.80s/it]937it [14:46,  1.54s/it]938it [14:47,  1.37s/it]939it [14:48,  1.26s/it]940it [14:49,  1.19s/it]941it [14:50,  1.14s/it]few-shot best completion: {'restaurant-pricerange': 'cheap'}
 this is the 933th example. PMUL0601.json_turn_5
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-pricerange': 'cheap'}": -0.0124255072888}
+934it [14:41,  1.67s/it]935it [14:42,  1.51s/it]936it [14:45,  1.80s/it]937it [14:46,  1.54s/it]938it [14:47,  1.37s/it]939it [14:48,  1.26s/it]940it [14:49,  1.19s/it]941it [14:50,  1.14s/it]few-shot best completion: {'restaurant-pricerange': 'cheap'}
+this is the 933th example. PMUL0601.json_turn_5
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: the cost is 13.28 pounds . would you like to make a reservation ?
 user response: no that s fine . i also need to find a cheap restaurant .
 pred turn change: {'restaurant-pricerange': 'cheap'}
@@ -24400,6 +24995,7 @@ gold states: {'attraction-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 941it [29:00,  1.81s/it]
 942it [29:01,  1.79s/it]
@@ -24414,6 +25010,10 @@ few-shot best completion: attraction = agent.find_attraction(name="adc theatre")
 few-shot completions: {"            {'attraction-name': 'adc theatre', 'attraction-area': 'centre'}": -0.217820419155}
 few-shot best completion: {'attraction-name': 'adc theatre', 'attraction-area': 'centre'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'attraction-name': 'adc theatre', 'attraction-area': 'centre'}": -0.217820419155}
+few-shot best completion: {'attraction-name': 'adc theatre', 'attraction-area': 'centre'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 940th example. PMUL4120.json_turn_3
 system response: adc theatre is nearby . it is in park street
 user response: could i have the address and phone number to the theater ?
@@ -24574,6 +25174,7 @@ few-shot completions: {"            {'taxi-destination': 'grafton hotel restaura
 few-shot best completion: {'taxi-destination': 'grafton hotel restaurant', 'taxi-arriveby': '16:15', 'taxi-departure': 'gallery at 12 a high street'}
 this is the 947th example. PMUL2320.json_turn_5
 system response: i have booked your table here is the information:booking was successful . the table will be reserved for 15 minutes . reference number is : cykhqp7b .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 948it [29:13,  2.08s/it]
@@ -24594,11 +25195,16 @@ pred turn change: {'attraction-area': 'east',
  'taxi-arriveby': '16:15',
  'taxi-departure': 'gallery at 12 a high street'}
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: great , thanks . would you be able to book me a taxi from the museum to the restaurant that can get me there by 16:15 please ?
 pred turn change: {'taxi-arriveby': '16:15',
  'taxi-departure': 'gallery at 12 a high street',
  'taxi-destination': 'grafton hotel restaurant'}
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'taxi-arriveby': '16:15',
  'taxi-departure': 'gallery at 12 a high street',
  'taxi-destination': 'grafton hotel restaurant'}
@@ -24768,6 +25374,7 @@ few-shot best completion: {'attraction-area': 'south', 'attraction-type': 'park'
 this is the 953th example. MUL1854.json_turn_3
 system response: did you need tickets for that train ?
 user response: not right now , but thanks for asking . i was wondering if there are any parks on the south side of town , though .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred turn change: {'attraction-area': 'south',
  'attraction-type': 'park',
@@ -24787,6 +25394,10 @@ pred turn change: {'attraction-area': 'south',
 pred turn change: {'attraction-area': 'south', 'attraction-type': 'park'}
 gold turn change: {'attraction-area': 'south', 'attraction-type': 'park'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'attraction-area': 'south', 'attraction-type': 'park'}
+gold turn change: {'attraction-area': 'south', 'attraction-type': 'park'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {'attraction-area': 'south',
  'attraction-type': 'park',
  'train-arriveby': '18:23',
@@ -24985,6 +25596,7 @@ gold states: {'hotel-book day': 'sunday',
 few-shot completions: {"            {'train-arriveby': '13:15'}": -0.34255218346052996}
 few-shot best completion: {'train-arriveby': '13:15'}
 this is the 961th example. PMUL4276.json_turn_5
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 962it [29:39,  1.92s/it]
@@ -24997,6 +25609,9 @@ this is the 961th example. PMUL4276.json_turn_5
 =======
 system response: what time would you like to leave or arrive by ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: what time would you like to leave or arrive by ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: i need to arrive at the airport by 13:15 . can i get a departure time and also the travel time for a train ? thanks !
 pred turn change: {'train-arriveby': '13:15'}
 gold turn change: {'train-arriveby': '13:15'}
@@ -25161,6 +25776,7 @@ pred states: {'restaurant-food': 'mediterranean',
  'train-book people': '5',
  'train-day': 'friday',
  'train-destination': 'bishops stortford'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 969it [29:54,  2.03s/it]
@@ -25174,6 +25790,9 @@ pred states: {'restaurant-food': 'mediterranean',
 =======
 gold states: {'restaurant-food': 'mediterranean',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'restaurant-food': 'mediterranean',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-name': 'shiraz',
  'restaurant-pricerange': 'expensive',
  'train-arriveby': '15:15',
@@ -25324,6 +25943,7 @@ pred states: {'attraction-area': 'centre',
  'train-arriveby': '18:00',
  'train-day': 'monday',
  'train-departure': 'cambridge',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-destination': 'london liverpool street'}
 
@@ -25371,6 +25991,10 @@ pred states: {'attraction-area': 'centre',
  'train-destination': 'london liverpool street',
  'train-leaveat': '17:27'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-destination': 'london liverpool street',
+ 'train-leaveat': '17:27'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold states: {'attraction-area': 'centre',
  'attraction-name': 'soul tree nightclub',
  'attraction-type': 'nightclub',
@@ -25529,6 +26153,7 @@ pred states: {'hotel-internet': 'yes',
  'restaurant-food': 'african',
  'restaurant-name': 'bedouin',
  'restaurant-pricerange': 'expensive'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 984it [30:22,  1.97s/it]
@@ -25539,6 +26164,9 @@ pred states: {'hotel-internet': 'yes',
 =======
 gold states: {'hotel-internet': 'yes',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'hotel-internet': 'yes',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-type': 'hotel',
  'restaurant-area': 'centre',
  'restaurant-book day': 'sunday',
@@ -25711,6 +26339,7 @@ few-shot best completion: {}
 this is the 988th example. MUL0047.json_turn_10
 system response: great , i hope i was able to assist you with everything you needed . have a good day .
 user response: thank you for your help .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 989it [30:32,  1.97s/it]
@@ -25735,6 +26364,9 @@ user response: thank you for your help .
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'hotel-area': 'centre',
  'hotel-internet': 'yes',
@@ -25934,6 +26566,7 @@ gold states: {'attraction-name': 'cambridge university botanic gardens'}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 998it [30:48,  1.83s/it]
 999it [30:50,  1.81s/it]
@@ -25949,6 +26582,10 @@ few-shot best completion: train = agent.find_train(arrive_by_time="08:15", leave
 few-shot completions: {"            {'train-destination': 'birmingham new street', 'train-arriveby': '08:15'}": -0.02244740766075}
 few-shot best completion: {'train-destination': 'birmingham new street', 'train-arriveby': '08:15'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-destination': 'birmingham new street', 'train-arriveby': '08:15'}": -0.02244740766075}
+few-shot best completion: {'train-destination': 'birmingham new street', 'train-arriveby': '08:15'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 997th example. MUL1988.json_turn_2
 system response: the area is centre and the postcode is cb21jf . would you like anything else today ?
 user response: yes , i am looking for a train that arrives by 08:15 going to birmingham new street
@@ -26133,6 +26770,7 @@ few-shot completions: {"            {'restaurant-pricerange': 'cheap', 'restaura
 few-shot best completion: {'restaurant-pricerange': 'cheap', 'restaurant-name': 'charlie chan'}
 this is the 1005th example. PMUL2259.json_turn_2
 system response: there are several chinese restaurant -s in city centre , do you have a preferred price range ? otherwise might i suggest charlie chan ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1006it [31:03,  1.87s/it]
@@ -26148,6 +26786,10 @@ pred turn change: {'restaurant-area': 'centre',
 user response: i would like to find something cheap . is charlie chan cheap ?
 pred turn change: {'restaurant-name': 'charlie chan', 'restaurant-pricerange': 'cheap'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: i would like to find something cheap . is charlie chan cheap ?
+pred turn change: {'restaurant-name': 'charlie chan', 'restaurant-pricerange': 'cheap'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-name': 'charlie chan'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-book people': '1',
@@ -26323,6 +26965,7 @@ gold turn change: {}
  'restaurant-food': 'chinese',
  'restaurant-name': 'charlie chan',
  'restaurant-pricerange': 'cheap',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'taxi-arriveby': '18:15'}
 
@@ -26335,11 +26978,16 @@ gold turn change: {}
 1018it [31:27,  1.84s/it]
 1019it [31:28,  1.84s/it]gold states: {'attraction-area': 'centre',
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'taxi-arriveby': '18:15',
  'taxi-destination': 'charlie chan',
  'taxi-leaveat': '18:15'}
 gold states: {'attraction-area': 'centre',
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'college',
  'restaurant-area': 'centre',
  'restaurant-book day': 'friday',
@@ -26526,6 +27174,7 @@ gold states: {'restaurant-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1020it [31:30,  1.78s/it]
 1021it [31:32,  1.90s/it]
@@ -26538,6 +27187,10 @@ few-shot best completion: restaurant = agent.find_restaurant(book_people=1)
 few-shot completions: {"            {'restaurant-book people': '1'}": -0.0043903375384}
 few-shot best completion: {'restaurant-book people': '1'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-book people': '1'}": -0.0043903375384}
+few-shot best completion: {'restaurant-book people': '1'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1019th example. MUL0242.json_turn_5
 system response: are you looking to book for just yourself ?
 user response: yes . just 1 person .
@@ -26696,6 +27349,7 @@ gold states: {'restaurant-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1025it [31:39,  1.75s/it]
 1026it [31:41,  1.79s/it]
@@ -26709,6 +27363,10 @@ few-shot best completion: train = agent.find_train(destination="london liverpool
 few-shot completions: {"            {'train-departure': 'cambridge', 'train-destination': 'london liverpool street'}": -0.047353329407139995}
 few-shot best completion: {'train-departure': 'cambridge', 'train-destination': 'london liverpool street'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-departure': 'cambridge', 'train-destination': 'london liverpool street'}": -0.047353329407139995}
+few-shot best completion: {'train-departure': 'cambridge', 'train-destination': 'london liverpool street'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1024th example. MUL0398.json_turn_0
 system response: 
 user response: i would like a train that is departing from cambridge and is going to london liverpool street .
@@ -26853,6 +27511,7 @@ pred states: {'restaurant-area': 'centre',
  'train-book people': '5',
  'train-day': 'friday',
  'train-departure': 'cambridge',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-destination': 'london liverpool street',
  'train-leaveat': '07:27'}
@@ -26869,6 +27528,10 @@ pred states: {'restaurant-area': 'centre',
  'train-destination': 'london liverpool street'}
 gold states: {'restaurant-area': 'dontcare',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-destination': 'london liverpool street'}
+gold states: {'restaurant-area': 'dontcare',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book people': '5',
  'restaurant-food': 'british',
  'restaurant-name': 'the oak bistro',
@@ -27073,6 +27736,7 @@ gold states: {'train-day': 'monday',
 few-shot completions: {'            {}': -0.003426256515}
 few-shot best completion: {}
 this is the 1038th example. SNG0344.json_turn_4
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1039it [32:08,  2.09s/it]
@@ -27086,6 +27750,9 @@ this is the 1038th example. SNG0344.json_turn_4
 =======
 system response: great , i have booked your ticket , your reference number is : i6nj8fub . may i help you with anything else ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: great , i have booked your ticket , your reference number is : i6nj8fub . may i help you with anything else ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: okay thank you for everything .
 pred turn change: {}
 gold turn change: {}
@@ -27261,6 +27928,7 @@ few-shot completions: {"            {'restaurant-book time': '11:30', 'restauran
 few-shot best completion: {'restaurant-book time': '11:30', 'restaurant-name': 'alimentum'}
 this is the 1046th example. MUL1347.json_turn_4
 system response: sure , i have 2 moderate -ly priced restaurant -s in the south . they are pizza hut cherry hinton and restaurant alimentum . do either interest you ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1047it [32:24,  2.08s/it]
@@ -27284,6 +27952,10 @@ pred turn change: {'hotel-area': 'south',
 user response: can you get us a table at restaurant alimentum at 11:30 on friday ?
 pred turn change: {'restaurant-book time': '11:30'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: can you get us a table at restaurant alimentum at 11:30 on friday ?
+pred turn change: {'restaurant-book time': '11:30'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-book day': 'friday',
  'restaurant-book people': '7',
  'restaurant-book time': '11:30',
@@ -27443,6 +28115,7 @@ system response: there are no expensive guest houses in the south area in the ex
 user response: how about 1 in the moderate price range ?
 pred turn change: {'hotel-pricerange': 'moderate'}
 gold turn change: {'hotel-pricerange': 'moderate'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1052it [32:34,  1.96s/it]
@@ -27455,6 +28128,9 @@ gold turn change: {'hotel-pricerange': 'moderate'}
 =======
 pred states: {'hotel-area': 'south',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'south',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-pricerange': 'moderate',
  'hotel-type': 'guest house'}
 gold states: {'hotel-area': 'south',
@@ -27636,6 +28312,7 @@ few-shot best completion: {'hotel-internet': 'yes'}
 1058it [17:03,  1.29s/it]1059it [17:05,  1.33s/it]1060it [17:06,  1.29s/it]1061it [17:07,  1.28s/it]1062it [17:08,  1.24s/it]1063it [17:09,  1.19s/it]1064it [17:11,  1.44s/it]this is the 1057th example. MUL1288.json_turn_0
 system response: 
 user response: hi there , i would like to find a hotel to stay in tonight that has free wifi .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1058it [32:46,  1.98s/it]
@@ -27648,6 +28325,9 @@ user response: hi there , i would like to find a hotel to stay in tonight that h
 =======
 pred turn change: {'hotel-internet': 'yes'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-internet': 'yes'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-internet': 'yes', 'hotel-type': 'hotel'}
 pred states: {'hotel-internet': 'yes'}
 gold states: {'hotel-internet': 'yes', 'hotel-type': 'hotel'}
@@ -27814,6 +28494,7 @@ gold states: {'hotel-internet': 'yes',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_day="thursday", book_time="17:15", book_people=3)': -0.9041332827252999}
 
@@ -27825,6 +28506,10 @@ few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_
 few-shot completions: {"            {'restaurant-book time': '17:15'}": -0.195830916287}
 few-shot best completion: {'restaurant-book time': '17:15'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-book time': '17:15'}": -0.195830916287}
+few-shot best completion: {'restaurant-book time': '17:15'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1064th example. MUL1288.json_turn_7
 system response: i am sorry , there are no open reservations for that day and time . would you like to choose a different time or day ?
 user response: then how about 17:15 ?
@@ -27983,6 +28668,7 @@ few-shot completions: {"            {'attraction-name': 'kettle s yard'}": -0.10
 few-shot best completion: {'attraction-name': 'kettle s yard'}
 this is the 1068th example. MUL1976.json_turn_0
 system response: 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1069it [33:08,  1.96s/it]
@@ -27998,6 +28684,9 @@ system response:
 =======
 user response: hello ! i am planning my trip there and i am trying to find out about an attraction called kettle s yard . what can you tell me about it ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: hello ! i am planning my trip there and i am trying to find out about an attraction called kettle s yard . what can you tell me about it ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred turn change: {'attraction-name': 'kettles yard'}
 gold turn change: {'attraction-name': 'kettles yard'}
 pred states: {'attraction-name': 'kettles yard'}
@@ -28178,6 +28867,7 @@ gold states: {'restaurant-area': 'west',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.restaurant = agent.find_restaurant(book_day="thursday", book_people=7, book_time="12:45")': -0.208700801854}
 few-shot best completion: restaurant = agent.find_restaurant(book_day="thursday", book_people=7, book_time="12:45")
@@ -28196,6 +28886,11 @@ few-shot completions: {"            {'restaurant-book day': 'thursday', 'restaur
 few-shot best completion: {'restaurant-book day': 'thursday', 'restaurant-book time': '12:45', 'restaurant-book people': '7'}
 this is the 1078th example. SNG01184.json_turn_2
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-book day': 'thursday', 'restaurant-book time': '12:45', 'restaurant-book people': '7'}": -0.7490800160297301}
+few-shot best completion: {'restaurant-book day': 'thursday', 'restaurant-book time': '12:45', 'restaurant-book people': '7'}
+this is the 1078th example. SNG01184.json_turn_2
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: can you please tell me how many people and what day and time you would like me to book it ?
 user response: thursday at 12:45 for 7 people .
 pred turn change: {'restaurant-book day': 'thursday',
@@ -28383,6 +29078,7 @@ gold states: {'hotel-book day': 'wednesday',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1088it [33:45,  2.04s/it]
 1089it [33:47,  2.24s/it]
@@ -28397,6 +29093,10 @@ few-shot best completion: hotel = agent.find_hotel(stars="2", internet="yes", pa
 few-shot completions: {"            {'hotel-stars': '2', 'hotel-internet': 'yes', 'hotel-parking': 'yes'}": -0.6964541324714301}
 few-shot best completion: {'hotel-stars': '2', 'hotel-internet': 'yes', 'hotel-parking': 'yes'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-stars': '2', 'hotel-internet': 'yes', 'hotel-parking': 'yes'}": -0.6964541324714301}
+few-shot best completion: {'hotel-stars': '2', 'hotel-internet': 'yes', 'hotel-parking': 'yes'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1087th example. SNG0913.json_turn_3
 system response: that booking was unsuccessful . would you like to try a different day , or a different length of stay ?
 user response: how about trying another 2 star hotel with free wifi and free parking ?
@@ -28572,6 +29272,7 @@ gold states: {'train-day': 'tuesday',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(book_people=2, depart_time="19:36")': -0.23257008097389995}
 
@@ -28587,6 +29288,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(book_people=2, 
 few-shot completions: {"            {'train-leaveat': '19:36', 'train-book people': '2'}": -0.4138969073930499}
 few-shot best completion: {'train-leaveat': '19:36', 'train-book people': '2'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-leaveat': '19:36', 'train-book people': '2'}": -0.4138969073930499}
+few-shot best completion: {'train-leaveat': '19:36', 'train-book people': '2'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1094th example. MUL1934.json_turn_2
 system response: i have 1 leaving at 19:36 . would you like more info on this train ?
 user response: yeah that 1 would work . could you book it for 2 people for me ?
@@ -28753,6 +29458,7 @@ system response: huntingdon marriott hotel is 4 stars , located in the west and 
 user response: does it have free parking ?
 pred turn change: {'hotel-name': 'huntingdon marriott hotel', 'hotel-parking': 'yes'}
 gold turn change: {'hotel-name': 'huntingdon marriott hotel', 'hotel-parking': 'yes'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1103it [34:14,  1.97s/it]WARNING:root:name 'hotel' is not defined
@@ -28768,6 +29474,9 @@ WARNING:root:name 'hotel' is not defined
 =======
 pred states: {'attraction-name': 'trinity college',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-name': 'trinity college',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-area': 'west',
  'hotel-name': 'huntingdon marriott hotel',
  'hotel-parking': 'yes',
@@ -28949,6 +29658,7 @@ this is the 1110th example. PMUL3607.json_turn_0
 system response: 
 user response: i am planning a trip in cambridge
 pred turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1111it [34:30,  1.87s/it]
@@ -28962,6 +29672,9 @@ pred turn change: {}
 =======
 gold turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {}
 gold states: {}
 
@@ -29144,6 +29857,7 @@ few-shot best completion: {}
 this is the 1118th example. PMUL3607.json_turn_8
 system response: sure , it is located at 5 mowbray road , postcode cb17sr .
 user response: ok . thanks . that is all my requests .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1119it [34:45,  1.94s/it]
@@ -29165,6 +29879,9 @@ user response: ok . thanks . that is all my requests .
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {}
 pred states: {'hotel-area': 'south',
  'hotel-name': 'aylesbray lodge guest house',
@@ -29375,6 +30092,7 @@ system response: you are all set , the reference number is 9wzd62ff , anything e
 user response: what are the nearest diners by the hotel ?
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1127it [35:01,  2.00s/it]
@@ -29388,6 +30106,9 @@ gold turn change: {}
 =======
 pred states: {'hotel-area': 'south',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-area': 'south',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book day': 'tuesday',
  'hotel-book people': '1',
  'hotel-book stay': '5',
@@ -29589,6 +30310,7 @@ gold states: {'hotel-area': 'north',
 few-shot completions: {"            {'restaurant-pricerange': 'expensive'}": -0.44133924843089994}
 few-shot best completion: {'restaurant-pricerange': 'expensive'}
 this is the 1134th example. PMUL0389.json_turn_5
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1135it [35:17,  2.00s/it]
@@ -29601,6 +30323,9 @@ this is the 1134th example. PMUL0389.json_turn_5
 =======
 system response: i have 5 restaurant -s that fit your description ? what area of town would you like the restaurant to be on ? centre , north , or west .
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: i have 5 restaurant -s that fit your description ? what area of town would you like the restaurant to be on ? centre , north , or west .
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: area does not matter , i just need expensive please .
 pred turn change: {'restaurant-pricerange': 'expensive'}
 gold turn change: {'restaurant-area': 'dontcare'}
@@ -29771,6 +30496,7 @@ gold states: {'restaurant-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.train = agent.find_train(day="friday", arrive_by_time="15:30", leave_from="stevenage")': -0.311071970515}
 
@@ -29785,6 +30511,10 @@ few-shot completions: {'    agent.state.train = agent.find_train(day="friday", a
 few-shot completions: {"            {'train-day': 'friday', 'train-arriveby': '15:30'}": -0.35417400676752997}
 few-shot best completion: {'train-day': 'friday', 'train-arriveby': '15:30'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'train-day': 'friday', 'train-arriveby': '15:30'}": -0.35417400676752997}
+few-shot best completion: {'train-day': 'friday', 'train-arriveby': '15:30'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1141th example. PMUL0574.json_turn_4
 1142it [18:48,  1.02s/it]1143it [18:49,  1.01s/it]1144it [18:50,  1.03it/s]1145it [18:51,  1.06it/s]1146it [18:52,  1.04it/s]1147it [18:53,  1.02it/s]1148it [18:54,  1.01it/s]1149it [18:55,  1.07it/s]1150it [18:56,  1.08it/s]system response: there are many trains leaving from stevenage . what day would you like to travel ? any preferred time ?
 user response: i need to leave on friday . the train should arrive by 15:30 . thanks for all your help .
@@ -29960,6 +30690,7 @@ pred states: {'hotel-stars': '4',
  'train-arriveby': '11:30',
  'train-day': 'sunday',
  'train-departure': 'ely',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-destination': 'cambridge'}
 
@@ -29976,6 +30707,11 @@ pred states: {'hotel-stars': '4',
  'train-leaveat': '9:52'}
 gold states: {'hotel-stars': '4',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '9:52'}
+gold states: {'hotel-stars': '4',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-arriveby': '11:30',
  'train-day': 'sunday',
  'train-departure': 'ely',
@@ -30168,6 +30904,7 @@ gold states: {'taxi-arriveby': '24:30',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.update({})  #': -0.00491364136}
 few-shot best completion: update({})  #
@@ -30184,6 +30921,11 @@ few-shot completions: {'            {}': -0.0072848728599999996}
 few-shot best completion: {}
 this is the 1156th example. SNG01801.json_turn_3
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {'            {}': -0.0072848728599999996}
+few-shot best completion: {}
+this is the 1156th example. SNG01801.json_turn_3
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 system response: sure . it s 07226817225 .
 user response: thank you . bye
 pred turn change: {}
@@ -30354,6 +31096,7 @@ gold states: {'restaurant-area': 'centre',
  'train-leaveat': '11:30'}
 
 =====================correct!=======================
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1164it [36:16,  1.93s/it]
 1165it [36:18,  1.93s/it]
@@ -30364,6 +31107,8 @@ gold states: {'restaurant-area': 'centre',
 1170it [36:27,  1.90s/it]
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 
 
@@ -30518,6 +31263,7 @@ few-shot best completion: {'train-destination': 'bishops stortford', 'train-day'
 this is the 1170th example. MUL0338.json_turn_4
 system response: i have 259 trains departing cambridge . could you be more specific on your destination and what day you would like to leave on ?
 user response: i would be travelling to bishops stortford leaving on sunday .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1171it [36:30,  2.01s/it]
@@ -30538,6 +31284,9 @@ user response: i would be travelling to bishops stortford leaving on sunday .
 =======
 pred turn change: {'train-day': 'sunday', 'train-destination': 'bishops stortford'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'train-day': 'sunday', 'train-destination': 'bishops stortford'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'train-day': 'sunday', 'train-destination': 'bishops stortford'}
 pred states: {'restaurant-area': 'dontcare',
  'restaurant-book people': '7',
@@ -30701,6 +31450,7 @@ gold states: {'train-day': 'monday',
 few-shot completions: {"            {'restaurant-name': 'la raza'}": -0.3702769439167}
 few-shot best completion: {'restaurant-name': 'la raza'}
 this is the 1177th example. MUL1517.json_turn_4
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1178it [36:43,  1.95s/it]
@@ -30713,6 +31463,9 @@ this is the 1177th example. MUL1517.json_turn_4
 =======
 system response: booked 1 ticket ! reference number: tfi0lll4 . fee is 75.09 gbp to be paid at the station .
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: booked 1 ticket ! reference number: tfi0lll4 . fee is 75.09 gbp to be paid at the station .
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: great ! is there a restaurant called la raza near by ?
 pred turn change: {'restaurant-name': 'la raza'}
 gold turn change: {'restaurant-name': 'la raza'}
@@ -30883,6 +31636,7 @@ few-shot best completion: {'restaurant-pricerange': 'expensive', 'restaurant-are
 this is the 1184th example. PMUL0543.json_turn_3
 system response: it s 23.60 pounds .
 user response: ok . i also want to book an expensive restaurant in the centre part of town .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1185it [36:57,  1.98s/it]
@@ -30901,6 +31655,9 @@ user response: ok . i also want to book an expensive restaurant in the centre pa
 =======
 pred turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-pricerange': 'expensive',
@@ -31059,6 +31816,7 @@ gold states: {'taxi-arriveby': '19:00',
 few-shot completions: {'            {}': -0.004384242342}
 few-shot best completion: {}
 this is the 1192th example. SNG02220.json_turn_4
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1193it [37:13,  1.92s/it]
@@ -31072,6 +31830,9 @@ this is the 1192th example. SNG02220.json_turn_4
 =======
 system response: ok i have a blue volvo with contact number 07401999983 .
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: ok i have a blue volvo with contact number 07401999983 .
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: thank you that s all i needed .
 pred turn change: {}
 gold turn change: {}
@@ -31245,6 +32006,7 @@ system response:
 user response: i am looking for a restaurant serving barbeque in the centre of town .
 pred turn change: {'restaurant-area': 'centre', 'restaurant-food': 'barbeque'}
 gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'barbeque'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1201it [37:29,  1.90s/it]
@@ -31261,6 +32023,9 @@ WARNING:root:invalid syntax (<string>, line 1)
 =======
 pred states: {'restaurant-area': 'centre', 'restaurant-food': 'barbeque'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'centre', 'restaurant-food': 'barbeque'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold states: {'restaurant-area': 'centre', 'restaurant-food': 'barbeque'}
 
 =====================correct!=======================
@@ -31422,6 +32187,7 @@ gold states: {'attraction-area': 'dontcare',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1210it [37:48,  2.23s/it]
 1211it [37:50,  2.12s/it]
@@ -31435,6 +32201,10 @@ few-shot best completion: restaurant = agent.find_restaurant(name="curry prince"
 few-shot completions: {"            {'restaurant-name': 'curry prince', 'restaurant-book time': '19:30'}": -0.6865841632512999}
 few-shot best completion: {'restaurant-name': 'curry prince', 'restaurant-book time': '19:30'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'restaurant-name': 'curry prince', 'restaurant-book time': '19:30'}": -0.6865841632512999}
+few-shot best completion: {'restaurant-name': 'curry prince', 'restaurant-book time': '19:30'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1209th example. MUL0827.json_turn_5
 system response: how about curry prince ? it is also located in the east .
 user response: that should work try that for 3 people at 19:30 on sunday .
@@ -31600,6 +32370,7 @@ gold states: {'hotel-internet': 'yes',
  'train-destination': 'kings lynn',
  'train-leaveat': '15:15'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1216it [38:00,  2.10s/it]
 1217it [38:01,  1.98s/it]
@@ -31611,6 +32382,9 @@ gold states: {'hotel-internet': 'yes',
 =======
 =====================wrong!=======================
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+=====================wrong!=======================
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 
 
@@ -31793,6 +32567,7 @@ pred states: {'hotel-area': 'north',
  'train-day': 'wednesday',
  'train-departure': 'cambridge',
  'train-destination': 'kings lynn',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-leaveat': '15:15'}
 
@@ -31808,6 +32583,10 @@ pred states: {'hotel-area': 'north',
  'train-leaveat': '16:11'}
 gold states: {'hotel-internet': 'yes',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-leaveat': '16:11'}
+gold states: {'hotel-internet': 'yes',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-name': 'acorn guest house',
  'hotel-parking': 'yes',
  'hotel-pricerange': 'moderate',
@@ -31985,6 +32764,7 @@ this is the 1229th example. PMUL1722.json_turn_0
 system response: 
 user response: i want to stay at a guest house in the expensive price range .
 pred turn change: {'hotel-pricerange': 'expensive', 'hotel-type': 'guest house'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1230it [38:27,  1.92s/it]
@@ -31999,6 +32779,9 @@ pred turn change: {'hotel-pricerange': 'expensive', 'hotel-type': 'guest house'}
 =======
 gold turn change: {'hotel-pricerange': 'expensive', 'hotel-type': 'guest house'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold turn change: {'hotel-pricerange': 'expensive', 'hotel-type': 'guest house'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred states: {'hotel-pricerange': 'expensive', 'hotel-type': 'guest house'}
 gold states: {'hotel-pricerange': 'expensive', 'hotel-type': 'guest house'}
 
@@ -32156,6 +32939,7 @@ few-shot best completion: {'train-destination': 'cambridge', 'train-departure': 
 this is the 1238th example. PMUL1722.json_turn_9
 system response: booking was successful . reference number is : eljhqgoz . can i help you with anything else ?
 user response: i would also like to find a train departing from kings cross and going to cambridge on wednesday .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1239it [38:47,  2.39s/it]
@@ -32180,6 +32964,10 @@ gold turn change: {'train-day': 'wednesday',
 pred turn change: {'train-destination': 'cambridge'}
 1239it [20:47,  1.55s/it]1240it [20:48,  1.50s/it]1241it [20:49,  1.41s/it]1242it [20:51,  1.38s/it]1243it [20:52,  1.38s/it]1244it [20:53,  1.32s/it]1245it [20:54,  1.30s/it]1246it [20:56,  1.29s/it]1247it [20:58,  1.65s/it]gold turn change: {'train-day': 'wednesday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'train-destination': 'cambridge'}
+1239it [20:47,  1.55s/it]1240it [20:48,  1.50s/it]1241it [20:49,  1.41s/it]1242it [20:51,  1.38s/it]1243it [20:52,  1.38s/it]1244it [20:53,  1.32s/it]1245it [20:54,  1.30s/it]1246it [20:56,  1.29s/it]1247it [20:58,  1.65s/it]gold turn change: {'train-day': 'wednesday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-departure': 'london kings cross',
  'train-destination': 'cambridge'}
 pred states: {'hotel-area': 'east',
@@ -32359,6 +33147,7 @@ restaurant-phone not found in SlotName
 few-shot completions: {"            {'restaurant-book': 'no', 'restaurant-postcode': '[TO BE FILLED]', 'restaurant-phone': '[TO BE FILLED]'}": -3.0022630791479306}
 few-shot best completion: {'restaurant-book': 'no', 'restaurant-postcode': '[TO BE FILLED]', 'restaurant-phone': '[TO BE FILLED]'}
 this is the 1246th example. PMUL0653.json_turn_5
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1247it [39:04,  2.00s/it]
@@ -32371,6 +33160,9 @@ this is the 1246th example. PMUL0653.json_turn_5
 =======
 system response: yes , it is a modern european restaurant . do you want a table reserved ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: yes , it is a modern european restaurant . do you want a table reserved ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: no just give me the postcode and phone number
 pred turn change: {}
 gold turn change: {'restaurant-name': 'riverside brasserie'}
@@ -32535,6 +33327,7 @@ system response: i am sorry , the allenbell could not accommodate that particula
 user response: could you try 4 nights ?
 pred turn change: {'hotel-book stay': '4'}
 gold turn change: {'hotel-book stay': '4'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1254it [39:19,  2.11s/it]
@@ -32547,6 +33340,9 @@ gold turn change: {'hotel-book stay': '4'}
 =======
 pred states: {'hotel-book day': 'monday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'hotel-book day': 'monday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book people': '7',
  'hotel-book stay': '4',
  'hotel-name': 'allenbell'}
@@ -32722,6 +33518,7 @@ few-shot best completion: {'hotel-name': 'express by holiday inn cambridge', 'ho
 this is the 1260th example. PMUL1653.json_turn_2
 system response: we have a match for you ! express by holiday inn cambridge is located at 1517 norman way , coldhams business park in eastern cambridge . would you like to book ?
 user response: yes please . 1 person for 3 nights starting thursday .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1261it [39:33,  2.13s/it]
@@ -32734,6 +33531,9 @@ user response: yes please . 1 person for 3 nights starting thursday .
 =======
 pred turn change: {'hotel-book day': 'thursday',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-book day': 'thursday',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-book people': '1',
  'hotel-book stay': '3',
  'hotel-name': 'express by holiday inn cambridge'}
@@ -32906,6 +33706,7 @@ pred states: {'attraction-area': 'dontcare',
  'train-day': 'saturday',
  'train-departure': 'cambridge',
  'train-destination': 'leicester',
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
  'train-leaveat': '19:00'}
 
@@ -32920,6 +33721,10 @@ pred states: {'attraction-area': 'dontcare',
  'train-leaveat': 'after 19:00'}
 gold states: {'attraction-name': 'peoples portraits exhibition at girton college',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+ 'train-leaveat': 'after 19:00'}
+gold states: {'attraction-name': 'peoples portraits exhibition at girton college',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'train-book people': '5',
  'train-day': 'saturday',
  'train-departure': 'cambridge',
@@ -33075,6 +33880,7 @@ system response: how about tr0721 , it arrives by 12:07 ? alternatively , the tr
 user response: thank you . what is the price ?
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1275it [40:02,  2.15s/it]
@@ -33088,6 +33894,9 @@ gold turn change: {}
 =======
 pred states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book people': '7',
  'restaurant-book time': '14:15',
  'restaurant-pricerange': 'expensive',
@@ -33248,6 +34057,7 @@ few-shot best completion: {'train-destination': 'cambridge', 'train-leaveat': '1
 this is the 1281th example. MUL1457.json_turn_5
 system response: i can book that for you , but i need to first confirm that you are going from ely to cambridge ?
 user response: yes , that s correct . ely to cambridge on tuesday , for 1 person , and it needs to leave sometime after 16:45 .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1282it [40:19,  2.74s/it]
@@ -33267,6 +34077,9 @@ user response: yes , that s correct . ely to cambridge on tuesday , for 1 person
 =======
 pred turn change: {'train-destination': 'cambridge', 'train-leaveat': '16:45'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'train-destination': 'cambridge', 'train-leaveat': '16:45'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'train-destination': 'cambridge'}
 pred states: {'restaurant-area': 'centre',
  'restaurant-food': 'chinese',
@@ -33433,6 +34246,7 @@ pred states: {'restaurant-area': 'centre',
  'restaurant-pricerange': 'moderate',
  'train-arriveby': '21:30',
  'train-destination': 'ely'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1288it [40:31,  2.12s/it]
@@ -33446,6 +34260,9 @@ pred states: {'restaurant-area': 'centre',
 =======
 gold states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+gold states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-book day': 'sunday',
  'restaurant-book people': '4',
  'restaurant-book time': '13:00',
@@ -33631,6 +34448,7 @@ gold states: {'taxi-departure': 'la mimosa',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.attraction = agent.find_attraction(type="multiple sports")': -0.004923028982399999}
 
@@ -33646,6 +34464,10 @@ few-shot completions: {'    agent.state.attraction = agent.find_attraction(type=
 few-shot completions: {"            {'attraction-type': 'multiple sports'}": -0.04228499600964}
 few-shot best completion: {'attraction-type': 'multiple sports'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'attraction-type': 'multiple sports'}": -0.04228499600964}
+few-shot best completion: {'attraction-type': 'multiple sports'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1295th example. PMUL1100.json_turn_0
 system response: 
 user response: i am looking to play a variety of sports . are there facilities that cater to that ?
@@ -33816,6 +34638,7 @@ gold turn change: {'train-day': 'saturday', 'train-destination': 'cambridge'}
 pred states: {'train-day': 'saturday', 'train-destination': 'cambridge'}
 gold states: {'train-day': 'saturday', 'train-destination': 'cambridge'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1304it [41:11,  2.72s/it]
 1305it [41:13,  2.47s/it]
@@ -33828,6 +34651,8 @@ gold states: {'train-day': 'saturday', 'train-destination': 'cambridge'}
 1312it [41:28,  2.03s/it]
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 =====================correct!=======================
 
 
@@ -34005,6 +34830,7 @@ gold states: {'taxi-departure': 'wandlebury country park', 'taxi-leaveat': '19:3
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.taxi = agent.find_taxi(destination="meze bar restaurant")': -0.0202986786733}
 
@@ -34022,6 +34848,10 @@ few-shot completions: {'    agent.state.taxi = agent.find_taxi(destination="meze
 few-shot completions: {"            {'taxi-destination': 'meze bar restaurant'}": -0.01947023151155}
 few-shot best completion: {'taxi-destination': 'meze bar restaurant'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'taxi-destination': 'meze bar restaurant'}": -0.01947023151155}
+few-shot best completion: {'taxi-destination': 'meze bar restaurant'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1312th example. SNG01229.json_turn_2
 system response: where will you be going to ?
 user response: i'll be going to meze bar restaurant .
@@ -34212,6 +35042,7 @@ gold states: {'taxi-arriveby': '18:00', 'taxi-departure': 'jesus college'}
 few-shot completions: {"            {'taxi-departure': 'jesus college'}": -0.061226041722349994}
 few-shot best completion: {'taxi-departure': 'jesus college'}
 this is the 1322th example. SNG02330.json_turn_1
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1323it [41:50,  2.00s/it]
@@ -34226,6 +35057,9 @@ this is the 1322th example. SNG02330.json_turn_1
 =======
 system response: sure ! where are you coming from ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: sure ! where are you coming from ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: leaving jesus college .
 pred turn change: {'taxi-departure': 'jesus college'}
 gold turn change: {}
@@ -34418,6 +35252,7 @@ few-shot best completion: {'hotel-name': 'acorn guest house', 'hotel-stars': '4'
 this is the 1331th example. PMUL1828.json_turn_6
 system response: how about acorn guest house ? it s 4 stars .
 user response: thank you , i'll take it . can you book me for that hotel ?
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1332it [42:07,  1.93s/it]
@@ -34435,6 +35270,9 @@ user response: thank you , i'll take it . can you book me for that hotel ?
 =======
 pred turn change: {'hotel-name': 'acorn guest house', 'hotel-stars': '4'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-name': 'acorn guest house', 'hotel-stars': '4'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-name': 'acorn guest house'}
 pred states: {'hotel-area': 'north',
  'hotel-internet': 'yes',
@@ -34607,6 +35445,7 @@ few-shot best completion: {}
 this is the 1336th example. PMUL1828.json_turn_11
 system response: i am sorry but i do not have anything meeting that criteria .
 user response: well okay then let s just go with whatever s available in the north .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1337it [42:18,  2.17s/it]
@@ -34630,6 +35469,9 @@ user response: well okay then let s just go with whatever s available in the nor
 =======
 pred turn change: {}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-type': 'dontcare'}
 pred states: {'hotel-area': 'north',
  'hotel-book people': '1',
@@ -34750,6 +35592,7 @@ few-shot best completion: {'hotel-book day': '4 and 5 and 20184 and 10 and 2018'
 this is the 1340th example. SNG01626.json_turn_1
 system response: acorn guest house is nearby and provides free parking . what are the days of your stay ?
 user response: 4 and 5 and 20184 and 10 and 2018
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 pred turn change: {'hotel-book day': 'thursday',
  'hotel-book stay': '2',
@@ -34905,6 +35748,8 @@ system response:
 user response: can you help me with a taxi booking ?
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 pred turn change: {}
 gold turn change: {}
 pred states: {'hotel-parking': 'yes', 'hotel-type': 'guest house'}
@@ -35168,6 +36013,7 @@ few-shot best completion: {'hotel-area': 'east'}
 this is the 1354th example. MUL1003.json_turn_2
 system response: is there anything else that i can help you with ?
 user response: i need a play to stay in the east .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1355it [42:55,  2.11s/it]
@@ -35180,6 +36026,9 @@ user response: i need a play to stay in the east .
 =======
 pred turn change: {'hotel-area': 'east'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-area': 'east'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-area': 'east'}
 pred states: {'attraction-name': 'cambridge artworks', 'hotel-area': 'east'}
 gold states: {'attraction-name': 'cambridge artworks', 'hotel-area': 'east'}
@@ -35347,6 +36196,7 @@ few-shot best completion: {'hotel-name': 'allenbell'}
 this is the 1361th example. MUL1003.json_turn_9
 system response: the 3 guest houses in the area are allenbell , autumn house , and leverton house . would you like to reserve at any of these ?
 user response: sure . book allenbell . i need the reference number as well .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1362it [43:10,  2.14s/it]
@@ -35368,6 +36218,9 @@ WARNING:root:must be called with a dataclass type or instance
 =======
 pred turn change: {'hotel-name': 'allenbell'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-name': 'allenbell'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-name': 'allenbell'}
 pred states: {'attraction-name': 'cambridge artworks',
  'hotel-area': 'east',
@@ -35546,6 +36399,7 @@ gold states: {'attraction-name': 'cambridge artworks',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_day="wednesday", book_people=1, book_number_of_days=2)\n': -1.3562920454404002}
 
@@ -35562,6 +36416,10 @@ few-shot completions: {'    agent.state.hotel = agent.find_hotel(book_day="wedne
 few-shot completions: {"            {'hotel-area': 'east', 'hotel-pricerange': 'cheap', 'hotel-internet': 'yes', 'hotel-type': 'guest house', 'hotel-book stay': '2', 'hotel-book day': 'wednesday', 'hotel-book people': '1'}": -0.41621616228229996}
 few-shot best completion: {'hotel-area': 'east', 'hotel-pricerange': 'cheap', 'hotel-internet': 'yes', 'hotel-type': 'guest house', 'hotel-book stay': '2', 'hotel-book day': 'wednesday', 'hotel-book people': '1'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'hotel-area': 'east', 'hotel-pricerange': 'cheap', 'hotel-internet': 'yes', 'hotel-type': 'guest house', 'hotel-book stay': '2', 'hotel-book day': 'wednesday', 'hotel-book people': '1'}": -0.41621616228229996}
+few-shot best completion: {'hotel-area': 'east', 'hotel-pricerange': 'cheap', 'hotel-internet': 'yes', 'hotel-type': 'guest house', 'hotel-book stay': '2', 'hotel-book day': 'wednesday', 'hotel-book people': '1'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1367th example. MUL1003.json_turn_15
 system response: there are no hotel -s on the east side that are not expensive . can i find something for you in another area ?
 user response: okay . a guest house in the east area , cheap with wifi for 1 person , 2 nights , starting wednesday .
@@ -35741,6 +36599,7 @@ system response: what area would you like the entertainment in ? the east , sout
 user response: the area does not matter , can you suggest something to me ?
 pred turn change: {'attraction-type': 'entertainment'}
 gold turn change: {'attraction-area': 'dontcare'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1376it [43:39,  2.05s/it]
@@ -35754,6 +36613,9 @@ gold turn change: {'attraction-area': 'dontcare'}
 =======
 pred states: {'attraction-type': 'entertainment',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-type': 'entertainment',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'hotel-area': 'dontcare',
  'hotel-internet': 'yes',
  'hotel-stars': '3',
@@ -35918,6 +36780,7 @@ system response: yes , it s 163 minutes . would you like me to book you a ticket
 user response: thank you for being so helpful , but you've done all i needed today . have a very nice day !
 pred turn change: {}
 gold turn change: {}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1383it [43:57,  2.33s/it]
@@ -35931,6 +36794,9 @@ gold turn change: {}
 =======
 pred states: {'restaurant-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'restaurant-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'restaurant-food': 'mediterranean',
  'restaurant-name': 'shiraz',
  'restaurant-pricerange': 'expensive',
@@ -36109,6 +36975,7 @@ gold states: {'restaurant-area': 'centre',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 1391it [44:14,  2.10s/it]
 1392it [44:18,  2.65s/it]
@@ -36124,6 +36991,10 @@ few-shot best completion: taxi = agent.find_taxi(depart_time="21:00")
 few-shot completions: {"            {'taxi-leaveat': '21:00'}": -0.6296147342066}
 few-shot best completion: {'taxi-leaveat': '21:00'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+few-shot completions: {"            {'taxi-leaveat': '21:00'}": -0.6296147342066}
+few-shot best completion: {'taxi-leaveat': '21:00'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 this is the 1390th example. SNG01218.json_turn_0
 system response: 
 user response: i need a taxi leaving after 21:00 .
@@ -36186,7 +37057,11 @@ gold states: {'train-day': 'friday', 'train-destination': 'london liverpool stre
 
 =====================correct!=======================
 
+<<<<<<< HEAD
 my_refpydst
+=======
+
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 few-shot completions: {"            {'train-leaveat': '15:45', 'train-departure': 'cambridge'}": -0.79533426912835}
 few-shot best completion: {'train-leaveat': '15:45', 'train-departure': 'cambridge'}
@@ -36287,6 +37162,7 @@ gold states: {'restaurant-area': 'north',
 few-shot completions: {"            {'train-arriveby': 'dontcare'}": -0.9161095609030002}
 few-shot best completion: {'train-arriveby': 'dontcare'}
 this is the 1398th example. MUL1462.json_turn_5
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1399it [44:31,  1.87s/it]
@@ -36300,6 +37176,9 @@ this is the 1398th example. MUL1462.json_turn_5
 =======
 system response: ok i can book that for you , do you have a particular time you would like ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: ok i can book that for you , do you have a particular time you would like ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: no particular time . i just need the phone number .
 pred turn change: {'train-arriveby': 'dontcare'}
 gold turn change: {}
@@ -36473,6 +37352,7 @@ pred states: {'restaurant-name': 'the hotpot',
 few-shot completions: {"            {'restaurant-book day': 'saturday', 'restaurant-book people': '2'}": -0.26127997297169997}
 few-shot best completion: {'restaurant-book day': 'saturday', 'restaurant-book people': '2'}
 this is the 1406th example. PMUL0571.json_turn_6
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1407it [44:48,  2.10s/it]
@@ -36486,6 +37366,9 @@ this is the 1406th example. PMUL0571.json_turn_6
 =======
 system response: what day would you like the reservation ? also , the number of guests and time would be needed .
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: what day would you like the reservation ? also , the number of guests and time would be needed .
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: we need a table for 2 on saturday .
 pred turn change: {'restaurant-book day': 'saturday', 'restaurant-book people': '2'}
 gold turn change: {'restaurant-book day': 'saturday', 'restaurant-book people': '2'}
@@ -36651,6 +37534,7 @@ gold turn change: {'train-day': 'sunday',
  'train-departure': 'bishops stortford',
  'train-destination': 'cambridge',
  'train-leaveat': '16:30'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1415it [45:05,  2.16s/it]
@@ -36664,6 +37548,9 @@ gold turn change: {'train-day': 'sunday',
 =======
 pred states: {'attraction-area': 'centre',
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred states: {'attraction-area': 'centre',
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
  'attraction-type': 'park',
  'train-day': 'sunday',
  'train-departure': 'bishops stortford',
@@ -36847,6 +37734,7 @@ gold states: {'restaurant-area': 'east',
 few-shot completions: {'            {}': -0.000813666198}
 few-shot best completion: {}
 this is the 1422th example. PMUL3050.json_turn_5
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1423it [45:22,  2.08s/it]
@@ -36860,6 +37748,9 @@ this is the 1422th example. PMUL3050.json_turn_5
 =======
 system response: your tickets have been booked . the total fee for the tickets is 150.19 gbp payable at the station and your reference number is 5b8wz9f7 . need any more help today ?
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+system response: your tickets have been booked . the total fee for the tickets is 150.19 gbp payable at the station and your reference number is 5b8wz9f7 . need any more help today ?
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 user response: great that was all i needed today , thank you !
 pred turn change: {}
 gold turn change: {}
@@ -37025,6 +37916,7 @@ few-shot completions: {"            {'taxi-destination': 'rajmahal', 'taxi-leave
 few-shot best completion: {'taxi-destination': 'rajmahal', 'taxi-leaveat': '22:30'}
 this is the 1430th example. SNG01320.json_turn_0
 system response: 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1431it [45:39,  2.11s/it]
@@ -37040,6 +37932,10 @@ pred turn change: {'taxi-arriveby': '22:30', 'taxi-destination': 'rajmahal'}
 user response: please book me a taxi to come to rajmahal by 22:30 .
 pred turn change: {'taxi-destination': 'rajmahal', 'taxi-leaveat': '22:30'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+user response: please book me a taxi to come to rajmahal by 22:30 .
+pred turn change: {'taxi-destination': 'rajmahal', 'taxi-leaveat': '22:30'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'taxi-arriveby': '22:30', 'taxi-departure': 'rajmahal'}
 pred states: {'taxi-destination': 'rajmahal', 'taxi-leaveat': '22:30'}
 gold states: {'taxi-arriveby': '22:30', 'taxi-departure': 'rajmahal'}
@@ -37206,6 +38102,7 @@ few-shot best completion: {'hotel-name': 'alexander bed and breakfast', 'hotel-b
 this is the 1438th example. MUL1382.json_turn_5
 system response: the alexander bed and breakfast matches those qualifications , as well as being located in the centre . would you like a reservation or more information ?
 user response: i would like to book that for 5 nights please .
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1439it [45:56,  2.03s/it]
@@ -37225,6 +38122,9 @@ user response: i would like to book that for 5 nights please .
 =======
 pred turn change: {'hotel-book stay': '5', 'hotel-name': 'alexander bed and breakfast'}
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+pred turn change: {'hotel-book stay': '5', 'hotel-name': 'alexander bed and breakfast'}
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold turn change: {'hotel-book stay': '5', 'hotel-name': 'alexander bed and breakfast'}
 pred states: {'hotel-book stay': '5',
  'hotel-internet': 'yes',
@@ -37395,6 +38295,7 @@ pred states: {'hotel-book day': 'saturday',
  'restaurant-book time': '16:00',
  'restaurant-food': 'indian',
  'restaurant-pricerange': 'cheap'}
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 1443it [46:03,  1.95s/it]
@@ -37405,6 +38306,8 @@ pred states: {'hotel-book day': 'saturday',
 1447it [46:11,  1.92s/it]
 =======
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 gold states: {'hotel-book day': 'saturday',
  'hotel-book people': '3',
  'hotel-book stay': '3',
@@ -37497,6 +38400,7 @@ gold states: {'hotel-book day': 'thursday',
 =====================correct!=======================
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 0it [00:00, ?it/s]
@@ -37505,11 +38409,16 @@ correct (JGA) 758/1447  =  0.5238
 Slot Acc 0.9717
 Joint F1 0.9083
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 0it [00:00, ?it/s]1447it [00:00, 123091.67it/s]
 correct (JGA) 634/1447  =  0.4381
 Slot Acc 0.9640
 Joint F1 0.8852
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 
 accuracy of turn 0 is 172/200 = 0.8600
 accuracy of turn 1 is 134/200 = 0.6700
@@ -37528,6 +38437,7 @@ accuracy of turn 13 is 1/4 = 0.2500
 accuracy of turn 14 is 0/2 = 0.0000
 accuracy of turn 15 is 0/2 = 0.0000
 accuracy of turn 16 is 0/1 = 0.0000
+<<<<<<< HEAD
 <<<<<<< HEAD:logs/mixed_fs_bm_mul.out
 
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]
@@ -37549,6 +38459,8 @@ calculating slot-level F1: 100%|██████████| 1447/1447 [00:00
 1447it [00:00, 272599.62it/s]
 wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/table4/5p/mixed_retriever/split_v1_fs_bm_0521_0056)... Done. 0.1s
 =======
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 calculating slot-level F1:   0%|          | 0/1447 [00:00<?, ?it/s]calculating slot-level F1: 100%|██████████| 1447/1447 [00:00<00:00, 215999.64it/s]
 0it [00:00, ?it/s]1447it [00:00, 292137.56it/s]
 0it [00:00, ?it/s]1447it [00:00, 220448.15it/s]
@@ -37556,7 +38468,10 @@ wandb: Adding directory to artifact (/homehaesungpyun/my_refpydst/outputs/runs/t
 0it [00:00, ?it/s]1447it [00:00, 215784.61it/s]
 0it [00:00, ?it/s]1447it [00:00, 263384.02it/s]
 wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/preliminary/prompt_format/plain_text_gpt_0825_1949)... Done. 0.0s
+<<<<<<< HEAD
 >>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf:preliminary_logs/prompt_decoding/plain_text_greedy_random_gpt_2.out
+=======
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
 wandb: Waiting for W&B process to finish... (success).
 wandb: ERROR Error uploading "/home/haesungpyun/.local/share/wandb/artifacts/staging/tmpvvpt3uay": CommError, <Response [400]>
 wandb: ERROR Uploading artifact file failed. Artifact won't be committed.

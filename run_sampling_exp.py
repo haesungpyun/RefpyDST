@@ -379,8 +379,6 @@ class CodexExperiment(AbstractLMPromptingExperiment):
 
         for data_item_idx, data_item in tqdm(enumerate(selected_set)):
             n_total += 1
-            if data_item_idx < 3:
-                continue
             if data_item.get('pred'):
                 self.prediction_recorder.add_state(data_item, data_item['pred'])
                 running_log.append(data_item)
@@ -452,7 +450,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     sample_idx += self.num_samples   
                     example_ids = [self.label_id(x) for x in examples]
 
-                    prompt_text_dict = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False)            
+                    prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False)            
                     all_slot_values, predicted_slot_values, predicted_prior_context, pred_turn_slot_values,  best_completion, completions = \
                         self.make_prediction(data_item, train_by_dial_id, prompt_text_dict, examples, save_prediction=False)
                     

@@ -292,7 +292,7 @@ class MWContrastiveDataloader:
 class MWContrastiveDataloader2:
     """
     pos: sampling 10 randomly in score_full=3
-    neg: sampling 10 randomly in score_full=0,1,2
+    neg: sampling 10 randomly in score_full=1,2,3
     """
     def __init__(self, f1_set: MWDataset):
         self.f1_set = f1_set

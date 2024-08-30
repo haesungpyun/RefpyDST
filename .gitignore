@@ -18,8 +18,13 @@ a.py
 b.py
 c.ipynb
 my_openai_key.py
+<<<<<<< HEAD
 logs/*
 logs/retriever_finetuning/*
 key.txtanalysis/tmp.json
 analysis/train_zero_log.json
 analysis/preference_data.json
+=======
+logs/
+key.txt
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
