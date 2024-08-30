@@ -108,19 +108,18 @@ def store_embed(input_dataset, output_filename, forward_fn):
 
 def embed_everything(model_name: str = 'sentence-transformers/all-mpnet-base-v2',
                      output_dir: str = f"outputs/retriever/pretrained_index/",
-                     data_file: str = "mw21_5p_train_v1.json",
                      **kwargs):
     # path to save indexes and results
     os.makedirs(output_dir, exist_ok=True)
 
-    device = torch.device("cuda:0")
+    device = torch.device("cuda")
 
     # Load model from HuggingFace Hub
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name)
     model.to(device)
 
-    mw_train = read_MW_with_string_transformation(data_file, **kwargs)
+    mw_train = read_MW_with_string_transformation("mw21_5p_train_v1.json", **kwargs)
     print("Finish reading data")
 
     def embed_sentence_with_this_model(sentence):
@@ -136,12 +135,16 @@ if __name__ == '__main__':
     os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
     os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
-    output_dir = 'runs/retriever/mw21_1p_train/split_v1/pretrained_index'
-    data_file = "mw21_1p_train_v1.json"
-    input_kwargs = {}
-    full_history = False
-    input_type = 'dialog_context'
-    only_slot = True
-    input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
+    dir_path = 'runs/preliminary/retriever_input/pt_sbert/8B'
+    config_files = os.listdir(dir_path)
+    for config_file in config_files:
+        with open(os.path.join(dir_path, config_file), 'r') as f:
+            config = json.load(f)
+        output_dir = f"outputs/retriever/pretrained_index/{config_file.replace('.json', '')}/pretrained"
+        input_kwargs = {}
+        full_history = config['retriever_args'].get('full_history', False)
+        input_type = config['retriever_args'].get('input_type', 'dialog_context')
+        only_slot = config['retriever_args'].get('only_slot', False)
+        input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
 
-    embed_everything(output_dir=output_dir, **input_kwargs, data_file=data_file)
+        embed_everything(output_dir=output_dir, **input_kwargs)

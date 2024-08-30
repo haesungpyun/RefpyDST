@@ -342,7 +342,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                     all_completions = {}
                     all_best_completions = {}                   
                     for ids, prompt_text in prompt_text_dict.items():
-                        completions = None  # the except block will print it, which can be confusing if its from the previous turn
+                        completions = {}  # the except block will print it, which can be confusing if its from the previous turn
                         completions, examples = self.generate_completion(prompt_text, data_item, examples)
                         best_completion = max(completions, key=completions.get)
                         best_completion = best_completion.strip().replace('agent.state.', '')
@@ -357,7 +357,8 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 #     all_predicted_slot_values[ids] = self.completion_parser(best_completion, predicted_prior_context)
 
             except Exception as e:
-                print(f"the output could not be parsed successfully: {best_completion}", e)
+                completions, examples = self.generate_completion(prompt_text, data_item, examples, just_return_completion=True)
+                print(f"the output could not be parsed successfully: {completions}", e)
                 data_item['not_valid'] = 1
                 data_item['completion'] = best_completion
             predicted_slot_values = self.normalizer.normalize(predicted_slot_values)

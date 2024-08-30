@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "train_fn": "/home/pyun/my_refpydst/data/mw21_1p_train_v1.json",
   "retriever_dir": "/home/pyun/my_refpydst/outputs/runs/retriever/mw21_1p_train/referred_states/split_v1",
   "test_fn": "/home/pyun/my_refpydst/data/mw24_100p_dev_100_sampled.json",
+=======
+  "train_fn": "/home/haesungpyun/my_refpydst/data/mw21_1p_train_v1.json",
+  "retriever_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever/mw21_1p_train/referred_states/split_v1",
+  "test_fn": "/home/haesungpyun/my_refpydst/data/mw24_100p_dev_100_sampled.json",
+>>>>>>> 24af7adf9c18fc8ebd8af481021a6dcaa10fb2cf
   "prompt_format": "python-prompt",
   "retriever_args":  {
     "state_transformation": "ref_aware"

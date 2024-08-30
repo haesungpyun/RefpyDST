@@ -108,7 +108,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
         if codex_engine.startswith('gpt'):
             self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
-        elif codex_engine.startswith('llama') or codex_engine.startswith('meta'):
+        elif codex_engine.startswith('llama') or codex_engine.startswith('meta') or 'llama' in codex_engine.lower():
             self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
         self.num_sampling_iteration = kwargs.get("num_sampling_iteration", 5)
         self.num_samples = kwargs.get("num_samples", 10)
@@ -624,7 +624,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         retriever_type=retriever_type,  # EmbeddingRetriever
         decoder_config=decoder_config,  # {'decoder_type': 'max_emb_distance', 'discount_factor': 0.2, 'from_n_possible': 100}
         lm_decoding_config=lm_decoding_config,  # {'method': 'top_p', 'top_p': 0.9, 'stop_token': ';', 'max_mi_candidates': 100, 'null_prompt_format': 'python-prompt', 'null_prompt_weight': 1.0, 'min_null_probability': 0.0, 'min_token_null_probability': 0.0}
-        output_dir=output_dir,  # /home/pyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
+        output_dir=output_dir,  # /home/haesungpyun/RefPyDST/outputs/runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v2
         format_example=format_example,  # None
         **kwargs    # {'retriever_args': {'state_transformation': 'ref_aware'}, 'run_name': 'runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
     )
@@ -646,14 +646,14 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
         run.update()
 
 if __name__ == "__main__":
-    os.environ['REFPYDST_DATA_DIR'] = "/home/pyun/my_refpydst/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/pyun/my_refpydst/outputs"    
+    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
+    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
     import warnings
     warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # raise ValueError
     
-    run_file: str = "runs/table4/5p/smapling_exp/split_v1_topk_bm_5_fs_5.json"
+    run_file: str = "runs/table4_llama/5p/smapling_exp_train/split_v1_topk_bm_5_fs_5_70B_vllm.json"
     # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
     # "runs/table4/5p/bm25/mixed.json"
     # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'

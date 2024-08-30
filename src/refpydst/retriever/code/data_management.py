@@ -142,6 +142,8 @@ def data_item_to_string(
     elif input_type == 'context':
         if full_history:
             history = ""
+            if len(data_item['dialog']['sys']) == 1:
+                return "[CONTEXT]  [SYS]  [USER] "
             for sys_utt, usr_utt in zip(data_item['dialog']['sys'][:-1], data_item['dialog']['usr'][:-1]):
                 history += string_transformation({}, sys_utt, usr_utt)
             return history
@@ -149,6 +151,7 @@ def data_item_to_string(
         if only_slot:
             context = list(data_item['last_slot_values'].keys())
             history = "[CONTEXT] " + ', '.join(context)
+            history += f" [SYS]  [USER] "
             return history
         
         context = data_item['last_slot_values']
