@@ -1,12 +1,3 @@
-{
-    "train_fn": "/home/haesungpyun/my_refpydst/data/mw21_100p_train.json",
-    "dev_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_dev.json",
-    "test_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_test.json",
-    "output_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/baseline/baseline",
-    "num_epochs": 3,
-    "top_k": 10,
-    "batch_size": 32,
-    "top_range": 200,
-    "max_seq_length": 256,
-    "state_transformation_type": "ref_aware"
-  }
+version https://git-lfs.github.com/spec/v1
+oid sha256:e993391276d7c2e472daba72463fe104651cf12d577ba459923c7da9a959d14d
+size 479
