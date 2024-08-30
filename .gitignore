@@ -20,4 +20,6 @@ c.ipynb
 my_openai_key.py
 logs/*
 logs/retriever_finetuning/*
-key.txt
+key.txtanalysis/tmp.json
+analysis/train_zero_log.json
+analysis/preference_data.json
