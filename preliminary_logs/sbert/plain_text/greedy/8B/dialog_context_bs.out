@@ -1,0 +1,94 @@
+/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.8 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.11
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240831_015303-jkaryhkj
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run -runs-preliminary-sbert-plain_text-greedy-8B-dialog_context_bs
+wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
+wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/jkaryhkj
+mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 7/2731 [00:00<00:50, 53.59it/s]mapping supervised_set surface forms...:   1%|          | 31/2731 [00:00<00:34, 78.77it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 242.91it/s]mapping supervised_set surface forms...:   8%|▊         | 206/2731 [00:01<00:12, 197.55it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:13, 191.90it/s]mapping supervised_set surface forms...:   9%|▉         | 243/2731 [00:01<00:13, 180.13it/s]mapping supervised_set surface forms...:   9%|▉         | 259/2731 [00:01<00:16, 150.07it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:01<00:04, 465.65it/s]mapping supervised_set surface forms...:  18%|█▊        | 503/2731 [00:01<00:05, 429.68it/s]mapping supervised_set surface forms...:  25%|██▍       | 671/2731 [00:01<00:02, 690.74it/s]mapping supervised_set surface forms...:  33%|███▎      | 911/2731 [00:02<00:01, 1083.74it/s]mapping supervised_set surface forms...:  38%|███▊      | 1043/2731 [00:02<00:01, 1087.74it/s]mapping supervised_set surface forms...:  43%|████▎     | 1168/2731 [00:02<00:01, 864.66it/s] mapping supervised_set surface forms...:  53%|█████▎    | 1442/2731 [00:02<00:01, 1268.31it/s]mapping supervised_set surface forms...:  58%|█████▊    | 1597/2731 [00:02<00:01, 714.07it/s] mapping supervised_set surface forms...:  63%|██████▎   | 1716/2731 [00:03<00:01, 729.18it/s]mapping supervised_set surface forms...:  71%|███████   | 1938/2731 [00:03<00:00, 854.92it/s]mapping supervised_set surface forms...:  75%|███████▍  | 2048/2731 [00:03<00:00, 853.12it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2178/2731 [00:03<00:00, 888.78it/s]mapping supervised_set surface forms...:  83%|████████▎ | 2280/2731 [00:04<00:01, 334.47it/s]mapping supervised_set surface forms...:  86%|████████▌ | 2355/2731 [00:04<00:01, 366.05it/s]mapping supervised_set surface forms...:  94%|█████████▎| 2555/2731 [00:04<00:00, 555.07it/s]mapping supervised_set surface forms...:  98%|█████████▊| 2664/2731 [00:04<00:00, 631.85it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:04<00:00, 565.63it/s]
+reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 82.48it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 67.75it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  8.62it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:02<00:00,  8.37it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 11.22it/s]
+WARNING:sentence_transformers.SentenceTransformer:No sentence-transformers model found with name /home/haesungpyun/my_refpydst/outputs/retriever/pretrained_index/dialog_context_bs/. Creating a new one with mean pooling.
+Traceback (most recent call last):
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
+    main(**args)
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
+    experiment: CodexExperiment = CodexExperiment(
+                                  ^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 58, in __init__
+    super().__init__(
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 109, in __init__
+    self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 543, in get_retriever_by_type
+    return EmbeddingRetriever(**{
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/embed_based_retriever.py", line 124, in __init__
+    self.model = SentenceTransformer(model_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 299, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1324, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 53, in __init__
+    config = AutoConfig.from_pretrained(model_name_or_path, **config_args, cache_dir=cache_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py", line 972, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/configuration_utils.py", line 632, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/configuration_utils.py", line 689, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/utils/hub.py", line 373, in cached_file
+    raise EnvironmentError(
+OSError: /home/haesungpyun/my_refpydst/outputs/retriever/pretrained_index/dialog_context_bs/ does not appear to have a file named config.json. Checkout 'https://huggingface.co//home/haesungpyun/my_refpydst/outputs/retriever/pretrained_index/dialog_context_bs//tree/None' for available files.
+Traceback (most recent call last):
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
+    main(**args)
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
+    experiment: CodexExperiment = CodexExperiment(
+                                  ^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 58, in __init__
+    super().__init__(
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 109, in __init__
+    self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 543, in get_retriever_by_type
+    return EmbeddingRetriever(**{
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/embed_based_retriever.py", line 124, in __init__
+    self.model = SentenceTransformer(model_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 299, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1324, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 53, in __init__
+    config = AutoConfig.from_pretrained(model_name_or_path, **config_args, cache_dir=cache_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py", line 972, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/configuration_utils.py", line 632, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/configuration_utils.py", line 689, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/transformers/utils/hub.py", line 373, in cached_file
+    raise EnvironmentError(
+OSError: /home/haesungpyun/my_refpydst/outputs/retriever/pretrained_index/dialog_context_bs/ does not appear to have a file named config.json. Checkout 'https://huggingface.co//home/haesungpyun/my_refpydst/outputs/retriever/pretrained_index/dialog_context_bs//tree/None' for available files.
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: 🚀 View run -runs-preliminary-sbert-plain_text-greedy-8B-dialog_context_bs at: https://wandb.ai/hacastle12/refpydst/runs/jkaryhkj
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240831_015303-jkaryhkj/logs

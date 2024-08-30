@@ -75,17 +75,22 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                         # 'run_name': '-runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2'}
         )
         self.lm_decoding_config = lm_decoding_config
+        self.beam_search_config = None
+        if self.lm_decoding_config is not None:
+            self.beam_search_config = {'beam_size': lm_decoding_config.pop('beam_size')} if lm_decoding_config.get('beam_size') else None
         
         min_null_token_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_token_null_probability', 0) or 0
         self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
         min_null_sequence_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_null_probability', 0) or 0
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
         if codex_engine.startswith('gpt'):
-            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
-        elif codex_engine.startswith('llama') or codex_engine.startswith('meta'):
-            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
+            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+        elif "llama" in codex_engine.lower():
+            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
 
-    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn]) -> Tuple[
+        self.add_guidelines = kwargs.get("add_guidelines", True)
+
+    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn], just_return_completion:bool = False) -> Tuple[
         Dict[str, float], List[Turn]]:
         # codex completion
         complete_flag = False
@@ -94,7 +99,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         completions: Dict[str, float] = {}
         while not complete_flag and parse_error_count < 5 and other_error_cnt < 5:
             try:
-                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") == "greedy":
+                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") in ["greedy", "beam_search"]:
                     completions = self.codex_client.greedy_lm_completion(prompt_text)
                 elif self.lm_decoding_config["method"] == "top_p":
                     completions = self.codex_client.top_p_lm_completion(prompt_text, **self.lm_decoding_config)
@@ -243,6 +248,8 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     # check if CODEX is crazy
                     predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
                     # for now, just verify our best completion is parse-able
+                    if isinstance(completions, list):
+                        completions = completions[0]
                     temp_parse = self.completion_parser(max(completions, key=completions.get).strip().replace('agent.state.', ''), predicted_context)
                     # temp_parse = self.completion_parser(max(completions, key=completions.get), predicted_context)
                     complete_flag = True
@@ -250,7 +257,10 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     parse_error_count += 1
 
         if not complete_flag:
+            if just_return_completion:
+                return completions, examples
             raise ValueError("unable to generate completion")
+        
         return completions, examples
 
 
@@ -305,7 +315,7 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
 
     # write out running log
     with open(os.path.join(output_dir, "running_log.json"), 'w') as f:
-        json.dump(running_log, f)
+        json.dump(running_log, f, indent=2)
 
     if len(running_log) == len(experiment.test_set):
         run = wandb.Api().run(f"{wandb.run.entity}/{wandb.run.project}/{wandb.run.id}")
@@ -321,7 +331,7 @@ if __name__ == "__main__":
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # # # raise ValueError
     
-    # run_file: str = 'runs/table4/5p/error_shot/split_v1.json'
+    # run_file: str = 'runs/preliminary/bm25/python_no_guidelines/greedy/8B/dialog_context_text.json'
     # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'

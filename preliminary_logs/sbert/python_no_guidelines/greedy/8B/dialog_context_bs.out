@@ -1,0 +1,45 @@
+/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.8 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.11
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240830_192036-16q566rn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run -runs-preliminary-sbert-python_no_guidelines-greedy-8B-dialog_context_bs
+wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
+wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/16q566rn
+mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 7/2731 [00:00<00:56, 48.44it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:20, 128.63it/s]mapping supervised_set surface forms...:   2%|▏         | 44/2731 [00:00<00:21, 122.28it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 254.31it/s]mapping supervised_set surface forms...:   8%|▊         | 206/2731 [00:01<00:12, 200.89it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:12, 194.50it/s]mapping supervised_set surface forms...:   9%|▉         | 244/2731 [00:01<00:13, 184.05it/s]mapping supervised_set surface forms...:  10%|▉         | 260/2731 [00:01<00:16, 152.34it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:01<00:04, 480.91it/s]mapping supervised_set surface forms...:  18%|█▊        | 505/2731 [00:01<00:04, 459.96it/s]mapping supervised_set surface forms...:  25%|██▍       | 674/2731 [00:01<00:02, 722.52it/s]mapping supervised_set surface forms...:  34%|███▍      | 936/2731 [00:01<00:01, 1174.05it/s]mapping supervised_set surface forms...:  39%|███▉      | 1075/2731 [00:02<00:01, 1042.66it/s]mapping supervised_set surface forms...:  44%|████▍     | 1197/2731 [00:02<00:01, 945.43it/s] mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:02<00:01, 1216.34it/s]mapping supervised_set surface forms...:  58%|█████▊    | 1588/2731 [00:02<00:01, 749.22it/s] mapping supervised_set surface forms...:  62%|██████▏   | 1695/2731 [00:02<00:01, 754.25it/s]mapping supervised_set surface forms...:  71%|███████   | 1938/2731 [00:03<00:00, 944.06it/s]mapping supervised_set surface forms...:  75%|███████▌  | 2049/2731 [00:03<00:00, 925.50it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2178/2731 [00:03<00:00, 950.86it/s]mapping supervised_set surface forms...:  84%|████████▎ | 2281/2731 [00:04<00:01, 345.61it/s]mapping supervised_set surface forms...:  86%|████████▋ | 2357/2731 [00:04<00:00, 377.78it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2563/2731 [00:04<00:00, 579.51it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:04<00:00, 590.29it/s]
+reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 82.97it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 68.42it/s]reading surface forms from ontology.json:  87%|████████▋ | 27/31 [00:02<00:00,  7.25it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 11.15it/s]
+Traceback (most recent call last):
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
+    main(**args)
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
+    experiment: CodexExperiment = CodexExperiment(
+                                  ^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 58, in __init__
+    super().__init__(
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 109, in __init__
+    self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 539, in get_retriever_by_type
+    raise ValueError(f"retriever_dir={retriever_dir} is a relative path, attempted to find rooted from "
+ValueError: retriever_dir=retriever/pretrained_index/context_slot/split_v1 is a relative path, attempted to find rooted from /home/haesungpyun/my_refpydst/outputs/, but not found. Set an abs path to retriever or check setting of REFPYDST_OUTPUTS_DIR.
+Traceback (most recent call last):
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
+    main(**args)
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
+    experiment: CodexExperiment = CodexExperiment(
+                                  ^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 58, in __init__
+    super().__init__(
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 109, in __init__
+    self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 539, in get_retriever_by_type
+    raise ValueError(f"retriever_dir={retriever_dir} is a relative path, attempted to find rooted from "
+ValueError: retriever_dir=retriever/pretrained_index/context_slot/split_v1 is a relative path, attempted to find rooted from /home/haesungpyun/my_refpydst/outputs/, but not found. Set an abs path to retriever or check setting of REFPYDST_OUTPUTS_DIR.
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: 🚀 View run -runs-preliminary-sbert-python_no_guidelines-greedy-8B-dialog_context_bs at: https://wandb.ai/hacastle12/refpydst/runs/16q566rn
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240830_192036-16q566rn/logs

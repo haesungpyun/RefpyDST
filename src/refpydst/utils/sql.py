@@ -79,56 +79,58 @@ def slot_values_to_seq_sql(original_slot_values: MultiWOZDict, single_answer: bo
 
 def sql_pred_parse(pred_completion) -> Dict[str, str]:
     # parse sql results and fix general errors
+    try:
+        pred_completion = " * FROM" + pred_completion
 
-    pred_completion = " * FROM" + pred_completion
+        # fix for no states
+        if pred_completion == " * FROM  WHERE ":
+            return {}
 
-    # fix for no states
-    if pred_completion == " * FROM  WHERE ":
+        # remove limit statements
+        pred_completion = re.sub(r" LIMIT [0-9]*", "", pred_completion)
+
+        # Here we need to write a parser to convert back to dialogue state
+        pred_slot_values = []
+        # pred = pred.lower()
+        parsed = sqlparse.parse(pred_completion)
+        if not parsed:
+            return {}
+        stmt = parsed[0]
+        sql_toks = pred_completion.split()
+        operators = [" = ", " LIKE ", " < ", " > ", " >= ", " <= "]
+
+        if "AS" in pred_completion:
+            as_indices = [i for i, x in enumerate(sql_toks) if x == "AS"]
+
+            table_name_map_dict = {}
+            for indice in as_indices:
+                # hotel AS h -> {h: hotel}
+                table_name_map_dict[sql_toks[indice + 1].replace(",", "")] = sql_toks[indice - 1]
+
+            slot_values_str = str(stmt.tokens[-1]).replace("_", " ").replace("""'""", "").replace("WHERE ", "")
+            for operator in operators:
+                slot_values_str = slot_values_str.replace(operator, "-")
+            slot_values = slot_values_str.split(" AND ")
+
+            for sv in slot_values:
+                for t_ in table_name_map_dict.keys():
+                    sv = sv.replace(t_ + ".", table_name_map_dict[t_] + "-")
+                pred_slot_values.append(sv)
+        else:
+
+            table_name = sql_toks[sql_toks.index("FROM") + 1]
+
+            slot_values_str = str(stmt.tokens[-1]).replace("_", " ").replace("""'""", "").replace("WHERE ", "")
+            for operator in operators:
+                slot_values_str = slot_values_str.replace(operator, "-")
+            slot_values = slot_values_str.split(" AND ")
+
+            pred_slot_values.extend([table_name + "-" + sv for sv in slot_values if slot_values != ['']])
+
+        pred_slot_values = {'-'.join(sv_pair.split('-')[:-1]): sv_pair.split('-')[-1] for sv_pair in pred_slot_values}
+
+        # remove _ in SQL columns
+        pred_slot_values = {slot.replace('_', ' '): value for slot, value in pred_slot_values.items()}
+        return pred_slot_values
+    except Exception as e:
         return {}
-
-    # remove limit statements
-    pred_completion = re.sub(r" LIMIT [0-9]*", "", pred_completion)
-
-    # Here we need to write a parser to convert back to dialogue state
-    pred_slot_values = []
-    # pred = pred.lower()
-    parsed = sqlparse.parse(pred_completion)
-    if not parsed:
-        return {}
-    stmt = parsed[0]
-    sql_toks = pred_completion.split()
-    operators = [" = ", " LIKE ", " < ", " > ", " >= ", " <= "]
-
-    if "AS" in pred_completion:
-        as_indices = [i for i, x in enumerate(sql_toks) if x == "AS"]
-
-        table_name_map_dict = {}
-        for indice in as_indices:
-            # hotel AS h -> {h: hotel}
-            table_name_map_dict[sql_toks[indice + 1].replace(",", "")] = sql_toks[indice - 1]
-
-        slot_values_str = str(stmt.tokens[-1]).replace("_", " ").replace("""'""", "").replace("WHERE ", "")
-        for operator in operators:
-            slot_values_str = slot_values_str.replace(operator, "-")
-        slot_values = slot_values_str.split(" AND ")
-
-        for sv in slot_values:
-            for t_ in table_name_map_dict.keys():
-                sv = sv.replace(t_ + ".", table_name_map_dict[t_] + "-")
-            pred_slot_values.append(sv)
-    else:
-
-        table_name = sql_toks[sql_toks.index("FROM") + 1]
-
-        slot_values_str = str(stmt.tokens[-1]).replace("_", " ").replace("""'""", "").replace("WHERE ", "")
-        for operator in operators:
-            slot_values_str = slot_values_str.replace(operator, "-")
-        slot_values = slot_values_str.split(" AND ")
-
-        pred_slot_values.extend([table_name + "-" + sv for sv in slot_values if slot_values != ['']])
-
-    pred_slot_values = {'-'.join(sv_pair.split('-')[:-1]): sv_pair.split('-')[-1] for sv_pair in pred_slot_values}
-
-    # remove _ in SQL columns
-    pred_slot_values = {slot.replace('_', ' '): value for slot, value in pred_slot_values.items()}
-    return pred_slot_values

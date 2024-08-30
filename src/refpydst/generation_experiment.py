@@ -144,7 +144,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 retriever=self.retriever,
                 from_n_possible=decoder_config['from_n_possible'],
                 discount_factor=decoder_config['discount_factor'],
-                operation=decoder_config.get('operation', 'sum'),
+                operation=decoder_config.get('operation', 'multiply'),
                 zscore=decoder_config.get('zscore', False)
             )
         
@@ -206,7 +206,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         return prompt_text
 
 
-    def get_prompt_text_dict(self, data_item: Turn, examples: List[Turn], zero_one_shot:bool=False) -> str:
+    def get_prompt_text_dict(self, data_item: Turn, examples: List[Turn], zero_one_shot:bool=False, add_guidelines:bool=True) -> str:
         """
         Given a target/inference turn, retrieve self.num_examples demonstrations and build a prompt which includes
         these, according to the format defined when instantiating the Experiment. Return this prompt and the
@@ -221,14 +221,14 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                     data_item, examples=[], 
                     given_context=predicted_context, 
                     prompt_format=self.prompt_format,
-                    chat_format=True
+                    chat_format=True, add_guidelines=add_guidelines
                 )
             for ex in examples:
                 prompt_text_dict[f"{ex['ID']}_turn_{ex['turn_id']}"] = self.prompt_generator.get_prompt(
                     data_item, examples=[ex], 
                     given_context=predicted_context, 
                     prompt_format=self.prompt_format,
-                    chat_format=True
+                    chat_format=True, add_guidelines=add_guidelines
                 )
             if len(examples) > 0:
                 prompt_text_dict[f"{len(examples)}-shot"] = \
@@ -236,17 +236,17 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                         data_item, examples=examples, 
                         given_context=predicted_context, 
                         prompt_format=self.prompt_format,
-                        chat_format=True
+                        chat_format=True, add_guidelines=add_guidelines
                     ) 
             return prompt_text_dict
         else:
             if self.use_gold:
                 prompt_text = self.prompt_generator.get_prompt(
-                    data_item, examples=examples, prompt_format=self.prompt_format)
+                    data_item, examples=examples, prompt_format=self.prompt_format, add_guidelines=add_guidelines)
             else:
                 predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
                 prompt_text = self.prompt_generator.get_prompt(
-                    data_item, examples=examples, given_context=predicted_context, prompt_format=self.prompt_format, chat_format=True)
+                    data_item, examples=examples, given_context=predicted_context, prompt_format=self.prompt_format, chat_format=True, add_guidelines=add_guidelines)
             return {f"{len(examples)}-shot":prompt_text}
         
     def get_demonstrations(self, data_item: Turn) -> List[Turn]:
@@ -268,7 +268,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             # we have remaining examples to retriever (in most few-shot settings, all of them)
             predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
             modified_item = copy.deepcopy(data_item)
-            modified_item['last_slot_values'] = predicted_context
+            modified_item['last_slot_values'] = predicted_context            
             examples = self.retriever.item_to_best_examples(
                 modified_item, k=self.num_examples, decoder=self.demonstration_decoder)
             if isinstance(examples, dict):
@@ -288,6 +288,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         # verify we haven't selected an example in this dialogue
         examples = [e for e in examples if e['ID'] != data_item['ID']]
         if len(examples) > num_examples:
+            # examples : [worst -> best]
             examples = examples[-num_examples:]
         return examples
 
@@ -313,7 +314,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             n_total += 1
             
             examples: List[Turn] = self.get_demonstrations(data_item) 
-            prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False)
+            prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False, add_guidelines=self.add_guidelines)
             
             # record the prompt
             data_item['prompt'] = prompt_text_dict
@@ -341,7 +342,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                     all_completions = {}
                     all_best_completions = {}                   
                     for ids, prompt_text in prompt_text_dict.items():
-                        completions = None  # the except block will print it, which can be confusing if its from the previous turn
+                        completions = {}  # the except block will print it, which can be confusing if its from the previous turn
                         completions, examples = self.generate_completion(prompt_text, data_item, examples)
                         best_completion = max(completions, key=completions.get)
                         best_completion = best_completion.strip().replace('agent.state.', '')
@@ -356,7 +357,8 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 #     all_predicted_slot_values[ids] = self.completion_parser(best_completion, predicted_prior_context)
 
             except Exception as e:
-                print(f"the output could not be parsed successfully: {best_completion}", e)
+                completions, examples = self.generate_completion(prompt_text, data_item, examples, just_return_completion=True)
+                print(f"the output could not be parsed successfully: {completions}", e)
                 data_item['not_valid'] = 1
                 data_item['completion'] = best_completion
             predicted_slot_values = self.normalizer.normalize(predicted_slot_values)
@@ -487,7 +489,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             # and didn't want to over-write
             if data_item_idx > 20:
                 with open(os.path.join(self.output_dir, "running_log.json"), 'w') as f:
-                    json.dump(running_log, f)
+                    json.dump(running_log, f, indent=2)
         stats = evaluate_run_log.evaluate_logs(running_log, test_set=self.test_set)
         slot_prf = slot_level_f1(running_log, tp_means_correct=True)
         self.logger.log({f"f1/{slot_name}": f1 for slot_name, (_, f1) in slot_prf.items()})

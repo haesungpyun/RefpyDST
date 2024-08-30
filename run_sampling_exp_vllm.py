@@ -361,10 +361,11 @@ class CodexExperiment(AbstractLMPromptingExperiment):
 
         for data_item_idx, data_item in tqdm(enumerate(selected_set)):
             n_total += 1
-            if data_item.get('pred'):
+            if 'pred' in data_item:
+                if isinstance(data_item['pred'], list):
+                    data_item['pred'] = data_item['pred'][0]
                 self.prediction_recorder.add_state(data_item, data_item['pred'])
                 running_log.append(data_item)
-                
                 this_jga, this_acc, this_f1 = evaluate(data_item['pred'], data_item['slot_values'])
                 total_acc += this_acc
                 total_f1 += this_f1
@@ -644,71 +645,27 @@ if __name__ == "__main__":
     os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
     os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
-    import warnings
-    warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
-    # raise ValueError
+    # import warnings
+    # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
+    # # raise ValueError
     
-    run_file: str = "runs/table4_llama/5p/smapling_exp_train/split_v1_topk_bm_5_fs_5_8B_vllm.json"
-    # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
-    # "runs/table4/5p/bm25/mixed.json"
-    # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
-    # 'runs/table4/5p/pretrained_sbert/split_v1.json'
+    # run_file: str = "runs/table4_llama/5p/smapling_exp_train/split_v1_topk_bm_5_fs_5_8B_vllm_full_log_half.json"
+    # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
+    # # "runs/table4/5p/bm25/mixed.json"
+    # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
+    # # 'runs/table4/5p/pretrained_sbert/split_v1.json'
 
-    # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-    # 'runs/codex/zero_shot/python/split_v1.json'
-    # "runs/codex/toy_test.json"
-    # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-        # arguments are input from a configuration file if the first argument to the program is a valid file
-    args: CodexPromptingRunConfig = read_json(run_file)
-    if 'output_dir' not in args:
-        args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
-    if not 'run_name' in args:
-        args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
-    
-    default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
-    default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
-    wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
-    wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
-    run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
-                     name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
-                     group=args.get("run_group", default_run_group),
-                     tags=args.get("run_tags", None))
-    # args.pop('format_example')
-    # args['num_examples'] = 0
-    main(**args)
-
-    # if os.path.exists(sys.argv[1]):
-    #     run_file: str = sys.argv[1]
+    # # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
+    # # 'runs/codex/zero_shot/python/split_v1.json'
+    # # "runs/codex/toy_test.json"
+    # # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
     #     # arguments are input from a configuration file if the first argument to the program is a valid file
-    #     args: CodexPromptingRunConfig = read_json(run_file)
-    #     if 'output_dir' not in args:
-    #         args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
-    #     if not 'run_name' in args:
-    #         args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
-    # else:
-    #     # otherwise, try to parse from argparse
-    #     parser = argparse.ArgumentParser()
-    #     parser.add_argument('--train_fn', type=str, help="training data file (few-shot or full shot)",
-    #                         required=True)  # e.g. "./data/mw21_10p_train_v3.json"
-    #     parser.add_argument('--prompt_format', type=str, choices=PROMPT_VARIANTS,
-    #                         help=f"prompt format variant, among: {', '.join(PROMPT_VARIANTS)}",
-    #                         default="IC-DST")  # e.g. "IC-DST"
-    #     parser.add_argument('--retriever_dir', type=str, required=True,
-    #                         help="sentence transformer saved path")  # "./retriever/expts/mw21_10p_v3_0304_400_20"
-    #     parser.add_argument('--output_dir', type=str, default="./expts/debug",
-    #                         help="directory to save running log and configs")
-    #     parser.add_argument('--mwz_ver', type=str, default="2.1", choices=['2.1', '2.4'], help="version of MultiWOZ")
-    #     parser.add_argument('--codex_engine', type=str, default="gpt-3.5-turbo", choices=["text-davinci-002"],
-    #                         help="version of GPT-3/Codex to complete with")
-    #     parser.add_argument('--demonstration_mapping_path', type=str, default=None,
-    #                         help="if provided, don't use retriever to find nearby dialogue turns, and instead use those "
-    #                              "provided in the mapping load-able at this path. It should contain a dictionary of the"
-    #                              "form: {dial_id: {turn_id: [(dial_id, turn_id), ...]}, ...}")
-    #     parser.add_argument('--test_fn', type=str, default='', help="file to evaluate on, empty means use the test set")
-    #     parser.add_argument('--retriever_type', type=str, default='EmbeddingRetriever',
-    #                         help="what kind of retriever to use")
-    #     args = parser.parse_args()
-    #     args = vars(args)
+    # args: CodexPromptingRunConfig = read_json(run_file)
+    # if 'output_dir' not in args:
+    #     args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
+    # if not 'run_name' in args:
+    #     args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
+    
     # default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     # default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
     # wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
@@ -720,6 +677,50 @@ if __name__ == "__main__":
     # # args.pop('format_example')
     # # args['num_examples'] = 0
     # main(**args)
+
+    if os.path.exists(sys.argv[1]):
+        run_file: str = sys.argv[1]
+        # arguments are input from a configuration file if the first argument to the program is a valid file
+        args: CodexPromptingRunConfig = read_json(run_file)
+        if 'output_dir' not in args:
+            args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
+        if not 'run_name' in args:
+            args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
+    else:
+        # otherwise, try to parse from argparse
+        parser = argparse.ArgumentParser()
+        parser.add_argument('--train_fn', type=str, help="training data file (few-shot or full shot)",
+                            required=True)  # e.g. "./data/mw21_10p_train_v3.json"
+        parser.add_argument('--prompt_format', type=str, choices=PROMPT_VARIANTS,
+                            help=f"prompt format variant, among: {', '.join(PROMPT_VARIANTS)}",
+                            default="IC-DST")  # e.g. "IC-DST"
+        parser.add_argument('--retriever_dir', type=str, required=True,
+                            help="sentence transformer saved path")  # "./retriever/expts/mw21_10p_v3_0304_400_20"
+        parser.add_argument('--output_dir', type=str, default="./expts/debug",
+                            help="directory to save running log and configs")
+        parser.add_argument('--mwz_ver', type=str, default="2.1", choices=['2.1', '2.4'], help="version of MultiWOZ")
+        parser.add_argument('--codex_engine', type=str, default="gpt-3.5-turbo", choices=["text-davinci-002"],
+                            help="version of GPT-3/Codex to complete with")
+        parser.add_argument('--demonstration_mapping_path', type=str, default=None,
+                            help="if provided, don't use retriever to find nearby dialogue turns, and instead use those "
+                                 "provided in the mapping load-able at this path. It should contain a dictionary of the"
+                                 "form: {dial_id: {turn_id: [(dial_id, turn_id), ...]}, ...}")
+        parser.add_argument('--test_fn', type=str, default='', help="file to evaluate on, empty means use the test set")
+        parser.add_argument('--retriever_type', type=str, default='EmbeddingRetriever',
+                            help="what kind of retriever to use")
+        args = parser.parse_args()
+        args = vars(args)
+    default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
+    default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
+    wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
+    wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
+                     name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
+                     group=args.get("run_group", default_run_group),
+                     tags=args.get("run_tags", None))
+    # args.pop('format_example')
+    # args['num_examples'] = 0
+    main(**args)
 
 
 
