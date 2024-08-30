@@ -82,9 +82,13 @@ class BM25Retriever(ExampleRetriever):
 
         # embedding : tokenized text
         # string: [CONTEXT]~ [SYS]~ [USER]~
+        input_kwargs = {}
+        input_type = kwargs.get('input_type', 'dialog_context')
+        only_slot = kwargs.get('only_slot', False)
+        input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
 
         def default_transformation(turn):
-            return data_item_to_string(turn, full_history=full_history)
+            return data_item_to_string(turn, **input_kwargs)
 
         if type(string_transformation) == str:
             # configs can also specify known functions by a string, e.g. 'default'
@@ -96,8 +100,8 @@ class BM25Retriever(ExampleRetriever):
         for dataset in datasets:
             self.data_items += dataset
         
-        self.string_history = list(map(self.string_transformation, dataset))
-        self.embedding = list(map(self.data_item_to_embedding, self.data_items))
+        self.string_history = [self.string_transformation(turn) for turn in self.data_items]
+        self.embedding = [self.data_item_to_embedding(turn) for turn in self.data_items]
 
         self.search_string = {}
         self.search_embeddings = {}
@@ -112,7 +116,7 @@ class BM25Retriever(ExampleRetriever):
         
         self.retriever = retriever_type(self.search_embeddings)
         
-    def data_item_to_embedding(self, data_item):
+    def data_item_to_embedding(self, data_item) -> NDArray:
         # embedding = tokenized string
         if isinstance(data_item, list):
             return data_item

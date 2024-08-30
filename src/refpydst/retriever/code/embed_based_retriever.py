@@ -83,7 +83,7 @@ class EmbeddingRetriever(ExampleRetriever):
         print(f"randomly select {ratio} of dialogs, i.e. {n_selected} dialogs")
         selected_dial_ids = random.sample(dial_ids, n_selected)
         return {k: v for k, v in embs.items() if k.split('_')[0] in selected_dial_ids}
-
+    
     def pre_assigned_sample_selection(self, embs, examples):
         selected_dial_ids = set([dial['ID'] for dial in examples])
         return {k: v for k, v in embs.items() if k.split('_')[0] in selected_dial_ids}
@@ -98,10 +98,15 @@ class EmbeddingRetriever(ExampleRetriever):
         # search_index:  string. a single npy filename, the embeddings of search candidates
         # sampling method: "random_by_turn", "random_by_dialog", "kmeans_cosine", "pre_assigned"
         # ratio: how much portion is selected
+        
+        input_kwargs = {}
+        input_type = kwargs.get('input_type', 'dialog_context')
+        only_slot = kwargs.get('only_slot', False)
+        input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
 
         def default_transformation(turn):
-            return data_item_to_string(turn, full_history=full_history)
-
+            return data_item_to_string(turn, **input_kwargs)
+    
         if type(string_transformation) == str:
             # configs can also specify known functions by a string, e.g. 'default'
             self.string_transformation = get_string_transformation_by_type(string_transformation)
@@ -139,7 +144,7 @@ class EmbeddingRetriever(ExampleRetriever):
         else:
             raise ValueError("selection method not supported")
 
-    def data_item_to_embedding(self, data_item):
+    def data_item_to_embedding(self, data_item, **kwargs) -> NDArray:
         with torch.no_grad():
             embed = self.model.encode(self.string_transformation(
                 data_item), convert_to_numpy=True).reshape(1, -1)

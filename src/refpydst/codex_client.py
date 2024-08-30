@@ -71,12 +71,13 @@ class CodexClient(AbstractLMClient):
     timer: SpeedLimitTimer
 
     def __init__(self, config: OpenAIAPIConfig = None, engine: str = "gpt-3.5-turbo-0125",
-                 stop_sequences: List[str] = None) -> None:
+                 stop_sequences: List[str] = None, beam_search_config=None) -> None:
         super().__init__()
         self.config = config or _load_environment_codex_config()
         self.engine = engine
         self.stop_sequences = stop_sequences or ['--', '\n', ';', '#']
         self.timer = SpeedLimitTimer(second_per_step=self.config['seconds_per_step'])  # openai limitation 20 query/min
+        self.beam_search_config = beam_search_config
 
     def greedy_lm_completion(self, prompt_text: str) -> Dict[str, float]:
         """
@@ -98,6 +99,8 @@ class CodexClient(AbstractLMClient):
                 "temperature": 0.0,
                 "stop": stop_sequences,
             }
+            if self.beam_search_config:
+                args.update(self.beam_search_config)
             self.timer.step()
             # result = openai.completions.create(**args)
             result = openai.chat.completions.create(**args)
@@ -241,13 +244,14 @@ class LlamaClient(AbstractLMClient):
     timer: SpeedLimitTimer
 
     def __init__(self, config = None, engine: str = "meta-llama/Meta-Llama-3-8B-Instruct",
-                 stop_sequences: List[str] = None, use_vllm: bool = True, quantization: str = None) -> None:
+                 stop_sequences: List[str] = None, use_vllm: bool = True, quantization: str = None, beam_search_config=None) -> None:
         super().__init__()
         self.config = config
         self.engine = engine
         self.stop_sequences = stop_sequences or ['--', '\n', ';', '#']
         self.use_vllm = use_vllm
         self.timer = SpeedLimitTimer(second_per_step=0.2)  # openai limitation 20 query/min
+        self.beam_search_config = beam_search_config
 
         if use_vllm:
             self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True)
@@ -261,7 +265,6 @@ class LlamaClient(AbstractLMClient):
                 bnb_4bit_compute_dtype=torch.float16,
                 bnb_4bit_use_double_quant=True,
             )
-
             self.model = LlamaForCausalLM.from_pretrained(
                 self.engine,
                 quantization_config=bnb_config,
@@ -289,13 +292,22 @@ class LlamaClient(AbstractLMClient):
             self.timer.step()
             # result = openai.completions.create(**args)
             if self.use_vllm:
-                samplig_params = SamplingParams(
+                sampling_params = SamplingParams(
                     n=1, best_of=1, max_tokens=120, 
                     temperature=0, stop=stop_sequences,
                     stop_token_ids=self.terminators)
+                if self.beam_search_config:
+                    sampling_params.use_beam_search = True
+                    sampling_params.best_of = self.beam_search_config['beam_size']
+
+                if not isinstance(prompt_text[0], torch.Tensor):
+                    prompt_text = [self.tokenizer.apply_chat_template(
+                        prompt_text, add_generation_prompt=True, return_tensors="pt"
+                    )]
                 prompts = [self.tokenizer.batch_decode(prompt, skip_special_tokens=False)[0] for prompt in prompt_text]
-                result = self.model.generate(prompts, sampling_params=samplig_params)
+                result = self.model.generate(prompts, sampling_params=sampling_params)
                 if len(result) > 1:
+                    # if batched
                     completions = [{output.outputs[0].text: 1} for output in result]
                 else:
                     completions = [{result[0].outputs[0].text: 1}]

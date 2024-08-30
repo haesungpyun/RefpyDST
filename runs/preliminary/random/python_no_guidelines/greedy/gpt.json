@@ -1,0 +1,9 @@
+{
+  "prompt_format": "python-prompt",
+  "train_fn": "mw21_5p_train_v1.json", 
+  "retriever_dir": "none",
+  "test_fn": "mw24_20p_dev.json",
+  "retriever_type": "random",
+  "codex_engine":"gpt-3.5-turbo-0125",
+  "add_guidelines": false
+}

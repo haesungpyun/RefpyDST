@@ -1,0 +1,24 @@
+{
+  "train_fn": "mw21_5p_train_v1.json",
+  "retriever_dir": "BM25",
+  "test_fn": "mw24_100p_dev.json",
+  "prompt_format": "plain_text",
+  "retriever_args":  {
+    "state_transformation": "ref_aware",
+    "input_type": "dialog_context",
+    "only_slot": true
+  },
+  "codex_engine":"meta-llama/Meta-Llama-3-8B-Instruct",
+  "retriever_type": "BM25",
+  "num_examples": 10,
+  "decoding_pool": "all_train_set",
+  "decoder_config": {
+    "decoder_type": "bm25_max_emb_distance", 
+    "discount_factor": 0.2, 
+    "from_n_possible": 100
+  },
+  "lm_decoding_config": {
+    "method": "beam_search",
+    "beam_size": 4
+  }
+}
