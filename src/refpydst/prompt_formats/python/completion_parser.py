@@ -161,6 +161,7 @@ def parse_python_completion(python_completion: str, state: Union[MultiWOZDict, P
                 # e.g. del agent.state.hotel.type -> agent.data.hotel.type = "[DELETE]"
                 line = line.replace("del ", "") + " = \"[DELETE]\""
             lines.append(line.strip())
+
         statements = "\n".join(lines).strip()
         exec(statements)
         return agent.state.to_mwoz_dict()

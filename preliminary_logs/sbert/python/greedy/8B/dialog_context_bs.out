@@ -4,6 +4,7 @@ wandb: Currently logged in as: haesung-pyun (haesung-pyun-seoul-national-univers
 wandb: wandb version 0.17.8 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
+<<<<<<< HEAD
 wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240831_050054-oljvtrha
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run -runs-preliminary-sbert-python-greedy-8B-dialog_context_bs
@@ -27,6 +28,31 @@ INFO 08-31 05:01:26 gpu_executor.py:102] # GPU blocks: 12046, # CPU blocks: 2048
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s, est. speed input: 2684.82 toks/s, output: 22.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s, est. speed input: 2684.82 toks/s, output: 22.16 toks/s]
 1it [00:01,  1.01s/it]
+=======
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240831_043337-yaq20or8
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run -runs-preliminary-sbert-python-greedy-8B-dialog_context_bs
+wandb: ⭐️ View project at https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD
+wandb: 🚀 View run at https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD/runs/yaq20or8
+mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:54, 50.37it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:24, 109.93it/s]mapping supervised_set surface forms...:   2%|▏         | 41/2731 [00:00<00:24, 108.02it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 240.64it/s]mapping supervised_set surface forms...:   7%|▋         | 204/2731 [00:01<00:16, 152.27it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:18, 138.54it/s]mapping supervised_set surface forms...:   9%|▉         | 240/2731 [00:01<00:21, 118.17it/s]mapping supervised_set surface forms...:   9%|▉         | 251/2731 [00:02<00:28, 87.22it/s] mapping supervised_set surface forms...:  13%|█▎        | 362/2731 [00:02<00:10, 228.35it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 316.81it/s]mapping supervised_set surface forms...:  18%|█▊        | 496/2731 [00:02<00:08, 271.80it/s]mapping supervised_set surface forms...:  24%|██▍       | 660/2731 [00:02<00:04, 500.24it/s]mapping supervised_set surface forms...:  27%|██▋       | 735/2731 [00:02<00:03, 525.16it/s]mapping supervised_set surface forms...:  32%|███▏      | 887/2731 [00:02<00:02, 731.71it/s]mapping supervised_set surface forms...:  36%|███▌      | 982/2731 [00:02<00:02, 766.77it/s]mapping supervised_set surface forms...:  39%|███▉      | 1075/2731 [00:03<00:02, 575.30it/s]mapping supervised_set surface forms...:  42%|████▏     | 1151/2731 [00:03<00:03, 445.16it/s]mapping supervised_set surface forms...:  50%|████▉     | 1353/2731 [00:03<00:01, 710.66it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:03<00:01, 694.77it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1547/2731 [00:04<00:03, 369.66it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:02, 497.12it/s]mapping supervised_set surface forms...:  69%|██████▉   | 1890/2731 [00:04<00:01, 715.60it/s]mapping supervised_set surface forms...:  74%|███████▎  | 2009/2731 [00:04<00:01, 622.78it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2178/2731 [00:04<00:00, 758.57it/s]mapping supervised_set surface forms...:  84%|████████▎ | 2285/2731 [00:05<00:01, 317.03it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2363/2731 [00:06<00:01, 351.09it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2564/2731 [00:06<00:00, 536.00it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:06<00:00, 435.05it/s]
+reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 82.52it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 67.11it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  8.30it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:02<00:00,  8.11it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 10.86it/s]
+INFO 08-31 04:33:53 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='meta-llama/Meta-Llama-3-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Meta-Llama-3-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=meta-llama/Meta-Llama-3-8B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
+INFO 08-31 04:33:55 model_runner.py:680] Starting to load model meta-llama/Meta-Llama-3-8B-Instruct...
+INFO 08-31 04:33:56 weight_utils.py:223] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.85s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  2.00s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.08s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.55s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.72s/it]
+
+INFO 08-31 04:34:04 model_runner.py:692] Loading model weights took 14.9595 GB
+INFO 08-31 04:34:05 gpu_executor.py:102] # GPU blocks: 27965, # CPU blocks: 2048
+0it [00:00, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.27it/s, est. speed input: 5228.88 toks/s, output: 43.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.27it/s, est. speed input: 5228.88 toks/s, output: 43.15 toks/s]
+1it [00:00,  1.80it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': 1}
 few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
 this is the 0th example. PMUL3470.json_turn_0
@@ -42,8 +68,13 @@ gold states: {'hotel-name': 'express by holiday inn cambridge'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.01it/s, est. speed input: 2316.20 toks/s, output: 24.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.01it/s, est. speed input: 2316.20 toks/s, output: 24.18 toks/s]
 2it [00:02,  1.02s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4669.75 toks/s, output: 48.75 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4669.75 toks/s, output: 48.75 toks/s]
+2it [00:01,  1.86it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_people=7, name="express by holiday inn cambridge")': 1}
 few-shot best completion: hotel = agent.find_hotel(book_people=7, name="express by holiday inn cambridge")
 this is the 1th example. PMUL3470.json_turn_1
@@ -59,8 +90,13 @@ gold states: {'hotel-book people': '7', 'hotel-name': 'express by holiday inn ca
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.13s/it, est. speed input: 2135.08 toks/s, output: 24.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.13s/it, est. speed input: 2135.08 toks/s, output: 24.77 toks/s]
 3it [00:03,  1.08s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4264.83 toks/s, output: 49.49 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.76it/s, est. speed input: 4264.83 toks/s, output: 49.49 toks/s]
+3it [00:01,  1.77it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="monday", book_people=7, book_number_of_days=4)': 1}
 few-shot best completion: hotel = agent.find_hotel(book_day="monday", book_people=7, book_number_of_days=4)
 this is the 2th example. PMUL3470.json_turn_2
@@ -85,8 +121,13 @@ gold states: {'hotel-book day': 'monday',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.88it/s, est. speed input: 4605.54 toks/s, output: 13.20 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.88it/s, est. speed input: 4605.54 toks/s, output: 13.20 toks/s]
 4it [00:03,  1.14it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.75it/s, est. speed input: 9172.12 toks/s, output: 26.28 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.74it/s, est. speed input: 9172.12 toks/s, output: 26.28 toks/s]
+4it [00:01,  2.17it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 3th example. PMUL3470.json_turn_3
@@ -111,8 +152,13 @@ gold states: {'hotel-book day': 'monday',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.03it/s, est. speed input: 2542.17 toks/s, output: 22.75 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.03it/s, est. speed input: 2542.17 toks/s, output: 22.75 toks/s]
 5it [00:04,  1.09it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 5155.13 toks/s, output: 46.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.09it/s, est. speed input: 5155.13 toks/s, output: 46.14 toks/s]
+5it [00:02,  2.10it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(leave_from="cambridge", destination="birmingham new street")': 1}
 few-shot best completion: train = agent.find_train(leave_from="cambridge", destination="birmingham new street")
 this is the 4th example. PMUL3470.json_turn_4
@@ -143,8 +189,13 @@ gold states: {'hotel-book day': 'monday',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.02it/s, est. speed input: 2528.18 toks/s, output: 22.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.02it/s, est. speed input: 2528.18 toks/s, output: 22.50 toks/s]
 6it [00:05,  1.05it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.08it/s, est. speed input: 5149.36 toks/s, output: 45.83 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.08it/s, est. speed input: 5149.36 toks/s, output: 45.83 toks/s]
+6it [00:02,  2.04it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(arrive_by_time="17:30", day="friday")': 1}
 few-shot best completion: train = agent.find_train(arrive_by_time="17:30", day="friday")
 this is the 5th example. PMUL3470.json_turn_5
@@ -182,8 +233,13 @@ gold states: {'hotel-book day': 'monday',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.22it/s, est. speed input: 2159.55 toks/s, output: 24.32 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s, est. speed input: 2159.55 toks/s, output: 24.32 toks/s]
 7it [00:06,  1.08it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.47it/s, est. speed input: 4392.64 toks/s, output: 49.46 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.47it/s, est. speed input: 4392.64 toks/s, output: 49.46 toks/s]
+7it [00:03,  2.13it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", internet="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", internet="yes")
 this is the 6th example. MUL0602.json_turn_0
@@ -199,8 +255,13 @@ gold states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate', 'hotel-ty
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.14it/s, est. speed input: 2611.52 toks/s, output: 22.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.14it/s, est. speed input: 2611.52 toks/s, output: 22.77 toks/s]
 8it [00:07,  1.08it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.30it/s, est. speed input: 5281.64 toks/s, output: 46.05 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.30it/s, est. speed input: 5281.64 toks/s, output: 46.05 toks/s]
+8it [00:03,  2.14it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", internet="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", internet="yes")
 this is the 7th example. MUL0602.json_turn_1
@@ -219,8 +280,13 @@ gold states: {'hotel-internet': 'yes',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.14s/it, est. speed input: 1964.91 toks/s, output: 24.51 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.14s/it, est. speed input: 1964.91 toks/s, output: 24.51 toks/s]
 9it [00:08,  1.00s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.82it/s, est. speed input: 4092.95 toks/s, output: 51.05 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.82it/s, est. speed input: 4092.95 toks/s, output: 51.05 toks/s]
+9it [00:04,  1.99it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(area="south", stars="4", price_range="moderate", internet="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(area="south", stars="4", price_range="moderate", internet="yes")
 this is the 8th example. MUL0602.json_turn_2
@@ -246,8 +312,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.11it/s, est. speed input: 2571.14 toks/s, output: 22.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.11it/s, est. speed input: 2571.14 toks/s, output: 22.21 toks/s]
 10it [00:09,  1.02it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5210.63 toks/s, output: 45.01 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5210.63 toks/s, output: 45.01 toks/s]
+10it [00:04,  2.03it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(name="aylesbray lodge guest house")': 1}
 few-shot best completion: hotel = agent.find_hotel(name="aylesbray lodge guest house")
 this is the 9th example. MUL0602.json_turn_3
@@ -276,8 +347,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it, est. speed input: 2052.18 toks/s, output: 24.28 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it, est. speed input: 2052.18 toks/s, output: 24.28 toks/s]
 11it [00:10,  1.05s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.80it/s, est. speed input: 4252.61 toks/s, output: 50.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.79it/s, est. speed input: 4252.61 toks/s, output: 50.30 toks/s]
+11it [00:05,  1.92it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="sunday", book_people=4, book_number_of_days=2)': 1}
 few-shot best completion: hotel = agent.find_hotel(book_day="sunday", book_people=4, book_number_of_days=2)
 this is the 10th example. MUL0602.json_turn_4
@@ -315,8 +391,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.01s/it, est. speed input: 2410.42 toks/s, output: 22.66 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 2410.42 toks/s, output: 22.66 toks/s]
 12it [00:11,  1.05s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4967.25 toks/s, output: 46.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4967.25 toks/s, output: 46.71 toks/s]
+12it [00:06,  1.92it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(depart_time="10:45", leave_from="peterborough")': 1}
 few-shot best completion: train = agent.find_train(depart_time="10:45", leave_from="peterborough")
 this is the 11th example. MUL0602.json_turn_5
@@ -360,8 +441,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.04s/it, est. speed input: 2398.30 toks/s, output: 23.06 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.04s/it, est. speed input: 2398.30 toks/s, output: 23.06 toks/s]
 13it [00:12,  1.06s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.96it/s, est. speed input: 4900.20 toks/s, output: 47.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.96it/s, est. speed input: 4900.20 toks/s, output: 47.12 toks/s]
+13it [00:06,  1.90it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(leave_from="peterborough", arrive_by_time="10:45")': 1}
 few-shot best completion: train = agent.find_train(leave_from="peterborough", arrive_by_time="10:45")
 this is the 12th example. MUL0602.json_turn_6
@@ -410,8 +496,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.30s/it, est. speed input: 1984.10 toks/s, output: 24.68 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.30s/it, est. speed input: 1984.10 toks/s, output: 24.68 toks/s]
 14it [00:14,  1.14s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 4036.96 toks/s, output: 50.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 4036.96 toks/s, output: 50.21 toks/s]
+14it [00:07,  1.75it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(day="sunday", depart_time=state.train.depart_time, arrive_by_time=state.train.arrive_by_time)': 1}
 few-shot best completion: train = agent.find_train(day="sunday", depart_time=state.train.depart_time, arrive_by_time=state.train.arrive_by_time)
 this is the 13th example. MUL0602.json_turn_7
@@ -461,8 +552,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3539.63 toks/s, output: 17.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3539.63 toks/s, output: 17.95 toks/s]
 15it [00:15,  1.03s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 6971.51 toks/s, output: 35.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 6971.51 toks/s, output: 35.36 toks/s]
+15it [00:07,  1.93it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(book_people=4)': 1}
 few-shot best completion: train = agent.find_train(book_people=4)
 this is the 14th example. MUL0602.json_turn_8
@@ -515,8 +611,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.82it/s, est. speed input: 4865.88 toks/s, output: 12.73 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.82it/s, est. speed input: 4865.88 toks/s, output: 12.73 toks/s]
 16it [00:15,  1.12it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.49it/s, est. speed input: 9342.13 toks/s, output: 24.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.48it/s, est. speed input: 9342.13 toks/s, output: 24.44 toks/s]
+16it [00:07,  2.18it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 15th example. MUL0602.json_turn_9
@@ -569,8 +670,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.47it/s, est. speed input: 2624.08 toks/s, output: 22.06 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.47it/s, est. speed input: 2624.08 toks/s, output: 22.06 toks/s]
 17it [00:16,  1.19it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.01it/s, est. speed input: 5363.44 toks/s, output: 45.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.00it/s, est. speed input: 5363.44 toks/s, output: 45.09 toks/s]
+17it [00:08,  2.34it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(parking="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(parking="yes")
 this is the 16th example. PMUL0134.json_turn_0
@@ -586,8 +692,13 @@ gold states: {'hotel-parking': 'yes'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s, est. speed input: 3218.12 toks/s, output: 19.61 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s, est. speed input: 3218.12 toks/s, output: 19.61 toks/s]
 18it [00:17,  1.23it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.84it/s, est. speed input: 6517.53 toks/s, output: 39.72 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.83it/s, est. speed input: 6517.53 toks/s, output: 39.72 toks/s]
+18it [00:08,  2.42it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(area="south")': 1}
 few-shot best completion: hotel = agent.find_hotel(area="south")
 this is the 17th example. PMUL0134.json_turn_1
@@ -603,8 +714,13 @@ gold states: {'hotel-area': 'south', 'hotel-parking': 'yes'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s, est. speed input: 2931.51 toks/s, output: 20.64 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s, est. speed input: 2931.51 toks/s, output: 20.64 toks/s]
 19it [00:17,  1.23it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.64it/s, est. speed input: 6006.45 toks/s, output: 42.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.64it/s, est. speed input: 6006.45 toks/s, output: 42.30 toks/s]
+19it [00:09,  2.44it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="expensive")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="expensive")
 this is the 18th example. PMUL0134.json_turn_2
@@ -620,8 +736,13 @@ gold states: {'hotel-area': 'south', 'hotel-parking': 'yes', 'hotel-pricerange':
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.17s/it, est. speed input: 2029.23 toks/s, output: 24.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.17s/it, est. speed input: 2029.23 toks/s, output: 24.77 toks/s]
 20it [00:19,  1.08it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.74it/s, est. speed input: 4141.29 toks/s, output: 50.54 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.74it/s, est. speed input: 4141.29 toks/s, output: 50.54 toks/s]
+20it [00:09,  2.14it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(parking="yes", area="south", price_range="expensive", type="hotel")': 1}
 few-shot best completion: hotel = agent.find_hotel(parking="yes", area="south", price_range="expensive", type="hotel")
 this is the 19th example. PMUL0134.json_turn_3
@@ -646,8 +767,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.67it/s, est. speed input: 3785.28 toks/s, output: 16.70 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.67it/s, est. speed input: 3785.28 toks/s, output: 16.70 toks/s]
 21it [00:19,  1.19it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.41it/s, est. speed input: 7726.05 toks/s, output: 34.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.40it/s, est. speed input: 7726.05 toks/s, output: 34.09 toks/s]
+21it [00:10,  2.36it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel.book_people = 1': 1}
 few-shot best completion: hotel.book_people = 1
 this is the 20th example. PMUL0134.json_turn_4
@@ -675,8 +801,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it, est. speed input: 2151.39 toks/s, output: 23.70 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it, est. speed input: 2151.39 toks/s, output: 23.70 toks/s]
 22it [00:21,  1.04it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4493.72 toks/s, output: 49.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4493.72 toks/s, output: 49.50 toks/s]
+22it [00:10,  2.10it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_people=3, book_number_of_days=5, book_day="friday")': 1}
 few-shot best completion: hotel = agent.find_hotel(book_people=3, book_number_of_days=5, book_day="friday")
 this is the 21th example. PMUL0134.json_turn_5
@@ -711,8 +842,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.05it/s, est. speed input: 2555.30 toks/s, output: 20.91 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, est. speed input: 2555.30 toks/s, output: 20.91 toks/s]
 23it [00:22,  1.03it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.22it/s, est. speed input: 5420.51 toks/s, output: 44.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.21it/s, est. speed input: 5420.51 toks/s, output: 44.36 toks/s]
+23it [00:11,  2.09it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(area="south", food_type="mexican")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(area="south", food_type="mexican")
 this is the 22th example. PMUL0134.json_turn_6
@@ -753,10 +889,17 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.19s/it, est. speed input: 2025.83 toks/s, output: 24.41 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.19s/it, est. speed input: 2025.83 toks/s, output: 24.41 toks/s]
 24it [00:23,  1.05s/it]
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="chiquito restaurant bar", area="south", food_type=state.restaurant.food_type)': 1}
 few-shot best completion: restaurant = agent.find_restaurant(name="chiquito restaurant bar", area="south", food_type=state.restaurant.food_type)
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 5228.68 toks/s, output: 45.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 5228.68 toks/s, output: 45.62 toks/s]
+24it [00:11,  2.06it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="chiquito restaurant bar", area="south")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(name="chiquito restaurant bar", area="south")
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 this is the 23th example. PMUL0134.json_turn_7
 system response: there s the chiquito restaurant bar but its rather expensive . if that s okay , i can help you make a reservation .
 user response: can i have the phone number and post code for that please ?
@@ -798,8 +941,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it, est. speed input: 1911.81 toks/s, output: 25.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it, est. speed input: 1911.81 toks/s, output: 25.21 toks/s]
 25it [00:24,  1.15s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.50it/s, est. speed input: 3856.21 toks/s, output: 50.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.49it/s, est. speed input: 3856.21 toks/s, output: 50.86 toks/s]
+25it [00:12,  1.82it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi(depart_time="02:30", destination=agent.state.restaurant.name, leave_from=agent.state.hotel.name)': 1}
 few-shot best completion: taxi = agent.find_taxi(depart_time="02:30", destination=restaurant.name, leave_from=hotel.name)
 this is the 24th example. PMUL0134.json_turn_8
@@ -848,8 +996,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.54it/s, est. speed input: 3709.44 toks/s, output: 16.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.54it/s, est. speed input: 3709.44 toks/s, output: 16.97 toks/s]
 26it [00:25,  1.01s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.15it/s, est. speed input: 7561.35 toks/s, output: 34.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.14it/s, est. speed input: 7561.35 toks/s, output: 34.60 toks/s]
+26it [00:12,  2.03it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi()': 1}
 few-shot best completion: taxi = agent.find_taxi()
 this is the 25th example. PMUL0134.json_turn_9
@@ -896,8 +1049,13 @@ gold states: {'hotel-area': 'south',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s, est. speed input: 2764.61 toks/s, output: 21.01 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s, est. speed input: 2764.61 toks/s, output: 21.01 toks/s]
 27it [00:26,  1.02it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.40it/s, est. speed input: 5680.36 toks/s, output: 43.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.39it/s, est. speed input: 5680.36 toks/s, output: 43.16 toks/s]
+27it [00:13,  2.09it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi(depart_time="10:30")': 1}
 few-shot best completion: taxi = agent.find_taxi(depart_time="10:30")
 this is the 26th example. SNG0019.json_turn_0
@@ -913,8 +1071,13 @@ gold states: {'taxi-leaveat': '10:30'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.08s/it, est. speed input: 2111.79 toks/s, output: 24.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.08s/it, est. speed input: 2111.79 toks/s, output: 24.08 toks/s]
 28it [00:27,  1.13s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s, est. speed input: 4398.68 toks/s, output: 50.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s, est. speed input: 4398.68 toks/s, output: 50.16 toks/s]
+28it [00:13,  1.75it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi(leave_from="cambridge belfy", destination="cambridge shop")': 1}
 few-shot best completion: taxi = agent.find_taxi(leave_from="cambridge belfy", destination="cambridge shop")
 this is the 27th example. SNG0019.json_turn_1
@@ -936,8 +1099,13 @@ gold states: {'taxi-departure': 'cambridge belfry',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.11it/s, est. speed input: 2905.46 toks/s, output: 21.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.11it/s, est. speed input: 2905.46 toks/s, output: 21.15 toks/s]
 29it [00:28,  1.13s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 5740.78 toks/s, output: 41.79 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 5740.78 toks/s, output: 41.79 toks/s]
+29it [00:14,  1.72it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi(leave_from="cambridge chop house")': 1}
 few-shot best completion: taxi = agent.find_taxi(leave_from="cambridge chop house")
 this is the 28th example. SNG0019.json_turn_2
@@ -959,8 +1127,13 @@ gold states: {'taxi-departure': 'cambridge belfry',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.87it/s, est. speed input: 4748.96 toks/s, output: 13.06 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 4748.96 toks/s, output: 13.06 toks/s]
 30it [00:29,  1.02s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.71it/s, est. speed input: 9442.01 toks/s, output: 25.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.70it/s, est. speed input: 9442.01 toks/s, output: 25.97 toks/s]
+30it [00:14,  1.87it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 29th example. SNG0019.json_turn_3
@@ -982,8 +1155,13 @@ gold states: {'taxi-departure': 'cambridge belfry',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 4693.53 toks/s, output: 13.02 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 4693.53 toks/s, output: 13.02 toks/s]
 31it [00:30,  1.05it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.70it/s, est. speed input: 9347.17 toks/s, output: 25.93 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.69it/s, est. speed input: 9347.17 toks/s, output: 25.93 toks/s]
+31it [00:15,  1.99it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 30th example. SNG0019.json_turn_4
@@ -1005,8 +1183,13 @@ gold states: {'taxi-departure': 'cambridge belfry',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.43it/s, est. speed input: 2873.27 toks/s, output: 21.38 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.42it/s, est. speed input: 2873.27 toks/s, output: 21.38 toks/s]
 32it [00:31,  1.12it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s, est. speed input: 5818.47 toks/s, output: 43.29 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s, est. speed input: 5818.47 toks/s, output: 43.29 toks/s]
+32it [00:15,  2.15it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(price_range="moderate")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(price_range="moderate")
 this is the 31th example. SNG01172.json_turn_0
@@ -1022,8 +1205,13 @@ gold states: {'restaurant-pricerange': 'moderate'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.08it/s, est. speed input: 2249.53 toks/s, output: 23.80 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.08it/s, est. speed input: 2249.53 toks/s, output: 23.80 toks/s]
 33it [00:32,  1.09it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 4520.76 toks/s, output: 47.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 4520.76 toks/s, output: 47.84 toks/s]
+33it [00:16,  2.10it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="belgian", price_range="moderate")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="belgian", price_range="moderate")
 this is the 32th example. SNG01172.json_turn_1
@@ -1039,8 +1227,13 @@ gold states: {'restaurant-food': 'belgian', 'restaurant-pricerange': 'moderate'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.45it/s, est. speed input: 3265.17 toks/s, output: 18.81 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.45it/s, est. speed input: 3265.17 toks/s, output: 18.81 toks/s]
 34it [00:32,  1.15it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.97it/s, est. speed input: 6690.37 toks/s, output: 38.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.96it/s, est. speed input: 6690.37 toks/s, output: 38.55 toks/s]
+34it [00:16,  2.24it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(area="centre")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(area="centre")
 this is the 33th example. SNG01172.json_turn_2
@@ -1062,8 +1255,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4229.64 toks/s, output: 14.23 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4229.64 toks/s, output: 14.23 toks/s]
 35it [00:33,  1.29it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.08it/s, est. speed input: 8486.69 toks/s, output: 28.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.07it/s, est. speed input: 8486.69 toks/s, output: 28.56 toks/s]
+35it [00:16,  2.50it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 34th example. SNG01172.json_turn_3
@@ -1085,8 +1283,13 @@ gold states: {'restaurant-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.36it/s, est. speed input: 3026.53 toks/s, output: 20.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.36it/s, est. speed input: 3026.53 toks/s, output: 20.44 toks/s]
 36it [00:34,  1.29it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.75it/s, est. speed input: 6106.13 toks/s, output: 41.24 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.74it/s, est. speed input: 6106.13 toks/s, output: 41.24 toks/s]
+36it [00:17,  2.50it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="turkish")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="turkish")
 this is the 35th example. SNG01172.json_turn_4
@@ -1108,8 +1311,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it, est. speed input: 1807.65 toks/s, output: 25.29 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it, est. speed input: 1807.65 toks/s, output: 25.29 toks/s]
 37it [00:35,  1.05it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3749.43 toks/s, output: 52.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3749.43 toks/s, output: 52.45 toks/s]
+37it [00:17,  2.09it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(book_day="tuesday", book_people=1, book_time="20:00", name="anatolia")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(book_day="tuesday", book_people=1, book_time="20:00", name="anatolia")
 this is the 36th example. SNG01172.json_turn_5
@@ -1144,8 +1352,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.29s/it, est. speed input: 1851.87 toks/s, output: 25.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.29s/it, est. speed input: 1851.87 toks/s, output: 25.56 toks/s]
 38it [00:36,  1.07s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3809.36 toks/s, output: 52.57 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3809.36 toks/s, output: 52.57 toks/s]
+38it [00:18,  1.87it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="efes restaurant", book_day="tuesday", book_people=1, book_time="19:00")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(name="efes restaurant", book_day="tuesday", book_people=1, book_time="19:00")
 this is the 37th example. SNG01172.json_turn_6
@@ -1178,8 +1391,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.90it/s, est. speed input: 4452.10 toks/s, output: 13.33 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.90it/s, est. speed input: 4452.10 toks/s, output: 13.33 toks/s]
 39it [00:37,  1.09it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s, est. speed input: 8916.96 toks/s, output: 26.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.81it/s, est. speed input: 8916.96 toks/s, output: 26.71 toks/s]
+39it [00:18,  2.15it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 38th example. SNG01172.json_turn_7
@@ -1212,8 +1430,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s, est. speed input: 4487.30 toks/s, output: 13.48 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.92it/s, est. speed input: 4487.30 toks/s, output: 13.48 toks/s]
 40it [00:38,  1.23it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.84it/s, est. speed input: 8946.80 toks/s, output: 26.88 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.83it/s, est. speed input: 8946.80 toks/s, output: 26.88 toks/s]
+40it [00:19,  2.42it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 39th example. SNG01172.json_turn_8
@@ -1246,8 +1469,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 3177.94 toks/s, output: 20.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 3177.94 toks/s, output: 20.50 toks/s]
 41it [00:38,  1.34it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.60it/s, est. speed input: 6135.11 toks/s, output: 39.58 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.59it/s, est. speed input: 6135.11 toks/s, output: 39.58 toks/s]
+41it [00:19,  2.60it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel()': 1}
 few-shot best completion: hotel = agent.find_hotel()
 this is the 40th example. PMUL1579.json_turn_0
@@ -1263,8 +1491,13 @@ gold states: {}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 1883.59 toks/s, output: 24.47 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 1883.59 toks/s, output: 24.47 toks/s]
 42it [00:39,  1.19it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 3944.79 toks/s, output: 51.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 3944.79 toks/s, output: 51.26 toks/s]
+42it [00:20,  2.34it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(type="guest house", price_range="moderate", internet="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(type="guest house", price_range="moderate", internet="yes")
 this is the 41th example. PMUL1579.json_turn_1
@@ -1288,8 +1521,13 @@ gold states: {'hotel-internet': 'yes',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.16s/it, est. speed input: 1762.12 toks/s, output: 25.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.16s/it, est. speed input: 1762.12 toks/s, output: 25.86 toks/s]
 43it [00:40,  1.05it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.79it/s, est. speed input: 3651.91 toks/s, output: 53.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.78it/s, est. speed input: 3651.91 toks/s, output: 53.60 toks/s]
+43it [00:20,  2.09it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house", internet="yes", area="dontcare")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house", internet="yes", area="dontcare")
 this is the 42th example. PMUL1579.json_turn_2
@@ -1314,8 +1552,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it, est. speed input: 1919.39 toks/s, output: 25.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it, est. speed input: 1919.39 toks/s, output: 25.18 toks/s]
 44it [00:42,  1.08s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.58it/s, est. speed input: 3962.99 toks/s, output: 52.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3962.99 toks/s, output: 52.00 toks/s]
+44it [00:21,  1.86it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="saturday", book_people=4, book_number_of_days=4, name="avalon")': 1}
 few-shot best completion: hotel = agent.find_hotel(book_day="saturday", book_people=4, book_number_of_days=4, name="avalon")
 this is the 43th example. PMUL1579.json_turn_3
@@ -1355,8 +1598,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 2404.77 toks/s, output: 22.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 2404.77 toks/s, output: 22.62 toks/s]
 45it [00:43,  1.08s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4955.90 toks/s, output: 46.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.02it/s, est. speed input: 4955.90 toks/s, output: 46.62 toks/s]
+45it [00:21,  1.87it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(leave_from="leicester", destination=agent.state.hotel.area)': 1}
 few-shot best completion: train = agent.find_train(leave_from="leicester", destination=hotel.area)
 this is the 44th example. PMUL1579.json_turn_4
@@ -1394,8 +1642,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it, est. speed input: 1889.03 toks/s, output: 24.96 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it, est. speed input: 1889.03 toks/s, output: 24.96 toks/s]
 46it [00:44,  1.16s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3927.39 toks/s, output: 51.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3927.39 toks/s, output: 51.90 toks/s]
+46it [00:22,  1.73it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(day="saturday", depart_time="18:45", arrive_by_time="dontcare", leave_from="cambridge")': 1}
 few-shot best completion: train = agent.find_train(day="saturday", depart_time="18:45", arrive_by_time="dontcare", leave_from="cambridge")
 this is the 45th example. PMUL1579.json_turn_5
@@ -1446,8 +1699,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.10it/s, est. speed input: 2922.85 toks/s, output: 19.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.10it/s, est. speed input: 2922.85 toks/s, output: 19.84 toks/s]
 47it [00:45,  1.11s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5974.11 toks/s, output: 40.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5974.11 toks/s, output: 40.55 toks/s]
+47it [00:23,  1.82it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(book_people=agent.state.hotel.book_people)': 1}
 few-shot best completion: train = agent.find_train(book_people=hotel.book_people)
 this is the 46th example. PMUL1579.json_turn_6
@@ -1497,8 +1755,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s, est. speed input: 4575.41 toks/s, output: 11.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s, est. speed input: 4575.41 toks/s, output: 11.90 toks/s]
 48it [00:46,  1.03it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.43it/s, est. speed input: 9229.75 toks/s, output: 24.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.42it/s, est. speed input: 9229.75 toks/s, output: 24.00 toks/s]
+48it [00:23,  2.06it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 47th example. PMUL1579.json_turn_7
@@ -1548,8 +1811,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.01s/it, est. speed input: 1790.26 toks/s, output: 25.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 1790.26 toks/s, output: 25.62 toks/s]
 49it [00:47,  1.00it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 3690.07 toks/s, output: 52.80 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 3690.07 toks/s, output: 52.80 toks/s]
+49it [00:23,  2.01it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(destination="cambridge", arrive_by_time="16:45", day="monday")': 1}
 few-shot best completion: train = agent.find_train(destination="cambridge", arrive_by_time="16:45", day="monday")
 this is the 48th example. PMUL1159.json_turn_0
@@ -1573,8 +1841,13 @@ gold states: {'train-arriveby': '16:45',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.09it/s, est. speed input: 2302.47 toks/s, output: 22.82 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.09it/s, est. speed input: 2302.47 toks/s, output: 22.82 toks/s]
 50it [00:48,  1.01it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4776.03 toks/s, output: 47.33 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4776.03 toks/s, output: 47.33 toks/s]
+50it [00:24,  2.04it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(day="monday", leave_from="birmingham new street")': 1}
 few-shot best completion: train = agent.find_train(day="monday", leave_from="birmingham new street")
 this is the 49th example. PMUL1159.json_turn_1
@@ -1599,8 +1872,13 @@ gold states: {'train-arriveby': '16:45',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.79it/s, est. speed input: 4467.78 toks/s, output: 12.54 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.79it/s, est. speed input: 4467.78 toks/s, output: 12.54 toks/s]
 51it [00:49,  1.14it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.71it/s, est. speed input: 9256.54 toks/s, output: 25.99 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.70it/s, est. speed input: 9256.54 toks/s, output: 25.99 toks/s]
+51it [00:24,  2.29it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 50th example. PMUL1159.json_turn_2
@@ -1625,8 +1903,13 @@ gold states: {'train-arriveby': '16:45',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s, est. speed input: 3181.13 toks/s, output: 17.91 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s, est. speed input: 3181.13 toks/s, output: 17.91 toks/s]
 52it [00:49,  1.15it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.70it/s, est. speed input: 6725.73 toks/s, output: 37.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.70it/s, est. speed input: 6725.73 toks/s, output: 37.86 toks/s]
+52it [00:25,  2.33it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="centre")
 this is the 51th example. PMUL1159.json_turn_3
@@ -1654,8 +1937,13 @@ gold states: {'attraction-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.19it/s, est. speed input: 2666.80 toks/s, output: 21.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.19it/s, est. speed input: 2666.80 toks/s, output: 21.44 toks/s]
 53it [00:50,  1.14it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.43it/s, est. speed input: 5432.09 toks/s, output: 43.67 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.42it/s, est. speed input: 5432.09 toks/s, output: 43.67 toks/s]
+53it [00:25,  2.29it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre", type="church")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="centre", type="church")
 this is the 52th example. PMUL1159.json_turn_4
@@ -1683,8 +1971,13 @@ gold states: {'attraction-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.96it/s, est. speed input: 4400.29 toks/s, output: 13.72 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.96it/s, est. speed input: 4400.29 toks/s, output: 13.72 toks/s]
 54it [00:51,  1.28it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.93it/s, est. speed input: 8828.99 toks/s, output: 27.53 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.92it/s, est. speed input: 8828.99 toks/s, output: 27.53 toks/s]
+54it [00:25,  2.54it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 53th example. PMUL1159.json_turn_5
@@ -1713,8 +2006,13 @@ gold states: {'attraction-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.42it/s, est. speed input: 3012.42 toks/s, output: 19.87 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.42it/s, est. speed input: 3012.42 toks/s, output: 19.87 toks/s]
 55it [00:52,  1.29it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.90it/s, est. speed input: 6154.77 toks/s, output: 40.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s, est. speed input: 6154.77 toks/s, output: 40.60 toks/s]
+55it [00:26,  2.56it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="centre")
 this is the 54th example. PMUL1159.json_turn_6
@@ -1743,8 +2041,13 @@ gold states: {'attraction-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.95it/s, est. speed input: 4456.84 toks/s, output: 13.68 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.95it/s, est. speed input: 4456.84 toks/s, output: 13.68 toks/s]
 56it [00:52,  1.41it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.94it/s, est. speed input: 8979.27 toks/s, output: 27.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.93it/s, est. speed input: 8979.27 toks/s, output: 27.55 toks/s]
+56it [00:26,  2.77it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 55th example. PMUL1159.json_turn_7
@@ -1773,8 +2076,13 @@ gold states: {'attraction-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.08it/s, est. speed input: 2323.61 toks/s, output: 22.67 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.08it/s, est. speed input: 2323.61 toks/s, output: 22.67 toks/s]
 57it [00:53,  1.26it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4844.45 toks/s, output: 47.27 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4844.45 toks/s, output: 47.27 toks/s]
+57it [00:27,  2.52it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house")
 this is the 56th example. PMUL2748.json_turn_0
@@ -1790,8 +2098,13 @@ gold states: {'hotel-pricerange': 'moderate', 'hotel-type': 'guest house'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it, est. speed input: 1944.60 toks/s, output: 24.66 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.18s/it, est. speed input: 1944.60 toks/s, output: 24.66 toks/s]
 58it [00:54,  1.08it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4053.93 toks/s, output: 51.40 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4053.93 toks/s, output: 51.40 toks/s]
+58it [00:27,  2.17it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house", stars="4", area="east")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house", stars="4", area="east")
 this is the 57th example. PMUL2748.json_turn_1
@@ -1816,8 +2129,13 @@ gold states: {'hotel-area': 'east',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it, est. speed input: 1890.42 toks/s, output: 24.72 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it, est. speed input: 1890.42 toks/s, output: 24.72 toks/s]
 59it [00:56,  1.03s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.73it/s, est. speed input: 3967.24 toks/s, output: 51.88 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.73it/s, est. speed input: 3967.24 toks/s, output: 51.88 toks/s]
+59it [00:28,  1.97it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", stars="4", type="guest house", area="dontcare")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", stars="4", type="guest house", area="dontcare")
 this is the 58th example. PMUL2748.json_turn_2
@@ -1842,8 +2160,13 @@ gold states: {'hotel-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.13it/s, est. speed input: 2446.01 toks/s, output: 22.67 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.13it/s, est. speed input: 2446.01 toks/s, output: 22.67 toks/s]
 60it [00:57,  1.00s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.31it/s, est. speed input: 4990.30 toks/s, output: 46.25 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.31it/s, est. speed input: 4990.30 toks/s, output: 46.25 toks/s]
+60it [00:28,  2.01it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", parking="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(price_range="moderate", parking="yes")
 this is the 59th example. PMUL2748.json_turn_3
@@ -1871,8 +2194,13 @@ gold states: {'hotel-area': 'east',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s, est. speed input: 4426.35 toks/s, output: 13.38 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s, est. speed input: 4426.35 toks/s, output: 13.38 toks/s]
 61it [00:57,  1.15it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.80it/s, est. speed input: 8795.48 toks/s, output: 26.58 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.79it/s, est. speed input: 8795.48 toks/s, output: 26.58 toks/s]
+61it [00:29,  2.27it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 60th example. PMUL2748.json_turn_4
@@ -1905,8 +2233,13 @@ gold states: {'attraction-area': 'east',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.37it/s, est. speed input: 3263.45 toks/s, output: 19.24 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.37it/s, est. speed input: 3263.45 toks/s, output: 19.24 toks/s]
 62it [00:58,  1.19it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.77it/s, est. speed input: 6574.88 toks/s, output: 38.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.76it/s, est. speed input: 6574.88 toks/s, output: 38.77 toks/s]
+62it [00:29,  2.33it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="centre")
 this is the 61th example. PMUL2748.json_turn_5
@@ -1939,8 +2272,13 @@ gold states: {'attraction-area': 'east',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.45it/s, est. speed input: 3032.82 toks/s, output: 20.24 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.44it/s, est. speed input: 3032.82 toks/s, output: 20.24 toks/s]
 63it [00:59,  1.23it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s, est. speed input: 6061.05 toks/s, output: 40.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s, est. speed input: 6061.05 toks/s, output: 40.44 toks/s]
+63it [00:29,  2.39it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="centre")
 this is the 62th example. PMUL2748.json_turn_6
@@ -1973,8 +2311,13 @@ gold states: {'attraction-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.92it/s, est. speed input: 4469.67 toks/s, output: 13.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.92it/s, est. speed input: 4469.67 toks/s, output: 13.45 toks/s]
 64it [00:59,  1.36it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s, est. speed input: 8875.26 toks/s, output: 26.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.81it/s, est. speed input: 8875.26 toks/s, output: 26.71 toks/s]
+64it [00:30,  2.60it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 63th example. PMUL2748.json_turn_7
@@ -2007,8 +2350,13 @@ gold states: {'attraction-area': 'dontcare',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 4230.12 toks/s, output: 14.35 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 4230.12 toks/s, output: 14.35 toks/s]
 65it [01:00,  1.48it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.06it/s, est. speed input: 8388.77 toks/s, output: 28.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.05it/s, est. speed input: 8388.77 toks/s, output: 28.45 toks/s]
+65it [00:30,  2.82it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 64th example. PMUL0689.json_turn_0
@@ -2024,8 +2372,13 @@ gold states: {}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.35it/s, est. speed input: 2961.84 toks/s, output: 20.23 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.35it/s, est. speed input: 2961.84 toks/s, output: 20.23 toks/s]
 66it [01:01,  1.41it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 5979.92 toks/s, output: 40.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 5979.92 toks/s, output: 40.84 toks/s]
+66it [00:30,  2.70it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="italian")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="italian")
 this is the 65th example. PMUL0689.json_turn_1
@@ -2041,8 +2394,13 @@ gold states: {'restaurant-food': 'italian'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.00s/it, est. speed input: 2031.42 toks/s, output: 24.88 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.01s/it, est. speed input: 2031.42 toks/s, output: 24.88 toks/s]
 67it [01:02,  1.24it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 4174.80 toks/s, output: 51.13 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4174.80 toks/s, output: 51.13 toks/s]
+67it [00:31,  2.40it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="italian", area="centre", price_range="dontcare")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(food_type="italian", area="centre", price_range="dontcare")
 this is the 66th example. PMUL0689.json_turn_2
@@ -2062,8 +2420,13 @@ gold states: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s, est. speed input: 4320.62 toks/s, output: 13.87 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s, est. speed input: 4320.62 toks/s, output: 13.87 toks/s]
 68it [01:02,  1.37it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.98it/s, est. speed input: 8670.42 toks/s, output: 27.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.97it/s, est. speed input: 8670.42 toks/s, output: 27.84 toks/s]
+68it [00:31,  2.63it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 67th example. PMUL0689.json_turn_3
@@ -2085,8 +2448,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.02it/s, est. speed input: 2251.68 toks/s, output: 23.53 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.02it/s, est. speed input: 2251.68 toks/s, output: 23.53 toks/s]
 69it [01:03,  1.22it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4628.73 toks/s, output: 48.37 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4628.73 toks/s, output: 48.37 toks/s]
+69it [00:32,  2.37it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(leave_from="leicester", arrive_by_time="10:15")': 1}
 few-shot best completion: train = agent.find_train(leave_from="leicester", arrive_by_time="10:15")
 this is the 68th example. PMUL0689.json_turn_4
@@ -2114,8 +2482,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.47s/it, est. speed input: 1529.74 toks/s, output: 27.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.47s/it, est. speed input: 1529.74 toks/s, output: 27.15 toks/s]
 70it [01:05,  1.03s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3120.12 toks/s, output: 55.37 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3120.12 toks/s, output: 55.37 toks/s]
+70it [00:32,  1.91it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(destination="ely", day=agent.state.train.day, leave_from=agent.state.train.leave_from, arrive_by_time=agent.state.train.arrive_by_time)': 1}
 few-shot best completion: train = agent.find_train(destination="ely", day=train.day, leave_from=train.leave_from, arrive_by_time=train.arrive_by_time)
 this is the 69th example. PMUL0689.json_turn_5
@@ -2144,8 +2517,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.33s/it, est. speed input: 1835.61 toks/s, output: 25.54 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.33s/it, est. speed input: 1835.61 toks/s, output: 25.54 toks/s]
 71it [01:06,  1.13s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.53it/s, est. speed input: 3731.04 toks/s, output: 51.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.52it/s, est. speed input: 3731.04 toks/s, output: 51.90 toks/s]
+71it [00:33,  1.74it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(day="friday", leave_from=agent.state.train.leave_from, arrive_by_time=agent.state.train.arrive_by_time)': 1}
 few-shot best completion: train = agent.find_train(day="friday", leave_from=train.leave_from, arrive_by_time=train.arrive_by_time)
 this is the 70th example. PMUL0689.json_turn_6
@@ -2175,8 +2553,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.84it/s, est. speed input: 4689.12 toks/s, output: 12.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.84it/s, est. speed input: 4689.12 toks/s, output: 12.89 toks/s]
 72it [01:07,  1.03it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.67it/s, est. speed input: 9335.06 toks/s, output: 25.66 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.66it/s, est. speed input: 9335.06 toks/s, output: 25.66 toks/s]
+72it [00:33,  2.01it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 71th example. PMUL0689.json_turn_7
@@ -2206,8 +2589,13 @@ gold states: {'restaurant-area': 'centre',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.13s/it, est. speed input: 2228.25 toks/s, output: 23.93 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.13s/it, est. speed input: 2228.25 toks/s, output: 23.93 toks/s]
 73it [01:08,  1.03s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.80it/s, est. speed input: 4521.51 toks/s, output: 48.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.80it/s, est. speed input: 4521.51 toks/s, output: 48.56 toks/s]
+73it [00:34,  1.90it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi(destination="oak bistro", leave_from="express by holiday inn cambridge")': 1}
 few-shot best completion: taxi = agent.find_taxi(destination="oak bistro", leave_from="express by holiday inn cambridge")
 this is the 72th example. SNG02260.json_turn_0
@@ -2227,8 +2615,13 @@ gold states: {'taxi-departure': 'express by holiday inn cambridge',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s, est. speed input: 2646.73 toks/s, output: 21.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s, est. speed input: 2646.73 toks/s, output: 21.77 toks/s]
 74it [01:09,  1.02it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.44it/s, est. speed input: 5330.80 toks/s, output: 43.85 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.43it/s, est. speed input: 5330.80 toks/s, output: 43.85 toks/s]
+74it [00:34,  1.99it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.taxi = agent.find_taxi(depart_time="07:30")': 1}
 few-shot best completion: taxi = agent.find_taxi(depart_time="07:30")
 this is the 73th example. SNG02260.json_turn_1
@@ -2250,8 +2643,13 @@ gold states: {'taxi-departure': 'express by holiday inn cambridge',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.51it/s, est. speed input: 2855.91 toks/s, output: 21.20 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.51it/s, est. speed input: 2855.91 toks/s, output: 21.20 toks/s]
 75it [01:09,  1.11it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.02it/s, est. speed input: 5700.70 toks/s, output: 42.31 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.02it/s, est. speed input: 5700.70 toks/s, output: 42.31 toks/s]
+75it [00:35,  2.16it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="west")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="west")
 this is the 74th example. PMUL3983.json_turn_0
@@ -2267,8 +2665,13 @@ gold states: {'attraction-area': 'west', 'attraction-type': 'museum'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.18it/s, est. speed input: 2507.22 toks/s, output: 22.47 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.18it/s, est. speed input: 2507.22 toks/s, output: 22.47 toks/s]
 76it [01:10,  1.11it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.41it/s, est. speed input: 5104.29 toks/s, output: 45.74 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.40it/s, est. speed input: 5104.29 toks/s, output: 45.74 toks/s]
+76it [00:35,  2.17it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(area="west", type="dontcare")': 1}
 few-shot best completion: attraction = agent.find_attraction(area="west", type="dontcare")
 this is the 75th example. PMUL3983.json_turn_1
@@ -2284,8 +2687,13 @@ gold states: {'attraction-area': 'west', 'attraction-type': 'museum'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, est. speed input: 2411.45 toks/s, output: 22.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, est. speed input: 2411.45 toks/s, output: 22.86 toks/s]
 77it [01:11,  1.07it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.11it/s, est. speed input: 4898.35 toks/s, output: 46.43 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.11it/s, est. speed input: 4898.35 toks/s, output: 46.43 toks/s]
+77it [00:36,  2.09it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(arrive_by_time="19:00", destination="cambridge")': 1}
 few-shot best completion: train = agent.find_train(arrive_by_time="19:00", destination="cambridge")
 this is the 76th example. PMUL3983.json_turn_2
@@ -2310,8 +2718,13 @@ gold states: {'attraction-area': 'west',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.09it/s, est. speed input: 2457.66 toks/s, output: 22.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.09it/s, est. speed input: 2457.66 toks/s, output: 22.95 toks/s]
 78it [01:12,  1.06it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 4958.51 toks/s, output: 46.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 4958.51 toks/s, output: 46.30 toks/s]
+78it [00:36,  2.07it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(day="monday", leave_from="london kings cross")': 1}
 few-shot best completion: train = agent.find_train(day="monday", leave_from="london kings cross")
 this is the 77th example. PMUL3983.json_turn_3
@@ -2342,8 +2755,13 @@ gold states: {'attraction-area': 'west',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, est. speed input: 2466.76 toks/s, output: 22.82 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, est. speed input: 2466.76 toks/s, output: 22.82 toks/s]
 79it [01:13,  1.04it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4991.66 toks/s, output: 46.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4991.66 toks/s, output: 46.18 toks/s]
+79it [00:37,  2.02it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.train = agent.find_train(arrive_by_time="18:08", book_people=1)': 1}
 few-shot best completion: train = agent.find_train(arrive_by_time="18:08", book_people=1)
 this is the 78th example. PMUL3983.json_turn_4
@@ -2376,8 +2794,13 @@ gold states: {'attraction-area': 'west',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.84it/s, est. speed input: 4649.12 toks/s, output: 12.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.84it/s, est. speed input: 4649.12 toks/s, output: 12.89 toks/s]
 80it [01:14,  1.17it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.65it/s, est. speed input: 9218.88 toks/s, output: 25.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.64it/s, est. speed input: 9218.88 toks/s, output: 25.56 toks/s]
+80it [00:37,  2.26it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 79th example. PMUL3983.json_turn_5
@@ -2410,8 +2833,13 @@ gold states: {'attraction-area': 'west',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 2902.66 toks/s, output: 20.67 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 2902.66 toks/s, output: 20.67 toks/s]
 81it [01:15,  1.21it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.78it/s, est. speed input: 5855.47 toks/s, output: 41.70 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.77it/s, est. speed input: 5855.47 toks/s, output: 41.70 toks/s]
+81it [00:38,  2.33it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="rajmahal")': 1}
 few-shot best completion: restaurant = agent.find_restaurant(name="rajmahal")
 this is the 80th example. MUL2341.json_turn_0
@@ -2427,8 +2855,13 @@ gold states: {'restaurant-name': 'rajmahal'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4344.44 toks/s, output: 14.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4344.44 toks/s, output: 14.26 toks/s]
 82it [01:15,  1.35it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.02it/s, est. speed input: 8583.03 toks/s, output: 28.17 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.01it/s, est. speed input: 8583.03 toks/s, output: 28.17 toks/s]
+82it [00:38,  2.58it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 81th example. MUL2341.json_turn_1
@@ -2444,8 +2877,13 @@ gold states: {'restaurant-name': 'rajmahal'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.30it/s, est. speed input: 2909.99 toks/s, output: 20.75 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.30it/s, est. speed input: 2909.99 toks/s, output: 20.75 toks/s]
 83it [01:16,  1.31it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.63it/s, est. speed input: 5894.79 toks/s, output: 42.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.62it/s, est. speed input: 5894.79 toks/s, output: 42.03 toks/s]
+83it [00:38,  2.51it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.attraction = agent.find_attraction(name="cambridge artworks")': 1}
 few-shot best completion: attraction = agent.find_attraction(name="cambridge artworks")
 this is the 82th example. MUL2341.json_turn_2
@@ -2461,8 +2899,13 @@ gold states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajma
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.92it/s, est. speed input: 4451.18 toks/s, output: 13.41 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s, est. speed input: 4451.18 toks/s, output: 13.41 toks/s]
 84it [01:17,  1.41it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.78it/s, est. speed input: 8789.91 toks/s, output: 26.48 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.77it/s, est. speed input: 8789.91 toks/s, output: 26.48 toks/s]
+84it [00:39,  2.68it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 83th example. MUL2341.json_turn_3
@@ -2478,8 +2921,13 @@ gold states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajma
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4174.38 toks/s, output: 14.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4174.38 toks/s, output: 14.26 toks/s]
 85it [01:17,  1.52it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.04it/s, est. speed input: 8272.45 toks/s, output: 28.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.03it/s, est. speed input: 8272.45 toks/s, output: 28.26 toks/s]
+85it [00:39,  2.88it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.update({})  ': 1}
 few-shot best completion: update({})
 this is the 84th example. MUL2341.json_turn_4
@@ -2495,8 +2943,13 @@ gold states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajma
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.43it/s, est. speed input: 3098.09 toks/s, output: 20.07 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.43it/s, est. speed input: 3098.09 toks/s, output: 20.07 toks/s]
 86it [01:18,  1.46it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s, est. speed input: 6215.32 toks/s, output: 40.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.87it/s, est. speed input: 6215.32 toks/s, output: 40.26 toks/s]
+86it [00:39,  2.79it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(area="north")': 1}
 few-shot best completion: hotel = agent.find_hotel(area="north")
 this is the 85th example. SNG0783.json_turn_0
@@ -2512,8 +2965,13 @@ gold states: {'hotel-area': 'north', 'hotel-type': 'hotel'}
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.01it/s, est. speed input: 2090.86 toks/s, output: 24.28 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.01it/s, est. speed input: 2090.86 toks/s, output: 24.28 toks/s]
 87it [01:19,  1.27it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 4230.95 toks/s, output: 49.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4230.95 toks/s, output: 49.12 toks/s]
+87it [00:40,  2.44it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(area="north", price_range="moderate", internet="yes")': 1}
 few-shot best completion: hotel = agent.find_hotel(area="north", price_range="moderate", internet="yes")
 this is the 86th example. SNG0783.json_turn_1
@@ -2532,8 +2990,13 @@ gold states: {'hotel-area': 'north',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.55it/s, est. speed input: 3681.61 toks/s, output: 17.02 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.55it/s, est. speed input: 3681.61 toks/s, output: 17.02 toks/s]
 88it [01:20,  1.31it/s]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.08it/s, est. speed input: 7333.62 toks/s, output: 33.91 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.08it/s, est. speed input: 7333.62 toks/s, output: 33.91 toks/s]
+88it [00:40,  2.51it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel()': 1}
 few-shot best completion: hotel = agent.find_hotel()
 this is the 87th example. SNG0783.json_turn_2
@@ -2552,8 +3015,13 @@ gold states: {'hotel-area': 'north',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.54s/it, est. speed input: 1477.59 toks/s, output: 27.34 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.54s/it, est. speed input: 1477.59 toks/s, output: 27.34 toks/s]
 89it [01:21,  1.01s/it]
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.34it/s, est. speed input: 3033.32 toks/s, output: 56.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.34it/s, est. speed input: 3033.32 toks/s, output: 56.12 toks/s]
+89it [00:41,  1.93it/s]
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_people=3, book_number_of_days=4, area="north", price_range="moderate", internet="yes", name="ashley hotel")': 1}
 few-shot best completion: hotel = agent.find_hotel(book_people=3, book_number_of_days=4, area="north", price_range="moderate", internet="yes", name="ashley hotel")
 this is the 88th example. SNG0783.json_turn_3
@@ -2585,10 +3053,17 @@ gold states: {'hotel-area': 'north',
 
 
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+<<<<<<< HEAD
 Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it, est. speed input: 1771.39 toks/s, output: 25.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it, est. speed input: 1771.39 toks/s, output: 25.95 toks/s]
 90it [01:23,  1.13s/it]
 few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="sunday", book_people=3, book_number_of_days=4, name=state.hotel.name)': 1}
 few-shot best completion: hotel = agent.find_hotel(book_day="sunday", book_people=3, book_number_of_days=4, name=state.hotel.name)
+=======
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.78it/s, est. speed input: 4253.88 toks/s, output: 49.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.78it/s, est. speed input: 4253.88 toks/s, output: 49.86 toks/s]
+90it [00:42,  1.83it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="sunday", book_people=3, book_number_of_days=4)': 1}
+few-shot best completion: hotel = agent.find_hotel(book_day="sunday", book_people=3, book_number_of_days=4)
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
 this is the 89th example. SNG0783.json_turn_4
 system response: ashley hotel is moderate -ly priced and has free wifi . what night would you like to begin your stay ?
 user response: i would like it to start sunday .
@@ -2620,6 +3095,7 @@ gold states: {'hotel-area': 'north',
 
 
 
+<<<<<<< HEAD
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
 Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.90it/s, est. speed input: 4536.24 toks/s, output: 13.32 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.90it/s, est. speed input: 4536.24 toks/s, output: 13.32 toks/s]
 91it [01:23,  1.04it/s]
@@ -43712,3 +44188,6 @@ wandb:
 wandb: 🚀 View run -runs-preliminary-sbert-python-greedy-8B-dialog_context_bs at: https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD/runs/oljvtrha
 wandb: Synced 6 W&B file(s), 1 media file(s), 5 artifact file(s) and 0 other file(s)
 wandb: Find logs at: ./wandb/run-20240831_050054-oljvtrha/logs
+=======
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327

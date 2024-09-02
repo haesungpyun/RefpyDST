@@ -233,14 +233,3 @@ if __name__ == '__main__':
     wandb.init(project=wandb_project, entity=wandb_entity, group=args.get("run_group", default_run_group),
                name=args.get("run_name", default_run_name))
     main(**args)
-
-
-{
-  "train_fn": "mw21_1p_train_v1.json",
-  "dev_fn": "mw21_100p_dev.json",
-  "test_fn": "mw21_100p_test.json",
-  "num_epochs": 15,
-  "top_k": 10,
-  "top_range": 200,
-  "state_transformation_type": "ref_aware"
-}

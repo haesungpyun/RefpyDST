@@ -8,35 +8,6 @@ from transformers import AutoTokenizer, AutoModel
 
 from refpydst.utils.general import read_json_from_data_dir
 
-def read_MW_dataset(mw_json_fn):
-    # only care domain in test
-    DOMAINS = ['hotel', 'restaurant', 'attraction', 'taxi', 'train']
-
-    data = read_json_from_data_dir(mw_json_fn)
-
-    dial_dict = {}
-
-    for turn in data:
-        # filter the domains that not belongs to the test domain
-        if not set(turn["domains"]).issubset(set(DOMAINS)):
-            continue
-
-        # update dialogue history
-        sys_utt = turn["dialog"]['sys'][-1]
-        usr_utt = turn["dialog"]['usr'][-1]
-
-        if sys_utt == 'none':
-            sys_utt = ''
-        if usr_utt == 'none':
-            usr_utt = ''
-
-        history = f"[system] {sys_utt} [user] {usr_utt}"
-
-        # store the history in dictionary
-        name = f"{turn['ID']}_turn_{turn['turn_id']}"
-        dial_dict[name] = history
-
-    return dial_dict
 
 def mean_pooling(model_output, attention_mask):
     # First element of model_output contains all token embeddings
@@ -74,7 +45,7 @@ def embed_single_sentence(sentence, tokenizer: AutoTokenizer, model: AutoModel, 
 
     return sentence_embeddings
 
-def read_MW_with_string_transformation(mw_json_fn, **input_kwargs):
+def read_MW_with_string_transformation(mw_json_fn):
     from refpydst.retriever.code.data_management import data_item_to_string
     
     DOMAINS = ['hotel', 'restaurant', 'attraction', 'taxi', 'train']
@@ -86,65 +57,75 @@ def read_MW_with_string_transformation(mw_json_fn, **input_kwargs):
         if not set(turn["domains"]).issubset(set(DOMAINS)):
             continue
 
-        history = data_item_to_string(turn, **input_kwargs)
+        history = data_item_to_string(turn)
         name = f"{turn['ID']}_turn_{turn['turn_id']}"
         dial_dict[name] = history
     
     return dial_dict
 
 
+def read_MW_dataset(mw_json_fn):
+    # only care domain in test
+    DOMAINS = ['hotel', 'restaurant', 'attraction', 'taxi', 'train']
+
+    data = read_json_from_data_dir(mw_json_fn)
+
+    dial_dict = {}
+
+    for turn in data:
+        # filter the domains that not belongs to the test domain
+        if not set(turn["domains"]).issubset(set(DOMAINS)):
+            continue
+
+        # update dialogue history
+        sys_utt = turn["dialog"]['sys'][-1]
+        usr_utt = turn["dialog"]['usr'][-1]
+
+        if sys_utt == 'none':
+            sys_utt = ''
+        if usr_utt == 'none':
+            usr_utt = ''
+
+        history = f"[system] {sys_utt} [user] {usr_utt}"
+
+        # store the history in dictionary
+        name = f"{turn['ID']}_turn_{turn['turn_id']}"
+        dial_dict[name] = history
+
+    return dial_dict
+
+
 def store_embed(input_dataset, output_filename, forward_fn):
     outputs = {}
-    txt_keys = []
     with torch.no_grad():
         for k, v in tqdm(input_dataset.items()):
             outputs[k] = forward_fn(v).detach().cpu().numpy()
-            txt_keys.append({k: v})
     np.save(output_filename, outputs)
-    with open(output_filename.replace('.npy', '_keys.txt'), 'w') as f:
-        json.dump(txt_keys,f, indent=2)
     return
 
 
 def embed_everything(model_name: str = 'sentence-transformers/all-mpnet-base-v2',
-                     output_dir: str = f"outputs/retriever/pretrained_index/",
-                     **kwargs):
+                     output_dir: str = f"outputs/retriever/pretrained_index/"):
     # path to save indexes and results
     os.makedirs(output_dir, exist_ok=True)
 
-    device = torch.device("cuda")
+    device = torch.device("cuda:0")
 
     # Load model from HuggingFace Hub
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name)
     model.to(device)
 
-    mw_train = read_MW_with_string_transformation("mw21_5p_train_v1.json", **kwargs)
+    mw_train = read_MW_with_string_transformation("mw21_100p_train.json")
     print("Finish reading data")
 
     def embed_sentence_with_this_model(sentence):
         return embed_single_sentence(sentence, model=model, tokenizer=tokenizer, cls=False)
 
-    store_embed(mw_train, f"{output_dir}/train_index.npy",
+    store_embed(mw_train, f"{output_dir}/mw21_train.npy",
                 embed_sentence_with_this_model)
     print("Finish Embedding data")
 
 
 if __name__ == '__main__':
-    import os, json
-    os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
-    os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
-
-    dir_path = 'runs/preliminary/retriever_input/pt_sbert/8B'
-    config_files = os.listdir(dir_path)
-    for config_file in config_files:
-        with open(os.path.join(dir_path, config_file), 'r') as f:
-            config = json.load(f)
-        output_dir = f"outputs/retriever/pretrained_index/{config_file.replace('.json', '')}/pretrained"
-        input_kwargs = {}
-        full_history = config['retriever_args'].get('full_history', False)
-        input_type = config['retriever_args'].get('input_type', 'dialog_context')
-        only_slot = config['retriever_args'].get('only_slot', False)
-        input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
-
-        embed_everything(output_dir=output_dir, **input_kwargs)
+    embed_everything()

@@ -37,7 +37,7 @@ from refpydst.retriever.code.mixed_retriever import MixedRetriever
 from refpydst.retriever.code.error_retriever import ErrorRetriever
 from refpydst.retriever.decoders.bm25_max_emb_distance import BM25MaxEmbDistinct
 from refpydst.retriever.decoders.mixed_max_emb_distance import MixedMaxEmbDistinct
-from refpydst.retriever.decoders.mixed_topk import MixedTopK
+from refpydst.retriever.decoders.mixed_decoder import MixedDecoder
 from refpydst.retriever.decoders.sampling_topk import SamplingTopK
 from refpydst.retriever.decoders.error_topk import ErrorTopK
 from refpydst.retriever.decoders.maximize_embedding_distinctness import MaximizeEmbeddingDistinctness
@@ -137,21 +137,17 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 discount_factor=decoder_config['discount_factor']
             )
         
-        elif decoder_config['decoder_type'] == 'mixed_max_emb_distance':
+        elif decoder_config['decoder_type'] == 'mixed':
             if not isinstance(self.retriever, MixedRetriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
-            self.demonstration_decoder = MixedMaxEmbDistinct(
+            self.demonstration_decoder = MixedDecoder(
                 retriever=self.retriever,
                 from_n_possible=decoder_config['from_n_possible'],
                 discount_factor=decoder_config['discount_factor'],
                 operation=decoder_config.get('operation', 'multiply'),
-                zscore=decoder_config.get('zscore', False)
+                zscore=decoder_config.get('zscore', False),
+                decoding_logic=decoder_config.get('decoding_logic', 'top_k_round_robin')
             )
-        
-        elif decoder_config['decoder_type'] == 'mixed_top_k':
-            if not isinstance(self.retriever, MixedRetriever):
-                raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
-            self.demonstration_decoder = MixedTopK(retriever=self.retriever, operation=decoder_config['operation'], zscore=decoder_config['zscore'])
         
         elif decoder_config['decoder_type'] == 'sampling_top_k':
             if not isinstance(self.retriever, MixedRetriever):
@@ -360,7 +356,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 completions, examples = self.generate_completion(prompt_text, data_item, examples, just_return_completion=True)
                 print(f"the output could not be parsed successfully: {completions}", e)
                 data_item['not_valid'] = 1
-                data_item['completion'] = best_completion
+                data_item['completion'] = completions
             predicted_slot_values = self.normalizer.normalize(predicted_slot_values)
             
             ############# NEW CODE #############
