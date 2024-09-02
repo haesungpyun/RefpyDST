@@ -254,7 +254,7 @@ class LlamaClient(AbstractLMClient):
         self.beam_search_config = beam_search_config
 
         if use_vllm:
-            self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True)
+            self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True, gpu_memory_utilization=1)
             self.tokenizer = self.model.get_tokenizer()
         else:
             self.tokenizer = AutoTokenizer.from_pretrained(self.engine)

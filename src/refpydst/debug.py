@@ -83,10 +83,10 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
         min_null_sequence_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_null_probability', 0) or 0
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
-        # if codex_engine.startswith('gpt'):
-        #     self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
-        # elif "llama" in codex_engine.lower():
-        #     self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+        if codex_engine.startswith('gpt'):
+            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+        elif "llama" in codex_engine.lower():
+            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
 
         self.add_guidelines = kwargs.get("add_guidelines", True)
 
@@ -331,7 +331,7 @@ if __name__ == "__main__":
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # # # raise ValueError
     
-    run_file: str = 'runs/preliminary/bm25/plain_text/beam/8B/context_text.json'
+    run_file: str = 'runs/preliminary/random/python_no_guidelines/beam/70B.json'
     # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'

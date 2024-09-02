@@ -68,6 +68,8 @@ def main(train_fn: str, dev_fn: str, test_fn: str, output_dir: str, mwdataloader
         mwdataloader_class = MWtripleDataloader
     elif args["mwdataloader_class"] == "MWtriple2Dataloader":
         mwdataloader_class = MWtriple2Dataloader
+    elif args["mwdataloader_class"] == "MWmnrbestDataloader":
+        mwdataloader_class = MWmnrbestDataloader
     else:
         raise ValueError(f"Unknown dataloader class: {args['mwdataloader_class']}")
 
@@ -82,6 +84,9 @@ def main(train_fn: str, dev_fn: str, test_fn: str, output_dir: str, mwdataloader
 
     # prepare training dataloaders
     all_train_samples = mw_train_loader.generate_train_examples(topk=top_k)
+    print(all_train_samples[20])
+    print()
+    print(all_train_samples[40])
     train_dataloader = DataLoader(all_train_samples, shuffle=True, batch_size=batch_size)
     print(f"=====number of batches {len(train_dataloader)}=====")
 

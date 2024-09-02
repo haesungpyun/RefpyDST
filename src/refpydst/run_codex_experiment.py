@@ -394,8 +394,8 @@ if __name__ == "__main__":
         args = vars(args)
     default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
-    wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
-    wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    wandb_entity: str = os.environ.get(WANDB_ENTITY, "haesung-pyun-seoul-national-university")
+    wandb_project: str = os.environ.get(WANDB_PROJECT, "error_TOD")
     run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
                      name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
                      group=args.get("run_group", default_run_group),
