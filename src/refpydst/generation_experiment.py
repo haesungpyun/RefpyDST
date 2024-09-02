@@ -360,7 +360,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 completions, examples = self.generate_completion(prompt_text, data_item, examples, just_return_completion=True)
                 print(f"the output could not be parsed successfully: {completions}", e)
                 data_item['not_valid'] = 1
-                data_item['completion'] = best_completion
+                data_item['completion'] = completions
             predicted_slot_values = self.normalizer.normalize(predicted_slot_values)
             
             ############# NEW CODE #############

@@ -1,45 +1,2623 @@
 /home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
-wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
+wandb: Currently logged in as: haesung-pyun (haesung-pyun-seoul-national-university). Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.17.8 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240830_191330-gnvzz9dd
+wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240831_043337-yaq20or8
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run -runs-preliminary-sbert-python-greedy-8B-dialog_context_bs
-wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
-wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/gnvzz9dd
-mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:50, 53.46it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:23, 113.32it/s]mapping supervised_set surface forms...:   2%|▏         | 41/2731 [00:00<00:24, 108.44it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 243.62it/s]mapping supervised_set surface forms...:   8%|▊         | 205/2731 [00:01<00:16, 154.92it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:17, 140.16it/s]mapping supervised_set surface forms...:   9%|▉         | 240/2731 [00:01<00:20, 119.88it/s]mapping supervised_set surface forms...:   9%|▉         | 251/2731 [00:02<00:28, 87.96it/s] mapping supervised_set surface forms...:  13%|█▎        | 368/2731 [00:02<00:09, 238.76it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 319.89it/s]mapping supervised_set surface forms...:  18%|█▊        | 497/2731 [00:02<00:08, 277.56it/s]mapping supervised_set surface forms...:  24%|██▍       | 660/2731 [00:02<00:04, 507.32it/s]mapping supervised_set surface forms...:  27%|██▋       | 735/2731 [00:02<00:03, 530.83it/s]mapping supervised_set surface forms...:  32%|███▏      | 887/2731 [00:02<00:02, 738.32it/s]mapping supervised_set surface forms...:  36%|███▌      | 982/2731 [00:02<00:02, 762.31it/s]mapping supervised_set surface forms...:  39%|███▉      | 1074/2731 [00:03<00:02, 583.25it/s]mapping supervised_set surface forms...:  42%|████▏     | 1149/2731 [00:03<00:03, 450.50it/s]mapping supervised_set surface forms...:  50%|████▉     | 1353/2731 [00:03<00:01, 726.58it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1457/2731 [00:03<00:02, 619.76it/s]mapping supervised_set surface forms...:  56%|█████▋    | 1543/2731 [00:04<00:02, 408.23it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:01, 547.74it/s]mapping supervised_set surface forms...:  71%|███████   | 1926/2731 [00:04<00:00, 830.89it/s]mapping supervised_set surface forms...:  75%|███████▌  | 2054/2731 [00:04<00:00, 738.04it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2178/2731 [00:04<00:00, 792.92it/s]mapping supervised_set surface forms...:  84%|████████▎ | 2283/2731 [00:05<00:01, 325.87it/s]mapping supervised_set surface forms...:  86%|████████▋ | 2360/2731 [00:05<00:01, 361.37it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2564/2731 [00:05<00:00, 558.53it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:06<00:00, 451.07it/s]
-reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 85.89it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 70.17it/s]reading surface forms from ontology.json:  87%|████████▋ | 27/31 [00:02<00:00,  7.48it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 11.50it/s]
-Traceback (most recent call last):
-  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
-    main(**args)
-  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
-    experiment: CodexExperiment = CodexExperiment(
-                                  ^^^^^^^^^^^^^^^^
-  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 58, in __init__
-    super().__init__(
-  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 109, in __init__
-    self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 539, in get_retriever_by_type
-    raise ValueError(f"retriever_dir={retriever_dir} is a relative path, attempted to find rooted from "
-ValueError: retriever_dir=retriever/pretrained_index/context_slot/split_v1 is a relative path, attempted to find rooted from /home/haesungpyun/my_refpydst/outputs/, but not found. Set an abs path to retriever or check setting of REFPYDST_OUTPUTS_DIR.
-Traceback (most recent call last):
-  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
-    main(**args)
-  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
-    experiment: CodexExperiment = CodexExperiment(
-                                  ^^^^^^^^^^^^^^^^
-  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 58, in __init__
-    super().__init__(
-  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 109, in __init__
-    self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 539, in get_retriever_by_type
-    raise ValueError(f"retriever_dir={retriever_dir} is a relative path, attempted to find rooted from "
-ValueError: retriever_dir=retriever/pretrained_index/context_slot/split_v1 is a relative path, attempted to find rooted from /home/haesungpyun/my_refpydst/outputs/, but not found. Set an abs path to retriever or check setting of REFPYDST_OUTPUTS_DIR.
-wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
-wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: 🚀 View run -runs-preliminary-sbert-python-greedy-8B-dialog_context_bs at: https://wandb.ai/hacastle12/refpydst/runs/gnvzz9dd
-wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20240830_191330-gnvzz9dd/logs
+wandb: ⭐️ View project at https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD
+wandb: 🚀 View run at https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD/runs/yaq20or8
+mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:54, 50.37it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:24, 109.93it/s]mapping supervised_set surface forms...:   2%|▏         | 41/2731 [00:00<00:24, 108.02it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 240.64it/s]mapping supervised_set surface forms...:   7%|▋         | 204/2731 [00:01<00:16, 152.27it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:18, 138.54it/s]mapping supervised_set surface forms...:   9%|▉         | 240/2731 [00:01<00:21, 118.17it/s]mapping supervised_set surface forms...:   9%|▉         | 251/2731 [00:02<00:28, 87.22it/s] mapping supervised_set surface forms...:  13%|█▎        | 362/2731 [00:02<00:10, 228.35it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 316.81it/s]mapping supervised_set surface forms...:  18%|█▊        | 496/2731 [00:02<00:08, 271.80it/s]mapping supervised_set surface forms...:  24%|██▍       | 660/2731 [00:02<00:04, 500.24it/s]mapping supervised_set surface forms...:  27%|██▋       | 735/2731 [00:02<00:03, 525.16it/s]mapping supervised_set surface forms...:  32%|███▏      | 887/2731 [00:02<00:02, 731.71it/s]mapping supervised_set surface forms...:  36%|███▌      | 982/2731 [00:02<00:02, 766.77it/s]mapping supervised_set surface forms...:  39%|███▉      | 1075/2731 [00:03<00:02, 575.30it/s]mapping supervised_set surface forms...:  42%|████▏     | 1151/2731 [00:03<00:03, 445.16it/s]mapping supervised_set surface forms...:  50%|████▉     | 1353/2731 [00:03<00:01, 710.66it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:03<00:01, 694.77it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1547/2731 [00:04<00:03, 369.66it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:02, 497.12it/s]mapping supervised_set surface forms...:  69%|██████▉   | 1890/2731 [00:04<00:01, 715.60it/s]mapping supervised_set surface forms...:  74%|███████▎  | 2009/2731 [00:04<00:01, 622.78it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2178/2731 [00:04<00:00, 758.57it/s]mapping supervised_set surface forms...:  84%|████████▎ | 2285/2731 [00:05<00:01, 317.03it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2363/2731 [00:06<00:01, 351.09it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2564/2731 [00:06<00:00, 536.00it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:06<00:00, 435.05it/s]
+reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 82.52it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 67.11it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  8.30it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:02<00:00,  8.11it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 10.86it/s]
+INFO 08-31 04:33:53 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='meta-llama/Meta-Llama-3-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Meta-Llama-3-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=meta-llama/Meta-Llama-3-8B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
+INFO 08-31 04:33:55 model_runner.py:680] Starting to load model meta-llama/Meta-Llama-3-8B-Instruct...
+INFO 08-31 04:33:56 weight_utils.py:223] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.85s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  2.00s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.08s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.55s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.72s/it]
+
+INFO 08-31 04:34:04 model_runner.py:692] Loading model weights took 14.9595 GB
+INFO 08-31 04:34:05 gpu_executor.py:102] # GPU blocks: 27965, # CPU blocks: 2048
+0it [00:00, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.27it/s, est. speed input: 5228.88 toks/s, output: 43.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.27it/s, est. speed input: 5228.88 toks/s, output: 43.15 toks/s]
+1it [00:00,  1.80it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(name="express by holiday inn cambridge")': 1}
+few-shot best completion: hotel = agent.find_hotel(name="express by holiday inn cambridge")
+this is the 0th example. PMUL3470.json_turn_0
+system response: 
+user response: i am looking for a specific hotel , its name is express by holiday inn cambridge
+pred turn change: {'hotel-name': 'express by holiday inn cambridge'}
+gold turn change: {'hotel-name': 'express by holiday inn cambridge'}
+pred states: {'hotel-name': 'express by holiday inn cambridge'}
+gold states: {'hotel-name': 'express by holiday inn cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4669.75 toks/s, output: 48.75 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4669.75 toks/s, output: 48.75 toks/s]
+2it [00:01,  1.86it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_people=7, name="express by holiday inn cambridge")': 1}
+few-shot best completion: hotel = agent.find_hotel(book_people=7, name="express by holiday inn cambridge")
+this is the 1th example. PMUL3470.json_turn_1
+system response: i have the express by holiday inn cambridge located on 1517 norman way , coldhams business park . their phone number is 01223866800 . would you like to know anything else ?
+user response: yes , could you book the hotel room for me for 7 people ?
+pred turn change: {'hotel-book people': '7', 'hotel-name': 'express by holiday inn cambridge'}
+gold turn change: {'hotel-book people': '7'}
+pred states: {'hotel-book people': '7', 'hotel-name': 'express by holiday inn cambridge'}
+gold states: {'hotel-book people': '7', 'hotel-name': 'express by holiday inn cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4264.83 toks/s, output: 49.49 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.76it/s, est. speed input: 4264.83 toks/s, output: 49.49 toks/s]
+3it [00:01,  1.77it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="monday", book_people=7, book_number_of_days=4)': 1}
+few-shot best completion: hotel = agent.find_hotel(book_day="monday", book_people=7, book_number_of_days=4)
+this is the 2th example. PMUL3470.json_turn_2
+system response: yes , of course . what day would you like to stay ?
+user response: monday , please . there will be 7 of us and we'd like to stay for 4 days .
+pred turn change: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge'}
+gold turn change: {'hotel-book day': 'monday', 'hotel-book stay': '4'}
+pred states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge'}
+gold states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.75it/s, est. speed input: 9172.12 toks/s, output: 26.28 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.74it/s, est. speed input: 9172.12 toks/s, output: 26.28 toks/s]
+4it [00:01,  2.17it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 3th example. PMUL3470.json_turn_3
+system response: here is the booking information:booking was successful . reference number is : 5f8g6j1g
+user response: thank you . i would also like to book a train , please .
+pred turn change: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge'}
+gold turn change: {}
+pred states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge'}
+gold states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 5155.13 toks/s, output: 46.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.09it/s, est. speed input: 5155.13 toks/s, output: 46.14 toks/s]
+5it [00:02,  2.10it/s]
+few-shot completions: {'agent.state.train = agent.find_train(leave_from="cambridge", destination="birmingham new street")': 1}
+few-shot best completion: train = agent.find_train(leave_from="cambridge", destination="birmingham new street")
+this is the 4th example. PMUL3470.json_turn_4
+system response: sure , which stations will you be traveling between ?
+user response: i will be going from cambridge to birmingham new street .
+pred turn change: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge',
+ 'train-departure': 'cambridge',
+ 'train-destination': 'birmingham new street'}
+gold turn change: {'train-departure': 'cambridge', 'train-destination': 'birmingham new street'}
+pred states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge',
+ 'train-departure': 'cambridge',
+ 'train-destination': 'birmingham new street'}
+gold states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge',
+ 'train-departure': 'cambridge',
+ 'train-destination': 'birmingham new street'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.08it/s, est. speed input: 5149.36 toks/s, output: 45.83 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.08it/s, est. speed input: 5149.36 toks/s, output: 45.83 toks/s]
+6it [00:02,  2.04it/s]
+few-shot completions: {'agent.state.train = agent.find_train(arrive_by_time="17:30", day="friday")': 1}
+few-shot best completion: train = agent.find_train(arrive_by_time="17:30", day="friday")
+this is the 5th example. PMUL3470.json_turn_5
+system response: what time would you like to leave ? the trains depart every hour .
+user response: whenever will get me there by 17:30 . i do need to leave on friday and i will need the travel time please .
+pred turn change: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge',
+ 'train-arriveby': '17:30',
+ 'train-day': 'friday',
+ 'train-departure': 'cambridge',
+ 'train-destination': 'birmingham new street'}
+gold turn change: {'train-arriveby': '17:30', 'train-day': 'friday', 'train-leaveat': 'dontcare'}
+pred states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge',
+ 'train-arriveby': '17:30',
+ 'train-day': 'friday',
+ 'train-departure': 'cambridge',
+ 'train-destination': 'birmingham new street'}
+gold states: {'hotel-book day': 'monday',
+ 'hotel-book people': '7',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'express by holiday inn cambridge',
+ 'train-arriveby': '17:30',
+ 'train-day': 'friday',
+ 'train-departure': 'cambridge',
+ 'train-destination': 'birmingham new street',
+ 'train-leaveat': 'dontcare'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.47it/s, est. speed input: 4392.64 toks/s, output: 49.46 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.47it/s, est. speed input: 4392.64 toks/s, output: 49.46 toks/s]
+7it [00:03,  2.13it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", internet="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", internet="yes")
+this is the 6th example. MUL0602.json_turn_0
+system response: 
+user response: i looking for information about a hotel in the moderate price range that include -s free wifi .
+pred turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate', 'hotel-type': 'hotel'}
+pred states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate', 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.30it/s, est. speed input: 5281.64 toks/s, output: 46.05 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.30it/s, est. speed input: 5281.64 toks/s, output: 46.05 toks/s]
+8it [00:03,  2.14it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", internet="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", internet="yes")
+this is the 7th example. MUL0602.json_turn_1
+system response: there is acorn guest house available in the moderate price range with free wifi
+user response: what is the star rating of the acorn guest house ?
+pred turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold turn change: {'hotel-name': 'acorn guest house'}
+pred states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold states: {'hotel-internet': 'yes',
+ 'hotel-name': 'acorn guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.82it/s, est. speed input: 4092.95 toks/s, output: 51.05 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.82it/s, est. speed input: 4092.95 toks/s, output: 51.05 toks/s]
+9it [00:04,  1.99it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(area="south", stars="4", price_range="moderate", internet="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(area="south", stars="4", price_range="moderate", internet="yes")
+this is the 8th example. MUL0602.json_turn_2
+system response: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?
+user response: sorry , the hotel i am looking for also needs to be in the south area and have a 4 star rating . could you suggest anything that fills those requirement -s too ?
+pred turn change: {'hotel-area': 'south',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4'}
+gold turn change: {'hotel-area': 'south', 'hotel-name': '[DELETE]', 'hotel-stars': '4'}
+pred states: {'hotel-area': 'south',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4'}
+gold states: {'hotel-area': 'south',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5210.63 toks/s, output: 45.01 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5210.63 toks/s, output: 45.01 toks/s]
+10it [00:04,  2.03it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(name="aylesbray lodge guest house")': 1}
+few-shot best completion: hotel = agent.find_hotel(name="aylesbray lodge guest house")
+this is the 9th example. MUL0602.json_turn_3
+system response: aylesbray lodge guest house meets all of your requirement -s . are you okay with the hotel type being a guest house ?
+user response: yep sure , why not ?
+pred turn change: {'hotel-area': 'south',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4'}
+gold turn change: {'hotel-name': 'aylesbray lodge guest house', 'hotel-type': 'guest house'}
+pred states: {'hotel-area': 'south',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4'}
+gold states: {'hotel-area': 'south',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.80it/s, est. speed input: 4252.61 toks/s, output: 50.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.79it/s, est. speed input: 4252.61 toks/s, output: 50.30 toks/s]
+11it [00:05,  1.92it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="sunday", book_people=4, book_number_of_days=2)': 1}
+few-shot best completion: hotel = agent.find_hotel(book_day="sunday", book_people=4, book_number_of_days=2)
+this is the 10th example. MUL0602.json_turn_4
+system response: i can book this for you if you provide the day you want to stay , the duration of the stay and the number of people .
+user response: 4 people for 2 nights starting sunday , please !
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4'}
+gold turn change: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '2'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4967.25 toks/s, output: 46.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4967.25 toks/s, output: 46.71 toks/s]
+12it [00:06,  1.92it/s]
+few-shot completions: {'agent.state.train = agent.find_train(depart_time="10:45", leave_from="peterborough")': 1}
+few-shot best completion: train = agent.find_train(depart_time="10:45", leave_from="peterborough")
+this is the 11th example. MUL0602.json_turn_5
+system response: booking was successful . reference number is : omug5y45 .
+user response: thanks . i also need a train departing from peterborough at 10:45 .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold turn change: {'train-departure': 'peterborough', 'train-leaveat': '10:45'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.96it/s, est. speed input: 4900.20 toks/s, output: 47.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.96it/s, est. speed input: 4900.20 toks/s, output: 47.12 toks/s]
+13it [00:06,  1.90it/s]
+few-shot completions: {'agent.state.train = agent.find_train(leave_from="peterborough", arrive_by_time="10:45")': 1}
+few-shot best completion: train = agent.find_train(leave_from="peterborough", arrive_by_time="10:45")
+this is the 12th example. MUL0602.json_turn_6
+system response: i am sorry , there seems to be an error . can you please restate your request ?
+user response: the train should depart from peterborough and arrive in cambridge by 10:45 .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold turn change: {'train-arriveby': '10:45',
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '[DELETE]'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': '10:45',
+ 'train-departure': 'peterborough',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 4036.96 toks/s, output: 50.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 4036.96 toks/s, output: 50.21 toks/s]
+14it [00:07,  1.75it/s]
+few-shot completions: {'agent.state.train = agent.find_train(day="sunday", depart_time=state.train.depart_time, arrive_by_time=state.train.arrive_by_time)': 1}
+few-shot best completion: train = agent.find_train(day="sunday", depart_time=state.train.depart_time, arrive_by_time=state.train.arrive_by_time)
+this is the 13th example. MUL0602.json_turn_7
+system response: that s not a problem . what day would you like ?
+user response: sunday and can you please give me the price and travel time ?
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold turn change: {'train-day': 'sunday'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': '10:45',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 6971.51 toks/s, output: 35.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 6971.51 toks/s, output: 35.36 toks/s]
+15it [00:07,  1.93it/s]
+few-shot completions: {'agent.state.train = agent.find_train(book_people=4)': 1}
+few-shot best completion: train = agent.find_train(book_people=4)
+this is the 14th example. MUL0602.json_turn_8
+system response: the price is 13.20 pounds and the travel time is 50 minutes .
+user response: book 4 seats for me please .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-book people': '4',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold turn change: {'train-book people': '4'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-book people': '4',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': '10:45',
+ 'train-book people': '4',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.49it/s, est. speed input: 9342.13 toks/s, output: 24.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.48it/s, est. speed input: 9342.13 toks/s, output: 24.44 toks/s]
+16it [00:07,  2.18it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 15th example. MUL0602.json_turn_9
+system response: i booked tr1071 , the last train before 10:45 arrives 10:38 . your reference number will be aul3mjy9 . however , if you would have preferred something earlier , i can easily cancel and rebook .
+user response: no , that would be fine . thank you . that was all i needed for today .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-book people': '4',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold turn change: {}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'train-arriveby': '10:45',
+ 'train-book people': '4',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-leaveat': '10:45'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '2',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'aylesbray lodge guest house',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': '10:45',
+ 'train-book people': '4',
+ 'train-day': 'sunday',
+ 'train-departure': 'peterborough',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.01it/s, est. speed input: 5363.44 toks/s, output: 45.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.00it/s, est. speed input: 5363.44 toks/s, output: 45.09 toks/s]
+17it [00:08,  2.34it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(parking="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(parking="yes")
+this is the 16th example. PMUL0134.json_turn_0
+system response: 
+user response: hello , i am looking for a place to stay that offers free parking .
+pred turn change: {'hotel-parking': 'yes'}
+gold turn change: {'hotel-parking': 'yes'}
+pred states: {'hotel-parking': 'yes'}
+gold states: {'hotel-parking': 'yes'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.84it/s, est. speed input: 6517.53 toks/s, output: 39.72 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.83it/s, est. speed input: 6517.53 toks/s, output: 39.72 toks/s]
+18it [00:08,  2.42it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(area="south")': 1}
+few-shot best completion: hotel = agent.find_hotel(area="south")
+this is the 17th example. PMUL0134.json_turn_1
+system response: what area would you like the hotel in ?
+user response: i would like it to be in south please .
+pred turn change: {'hotel-area': 'south', 'hotel-parking': 'yes'}
+gold turn change: {'hotel-area': 'south'}
+pred states: {'hotel-area': 'south', 'hotel-parking': 'yes'}
+gold states: {'hotel-area': 'south', 'hotel-parking': 'yes'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.64it/s, est. speed input: 6006.45 toks/s, output: 42.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.64it/s, est. speed input: 6006.45 toks/s, output: 42.30 toks/s]
+19it [00:09,  2.44it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="expensive")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="expensive")
+this is the 18th example. PMUL0134.json_turn_2
+system response: is there a price you are looking for ?
+user response: i am looking for an expensive place to stay .
+pred turn change: {'hotel-area': 'south', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
+gold turn change: {'hotel-pricerange': 'expensive'}
+pred states: {'hotel-area': 'south', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
+gold states: {'hotel-area': 'south', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.74it/s, est. speed input: 4141.29 toks/s, output: 50.54 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.74it/s, est. speed input: 4141.29 toks/s, output: 50.54 toks/s]
+20it [00:09,  2.14it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(parking="yes", area="south", price_range="expensive", type="hotel")': 1}
+few-shot best completion: hotel = agent.find_hotel(parking="yes", area="south", price_range="expensive", type="hotel")
+this is the 19th example. PMUL0134.json_turn_3
+system response: would you like a hotel or guest house ?
+user response: i would like a hotel please .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+gold turn change: {'hotel-type': 'hotel'}
+pred states: {'hotel-area': 'south',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+gold states: {'hotel-area': 'south',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.41it/s, est. speed input: 7726.05 toks/s, output: 34.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.40it/s, est. speed input: 7726.05 toks/s, output: 34.09 toks/s]
+21it [00:10,  2.36it/s]
+few-shot completions: {'agent.state.hotel.book_people = 1': 1}
+few-shot best completion: hotel.book_people = 1
+this is the 20th example. PMUL0134.json_turn_4
+system response: i have 1 hotel that would suit your needs . it s called the lensfield hotel . they offer free parking and free wifi . can i book you a room ?
+user response: how many people ?
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book people': '1',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+gold turn change: {'hotel-name': 'lensfield hotel'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book people': '1',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+gold states: {'hotel-area': 'south',
+ 'hotel-name': 'lensfield hotel',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4493.72 toks/s, output: 49.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4493.72 toks/s, output: 49.50 toks/s]
+22it [00:10,  2.10it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_people=3, book_number_of_days=5, book_day="friday")': 1}
+few-shot best completion: hotel = agent.find_hotel(book_people=3, book_number_of_days=5, book_day="friday")
+this is the 21th example. PMUL0134.json_turn_5
+system response: how many people will be staying with you ?
+user response: i need it booked for 3 people for 5 nights starting from friday .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+gold turn change: {'hotel-book day': 'friday', 'hotel-book people': '3', 'hotel-book stay': '5'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-name': 'lensfield hotel',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.22it/s, est. speed input: 5420.51 toks/s, output: 44.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.21it/s, est. speed input: 5420.51 toks/s, output: 44.36 toks/s]
+23it [00:11,  2.09it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(area="south", food_type="mexican")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(area="south", food_type="mexican")
+this is the 22th example. PMUL0134.json_turn_6
+system response: booked ! reference number: 68sv7auh .
+user response: thank you , i also need to find a place to eat serving mexican food in the same area as the hotel
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican'}
+gold turn change: {'restaurant-area': 'south', 'restaurant-food': 'mexican'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-name': 'lensfield hotel',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 5228.68 toks/s, output: 45.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 5228.68 toks/s, output: 45.62 toks/s]
+24it [00:11,  2.06it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="chiquito restaurant bar", area="south")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(name="chiquito restaurant bar", area="south")
+this is the 23th example. PMUL0134.json_turn_7
+system response: there s the chiquito restaurant bar but its rather expensive . if that s okay , i can help you make a reservation .
+user response: can i have the phone number and post code for that please ?
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+gold turn change: {'restaurant-name': 'chiquito restaurant bar'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-name': 'lensfield hotel',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.50it/s, est. speed input: 3856.21 toks/s, output: 50.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.49it/s, est. speed input: 3856.21 toks/s, output: 50.86 toks/s]
+25it [00:12,  1.82it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi(depart_time="02:30", destination=agent.state.restaurant.name, leave_from=agent.state.hotel.name)': 1}
+few-shot best completion: taxi = agent.find_taxi(depart_time="02:30", destination=restaurant.name, leave_from=hotel.name)
+this is the 24th example. PMUL0134.json_turn_8
+system response: their phone number is 01223400170 and their postcode is cb17dy
+user response: i need a taxi from the hotel to the restaurant , leaving the hotel by 02:30 , i have to make sure im first in line when they open for breakfast .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+gold turn change: {'taxi-departure': 'lensfield hotel',
+ 'taxi-destination': 'chiquito restaurant bar',
+ 'taxi-leaveat': '02:30'}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-name': 'lensfield hotel',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar',
+ 'taxi-departure': 'lensfield hotel',
+ 'taxi-destination': 'chiquito restaurant bar',
+ 'taxi-leaveat': '02:30'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.15it/s, est. speed input: 7561.35 toks/s, output: 34.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.14it/s, est. speed input: 7561.35 toks/s, output: 34.60 toks/s]
+26it [00:12,  2.03it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi()': 1}
+few-shot best completion: taxi = agent.find_taxi()
+this is the 25th example. PMUL0134.json_turn_9
+system response: out taxis operate 24 and 7 , so you are in luck . look for a white skoda , there phone number is 07842340394 , any further questions ?
+user response: no thats all i need for today .
+pred turn change: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+gold turn change: {}
+pred states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar'}
+gold states: {'hotel-area': 'south',
+ 'hotel-book day': 'friday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '5',
+ 'hotel-name': 'lensfield hotel',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'expensive',
+ 'hotel-type': 'hotel',
+ 'restaurant-area': 'south',
+ 'restaurant-food': 'mexican',
+ 'restaurant-name': 'chiquito restaurant bar',
+ 'taxi-departure': 'lensfield hotel',
+ 'taxi-destination': 'chiquito restaurant bar',
+ 'taxi-leaveat': '02:30'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.40it/s, est. speed input: 5680.36 toks/s, output: 43.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.39it/s, est. speed input: 5680.36 toks/s, output: 43.16 toks/s]
+27it [00:13,  2.09it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi(depart_time="10:30")': 1}
+few-shot best completion: taxi = agent.find_taxi(depart_time="10:30")
+this is the 26th example. SNG0019.json_turn_0
+system response: 
+user response: hi , i need to book a taxi , please ? i need to leave sometime after 10:30 .
+pred turn change: {'taxi-leaveat': '10:30'}
+gold turn change: {'taxi-leaveat': '10:30'}
+pred states: {'taxi-leaveat': '10:30'}
+gold states: {'taxi-leaveat': '10:30'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s, est. speed input: 4398.68 toks/s, output: 50.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s, est. speed input: 4398.68 toks/s, output: 50.16 toks/s]
+28it [00:13,  1.75it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi(leave_from="cambridge belfy", destination="cambridge shop")': 1}
+few-shot best completion: taxi = agent.find_taxi(leave_from="cambridge belfy", destination="cambridge shop")
+this is the 27th example. SNG0019.json_turn_1
+system response: i would love to help you with that . where would you like to be picked up , and where are you going ?
+user response: i would like to be picked up at the cambridge belfy and go to the cambridge shop .
+pred turn change: {'taxi-departure': 'cambridge belfry',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold turn change: {'taxi-departure': 'cambridge belfry', 'taxi-destination': 'cambridge shop'}
+pred states: {'taxi-departure': 'cambridge belfry',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold states: {'taxi-departure': 'cambridge belfry',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 5740.78 toks/s, output: 41.79 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 5740.78 toks/s, output: 41.79 toks/s]
+29it [00:14,  1.72it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi(leave_from="cambridge chop house")': 1}
+few-shot best completion: taxi = agent.find_taxi(leave_from="cambridge chop house")
+this is the 28th example. SNG0019.json_turn_2
+system response: i am sorry , are you going to the cambridge chop house , or did you mean the cambridge shop ?
+user response: the chop house .
+pred turn change: {'taxi-departure': 'cambridge chop house',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold turn change: {'taxi-destination': 'cambridge chop house'}
+pred states: {'taxi-departure': 'cambridge chop house',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold states: {'taxi-departure': 'cambridge belfry',
+ 'taxi-destination': 'cambridge chop house',
+ 'taxi-leaveat': '10:30'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.71it/s, est. speed input: 9442.01 toks/s, output: 25.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.70it/s, est. speed input: 9442.01 toks/s, output: 25.97 toks/s]
+30it [00:14,  1.87it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 29th example. SNG0019.json_turn_3
+system response: i have you booked . a yellow lexus will pick you up at 10:30 . the contact number is 07463778759 . will there be anything else ?
+user response: i am sorry , i need to leave after 10:30 , could you change the reservation ?
+pred turn change: {'taxi-departure': 'cambridge chop house',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold turn change: {}
+pred states: {'taxi-departure': 'cambridge chop house',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold states: {'taxi-departure': 'cambridge belfry',
+ 'taxi-destination': 'cambridge chop house',
+ 'taxi-leaveat': '10:30'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.70it/s, est. speed input: 9347.17 toks/s, output: 25.93 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.69it/s, est. speed input: 9347.17 toks/s, output: 25.93 toks/s]
+31it [00:15,  1.99it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 30th example. SNG0019.json_turn_4
+system response: yes , i have you arranged to be picked up by a black honda at 10:45 .
+user response: that s perfect . thank you for all of your help .
+pred turn change: {'taxi-departure': 'cambridge chop house',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold turn change: {}
+pred states: {'taxi-departure': 'cambridge chop house',
+ 'taxi-destination': 'cambridge shop',
+ 'taxi-leaveat': '10:30'}
+gold states: {'taxi-departure': 'cambridge belfry',
+ 'taxi-destination': 'cambridge chop house',
+ 'taxi-leaveat': '10:30'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s, est. speed input: 5818.47 toks/s, output: 43.29 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s, est. speed input: 5818.47 toks/s, output: 43.29 toks/s]
+32it [00:15,  2.15it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(price_range="moderate")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(price_range="moderate")
+this is the 31th example. SNG01172.json_turn_0
+system response: 
+user response: i want to eat at a moderate -ly priced restaurant please
+pred turn change: {'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-pricerange': 'moderate'}
+pred states: {'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-pricerange': 'moderate'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 4520.76 toks/s, output: 47.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s, est. speed input: 4520.76 toks/s, output: 47.84 toks/s]
+33it [00:16,  2.10it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="belgian", price_range="moderate")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(food_type="belgian", price_range="moderate")
+this is the 32th example. SNG01172.json_turn_1
+system response: what type of food would you like ?
+user response: belgian please , i am craving that lately
+pred turn change: {'restaurant-food': 'belgian', 'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-food': 'belgian'}
+pred states: {'restaurant-food': 'belgian', 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-food': 'belgian', 'restaurant-pricerange': 'moderate'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.97it/s, est. speed input: 6690.37 toks/s, output: 38.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.96it/s, est. speed input: 6690.37 toks/s, output: 38.55 toks/s]
+34it [00:16,  2.24it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(area="centre")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(area="centre")
+this is the 33th example. SNG01172.json_turn_2
+system response: we need some more information . where are looking to eat ?
+user response: i prefer to eat in the center of town , please .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'belgian',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-area': 'centre'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'belgian',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'belgian',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.08it/s, est. speed input: 8486.69 toks/s, output: 28.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.07it/s, est. speed input: 8486.69 toks/s, output: 28.56 toks/s]
+35it [00:16,  2.50it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 34th example. SNG01172.json_turn_3
+system response: no , i did not find any restaurant -s in the centre .
+user response: hmm . how about somewhere else in town , what is available ?
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'belgian',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-area': 'dontcare'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'belgian',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'dontcare',
+ 'restaurant-food': 'belgian',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.75it/s, est. speed input: 6106.13 toks/s, output: 41.24 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.74it/s, est. speed input: 6106.13 toks/s, output: 41.24 toks/s]
+36it [00:17,  2.50it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="turkish")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(food_type="turkish")
+this is the 35th example. SNG01172.json_turn_4
+system response: i am sorry but i do not have any belgian place -s in the centre . can i try a different area ?
+user response: why do not we try turkish food instead
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'turkish'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3749.43 toks/s, output: 52.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3749.43 toks/s, output: 52.45 toks/s]
+37it [00:17,  2.09it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(book_day="tuesday", book_people=1, book_time="20:00", name="anatolia")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(book_day="tuesday", book_people=1, book_time="20:00", name="anatolia")
+this is the 36th example. SNG01172.json_turn_5
+system response: there are 2 turkish restaurant -s in the centre of town . they are efe s restaurant and anatolia .
+user response: either would be fine . can you book for 1 at 20:00 on tuesday ?
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '20:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'anatolia',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '20:00'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '20:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'anatolia',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '20:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3809.36 toks/s, output: 52.57 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3809.36 toks/s, output: 52.57 toks/s]
+38it [00:18,  1.87it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="efes restaurant", book_day="tuesday", book_people=1, book_time="19:00")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(name="efes restaurant", book_day="tuesday", book_people=1, book_time="19:00")
+this is the 37th example. SNG01172.json_turn_6
+system response: i am sorry , it looks like they are both booked during yoir preferred time and day . would you like to try something else ?
+user response: yes try 19:00 and please give me the reference number .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'efes restaurant',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {'restaurant-book time': '19:00'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'efes restaurant',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s, est. speed input: 8916.96 toks/s, output: 26.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.81it/s, est. speed input: 8916.96 toks/s, output: 26.71 toks/s]
+39it [00:18,  2.15it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 38th example. SNG01172.json_turn_7
+system response: booking was successful at efes restaurant . the table will be reserved for 15 minutes . reference number is : qxz05j29 .
+user response: thanks so much ! you've been helpful .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'efes restaurant',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'efes restaurant',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.84it/s, est. speed input: 8946.80 toks/s, output: 26.88 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.83it/s, est. speed input: 8946.80 toks/s, output: 26.88 toks/s]
+40it [00:19,  2.42it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 39th example. SNG01172.json_turn_8
+system response: have a nice day
+user response: you have a nice day also .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'efes restaurant',
+ 'restaurant-pricerange': 'moderate'}
+gold turn change: {}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-name': 'efes restaurant',
+ 'restaurant-pricerange': 'moderate'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-book day': 'tuesday',
+ 'restaurant-book people': '1',
+ 'restaurant-book time': '19:00',
+ 'restaurant-food': 'turkish',
+ 'restaurant-pricerange': 'moderate'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.60it/s, est. speed input: 6135.11 toks/s, output: 39.58 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.59it/s, est. speed input: 6135.11 toks/s, output: 39.58 toks/s]
+41it [00:19,  2.60it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel()': 1}
+few-shot best completion: hotel = agent.find_hotel()
+this is the 40th example. PMUL1579.json_turn_0
+system response: 
+user response: please help me find somewhere to stay .
+pred turn change: {}
+gold turn change: {}
+pred states: {}
+gold states: {}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 3944.79 toks/s, output: 51.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 3944.79 toks/s, output: 51.26 toks/s]
+42it [00:20,  2.34it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(type="guest house", price_range="moderate", internet="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(type="guest house", price_range="moderate", internet="yes")
+this is the 41th example. PMUL1579.json_turn_1
+system response: absolutely ! what type of hotel would you like to stay in and what is your price range ?
+user response: i would like to stay in a guest house type of hotel that is in the moderate price range . also , it should have free wifi .
+pred turn change: {'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold turn change: {'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+pred states: {'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.79it/s, est. speed input: 3651.91 toks/s, output: 53.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.78it/s, est. speed input: 3651.91 toks/s, output: 53.60 toks/s]
+43it [00:20,  2.09it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house", internet="yes", area="dontcare")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house", internet="yes", area="dontcare")
+this is the 42th example. PMUL1579.json_turn_2
+system response: we have 14 guest houses around town that fit your criteria . are you planning on staying in a specific area of town ?
+user response: i do not have an area preference .
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold turn change: {'hotel-area': 'dontcare'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.58it/s, est. speed input: 3962.99 toks/s, output: 52.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3962.99 toks/s, output: 52.00 toks/s]
+44it [00:21,  1.86it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="saturday", book_people=4, book_number_of_days=4, name="avalon")': 1}
+few-shot best completion: hotel = agent.find_hotel(book_day="saturday", book_people=4, book_number_of_days=4, name="avalon")
+this is the 43th example. PMUL1579.json_turn_3
+system response: i can book a room for you at avalon .
+user response: i would like to book the room for 4 people , for 4 nights , starting saturday . please provide me with the reference number .
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold turn change: {'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-name': 'avalon'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 4955.90 toks/s, output: 46.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.02it/s, est. speed input: 4955.90 toks/s, output: 46.62 toks/s]
+45it [00:21,  1.87it/s]
+few-shot completions: {'agent.state.train = agent.find_train(leave_from="leicester", destination=agent.state.hotel.area)': 1}
+few-shot best completion: train = agent.find_train(leave_from="leicester", destination=hotel.area)
+this is the 44th example. PMUL1579.json_turn_4
+system response: booking was successful . reference number is : kpbdlexw . anything else for you ?
+user response: yes , i need to find a train from leicester to get to the hotel .
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold turn change: {'train-departure': 'leicester'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-departure': 'leicester'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3927.39 toks/s, output: 51.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3927.39 toks/s, output: 51.90 toks/s]
+46it [00:22,  1.73it/s]
+few-shot completions: {'agent.state.train = agent.find_train(day="saturday", depart_time="18:45", arrive_by_time="dontcare", leave_from="cambridge")': 1}
+few-shot best completion: train = agent.find_train(day="saturday", depart_time="18:45", arrive_by_time="dontcare", leave_from="cambridge")
+this is the 45th example. PMUL1579.json_turn_5
+system response: sure , arrival at the cambridge station ? when are you traveling ?
+user response: i will be travelling on saturday , but i cannot leave until the evening after 18:45 .
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': 'dontcare',
+ 'train-day': 'saturday',
+ 'train-departure': 'cambridge',
+ 'train-leaveat': '18:45'}
+gold turn change: {'train-day': 'saturday',
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '18:45'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': 'dontcare',
+ 'train-day': 'saturday',
+ 'train-departure': 'cambridge',
+ 'train-leaveat': '18:45'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-day': 'saturday',
+ 'train-departure': 'leicester',
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '18:45'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5974.11 toks/s, output: 40.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 5974.11 toks/s, output: 40.55 toks/s]
+47it [00:23,  1.82it/s]
+few-shot completions: {'agent.state.train = agent.find_train(book_people=agent.state.hotel.book_people)': 1}
+few-shot best completion: train = agent.find_train(book_people=hotel.book_people)
+this is the 46th example. PMUL1579.json_turn_6
+system response: train id tr5790 leaves at 19:09 . will that be fine with you ?
+user response: can you book the train for my entire group of people and give me the reference number please ?
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': 'dontcare',
+ 'train-day': 'saturday',
+ 'train-departure': 'cambridge',
+ 'train-leaveat': '18:45'}
+gold turn change: {'train-book people': '4'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': 'dontcare',
+ 'train-day': 'saturday',
+ 'train-departure': 'cambridge',
+ 'train-leaveat': '18:45'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-book people': '4',
+ 'train-day': 'saturday',
+ 'train-departure': 'leicester',
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '18:45'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.43it/s, est. speed input: 9229.75 toks/s, output: 24.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.42it/s, est. speed input: 9229.75 toks/s, output: 24.00 toks/s]
+48it [00:23,  2.06it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 47th example. PMUL1579.json_turn_7
+system response: booking was successful , the total fee is 120.96 gbp payable at the station . reference number is : 4qnvl472 . can i help with anything else today ?
+user response: that s all i need for today , thank you !
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': 'dontcare',
+ 'train-day': 'saturday',
+ 'train-departure': 'cambridge',
+ 'train-leaveat': '18:45'}
+gold turn change: {}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-arriveby': 'dontcare',
+ 'train-day': 'saturday',
+ 'train-departure': 'cambridge',
+ 'train-leaveat': '18:45'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-book day': 'saturday',
+ 'hotel-book people': '4',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'avalon',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'guest house',
+ 'train-book people': '4',
+ 'train-day': 'saturday',
+ 'train-departure': 'leicester',
+ 'train-destination': 'cambridge',
+ 'train-leaveat': '18:45'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 3690.07 toks/s, output: 52.80 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.03it/s, est. speed input: 3690.07 toks/s, output: 52.80 toks/s]
+49it [00:23,  2.01it/s]
+few-shot completions: {'agent.state.train = agent.find_train(destination="cambridge", arrive_by_time="16:45", day="monday")': 1}
+few-shot best completion: train = agent.find_train(destination="cambridge", arrive_by_time="16:45", day="monday")
+this is the 48th example. PMUL1159.json_turn_0
+system response: 
+user response: i am looking for a train to cambridge that arrives by 16:45 on monday .
+pred turn change: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-destination': 'cambridge'}
+gold turn change: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-destination': 'cambridge'}
+pred states: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-destination': 'cambridge'}
+gold states: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-destination': 'cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4776.03 toks/s, output: 47.33 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4776.03 toks/s, output: 47.33 toks/s]
+50it [00:24,  2.04it/s]
+few-shot completions: {'agent.state.train = agent.find_train(day="monday", leave_from="birmingham new street")': 1}
+few-shot best completion: train = agent.find_train(day="monday", leave_from="birmingham new street")
+this is the 49th example. PMUL1159.json_turn_1
+system response: where would you like to leave from ?
+user response: i want to leave from the birmingham new street station .
+pred turn change: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {'train-departure': 'birmingham new street'}
+pred states: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.71it/s, est. speed input: 9256.54 toks/s, output: 25.99 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.70it/s, est. speed input: 9256.54 toks/s, output: 25.99 toks/s]
+51it [00:24,  2.29it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 50th example. PMUL1159.json_turn_2
+system response: tr3387 will get you there in time . would you like me to book it for you ?
+user response: can you tell me the price and the train id ?
+pred turn change: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {}
+pred states: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.70it/s, est. speed input: 6725.73 toks/s, output: 37.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.70it/s, est. speed input: 6725.73 toks/s, output: 37.86 toks/s]
+52it [00:25,  2.33it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="centre")
+this is the 51th example. PMUL1159.json_turn_3
+system response: the train id is tr3387 and the price is 75.10 pounds per ticket . would you like me to book you a ticket ?
+user response: no but i need an attraction in the center part of town .
+pred turn change: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {'attraction-area': 'centre'}
+pred states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.43it/s, est. speed input: 5432.09 toks/s, output: 43.67 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.42it/s, est. speed input: 5432.09 toks/s, output: 43.67 toks/s]
+53it [00:25,  2.29it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre", type="church")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="centre", type="church")
+this is the 52th example. PMUL1159.json_turn_4
+system response: great , there are several churches if that interests you .
+user response: i wouldn't mind checking out some churches . which 1 in particular do you recommend ?
+pred turn change: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {}
+pred states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.93it/s, est. speed input: 8828.99 toks/s, output: 27.53 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.92it/s, est. speed input: 8828.99 toks/s, output: 27.53 toks/s]
+54it [00:25,  2.54it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 53th example. PMUL1159.json_turn_5
+system response: i recommend old schools . it is located in trinity lane , cb21tt . can i give you their phone numbers ?
+user response: yes phone and adress please
+pred turn change: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {'attraction-name': 'old schools'}
+pred states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'centre',
+ 'attraction-name': 'old schools',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.90it/s, est. speed input: 6154.77 toks/s, output: 40.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s, est. speed input: 6154.77 toks/s, output: 40.60 toks/s]
+55it [00:26,  2.56it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="centre")
+this is the 54th example. PMUL1159.json_turn_6
+system response: 01223332320 . it is on trinity lane .
+user response: where is that located again , in the centre right ?
+pred turn change: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {}
+pred states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'centre',
+ 'attraction-name': 'old schools',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.94it/s, est. speed input: 8979.27 toks/s, output: 27.55 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.93it/s, est. speed input: 8979.27 toks/s, output: 27.55 toks/s]
+56it [00:26,  2.77it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 55th example. PMUL1159.json_turn_7
+system response: yes , it is located in the centre .
+user response: ok , that s all the information i need . thank you for your help .
+pred turn change: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold turn change: {}
+pred states: {'attraction-area': 'centre',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'centre',
+ 'attraction-name': 'old schools',
+ 'train-arriveby': '16:45',
+ 'train-day': 'monday',
+ 'train-departure': 'birmingham new street',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4844.45 toks/s, output: 47.27 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s, est. speed input: 4844.45 toks/s, output: 47.27 toks/s]
+57it [00:27,  2.52it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house")
+this is the 56th example. PMUL2748.json_turn_0
+system response: 
+user response: i would like to find a moderate -ly priced guest house to stay at in cambridge .
+pred turn change: {'hotel-pricerange': 'moderate', 'hotel-type': 'guest house'}
+gold turn change: {'hotel-pricerange': 'moderate', 'hotel-type': 'guest house'}
+pred states: {'hotel-pricerange': 'moderate', 'hotel-type': 'guest house'}
+gold states: {'hotel-pricerange': 'moderate', 'hotel-type': 'guest house'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4053.93 toks/s, output: 51.40 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.77it/s, est. speed input: 4053.93 toks/s, output: 51.40 toks/s]
+58it [00:27,  2.17it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", type="guest house", stars="4", area="east")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", type="guest house", stars="4", area="east")
+this is the 57th example. PMUL2748.json_turn_1
+system response: a and b guest house is in the moderate price range .
+user response: maybe , if possible , i would like a guest house that is also 4 star in the east in addition to being moderate .
+pred turn change: {'hotel-area': 'east',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {'hotel-area': 'east', 'hotel-stars': '4'}
+pred states: {'hotel-area': 'east',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-area': 'east',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.73it/s, est. speed input: 3967.24 toks/s, output: 51.88 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.73it/s, est. speed input: 3967.24 toks/s, output: 51.88 toks/s]
+59it [00:28,  1.97it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", stars="4", type="guest house", area="dontcare")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", stars="4", type="guest house", area="dontcare")
+this is the 58th example. PMUL2748.json_turn_2
+system response: i apologize , but there are no guest houses in cambridge that are both 4 star and at the east end of cambridge .
+user response: do you have any moderate priced guest houses that are 4 star any where else ?
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {'hotel-area': 'dontcare'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-area': 'dontcare',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.31it/s, est. speed input: 4990.30 toks/s, output: 46.25 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.31it/s, est. speed input: 4990.30 toks/s, output: 46.25 toks/s]
+60it [00:28,  2.01it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(price_range="moderate", parking="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(price_range="moderate", parking="yes")
+this is the 59th example. PMUL2748.json_turn_3
+system response: actually , there are 64 star guest houses in the east . do you have a price preference ?
+user response: i need 1 that is moderate -ly priced and does it have free parking ?
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {'hotel-area': 'east', 'hotel-parking': 'yes'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'hotel-area': 'east',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.80it/s, est. speed input: 8795.48 toks/s, output: 26.58 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.79it/s, est. speed input: 8795.48 toks/s, output: 26.58 toks/s]
+61it [00:29,  2.27it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 60th example. PMUL2748.json_turn_4
+system response: carolina bed and breakfast is in the moderate price range and has free parking . would you like me to book that for your now ?
+user response: yes please ! can i also get admission fees for nearby museums ?
+pred turn change: {'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {'attraction-area': 'east',
+ 'attraction-type': 'museum',
+ 'hotel-name': 'carolina bed and breakfast'}
+pred states: {'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'attraction-area': 'east',
+ 'attraction-type': 'museum',
+ 'hotel-area': 'east',
+ 'hotel-name': 'carolina bed and breakfast',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.77it/s, est. speed input: 6574.88 toks/s, output: 38.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.76it/s, est. speed input: 6574.88 toks/s, output: 38.77 toks/s]
+62it [00:29,  2.33it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="centre")
+this is the 61th example. PMUL2748.json_turn_5
+system response: what day do you want to book it , how many days and how many people ? 3 museums are free admission and 1 museum is pounds .
+user response: nevermind , can you help me find some museums in town and how much is the entrance fees ?
+pred turn change: {'attraction-area': 'centre',
+ 'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {}
+pred states: {'attraction-area': 'centre',
+ 'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'attraction-area': 'east',
+ 'attraction-type': 'museum',
+ 'hotel-area': 'east',
+ 'hotel-name': 'carolina bed and breakfast',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s, est. speed input: 6061.05 toks/s, output: 40.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s, est. speed input: 6061.05 toks/s, output: 40.44 toks/s]
+63it [00:29,  2.39it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="centre")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="centre")
+this is the 62th example. PMUL2748.json_turn_6
+system response: are you looking in the east ? most museums are free , but the cambridge museum of technology does charge 5 pounds .
+user response: the location and cost of the museum does not matter to me . what museum do you recommend ?
+pred turn change: {'attraction-area': 'centre',
+ 'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {'attraction-area': 'dontcare'}
+pred states: {'attraction-area': 'centre',
+ 'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'attraction-area': 'dontcare',
+ 'attraction-type': 'museum',
+ 'hotel-area': 'east',
+ 'hotel-name': 'carolina bed and breakfast',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s, est. speed input: 8875.26 toks/s, output: 26.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.81it/s, est. speed input: 8875.26 toks/s, output: 26.71 toks/s]
+64it [00:30,  2.60it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 63th example. PMUL2748.json_turn_7
+system response: if area does not matter , then there are 23 museums available . the cambridge artworks is in the east and is free . would you like additional information ?
+user response: actually that sounds good . you gave me the info i need . thanks . bye .
+pred turn change: {'attraction-area': 'centre',
+ 'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold turn change: {}
+pred states: {'attraction-area': 'centre',
+ 'hotel-area': 'dontcare',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+gold states: {'attraction-area': 'dontcare',
+ 'attraction-type': 'museum',
+ 'hotel-area': 'east',
+ 'hotel-name': 'carolina bed and breakfast',
+ 'hotel-parking': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-stars': '4',
+ 'hotel-type': 'guest house'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.06it/s, est. speed input: 8388.77 toks/s, output: 28.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.05it/s, est. speed input: 8388.77 toks/s, output: 28.45 toks/s]
+65it [00:30,  2.82it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 64th example. PMUL0689.json_turn_0
+system response: 
+user response: hi . can you help me find a restaurant ?
+pred turn change: {}
+gold turn change: {}
+pred states: {}
+gold states: {}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 5979.92 toks/s, output: 40.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 5979.92 toks/s, output: 40.84 toks/s]
+66it [00:30,  2.70it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="italian")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(food_type="italian")
+this is the 65th example. PMUL0689.json_turn_1
+system response: i sure can ! what kind of food are you looking for ?
+user response: i am looking for an italian restaurant .
+pred turn change: {'restaurant-food': 'italian'}
+gold turn change: {'restaurant-food': 'italian'}
+pred states: {'restaurant-food': 'italian'}
+gold states: {'restaurant-food': 'italian'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 4174.80 toks/s, output: 51.13 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4174.80 toks/s, output: 51.13 toks/s]
+67it [00:31,  2.40it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(food_type="italian", area="centre", price_range="dontcare")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(food_type="italian", area="centre", price_range="dontcare")
+this is the 66th example. PMUL0689.json_turn_2
+system response: there are numbers of italian restaurant -s . are you looking for 1 in any particular area or price range ?
+user response: i want 1 in the centre .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare'}
+gold turn change: {'restaurant-area': 'centre'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare'}
+gold states: {'restaurant-area': 'centre', 'restaurant-food': 'italian'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.98it/s, est. speed input: 8670.42 toks/s, output: 27.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.97it/s, est. speed input: 8670.42 toks/s, output: 27.84 toks/s]
+68it [00:31,  2.63it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 67th example. PMUL0689.json_turn_3
+system response: i would recommend the pizza express , a moderate -ly priced restaurant located at regent street city centre . do you need to make a reservation ?
+user response: no thank you but i do need the phone number .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare'}
+gold turn change: {'restaurant-name': 'pizza express'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-name': 'pizza express'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4628.73 toks/s, output: 48.37 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4628.73 toks/s, output: 48.37 toks/s]
+69it [00:32,  2.37it/s]
+few-shot completions: {'agent.state.train = agent.find_train(leave_from="leicester", arrive_by_time="10:15")': 1}
+few-shot best completion: train = agent.find_train(leave_from="leicester", arrive_by_time="10:15")
+this is the 68th example. PMUL0689.json_turn_4
+system response: the phone number is 01223324033 .
+user response: great . i am also looking for a train departing leicester and arriving before 10:15 at my destination .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold turn change: {'train-arriveby': '10:15', 'train-departure': 'leicester'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-name': 'pizza express',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3120.12 toks/s, output: 55.37 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3120.12 toks/s, output: 55.37 toks/s]
+70it [00:32,  1.91it/s]
+few-shot completions: {'agent.state.train = agent.find_train(destination="ely", day=agent.state.train.day, leave_from=agent.state.train.leave_from, arrive_by_time=agent.state.train.arrive_by_time)': 1}
+few-shot best completion: train = agent.find_train(destination="ely", day=train.day, leave_from=train.leave_from, arrive_by_time=train.arrive_by_time)
+this is the 69th example. PMUL0689.json_turn_5
+system response: what is your destination ?
+user response: i will be going to ely .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold turn change: {'train-destination': 'ely'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-name': 'pizza express',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester',
+ 'train-destination': 'ely'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.53it/s, est. speed input: 3731.04 toks/s, output: 51.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.52it/s, est. speed input: 3731.04 toks/s, output: 51.90 toks/s]
+71it [00:33,  1.74it/s]
+few-shot completions: {'agent.state.train = agent.find_train(day="friday", leave_from=agent.state.train.leave_from, arrive_by_time=agent.state.train.arrive_by_time)': 1}
+few-shot best completion: train = agent.find_train(day="friday", leave_from=train.leave_from, arrive_by_time=train.arrive_by_time)
+this is the 70th example. PMUL0689.json_turn_6
+system response: and what day are you traveling ?
+user response: i would like to go to cambridge friday .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold turn change: {'train-day': 'friday', 'train-destination': 'cambridge'}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-name': 'pizza express',
+ 'train-arriveby': '10:15',
+ 'train-day': 'friday',
+ 'train-departure': 'leicester',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.67it/s, est. speed input: 9335.06 toks/s, output: 25.66 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.66it/s, est. speed input: 9335.06 toks/s, output: 25.66 toks/s]
+72it [00:33,  2.01it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 71th example. PMUL0689.json_turn_7
+system response: train tr4390 leaves at 8:09 and arrives at 9:54 . would you like me to book it for you ?
+user response: no thank you that was all the info i needed today .
+pred turn change: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold turn change: {}
+pred states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-pricerange': 'dontcare',
+ 'train-arriveby': '10:15',
+ 'train-departure': 'leicester'}
+gold states: {'restaurant-area': 'centre',
+ 'restaurant-food': 'italian',
+ 'restaurant-name': 'pizza express',
+ 'train-arriveby': '10:15',
+ 'train-day': 'friday',
+ 'train-departure': 'leicester',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.80it/s, est. speed input: 4521.51 toks/s, output: 48.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.80it/s, est. speed input: 4521.51 toks/s, output: 48.56 toks/s]
+73it [00:34,  1.90it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi(destination="oak bistro", leave_from="express by holiday inn cambridge")': 1}
+few-shot best completion: taxi = agent.find_taxi(destination="oak bistro", leave_from="express by holiday inn cambridge")
+this is the 72th example. SNG02260.json_turn_0
+system response: 
+user response: i need to book a taxi to come to express by holiday inn cambridge to take me to the oak bistro .
+pred turn change: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro'}
+gold turn change: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro'}
+pred states: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro'}
+gold states: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.44it/s, est. speed input: 5330.80 toks/s, output: 43.85 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.43it/s, est. speed input: 5330.80 toks/s, output: 43.85 toks/s]
+74it [00:34,  1.99it/s]
+few-shot completions: {'agent.state.taxi = agent.find_taxi(depart_time="07:30")': 1}
+few-shot best completion: taxi = agent.find_taxi(depart_time="07:30")
+this is the 73th example. SNG02260.json_turn_1
+system response: okay , what time do you want to leave by ?
+user response: i want to leave by 07:30 .
+pred turn change: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro',
+ 'taxi-leaveat': '07:30'}
+gold turn change: {'taxi-leaveat': '07:30'}
+pred states: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro',
+ 'taxi-leaveat': '07:30'}
+gold states: {'taxi-departure': 'express by holiday inn cambridge',
+ 'taxi-destination': 'the oak bistro',
+ 'taxi-leaveat': '07:30'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.02it/s, est. speed input: 5700.70 toks/s, output: 42.31 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.02it/s, est. speed input: 5700.70 toks/s, output: 42.31 toks/s]
+75it [00:35,  2.16it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="west")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="west")
+this is the 74th example. PMUL3983.json_turn_0
+system response: 
+user response: i really would love to get any information i can on museums in the west
+pred turn change: {'attraction-area': 'west'}
+gold turn change: {'attraction-area': 'west', 'attraction-type': 'museum'}
+pred states: {'attraction-area': 'west'}
+gold states: {'attraction-area': 'west', 'attraction-type': 'museum'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.41it/s, est. speed input: 5104.29 toks/s, output: 45.74 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.40it/s, est. speed input: 5104.29 toks/s, output: 45.74 toks/s]
+76it [00:35,  2.17it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(area="west", type="dontcare")': 1}
+few-shot best completion: attraction = agent.find_attraction(area="west", type="dontcare")
+this is the 75th example. PMUL3983.json_turn_1
+system response: we have a lot of those ! anything specific you need or just a recommendation ?
+user response: nothing specific . can you make a recommendation and give me their address , postcode , and entrance fee ?
+pred turn change: {'attraction-area': 'west', 'attraction-type': 'dontcare'}
+gold turn change: {}
+pred states: {'attraction-area': 'west', 'attraction-type': 'dontcare'}
+gold states: {'attraction-area': 'west', 'attraction-type': 'museum'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.11it/s, est. speed input: 4898.35 toks/s, output: 46.43 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.11it/s, est. speed input: 4898.35 toks/s, output: 46.43 toks/s]
+77it [00:36,  2.09it/s]
+few-shot completions: {'agent.state.train = agent.find_train(arrive_by_time="19:00", destination="cambridge")': 1}
+few-shot best completion: train = agent.find_train(arrive_by_time="19:00", destination="cambridge")
+this is the 76th example. PMUL3983.json_turn_2
+system response: may i recommend lynne strover gallery located at 23 high street , fen ditton . the postcode is cb30aq and it s free to get it !
+user response: i am also looking about a train . i need it to be to cambridge by 19:00 . can you help find 1 ?
+pred turn change: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '19:00',
+ 'train-destination': 'cambridge'}
+gold turn change: {'train-arriveby': '19:00', 'train-destination': 'cambridge'}
+pred states: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '19:00',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'west',
+ 'attraction-type': 'museum',
+ 'train-arriveby': '19:00',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 4958.51 toks/s, output: 46.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.20it/s, est. speed input: 4958.51 toks/s, output: 46.30 toks/s]
+78it [00:36,  2.07it/s]
+few-shot completions: {'agent.state.train = agent.find_train(day="monday", leave_from="london kings cross")': 1}
+few-shot best completion: train = agent.find_train(day="monday", leave_from="london kings cross")
+this is the 77th example. PMUL3983.json_turn_3
+system response: sure . where will you be leaving from ?
+user response: i will be leaving london kings cross on monday .
+pred turn change: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '19:00',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+gold turn change: {'train-day': 'monday', 'train-departure': 'london kings cross'}
+pred states: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '19:00',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'west',
+ 'attraction-type': 'museum',
+ 'train-arriveby': '19:00',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4991.66 toks/s, output: 46.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s, est. speed input: 4991.66 toks/s, output: 46.18 toks/s]
+79it [00:37,  2.02it/s]
+few-shot completions: {'agent.state.train = agent.find_train(arrive_by_time="18:08", book_people=1)': 1}
+few-shot best completion: train = agent.find_train(arrive_by_time="18:08", book_people=1)
+this is the 78th example. PMUL3983.json_turn_4
+system response: tr7556 arrives at 18:08 . can i book it for you ?
+user response: yes please book . i need the travel time and the train id please .
+pred turn change: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '18:08',
+ 'train-book people': '1',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+gold turn change: {}
+pred states: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '18:08',
+ 'train-book people': '1',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'west',
+ 'attraction-type': 'museum',
+ 'train-arriveby': '19:00',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.65it/s, est. speed input: 9218.88 toks/s, output: 25.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.64it/s, est. speed input: 9218.88 toks/s, output: 25.56 toks/s]
+80it [00:37,  2.26it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 79th example. PMUL3983.json_turn_5
+system response: tr7556 leaves london kings cross at 17:17 and arrives in cambridge at 18:08 . the trip should last about 51 minutes . how many tickets should i book for your trip ?
+user response: that s all the info i needed today , thanks .
+pred turn change: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '18:08',
+ 'train-book people': '1',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+gold turn change: {}
+pred states: {'attraction-area': 'west',
+ 'attraction-type': 'dontcare',
+ 'train-arriveby': '18:08',
+ 'train-book people': '1',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+gold states: {'attraction-area': 'west',
+ 'attraction-type': 'museum',
+ 'train-arriveby': '19:00',
+ 'train-day': 'monday',
+ 'train-departure': 'london kings cross',
+ 'train-destination': 'cambridge'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.78it/s, est. speed input: 5855.47 toks/s, output: 41.70 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.77it/s, est. speed input: 5855.47 toks/s, output: 41.70 toks/s]
+81it [00:38,  2.33it/s]
+few-shot completions: {'agent.state.restaurant = agent.find_restaurant(name="rajmahal")': 1}
+few-shot best completion: restaurant = agent.find_restaurant(name="rajmahal")
+this is the 80th example. MUL2341.json_turn_0
+system response: 
+user response: hi there . i have heard lots of good things about a restaurant called rajmahal . can you tell me anything about it ?
+pred turn change: {'restaurant-name': 'rajmahal'}
+gold turn change: {'restaurant-name': 'rajmahal'}
+pred states: {'restaurant-name': 'rajmahal'}
+gold states: {'restaurant-name': 'rajmahal'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.02it/s, est. speed input: 8583.03 toks/s, output: 28.17 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.01it/s, est. speed input: 8583.03 toks/s, output: 28.17 toks/s]
+82it [00:38,  2.58it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 81th example. MUL2341.json_turn_1
+system response: it s an indian restaurant located in the east . they are moderate -ly priced . would you like to make a reservation ?
+user response: nope but can i get the postcode for that ?
+pred turn change: {'restaurant-name': 'rajmahal'}
+gold turn change: {}
+pred states: {'restaurant-name': 'rajmahal'}
+gold states: {'restaurant-name': 'rajmahal'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.63it/s, est. speed input: 5894.79 toks/s, output: 42.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.62it/s, est. speed input: 5894.79 toks/s, output: 42.03 toks/s]
+83it [00:38,  2.51it/s]
+few-shot completions: {'agent.state.attraction = agent.find_attraction(name="cambridge artworks")': 1}
+few-shot best completion: attraction = agent.find_attraction(name="cambridge artworks")
+this is the 82th example. MUL2341.json_turn_2
+system response: certainly . they are located in postcode cb58rg . do you need assistance with anything else today ?
+user response: yes i would like some information on the cambrige artworks .
+pred turn change: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+gold turn change: {'attraction-name': 'cambridge artworks'}
+pred states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+gold states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.78it/s, est. speed input: 8789.91 toks/s, output: 26.48 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.77it/s, est. speed input: 8789.91 toks/s, output: 26.48 toks/s]
+84it [00:39,  2.68it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 83th example. MUL2341.json_turn_3
+system response: the cambridge artworks is located at 5 greens road , postal code cb13ef and the phone number is 01223902168 . admission is free .
+user response: thank you for the information . goodbye !
+pred turn change: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+gold turn change: {}
+pred states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+gold states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.04it/s, est. speed input: 8272.45 toks/s, output: 28.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  4.03it/s, est. speed input: 8272.45 toks/s, output: 28.26 toks/s]
+85it [00:39,  2.88it/s]
+few-shot completions: {'agent.state.update({})  ': 1}
+few-shot best completion: update({})
+this is the 84th example. MUL2341.json_turn_4
+system response: you are very welcome . i hope you have a wonderful day ! goodbye .
+user response: ok , hope you have a good day too . bye .
+pred turn change: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+gold turn change: {}
+pred states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+gold states: {'attraction-name': 'cambridge artworks', 'restaurant-name': 'rajmahal'}
+
+=====================correct!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s, est. speed input: 6215.32 toks/s, output: 40.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.87it/s, est. speed input: 6215.32 toks/s, output: 40.26 toks/s]
+86it [00:39,  2.79it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(area="north")': 1}
+few-shot best completion: hotel = agent.find_hotel(area="north")
+this is the 85th example. SNG0783.json_turn_0
+system response: 
+user response: hello . can you help me find a hotel in the north of town ?
+pred turn change: {'hotel-area': 'north'}
+gold turn change: {'hotel-area': 'north', 'hotel-type': 'hotel'}
+pred states: {'hotel-area': 'north'}
+gold states: {'hotel-area': 'north', 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.05it/s, est. speed input: 4230.95 toks/s, output: 49.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.04it/s, est. speed input: 4230.95 toks/s, output: 49.12 toks/s]
+87it [00:40,  2.44it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(area="north", price_range="moderate", internet="yes")': 1}
+few-shot best completion: hotel = agent.find_hotel(area="north", price_range="moderate", internet="yes")
+this is the 86th example. SNG0783.json_turn_1
+system response: i have 2 hotel -s in the north , would you like to book 1 ?
+user response: are either of them moderate -ly priced ? do they include free wifi ?
+pred turn change: {'hotel-area': 'north', 'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+pred states: {'hotel-area': 'north', 'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold states: {'hotel-area': 'north',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.08it/s, est. speed input: 7333.62 toks/s, output: 33.91 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.08it/s, est. speed input: 7333.62 toks/s, output: 33.91 toks/s]
+88it [00:40,  2.51it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel()': 1}
+few-shot best completion: hotel = agent.find_hotel()
+this is the 87th example. SNG0783.json_turn_2
+system response: we have 2 hotel -s and 8 guest houses that match your needs . do you have additional requirement -s ?
+user response: could you book me into 1 of the 2 hotel -s please .
+pred turn change: {'hotel-area': 'north', 'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold turn change: {}
+pred states: {'hotel-area': 'north', 'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
+gold states: {'hotel-area': 'north',
+ 'hotel-internet': 'yes',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.34it/s, est. speed input: 3033.32 toks/s, output: 56.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.34it/s, est. speed input: 3033.32 toks/s, output: 56.12 toks/s]
+89it [00:41,  1.93it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_people=3, book_number_of_days=4, area="north", price_range="moderate", internet="yes", name="ashley hotel")': 1}
+few-shot best completion: hotel = agent.find_hotel(book_people=3, book_number_of_days=4, area="north", price_range="moderate", internet="yes", name="ashley hotel")
+this is the 88th example. SNG0783.json_turn_3
+system response: how about the ashley hotel ? how many people in your party ?
+user response: but i am not sure from what you said is the ashley priced moderate -ly , and do they have free wifi ? we are 3 people and we'd like to stay 4 nights .
+pred turn change: {'hotel-area': 'north',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'ashley hotel',
+ 'hotel-pricerange': 'moderate'}
+gold turn change: {'hotel-book people': '3', 'hotel-book stay': '4', 'hotel-name': 'ashley hotel'}
+pred states: {'hotel-area': 'north',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'ashley hotel',
+ 'hotel-pricerange': 'moderate'}
+gold states: {'hotel-area': 'north',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'ashley hotel',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.78it/s, est. speed input: 4253.88 toks/s, output: 49.86 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.78it/s, est. speed input: 4253.88 toks/s, output: 49.86 toks/s]
+90it [00:42,  1.83it/s]
+few-shot completions: {'agent.state.hotel = agent.find_hotel(book_day="sunday", book_people=3, book_number_of_days=4)': 1}
+few-shot best completion: hotel = agent.find_hotel(book_day="sunday", book_people=3, book_number_of_days=4)
+this is the 89th example. SNG0783.json_turn_4
+system response: ashley hotel is moderate -ly priced and has free wifi . what night would you like to begin your stay ?
+user response: i would like it to start sunday .
+pred turn change: {'hotel-area': 'north',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'ashley hotel',
+ 'hotel-pricerange': 'moderate'}
+gold turn change: {'hotel-book day': 'sunday'}
+pred states: {'hotel-area': 'north',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'ashley hotel',
+ 'hotel-pricerange': 'moderate'}
+gold states: {'hotel-area': 'north',
+ 'hotel-book day': 'sunday',
+ 'hotel-book people': '3',
+ 'hotel-book stay': '4',
+ 'hotel-internet': 'yes',
+ 'hotel-name': 'ashley hotel',
+ 'hotel-pricerange': 'moderate',
+ 'hotel-type': 'hotel'}
+
+=====================wrong!=======================
+
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A

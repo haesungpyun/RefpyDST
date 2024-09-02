@@ -346,6 +346,7 @@ class LlamaClient(AbstractLMClient):
             logging.warning(e)
             self.timer.sleep(10)
             raise e
+        
     def top_p_lm_completion(self, prompt_text: str, top_p: float = 0.9, n: int = 5, best_of: int = 10,
                             max_tokens: int = 120, **kwargs) -> Dict[str, float]:
         """

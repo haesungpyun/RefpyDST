@@ -34,21 +34,24 @@ class Retriever:
         i = 0
         fetch_size: int = k
         scores = self.bm25.get_scores(query_emb)
-        score_idx_dict = {score:i for i, score in enumerate(scores)}
-        sorted_scores = sorted(score_idx_dict, reverse=True)
-        query_result = np.array([[score_idx_dict[top_score] 
-                                      for top_score in sorted_scores]])
-        sorted_scores = np.array([sorted_scores])
+        score_idx_dict = [[i,score] for i, score in enumerate(scores)]
+        sorted_scores = sorted(score_idx_dict, key=lambda x: x[1], reverse=True)
+        query_result = np.array([[i for (i, score) in sorted_scores]])
+        sorted_scores = np.array([[score for (i, score) in sorted_scores]])
         while i < len(self.emb_keys):
             if query_result.shape == (1,):
                 i += 1
                 yield self.emb_keys[query_result.item()], sorted_scores.item()
+                if i >= len(self.emb_keys):
+                    break
             else:
                 for item, score_item in zip(query_result.squeeze(0)[i:], sorted_scores.squeeze(0)[i:]):
                     i += 1
                     if item.item() >= len(self.emb_keys):
                         return  # stop iteration!
                     yield self.emb_keys[item.item()], score_item.item()
+                if i >= len(self.emb_keys):
+                    break
             fetch_size = min(2 * fetch_size, len(self.emb_keys))
 
     def topk_nearest_dialogs(self, query_emb, k=5):
