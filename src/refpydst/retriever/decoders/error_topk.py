@@ -27,7 +27,7 @@ class ErrorTopK(AbstractExampleListDecoder):
 
     def __init__(self, retriever: EmbeddingRetriever,**kwargs) -> None:
         self.retriever = retriever
-        self.ground_key = kwargs.get('ground_key')
+        self.ground_key = kwargs.get('ground_key', 'correct')
 
     def select_k(self, examples: Iterator[Tuple[Turn, float]], k: Dict) -> List[Turn]:
         example_by_key = defaultdict(list)

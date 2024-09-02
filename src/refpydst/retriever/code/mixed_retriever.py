@@ -129,15 +129,34 @@ class MixedRetriever(ExampleRetriever):
 
         # embedding : tokenized text
         # string: [CONTEXT]~ [SYS]~ [USER]~
+        if kwargs.get('bm25_input_kwargs'):
+            bm25_input_kwargs = kwargs.get('bm25_input_kwargs')
+        else:
+            bm25_input_kwargs = {}
+            input_type = kwargs.get('input_type', 'dialog')
+            only_slot = kwargs.get('only_slot', False)
+            bm25_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
 
-        def default_transformation(turn):
-            return data_item_to_string(turn, full_history=full_history)
+        if kwargs.get('sbert_input_kwargs'):
+            sbert_input_kwargs = kwargs.get('sbert_input_kwargs')
+        else:    
+            sbert_input_kwargs = {}
+            input_type = kwargs.get('input_type', 'dialog_context')
+            only_slot = kwargs.get('only_slot', False)
+            sbert_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
+
+        def bm25_default_transformation(turn):
+            return data_item_to_string(turn, **bm25_input_kwargs)
+        
+        def sbert_default_transformation(turn):
+            return data_item_to_string(turn, **sbert_input_kwargs)
 
         if type(string_transformation) == str:
             # configs can also specify known functions by a string, e.g. 'default'
             self.string_transformation = get_string_transformation_by_type(string_transformation)
         else:
-            self.string_transformation = string_transformation or default_transformation
+            self.bm25_string_transformation = bm25_default_transformation
+            self.sbert_string_transformation = sbert_default_transformation
 
         self.data_items = []
         for dataset in datasets:
@@ -182,13 +201,13 @@ class MixedRetriever(ExampleRetriever):
         # embedding = tokenized string
         if isinstance(data_item, list):
             return data_item
-        string_query = self.string_transformation(data_item)
+        string_query = self.bm25_string_transformation(data_item)
         embed = string_query.split()
         return embed
 
     def data_item_to_embedding(self, data_item):
         with torch.no_grad():
-            embed = self.model.encode(self.string_transformation(
+            embed = self.model.encode(self.sbert_string_transformation(
                 data_item), convert_to_numpy=True).reshape(1, -1)
         return embed
 
