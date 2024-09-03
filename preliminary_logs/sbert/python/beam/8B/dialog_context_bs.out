@@ -1,5 +1,27 @@
 /home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
   warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+<<<<<<< HEAD
+Traceback (most recent call last):
+  File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 366, in <module>
+    args: CodexPromptingRunConfig = read_json(run_file)
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/utils/general.py", line 38, in read_json
+    return json.load(f)
+           ^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 4 column 64 (char 138)
+=======
 wandb: Currently logged in as: haesung-pyun (haesung-pyun-seoul-national-university). Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.17.8 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
@@ -43134,3 +43156,4 @@ wandb:
 wandb: 🚀 View run -runs-preliminary-sbert-python-beam-8B-dialog_context_bs at: https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD/runs/99ykiah2
 wandb: Synced 6 W&B file(s), 1 media file(s), 5 artifact file(s) and 0 other file(s)
 wandb: Find logs at: ./wandb/run-20240831_062308-99ykiah2/logs
+>>>>>>> 0a6d6c22586d4cdd846ae63fd5721a9b47bd6327
