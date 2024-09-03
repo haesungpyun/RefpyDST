@@ -23,10 +23,62 @@ class MixedDecoder(AbstractExampleListDecoder):
         self.retriever = retriever
         self.operation = kwargs.get('operation', 'multiply')
         self.zscore = kwargs.get('zscore', False)
-        self.decoding_logic = kwargs.get('decoding_logit', 'top_k_round_robin')
+        self.decoding_logic = kwargs.get('decoding_logic', 'top_k_round_robin')
+
+    def union_examples_update_score(self, sbert_examples, bm25_examples, cos_score, bm25_score):
+        sbert_dict = {
+                turn_label: c_score 
+            for (turn_label, _), c_score in zip(sbert_examples, cos_score)
+        }
+        bm25_dict = {
+                turn_label: b_score 
+            for (turn_label, _), b_score in zip(bm25_examples.items(), bm25_score)
+        }
+        
+        sbert_set = set(list(sbert_dict.keys())[:self.from_n_possible])
+        bm25_dict = set(list(bm25_dict.keys())[:self.from_n_possible])
+        union_set = sbert_set.union(bm25_dict)
+        
+        sbert_examples = [(turn_label, sbert_dict[turn_label]) for turn_label in union_set]
+        bm25_examples = [(turn_label, bm25_dict[turn_label]) for turn_label in union_set]
+
+        sbert_examples = list(sorted(sbert_examples, key=lambda x: x[1], reverse=True)) # [high to low]
+        bm25_examples = list(sorted(bm25_examples, key=lambda item: item[1], reverse=True)) # [high to low]
+
+        return sbert_examples, bm25_examples
+
+    def standardize_distribution(self, sbert_score, bm25_score):
+        # tf-idf => [35-4] => z-score
+        # cos sim => [-1 1] => [0 2] => [0 1] => z-score
+        sbert_score = (sbert_score+1)/2     # [0, 1]
+        self.sbert_mean, self.sbert_std = np.mean(sbert_score), np.std(sbert_score)
+        self.bm25_mean, self.bm25_std = np.mean(bm25_score), np.std(bm25_score)
+        bm25_score = (bm25_score-self.bm25_mean)/self.bm25_std
+        if self.zscore:
+            return (sbert_score-self.sbert_mean)/self.sbert_std, bm25_score
+        else:
+            return sbert_score, bm25_score
+
+    def standardize(self, sbert_score=None, bm25_score=None):
+        if sbert_score and bm25_score:
+            raise ValueError("Both scores provided to standard")
+        if sbert_score:
+            sbert_score = (sbert_score+1)/2
+            return (sbert_score - self.sbert_mean) / self.sbert_std
+        elif bm25_score:
+            return (bm25_score - self.bm25_mean) / self.bm25_std
+        else:   
+            raise ValueError("No score provided to standard")
 
     def select_k(self, examples: Iterator[Tuple[Turn, float]],
-                 bm25_examples:Iterator[Tuple[Turn, float]], k: int) -> List[Turn]:
+                 bm25_examples:Iterator[Tuple[Turn, float]], k: int, **kwargs) -> List[Turn]:
+        if isinstance(k, dict):
+            self.bm25_k = k.get('bm25', 5)
+            self.sbert_k = k.get('sbert', 5)
+        else:
+            self.bm25_k = k
+            self.sbert_k = k
+        
         # Select up to "from N possible" in the iterator
         sbert_examples: List[Tuple[Turn, float]] = [turn_label_and_score for turn_label_and_score in examples]
         bm25_examples: Dict[Tuple[Turn, float]] = {turn_label: score for turn_label, score in bm25_examples}
@@ -34,40 +86,42 @@ class MixedDecoder(AbstractExampleListDecoder):
         # scores from retriever are euclidean distances, of unit vectors (range 0-2). cos(y, z) = 1-.5*euc(y, z)^2
         # We initialize example_scores with the cosine similarity of each example e to x, the input turn (implicit from
         #  order of argument examples to select_k).
-        cos_score = np.array([(1-0.5*(score**2)) for _, score in sbert_examples])
+        sbert_score = np.array([(1-0.5*(score**2)) for _, score in sbert_examples])
         bm25_score = np.array(list(bm25_examples.values()))
-
-        if len(sbert_examples) == 0:
-            return []
         
-        if self.zscore:
-            cos_score = self.standardize(cos_score)
-            bm25_score = self.standardize(bm25_score)
-        else:
-            bm25_score = self.standardize(bm25_score)
+        if self.decoding_logic == 'top_k_round_robin':  # done
+            sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
+            
+            return self.top_k_round_robin(sbert_examples, bm25_examples)
+        
+        elif self.decoding_logic == 'multiply_top_k':   # done
+            sbert_score, bm25_score = self.standardize_distribution(sbert_score, bm25_score)
+            sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
+            
+            return self.multiply_top_k(sbert_examples, bm25_examples)
 
-        sbert_examples = [(turn_label, score) for (turn_label, _), score in zip(sbert_examples, cos_score)]        
-        bm25_examples = {turn_label: score for turn_label, score in zip(bm25_examples.keys(), bm25_score)}
+        elif self.decoding_logic == 'round_robin_div_top_k':    # done
+            sbert_score, bm25_score = self.standardize_distribution(sbert_score, bm25_score)
+            sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
+        
+            return self.round_robin_div_top_k(sbert_examples, bm25_examples)
+        
+        elif self.decoding_logic == 'multiply_div_top_k':
+            sbert_score, bm25_score = self.standardize_distribution(sbert_score, bm25_score)
+            sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
+        
+            return self.multiply_div_top_k(sbert_examples, bm25_examples)
+        
+        elif self.decoding_logic == 'div_topk_round_robin':
+            sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
+        
+            return self.div_topk_round_robin(sbert_examples, bm25_examples)
 
-        if self.decoding_logit == 'top_k_round_robin':
-            return self.top_k_round_robin(sbert_examples, bm25_examples, k)
-        elif self.decoding_logit == 'multiply_top_k':
-            return self.multiply_top_k(sbert_examples, bm25_examples, k)
-        elif self.decoding_logit == 'round_robin_div_top_k':
-            return self.round_robin_div_top_k(sbert_examples, bm25_examples, k)
-        elif self.decoding_logit == 'multiply_div_top_k':
-            return self.multiply_div_top_k(sbert_examples, bm25_examples, k)
-        elif self.decoding_logit == 'div_topk_round_robin':
-            return self.div_topk_round_robin(sbert_examples, bm25_examples, k)
-        else:
-            raise ValueError(f"Unknown decoding logit: {self.decoding_logit}")
-
-    
     def top_k_round_robin(
         self, 
         sbert_examples: List[Tuple[Turn, float]], 
         bm25_examples: List[Tuple[Turn, float]], 
-        k: int
+        k: int = 10
     ) -> List[Turn]:
         """
         Selects the top k examples from the round-robin of BM25 and SBERT examples.        
@@ -75,25 +129,32 @@ class MixedDecoder(AbstractExampleListDecoder):
                             -> Union
         sbert -> top k/2 / 
         """
-        bm25_examples = [turn_label for turn_label, _ in bm25_examples]
-        sbert_examples = [turn_label for turn_label, _ in sbert_examples]
-
-        top_bm25 = bm25_examples[:k]
-        top_sbert = sbert_examples[:k]
-
         # Round-robin of the two lists
-        result = []
-        for i in range(k):
-            result.append(top_sbert[i])
-            result.append(top_bm25[i])
+        result = {}
+        s_idx, b_idx = 0, 0
+        while len(result) < self.bm25_k+self.sbert_k:
+            while s_idx < len(sbert_examples):
+                turn_label, _ = sbert_examples[s_idx]
+                if turn_label not in result:
+                    result.update({turn_label: 0})
+                    s_idx += 1
+                    break
+                s_idx += 1
+            while b_idx < len(bm25_examples):
+                turn_label, _ = sbert_examples[s_idx]
+                if turn_label not in result:
+                    result.update({turn_label: 0})
+                    b_idx += 1
+                    break
+                b_idx += 1
 
-        return result[::-1] # [low to high]
-    
+        return [self.retriever.label_to_data_item(turn_label) for turn_label in result][::-1] # [low to high]
+
     def multiply_top_k(
         self, 
         sbert_examples: List[Tuple[Turn, float]], 
         bm25_examples: List[Tuple[Turn, float]], 
-        k: int
+        k: int=10
     ) -> List[Turn]:
         """
         Selects the top k examples from the round-robin of BM25 and SBERT examples.
@@ -103,53 +164,75 @@ class MixedDecoder(AbstractExampleListDecoder):
         sbert -> z-score / 
         
         """
-        total_examples = {
-            turn_label: score * bm25_examples[turn_label] 
-            for _, (turn_label, score) in enumerate(sbert_examples)}
 
-        total_examples = dict(sorted(total_examples.items(), key=lambda item: item[1], reverse=True)) # [higt to low]
-        assert np.all(np.diff(list(total_examples.values())) <= 0)  # verifies they are decreasing as expected
+        union_set = set([turn_label for turn_label, _ in sbert_examples]).union([turn_label for turn_label, _ in bm25_examples])
+
+        total_examples = {}
+        for turn_label in union_set:
+            total_examples[turn_label] = sbert_examples[turn_label] * bm25_examples[turn_label]
+
+        total_examples = list(sorted(total_examples.items(), key=lambda item: item[1], reverse=True)) # [higt to low]
+        assert np.all(np.diff(np.array(np.array(total_examples)[:,1])) <= 0)  # verifies they are decreasing as expected
         
-        result = [self.retriever.label_to_data_item(turn_label) for turn_label in list(total_examples.keys())[:k]]  # top k
+        result = [self.retriever.label_to_data_item(turn_label) for turn_label in total_examples[:self.bm25_k+self.sbert_k]]  # top k
 
-        return result[::-1] # [low to high]
+        return result[::-1] # return [low to high]
 
 
     def round_robin_div_top_k(
         self, 
         sbert_examples: List[Tuple[Turn, float]], 
         bm25_examples: List[Tuple[Turn, float]], 
-        k: int
+        k: int=10
     ) -> List[Turn]:
         """
         bm25 -> z-score  \
                           -> Union -> diversity -> top K
         sbert -> z-score / 
-        """
-        # storing these as a list of indices so they can be interpreted: 0-(k-1) would mean our discount factor had no
-        # impact on the score.
-        result : List[int] = []
-        bm25_examples = [(turn_label, score) for turn_label, score in bm25_examples.items()]
+        """       
+        union_set = set([turn_label for turn_label, _ in sbert_examples]).union([turn_label for turn_label, _ in bm25_examples])
+        total_length = len(union_set)
         
         # shape: (example_idx, embedding size)
-        sbert_embeddings: NDArray = np.asarray([
-            self.retriever.label_to_search_embedding(turn_label) for (turn_label, _) in example_scores
+        sbert_all_embeddings: NDArray = np.asarray([
+            self.retriever.label_to_search_embedding(turn_label) for (turn_label, _) in sbert_examples
         ])
-        bm25_embeddings = [
-            self.retriever.label_to_bm25_search_embedding(turn_label) for turn_label, _ in bm25_examples
+        bm25_all_embeddings = [
+            self.retriever.label_to_bm25_search_embedding(turn_label) for (turn_label, _) in bm25_examples
         ]
-        
-        example_scores_embedding = []
-        for idx in range(k):
-            example_scores_embedding += [(sbert_examples[idx][0], sbert_examples[idx][1], sbert_embeddings[idx])]
-            example_scores_embedding += [(bm25_examples[idx][0], bm25_examples[idx][1], bm25_embeddings[idx])]
-        
-        example_scores_embedding = sorted(example_scores_embedding, key=lambda x: x[1], reverse=True) # [high to low]
 
-        example_scores = []
+        # Round-robin of the two lists
+        example_scores_embedding = {}
+        s_idx, b_idx = 0, 0
+        while len(example_scores_embedding) < total_length:
+            while s_idx < len(sbert_examples):
+                turn_label, s_score = sbert_examples[s_idx]
+                if turn_label not in example_scores_embedding:
+                    example_scores_embedding.update({turn_label: (s_score, sbert_all_embeddings[s_idx])})
+                    s_idx += 1
+                    break
+                s_idx += 1
+                
+            while b_idx < len(bm25_examples):
+                turn_label, b_score = sbert_examples[s_idx]
+                if turn_label not in example_scores_embedding:
+                    example_scores_embedding.update({turn_label: (b_score, bm25_all_embeddings[b_idx])})
+                    b_idx += 1
+                    break
+                b_idx += 1
+                
+        example_scores_embedding = sorted(example_scores_embedding.items(), key=lambda x: x[1][0], reverse=True) # [high to low]
+        sbert_all_embeddings: NDArray = np.asarray([
+            self.retriever.label_to_search_embedding(turn_label) for (turn_label, _) in example_scores_embedding
+        ])
+        bm25_all_embeddings = [
+            self.retriever.label_to_bm25_search_embedding(turn_label) for (turn_label, _) in example_scores_embedding
+        ]
+
         idx_label_dict = {}
+        example_scores = []
         embeddings = []
-        for idx, (turn_label, score, emb) in enumerate(example_scores_embedding):
+        for idx, (turn_label, (score, emb)) in enumerate(example_scores_embedding):
             idx_label_dict.update({idx: turn_label})
             example_scores.append(score)
             embeddings.append(emb)
@@ -157,18 +240,25 @@ class MixedDecoder(AbstractExampleListDecoder):
         example_scores = np.array(example_scores)
         assert np.all(np.diff(example_scores) <= 0)  # verifies they are decreasing as expected
 
-        while len(result) < k:
+        # storing these as a list of indices so they can be interpreted: 0-(k-1) would mean our discount factor had no
+        # impact on the score.
+        result : List[int] = []
+        while len(result) < self.bm25_k+self.sbert_k:
             # find the current best scoring example
             best_idx: int = np.argmax(example_scores).item()
             example_scores[best_idx] = -np.inf
             result.append(best_idx)
             # Update the scores. The worst-case decrease in score is defined by discount_factor.
-            embedding = embeddings[best_idx]
+            best_emb = embeddings[best_idx]
             
-            if isinstance(embedding, np.ndarray):
-                discount = self.discount_factor * cosine_similarity(embedding[None, :], embeddings).squeeze(0)
+            if isinstance(best_emb, np.ndarray):
+                div_score = cosine_similarity(best_emb[None, :], sbert_all_embeddings).squeeze(0)
+                div_score = self.standardize(sbert_score=div_score)
+                discount = self.discount_factor * div_score
             else:
-                discount = self.discount_factor * self.retriever.get_bm25_scores_for_query(embedding, bm25_embeddings)
+                div_score = self.retriever.get_bm25_scores_for_query(best_emb, bm25_all_embeddings)
+                div_score = self.standardize(bm25_score=div_score)
+                discount = self.discount_factor * div_score
             
             example_scores = example_scores - discount
 
@@ -178,7 +268,7 @@ class MixedDecoder(AbstractExampleListDecoder):
         self, 
         sbert_examples: List[Tuple[Turn, float]], 
         bm25_examples: List[Tuple[Turn, float]], 
-        k: int
+        k: int=10
     ) -> List[Turn]:
         """
         bm25 -> z-score  \
@@ -190,16 +280,17 @@ class MixedDecoder(AbstractExampleListDecoder):
         # impact on the score.
         result : List[int] = []
 
-        example_scores = []
-        for idx, (turn_label, cos_score) in enumerate(sbert_examples):
-            bm_score = bm25_examples[turn_label]
-            example_scores += [(turn_label, cos_score+bm_score)] if self.operation == 'sum' else [(turn_label, cos_score*bm_score)]
+        union_set = set([turn_label for turn_label, _ in sbert_examples]).union([turn_label for turn_label, _ in bm25_examples])
+
+        total_examples = {}
+        for turn_label in union_set:
+            total_examples[turn_label] = sbert_examples[turn_label] * bm25_examples[turn_label]
         
-        example_scores = sorted(example_scores, key=lambda x: x[1], reverse=True)
+        total_examples = sorted(total_examples, key=lambda x: x[1], reverse=True)
 
         # shape: (example_idx, embedding size)
         sbert_embeddings: NDArray = np.asarray([
-            self.retriever.label_to_search_embedding(turn_label) for (turn_label, _) in example_scores
+            self.retriever.label_to_search_embedding(turn_label) for (turn_label, _) in total_examples
         ])
         bm25_embeddings: NDArray = {
             turn_label: self.retriever.label_to_bm25_search_embedding(turn_label) for turn_label, _ in bm25_examples.items()
@@ -213,7 +304,7 @@ class MixedDecoder(AbstractExampleListDecoder):
         example_scores = np.array(tmp)
         assert np.all(np.diff(example_scores) <= 0)  # verifies they are decreasing as expected
 
-        while len(result) < k:
+        while len(result) < self.bm25_k+self.sbert_k:
             # find the current best scoring example
             best_idx: int = np.argmax(example_scores).item()
             example_scores[best_idx] = -np.inf
@@ -222,7 +313,7 @@ class MixedDecoder(AbstractExampleListDecoder):
             best_emb: NDArray = sbert_embeddings[best_idx]
             best_bm25_emb:NDArray = bm25_embeddings[idx_label_dict[best_idx]]
             
-            discount = self.standardize(self.retriever.get_bm25_scores_for_query(best_bm25_emb, sbert_examples))
+            discount = self.standardize(self.retriever.get_bm25_scores_for_query(best_bm25_emb, bm25_examples))
             if self.operation == "sum":
                 discount += self.standardize(cosine_similarity(best_emb[None, :], sbert_embeddings).squeeze(0))
             else:
@@ -235,25 +326,39 @@ class MixedDecoder(AbstractExampleListDecoder):
     def div_topk_round_robin(
         self,
         sbert_examples: List[Tuple[Turn, float]],
-        bm25_examples: List[Tuple[Turn, float]],
-        k: int
+        bm25_examples: Dict[Turn, float],
+        k: int=10
     ) -> List[Turn]:
         """
         bm25 -> diversity -> top K  \
                                      -> Union
         sbert -> diversity -> top k /
         """
-
-        sbert_examples = self.sbert_div(sbert_examples, k)[::-1]
-        bm25_examples = self.bm25_div(bm25_examples, k)[::-1]
+        sbert_examples = self.sbert_div(sbert_examples, self.from_n_possible)[::-1]
+        bm25_examples = [(turn_label, score) for (turn_label, score) in bm25_examples][:self.sbert_k+self.bm25_k]
+        bm25_examples = self.bm25_div(bm25_examples, self.from_n_possible)[::-1]
     
         # Round-robin of the two lists
-        result = []
-        for i in range(k):
-            result.append(sbert_examples[i])
-            result.append(bm25_examples[i])
-
-        return result[::-1] # [low to high]
+        result = {}
+        while len(result) < self.bm25_k+self.sbert_k:
+            while True:
+                try:
+                    turn_label = sbert_examples.pop(0)[0]
+                    if turn_label not in result:
+                        result.update({turn_label: 0})
+                        break
+                except:
+                    break
+            while True:
+                try:
+                    turn_label = bm25_examples.pop(0)[0]
+                    if turn_label not in result:
+                        result.update({turn_label: 0})
+                        break
+                except:
+                    break
+        
+        return [self.retriever.label_to_data_item(turn_label) for turn_label in result][::-1] # [low to high]
     
     def bm25_div(self, bm25_examples, k = 10):
         """
@@ -261,13 +366,12 @@ class MixedDecoder(AbstractExampleListDecoder):
         """
         # shape: (example_idx, embedding size)
         bm25_embeddings = [
-            self.retriever.label_to_search_embedding(self.retriever.data_item_to_label(turn))
-            for turn, score in bm25_examples
+            self.retriever.label_to_bm25_search_embedding(turn_label)
+            for turn_label, score in bm25_examples
         ]
         if len(bm25_examples) == 0:
             return []
-        
-        bm25_corpus = bm25_embeddings if 'ret' in self.decoding_pool else  bm25_examples
+    
         # storing these as a list of indices so they can be interpreted: 0-(k-1) would mean our discount factor had no
         # impact on the score.
         result: List[int] = []
@@ -277,14 +381,14 @@ class MixedDecoder(AbstractExampleListDecoder):
         #  order of argument examples to select_k).
         example_scores: NDArray = np.asarray([score for turn, score in bm25_examples])
         assert np.all(np.diff(example_scores) <= 0)  # verifies they are decreasing as expected
-        while len(result) < k:
+        while len(result) < self.bm25_k:
             # find the current best scoring example
             best_idx: int = np.argmax(example_scores).item()
             example_scores[best_idx] = -np.inf
             result.append(best_idx)
             # Update the scores. The worst-case decrease in score is defined by discount_factor.
             best_emb: NDArray = bm25_embeddings[best_idx]
-            discount: NDArray = self.discount_factor * self.retriever.get_scores_for_query(best_emb, bm25_corpus)
+            discount: NDArray = self.discount_factor * self.retriever.get_bm25_scores_for_query(best_emb, bm25_embeddings)
             example_scores = example_scores - discount
         return [bm25_examples[i][0] for i in result][::-1]  # [low to high]
 
@@ -297,8 +401,8 @@ class MixedDecoder(AbstractExampleListDecoder):
             [turn_and_score for _, turn_and_score in zip(range(self.from_n_possible), examples)]
         # shape: (example_idx, embedding size)
         sbert_embeddings: NDArray = np.asarray([
-            self.retriever.label_to_search_embedding(self.retriever.data_item_to_label(turn))
-            for turn, score in examples
+            self.retriever.label_to_search_embedding(turn_label) 
+            for turn_label, score in examples
         ])
         if len(examples) == 0:
             return []
@@ -309,9 +413,9 @@ class MixedDecoder(AbstractExampleListDecoder):
         # scores from retriever are euclidean distances, of unit vectors (range 0-2). cos(y, z) = 1-.5*euc(y, z)^2
         # We initialize example_scores with the cosine similarity of each example e to x, the input turn (implicit from
         #  order of argument examples to select_k).
-        example_scores: NDArray = np.asarray([1 - 0.5*(score**2) for turn, score in examples])
+        example_scores: NDArray = np.asarray([score for turn, score in examples])
         assert np.all(np.diff(example_scores) <= 0)  # verifies they are decreasing as expected
-        while len(result) < k:
+        while len(result) < self.sbert_k:
             # find the current best scoring example
             best_idx: int = np.argmax(example_scores).item()
             example_scores[best_idx] = -np.inf
@@ -322,14 +426,6 @@ class MixedDecoder(AbstractExampleListDecoder):
             example_scores = example_scores - discount
         return [examples[i][0] for i in result][::-1]   # [low to high]
     
-    def standardize(self, emb):
-        emb = (emb-np.mean(emb))/np.std(emb)
-        return 1 / (1+ np.exp(-emb))
-            # tf-idf => 35-4 
-            # cos sim => -1 1
-            # cos sim -> z-score
-            # tf-idf -> z-score
-
-
+    
     
     

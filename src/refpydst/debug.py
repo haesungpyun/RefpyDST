@@ -331,7 +331,7 @@ if __name__ == "__main__":
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # # # raise ValueError
     
-    run_file: str = 'runs/instance_ad_hoc/8B/bm25/tf_idf_div.json'
+    run_file: str = 'runs/preliminary/bm25/plain_text/beam/8B/context_text.json'
     # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
@@ -351,8 +351,8 @@ if __name__ == "__main__":
 
     default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
-    wandb_entity: str = os.environ.get(WANDB_ENTITY, "haesung-pyun-seoul-national-university")
-    wandb_project: str = os.environ.get(WANDB_PROJECT, "error_TOD")
+    wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
+    wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
     run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
                      name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
                      group=args.get("run_group", default_run_group),

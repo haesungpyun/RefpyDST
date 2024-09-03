@@ -142,10 +142,10 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
             self.demonstration_decoder = MixedDecoder(
                 retriever=self.retriever,
-                from_n_possible=decoder_config['from_n_possible'],
-                discount_factor=decoder_config['discount_factor'],
+                from_n_possible=decoder_config.get('from_n_possible', 100),
+                discount_factor=decoder_config.get('discount_factor',0.2),
                 operation=decoder_config.get('operation', 'multiply'),
-                zscore=decoder_config.get('zscore', False),
+                zscore=decoder_config.get('zscore', True),
                 decoding_logic=decoder_config.get('decoding_logic', 'top_k_round_robin')
             )
         
