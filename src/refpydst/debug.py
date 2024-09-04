@@ -331,7 +331,7 @@ if __name__ == "__main__":
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # # # raise ValueError
     
-    run_file: str = 'runs/preliminary/bm25/plain_text_no_guidelines/beam/8B/dialog_gt_full_bs.json'
+    run_file: str = 'runs/preliminary/sbert/plain_text_no_guidelines/beam/8B/dialog_gt_full_bs.json'
     # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'

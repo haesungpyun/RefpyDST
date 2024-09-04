@@ -79,22 +79,28 @@ def input_to_string(context_dict, sys_utt, usr_utt):
     return history
 
 
+def gt_to_NL(slot_value_dict):
+    output = "[BS] "
+    for k, v in slot_value_dict.items():
+        output += f"{' '.join(k.split('-'))}: {v.split('|')[0]}, "
+    return output
+
 def get_ground_truth_by_type(data_item, gt_type: str):
     gt_string = ''
     if gt_type is None:
         return gt_string
 
     if gt_type == 'gt_full_bs':         # gt: bs
-        gt_string = f" [BS] {data_item['slot_values']}"
+        gt_string = gt_to_NL(data_item['slot_values'])
     
     elif gt_type == 'gt_full_slot':     # gt: slots
-        gt_string = " [BS]" + ", ".join(list(data_item['slot_values'].keys()))
+        gt_string = " [BS] " + ", ".join(list(data_item['slot_values'].keys()))
     
     elif gt_type == 'gt_delta_bs':      # gt: turn bs
-        gt_string = f" [BS] {data_item['turn_slot_values']}"
+        gt_string = gt_to_NL(data_item['turn_slot_values'])
     
     elif gt_type == 'gt_delta_slot':    # gt: turn slots
-        gt_string = " [BS]" + ", ".join(list(data_item['turn_slot_values'].keys()))
+        gt_string = " [BS] " + ", ".join(list(data_item['turn_slot_values'].keys()))
 
     else: 
         raise ValueError(f"Unsupported ground truth type: {gt_type}")
@@ -126,7 +132,7 @@ def data_item_to_string(
     """
     input_type = kwargs.get('input_type', 'dialog_context')
     only_slot = kwargs.get('only_slot', False)
-    gt_type = kwargs.get('include_ground_truth', None)
+    gt_type = kwargs.get('gt_type', None)
     
     if input_type == 'dialog_context':
         # use full history, depend on retriever training (for ablation)
@@ -188,11 +194,10 @@ def data_item_to_string(
         history = string_transformation({}, sys_utt, usr_utt)
         history += get_ground_truth_by_type(data_item, gt_type)
         return history
-     
-    elif 'gt' in input_type:
-        history = get_string_transformation_by_type(data_item, gt_type)
-        return history
     
+    elif 'gt' in input_type:
+        history = get_ground_truth_by_type(data_item, input_type)
+        return history
 
 def state_to_NL(slot_value_dict):
     output = "[CONTEXT] "

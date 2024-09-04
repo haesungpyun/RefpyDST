@@ -105,12 +105,18 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             counts_from_ontology_file=ontology_file_path
         )
         self.logger = WandbStepLogger()
+
+        if 'pretrained_sbert' in retriever_dir:
+            import re
+            file = '_'.join([i for i in self.output_dir.split('/')[-1].split('_') if not re.match(r'\d+', i)])
+            search_index_filename = os.path.join(get_output_dir_full_path(retriever_dir), "pretrained_index", file, "train_index.npy")
+            assert os.path.exists(search_index_filename)
         # load the selection pool and retriever
         self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
             "datasets": [self.train_set],
             "sampling_method": "pre_assigned",
             **(retriever_args or {})  # default is None, which is not a mapping and throws an exception
-        })
+        }, search_index_filename=search_index_filename)
 
         # choose a decoder for selecting example lists, given retrieval scores of individual examples (local parts)
         if not decoder_config:
@@ -527,7 +533,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         pass
 
 
-def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_args: Dict[str, Any]) -> ExampleRetriever:
+def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_args: Dict[str, Any], **kwargs) -> ExampleRetriever:
     if retriever_type == "EmbeddingRetriever":
         retriever_full_path: str = get_output_dir_full_path(retriever_dir)
         if retriever_full_path != retriever_dir:
@@ -536,9 +542,13 @@ def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_arg
                                  f"{get_output_dir_full_path('')}, but not found. Set an abs path to retriever or "
                                  f"check setting of REFPYDST_OUTPUTS_DIR.")
             logging.info(f"loading retriever from {retriever_full_path}")
+        if kwargs.get('search_index_filename'):
+            search_index_filename = kwargs['search_index_filename']
+        else:
+            search_index_filename = os.path.join(retriever_full_path, "train_index.npy")
         return EmbeddingRetriever(**{
             "model_path": retriever_full_path,
-            "search_index_filename": os.path.join(retriever_full_path, "train_index.npy"),
+            "search_index_filename": search_index_filename,
             **retriever_args
         })
     elif retriever_type == "no_retriever":
