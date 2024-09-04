@@ -14,7 +14,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from mwdataloader import *
+from refpydst.retriever.code.mwdataloader import *
 
 from refpydst.retriever.code.embed_based_retriever import EmbeddingRetriever
 from refpydst.retriever.code.index_based_retriever import IndexRetriever

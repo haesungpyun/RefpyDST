@@ -14,7 +14,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from mwdataloader import *
+from refpydst.retriever.code.mwdataloader import *
 #from refpydst.retriever.code.data_management import MWDataset, save_embeddings, get_state_transformation_by_type, \
 #    StateTransformationFunction
 from refpydst.retriever.code.index_based_retriever import IndexRetriever
