@@ -188,7 +188,10 @@ def data_item_to_string(
         history = string_transformation({}, sys_utt, usr_utt)
         history += get_ground_truth_by_type(data_item, gt_type)
         return history
-    
+     
+    elif 'gt' in input_type:
+        history = get_string_transformation_by_type(data_item, gt_type)
+        return history
     
 
 def state_to_NL(slot_value_dict):
