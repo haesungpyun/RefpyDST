@@ -79,6 +79,29 @@ def input_to_string(context_dict, sys_utt, usr_utt):
     return history
 
 
+def get_ground_truth_by_type(data_item, gt_type: str):
+    gt_string = ''
+    if gt_type is None:
+        return gt_string
+
+    if gt_type == 'gt_full_bs':         # gt: bs
+        gt_string = f" [BS] {data_item['slot_values']}"
+    
+    elif gt_type == 'gt_full_slot':     # gt: slots
+        gt_string = " [BS]" + ", ".join(list(data_item['slot_values'].keys()))
+    
+    elif gt_type == 'gt_delta_bs':      # gt: turn bs
+        gt_string = f" [BS] {data_item['turn_slot_values']}"
+    
+    elif gt_type == 'gt_delta_slot':    # gt: turn slots
+        gt_string = " [BS]" + ", ".join(list(data_item['turn_slot_values'].keys()))
+
+    else: 
+        raise ValueError(f"Unsupported ground truth type: {gt_type}")
+    
+    return gt_string
+
+
 def data_item_to_string(
     data_item: Turn, 
     string_transformation=input_to_string, 
@@ -103,6 +126,7 @@ def data_item_to_string(
     """
     input_type = kwargs.get('input_type', 'dialog_context')
     only_slot = kwargs.get('only_slot', False)
+    gt_type = kwargs.get('include_ground_truth', None)
     
     if input_type == 'dialog_context':
         # use full history, depend on retriever training (for ablation)
@@ -111,14 +135,9 @@ def data_item_to_string(
             history = ""
             for sys_utt, usr_utt in zip(data_item['dialog']['sys'], data_item['dialog']['usr']):
                 history += string_transformation({}, sys_utt, usr_utt)
+            history += get_ground_truth_by_type(data_item, gt_type)
             return history
 
-        # if full_history:
-        #     history = "[CONTEXT] "
-        #     for sys_utt, usr_utt in zip(data_item['dialog']['sys'], data_item['dialog']['usr']):
-        #         history += f" [SYS] {sys_utt} [USER] {usr_utt}"
-        #     return history
-        
         # Use only slots in the context
         if only_slot:
             context = list(data_item['last_slot_values'].keys())
@@ -130,6 +149,7 @@ def data_item_to_string(
             if usr_utt == 'none':
                 usr_utt = ''
             history += f" [SYS] {sys_utt} [USER] {usr_utt}"
+            history += get_ground_truth_by_type(data_item, gt_type)
             return history
 
         # use single turn
@@ -137,6 +157,7 @@ def data_item_to_string(
         sys_utt = data_item['dialog']['sys'][-1]
         usr_utt = data_item['dialog']['usr'][-1]
         history = string_transformation(context, sys_utt, usr_utt)
+        history += get_ground_truth_by_type(data_item, gt_type)
         return history
     
     elif input_type == 'context':
@@ -146,26 +167,29 @@ def data_item_to_string(
                 return "[CONTEXT]  [SYS]  [USER] "
             for sys_utt, usr_utt in zip(data_item['dialog']['sys'][:-1], data_item['dialog']['usr'][:-1]):
                 history += string_transformation({}, sys_utt, usr_utt)
+            history += get_ground_truth_by_type(data_item, gt_type)
             return history
          
         if only_slot:
             context = list(data_item['last_slot_values'].keys())
             history = "[CONTEXT] " + ', '.join(context)
             history += f" [SYS]  [USER] "
+            history += get_ground_truth_by_type(data_item, gt_type)
             return history
         
         context = data_item['last_slot_values']
         history = string_transformation(context, '', '')
+        history += get_ground_truth_by_type(data_item, gt_type)
         return history
     
     elif input_type == 'dialog':
         sys_utt = data_item['dialog']['sys'][-1]
         usr_utt = data_item['dialog']['usr'][-1]
         history = string_transformation({}, sys_utt, usr_utt)
+        history += get_ground_truth_by_type(data_item, gt_type)
         return history
     
-    return history
-
+    
 
 def state_to_NL(slot_value_dict):
     output = "[CONTEXT] "

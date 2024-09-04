@@ -272,8 +272,8 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
          artifact_cache: str = None,
          format_example: Optional[Turn] = None, num_examples: int = 10, **kwargs) -> None:
     # create the output folder
-    if os.path.exists(output_dir):
-        output_dir = output_dir + "_" + str(datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=9))).strftime('%m%d_%H%M'))
+    # if os.path.exists(output_dir):
+    output_dir = output_dir + "_" + str(datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=9))).strftime('%m%d_%H%M'))
     os.makedirs(output_dir, exist_ok=True)
     # write out this experiment's configuration
     exp_config: Dict[str, Union[str, int]] = dict(locals())
