@@ -290,18 +290,18 @@ class MixedDecoder(AbstractExampleListDecoder):
 
         # shape: (example_idx, embedding size)
         sbert_embeddings: NDArray = np.asarray([
-            self.retriever.label_to_search_embedding(turn_label) for (turn_label, _) in total_examples
+            self.retriever.label_to_search_embedding(turn_label) for turn_label in total_examples
         ])
         bm25_embeddings: NDArray = {
-            turn_label: self.retriever.label_to_bm25_search_embedding(turn_label) for turn_label, _ in bm25_examples.items()
+            self.retriever.label_to_bm25_search_embedding(turn_label) for turn_label in total_examples
         }
 
-        tmp = []
+        example_scores = []
         idx_label_dict = {}
-        for idx, (turn_label, cos_score) in enumerate(example_scores):
+        for idx, (turn_label, cos_score) in enumerate(total_examples):
             idx_label_dict.update({idx: turn_label})
-            tmp.append(cos_score)
-        example_scores = np.array(tmp)
+            example_scores.append(cos_score)
+        example_scores = np.array(example_scores)
         assert np.all(np.diff(example_scores) <= 0)  # verifies they are decreasing as expected
 
         while len(result) < self.bm25_k+self.sbert_k:
@@ -311,7 +311,7 @@ class MixedDecoder(AbstractExampleListDecoder):
             result.append(best_idx)
             # Update the scores. The worst-case decrease in score is defined by discount_factor.
             best_emb: NDArray = sbert_embeddings[best_idx]
-            best_bm25_emb:NDArray = bm25_embeddings[idx_label_dict[best_idx]]
+            best_bm25_emb:NDArray = bm25_embeddings[best_idx]
             
             discount = self.standardize(self.retriever.get_bm25_scores_for_query(best_bm25_emb, bm25_examples))
             if self.operation == "sum":
