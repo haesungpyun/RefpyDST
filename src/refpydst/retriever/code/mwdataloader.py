@@ -122,7 +122,7 @@ def data_item_to_string(
     [USER] is there an exact address , like a street number ? thanks !
     """
     input_type = kwargs.get('input_type', 'dialog_context')
-    only_slot = kwargs.get('only_slot', True)
+    only_slot = kwargs.get('only_slot', False)
     
     if input_type == 'dialog_context':
         # use full history, depend on retriever training (for ablation)
@@ -247,6 +247,7 @@ class MWDataset:
         self.string_transformation = string_transformation
         self.state_transformation = state_transformation
         self.turn_scores = []
+        self.best_example = []
 
         for turn in data:
             # filter the domains that not belongs to the test domain
@@ -263,6 +264,12 @@ class MWDataset:
             self.turn_utts.append(history)
             self.turn_states.append(current_state)
             self.turn_scores.append(turn['final_scores'])
+            best_examples=[]
+            for example in turn['best_example']:
+                best_example_label = f"{example['ID']}_turn_{example['turn_id']}"
+                best_examples.append(best_example_label)
+            self.best_example.append(best_examples)
+
 
         self.n_turns = len(self.turn_labels)
         print(f"there are {self.n_turns} turns in this dataset")
@@ -496,9 +503,10 @@ class MWtripleDataloader:
     pos: top 5 in sorted score_full
     neg: bot 5 in sorted score_full
     """
-    def __init__(self, f1_set: MWDataset):
+    def __init__(self, f1_set: MWDataset, score_type: str):
         self.f1_set = f1_set
         self.label_to_index = {label: idx for idx, label in enumerate(self.f1_set.turn_labels)}  
+        self.score_type = score_type
 
     def hard_negative_sampling(self, topk=10):
         anchor = []
@@ -507,7 +515,16 @@ class MWtripleDataloader:
 
         # do hard negative sampling
         for ind in tqdm(range(self.f1_set.n_turns)):
-            score_full = self.f1_set.turn_scores[ind]['score_full']
+            if self.score_type == "simple":
+                score_full = self.f1_set.turn_scores[ind]['score_full']
+            elif self.score_type == "influence":
+                score_full = self.f1_set.turn_scores[ind]['influence_full']
+            elif self.score_type == "simple_delta":
+                score_full = self.f1_set.turn_scores[ind]['score_delta']
+            elif self.score_type == "influence_delta":
+                score_full = self.f1_set.turn_scores[ind]['influence_delta']
+            else:
+                raise ValueError(f"Unknown score type: {self.score_type}")
             sorted_scores = sorted(score_full.items(), key=lambda item: item[1], reverse=True)
 
             chosen_positive_args = sorted_scores[:topk]
@@ -620,6 +637,45 @@ class MWmnrDataloader:
 
             for label, score in chosen_positive_args:
                 idx = self.label_to_index[label]  
+                anchor.append(self.f1_set.turn_utts[ind])
+                positive.append(self.f1_set.turn_utts[idx])
+
+        return anchor, positive
+
+    def generate_eval_examples(self, topk=5):
+        # add topk closest, furthest, and n_random random indices
+        anchor, positive = self.hard_negative_sampling(
+            topk=topk)
+        return anchor, positive
+
+    def generate_train_examples(self, topk=5):
+        anchor, positive = self.generate_eval_examples(
+            topk=topk)
+        n_samples = len(anchor)
+        return [InputExample(texts=[anchor[i], positive[i]])
+                for i in range(n_samples)]
+
+
+class MWmnrbestDataloader:
+    """
+    pos: top 5 in sorted score_full
+    neg: bot 5 in sorted score_full
+    """
+    def __init__(self, f1_set: MWDataset, score_type: str):
+        self.f1_set = f1_set
+        self.label_to_index = {label: idx for idx, label in enumerate(self.f1_set.turn_labels)}  
+        self.score_type = score_type
+    def hard_negative_sampling(self, topk=10):
+        anchor = []
+        positive = []
+
+        # do hard negative sampling
+        for ind in tqdm(range(self.f1_set.n_turns)):
+
+            chosen_positive_args = self.f1_set.best_example[ind][:topk]
+
+            for label in chosen_positive_args:
+                idx = self.label_to_index[label]
                 anchor.append(self.f1_set.turn_utts[ind])
                 positive.append(self.f1_set.turn_utts[idx])
 

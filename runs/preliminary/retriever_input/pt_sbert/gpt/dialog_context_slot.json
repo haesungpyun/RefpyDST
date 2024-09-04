@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:316d7a33e364900b4654817065ad66f90a3d365d7c19272bd362f9c4847e8056
-size 454
+{
+  "train_fn": "mw21_5p_train_v1.json",
+  "test_fn": "mw24_20p_dev.json",
+  "retriever_dir": "retriever/pretrained_index/dialog_context_slot/split_v1",
+  "retriever_args":  {
+    "state_transformation": "ref_aware",
+    "input_type": "dialog_context",
+    "only_slot": true
+  },
+  "prompt_format": "plain_text",
+  "codex_engine":"gpt-3.5-turbo-0125",
+  "num_examples": 10,
+  "lm_decoding_config": {
+    "method": "beam_search",
+    "beam_size": 4
+  }
+}

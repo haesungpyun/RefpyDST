@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4af3e8ba23b86cff75a97eabe789a908c4c907f3568fb93c9c8ab69b2a15b290
-size 578
+{
+    "train_fn": "/home/haesungpyun/my_refpydst/data/new_full_log.json",
+    "dev_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_dev.json",
+    "test_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_test.json",
+    "output_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/influence/mnr",
+    "num_epochs": 3,
+    "top_k": 5,
+    "batch_size": 32,
+    "max_seq_length": 256,
+    "state_transformation_type": "ref_aware",
+    "mwdataloader_class": "MWmnrDataloader",
+    "loss_function": "MultipleNegativesRankingLoss",
+    "score_type": "influence"
+  }

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0649cf03d13341577f8cd07d6217b8973f753412bb66fa06444e716ec20dd98d
-size 563
+{
+    "train_fn": "/home/haesungpyun/my_refpydst/data/new_full_log.json",
+    "dev_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_dev.json",
+    "test_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_test.json",
+    "output_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/simple/triple2",
+    "num_epochs": 3,
+    "top_k": 5,
+    "batch_size": 32,
+    "max_seq_length": 256,
+    "state_transformation_type": "ref_aware",
+    "mwdataloader_class": "MWtriple2Dataloader",
+    "loss_function": "TripletLoss",
+    "score_type": "simple"
+  }

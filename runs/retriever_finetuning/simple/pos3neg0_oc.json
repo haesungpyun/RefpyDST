@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89d4db46a1e0dbbc6c2a1a320d7095232814d265d82da2382cfcd86ab20d5d1b
-size 578
+{
+    "train_fn": "/home/haesungpyun/my_refpydst/data/new_full_log.json",
+    "dev_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_dev.json",
+    "test_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_test.json",
+    "output_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/simple/pos3neg0_oc",
+    "num_epochs": 3,
+    "top_k": 5,
+    "batch_size": 32,
+    "max_seq_length": 256,
+    "state_transformation_type": "ref_aware",
+    "mwdataloader_class": "MWpos3neg0Dataloader",
+    "loss_function": "OnlineContrastiveLoss",
+    "score_type": "simple"
+  }

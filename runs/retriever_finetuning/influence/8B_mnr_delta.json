@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a067223a58ef32dd784161b597ca75c1237df6c0f346eddfe804decbf564036
-size 532
+{
+    "train_fn": "mw21_100p_train.json",
+    "test_fn": "mw24_20p_dev.json",
+    "retriever_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/influence/mnr_delta",
+    "retriever_args":  {
+      "state_transformation": "ref_aware",
+      "input_type": "dialog_context",
+      "only_slot": true
+    },
+    "prompt_format": "plain_text",
+    "codex_engine":"meta-llama/Meta-Llama-3-8B-Instruct",
+    "num_examples": 10,
+    "lm_decoding_config": {
+      "method": "beam_search",
+      "beam_size": 4
+    }
+  }
+  

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4648ed9474c83ca07afe54bfd0cb1b6548ddc56ffb26769c8b0e84d6788f0be5
-size 454
+{
+  "train_fn": "mw21_5p_train_v1.json",
+  "test_fn": "mw24_20p_dev.json",
+  "retriever_dir": "BM25",
+  "retriever_type": "BM25",
+  "retriever_args":  {
+    "state_transformation": "ref_aware",
+    "input_type": "context"
+  },
+  "prompt_format": "plain_text",
+  "codex_engine":"meta-llama/Meta-Llama-3-8B-Instruct",
+  "num_examples": 10,
+  "decoding_pool": "all_train_set",
+  "lm_decoding_config": {
+    "method": "beam_search",
+    "beam_size": 4
+  }
+}

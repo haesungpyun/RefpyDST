@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b1c6ff8b427aac7f6202f55cc80b547dfad45b32e7e6d3fb786c35664f49d95
-size 210
+{
+  "train_fn": "mw21_5p_train_v3.json",
+  "dev_fn": "mw21_100p_dev.json",
+  "test_fn": "mw21_100p_test.json",
+  "num_epochs": 15,
+  "top_k": 10,
+  "top_range": 200,
+  "state_transformation_type": "ref_aware"
+}

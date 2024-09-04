@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1640ce220d12799bf671261cdda52c4f4d0423c1b10f8b92d98019c013ec7be3
-size 482
+{
+    "train_fn": "/home/haesungpyun/my_refpydst/data/mw21_5p_train_v1.json",
+    "dev_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_dev.json",
+    "test_fn": "/home/haesungpyun/my_refpydst/data/mw21_10p_test.json",
+    "output_dir": "/home/haesungpyun/my_refpydst/outputs/runs/retriever_finetuning/baseline/baseline5p",
+    "num_epochs": 3,
+    "top_k": 10,
+    "batch_size": 32,
+    "top_range": 200,
+    "max_seq_length": 256,
+    "state_transformation_type": "ref_aware"
+  }

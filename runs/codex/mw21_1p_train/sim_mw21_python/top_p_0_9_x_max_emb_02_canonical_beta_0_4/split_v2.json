@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30b23333c7dc7d74b9f6d41a19e626eb47ffbf5b8f255dd72706b9cc61dc340b
-size 243
+{
+  "train_fn": "mw21_1p_train_v2.json",
+  "test_fn": "mw21_100p_test.json",
+  "prompt_format": "python-prompt",
+  "artifact_id": "-runs-codex-mw21_1p_train-python-top_p_0_9_x_max_emb_02_canonical_beta_0_4-split_v2",
+  "artifact_alias": "v0"
+}

@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3cfc1bfdc2589845efe05afdee0a77bdd48623eb784e29eac518d929a15cd064
-size 254
+{
+  "prompt_format": "python-prompt",
+  "train_fn": "mw21_5p_train_v1.json", 
+  "retriever_dir": "none",
+  "test_fn": "mw24_20p_dev.json",
+  "retriever_type": "random",
+  "codex_engine":"meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "add_guidelines": false
+}

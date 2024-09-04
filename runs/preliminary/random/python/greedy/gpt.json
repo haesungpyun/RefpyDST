@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:58fefe47b24a66195e617b518954d858bc01fe2265eb14138d7b0a1378235b5a
-size 208
+{
+  "train_fn": "mw21_5p_train_v1.json", 
+  "retriever_dir": "none",
+  "test_fn": "mw24_20p_dev.json",
+  "prompt_format": "python-prompt",
+  "retriever_type": "random",
+  "codex_engine":"gpt-3.5-turbo-0125"
+}

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a0aa0f672a79499d516f1a751e76437bdb0a3bb16a85df681f938ed2c09aa41
-size 483
+{
+  "train_fn": "mw21_5p_train_v1.json",
+  "test_fn": "mw24_20p_dev.json",
+  "retriever_dir": "BM25",
+  "retriever_type": "BM25",
+  "retriever_args":  {
+    "state_transformation": "ref_aware",
+    "input_type": "dialog"
+  },
+  "prompt_format": "plain_text",
+  "codex_engine":"../models/Meta-Llama-3-70B-Instruct-GPTQ",
+  "quantization":"GPTQ",
+  "num_examples": 10,
+  "decoding_pool": "all_train_set",
+  "lm_decoding_config": {
+    "method": "beam_search",
+    "beam_size": 4
+  }
+}

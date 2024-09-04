@@ -90,7 +90,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
 
         self.add_guidelines = kwargs.get("add_guidelines", True)
 
-    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn]) -> Tuple[
+    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn], just_return_completion:bool = False) -> Tuple[
         Dict[str, float], List[Turn]]:
         # codex completion
         complete_flag = False
@@ -257,7 +257,10 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     parse_error_count += 1
 
         if not complete_flag:
+            if just_return_completion:
+                return completions, examples
             raise ValueError("unable to generate completion")
+        
         return completions, examples
 
 
@@ -324,7 +327,39 @@ if __name__ == "__main__":
     os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
     os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
+    # import warnings
+    # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
+    # # # raise ValueError
     
+    # run_file: str = 'runs/preliminary/bm25/python_no_guidelines/greedy/8B/dialog_context_text.json'
+    # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
+    # # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
+    # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
+    # # "runs/table4/5p/bm25/mixed.json"
+    # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
+    # # 'runs/table4/5p/pretrained_sbert/split_v1.json'
+    # # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
+    # # 'runs/codex/zero_shot/python/split_v1.json'
+    # # "runs/codex/toy_test.json"
+    # # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
+    #     # arguments are input from a configuration file if the first argument to the program is a valid file
+    # args: CodexPromptingRunConfig = read_json(run_file)
+    # if 'output_dir' not in args:
+    #     args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
+    # if not 'run_name' in args:
+    #     args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
+
+    # default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
+    # default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
+    # wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
+    # wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    # run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
+    #                  name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
+    #                  group=args.get("run_group", default_run_group),
+    #                  tags=args.get("run_tags", None))
+    # main(**args)
+    
+
     if os.path.exists(sys.argv[1]):
         run_file: str = sys.argv[1]
         # arguments are input from a configuration file if the first argument to the program is a valid file

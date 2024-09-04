@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4c84967700d92f5c083a8790c816f2185c7bad7ea2cedecd98d8066db1514c8f
-size 349
+{
+  "train_fn": "mw21_5p_train_v1.json",
+  "retriever_dir": "BM25",
+  "test_fn": "mw24_20p_dev.json",
+  "prompt_format": "python-prompt",
+  "retriever_args":  {
+    "state_transformation": "ref_aware"
+  },
+  "codex_engine":"meta-llama/Meta-Llama-3-70B-Instruct",
+  "retriever_type": "BM25",
+  "num_examples": 10,
+  "decoding_pool": "all_train_set"
+}
