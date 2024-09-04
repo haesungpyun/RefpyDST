@@ -135,7 +135,8 @@ class MixedRetriever(ExampleRetriever):
             bm25_input_kwargs = {}
             input_type = kwargs.get('input_type', 'dialog')
             only_slot = kwargs.get('only_slot', False)
-            bm25_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
+            gt_type = kwargs.get('gt_type', None)
+            bm25_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot, 'gt_type':gt_type})
 
         if kwargs.get('sbert_input_kwargs'):
             sbert_input_kwargs = kwargs.get('sbert_input_kwargs')
@@ -143,7 +144,9 @@ class MixedRetriever(ExampleRetriever):
             sbert_input_kwargs = {}
             input_type = kwargs.get('input_type', 'dialog_context')
             only_slot = kwargs.get('only_slot', False)
-            sbert_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
+            gt_type = kwargs.get('gt_type', None)
+            sbert_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot, 'gt_type':gt_type})
+
 
         def bm25_default_transformation(turn):
             return data_item_to_string(turn, **bm25_input_kwargs)

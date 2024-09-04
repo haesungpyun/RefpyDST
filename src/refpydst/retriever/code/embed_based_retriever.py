@@ -102,7 +102,9 @@ class EmbeddingRetriever(ExampleRetriever):
         input_kwargs = {}
         input_type = kwargs.get('input_type', 'dialog_context')
         only_slot = kwargs.get('only_slot', False)
-        input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot})
+        gt_type = kwargs.get('gt_type', None)
+        input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot, 'gt_type':gt_type})
+
 
         def default_transformation(turn):
             return data_item_to_string(turn, **input_kwargs)
