@@ -1,103 +1,0 @@
-/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
-  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
-wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
-wandb: wandb version 0.17.8 is available!  To upgrade, please run:
-wandb:  $ pip install wandb --upgrade
-wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240830_104051-lm6of0h5
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run -runs-preliminary-bm25-python_no_guidelines-greedy-8B-dialog_context_text
-wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
-wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/lm6of0h5
-mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:53, 50.62it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:24, 108.59it/s]mapping supervised_set surface forms...:   2%|▏         | 41/2731 [00:00<00:25, 105.93it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 238.21it/s]mapping supervised_set surface forms...:   7%|▋         | 204/2731 [00:01<00:16, 150.41it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:18, 137.16it/s]mapping supervised_set surface forms...:   9%|▉         | 239/2731 [00:01<00:21, 116.05it/s]mapping supervised_set surface forms...:   9%|▉         | 249/2731 [00:01<00:26, 92.60it/s] mapping supervised_set surface forms...:  13%|█▎        | 362/2731 [00:02<00:10, 219.41it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:07, 307.09it/s]mapping supervised_set surface forms...:  18%|█▊        | 486/2731 [00:02<00:08, 253.16it/s]mapping supervised_set surface forms...:  24%|██▍       | 660/2731 [00:02<00:04, 497.43it/s]mapping supervised_set surface forms...:  27%|██▋       | 732/2731 [00:02<00:03, 512.71it/s]mapping supervised_set surface forms...:  32%|███▏      | 883/2731 [00:02<00:02, 716.22it/s]mapping supervised_set surface forms...:  36%|███▌      | 975/2731 [00:03<00:02, 736.95it/s]mapping supervised_set surface forms...:  39%|███▉      | 1064/2731 [00:03<00:02, 559.04it/s]mapping supervised_set surface forms...:  42%|████▏     | 1136/2731 [00:03<00:03, 442.47it/s]mapping supervised_set surface forms...:  50%|████▉     | 1352/2731 [00:03<00:01, 732.81it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:03<00:01, 768.53it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1554/2731 [00:04<00:02, 508.70it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:01, 631.02it/s]mapping supervised_set surface forms...:  69%|██████▉   | 1898/2731 [00:04<00:00, 885.60it/s]mapping supervised_set surface forms...:  74%|███████▍  | 2021/2731 [00:04<00:00, 735.01it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2177/2731 [00:04<00:00, 884.80it/s]mapping supervised_set surface forms...:  84%|████████▍ | 2294/2731 [00:05<00:01, 335.30it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2380/2731 [00:05<00:00, 373.53it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2564/2731 [00:05<00:00, 543.22it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:06<00:00, 454.39it/s]
-reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 78.22it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 66.69it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  8.37it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:02<00:00,  8.15it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 10.92it/s]
-INFO 08-30 10:41:06 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='meta-llama/Meta-Llama-3-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Meta-Llama-3-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=meta-llama/Meta-Llama-3-8B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
-INFO 08-30 10:41:08 model_runner.py:680] Starting to load model meta-llama/Meta-Llama-3-8B-Instruct...
-INFO 08-30 10:41:09 weight_utils.py:223] Using model weights format ['*.safetensors']
-Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
-Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.89s/it]
-Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:04<00:04,  2.04s/it]
-Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.08s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.55s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.72s/it]
-
-INFO 08-30 10:41:17 model_runner.py:692] Loading model weights took 14.9595 GB
-INFO 08-30 10:41:18 gpu_executor.py:102] # GPU blocks: 27955, # CPU blocks: 2048
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 360, in <module>
-[rank0]:     main(**args)
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
-[rank0]:     experiment: CodexExperiment = CodexExperiment(
-[rank0]:                                   ^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 89, in __init__
-[rank0]:     self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
-[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/codex_client.py", line 257, in __init__
-[rank0]:     self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True)
-[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 155, in __init__
-[rank0]:     self.llm_engine = LLMEngine.from_engine_args(
-[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 441, in from_engine_args
-[rank0]:     engine = cls(
-[rank0]:              ^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 265, in __init__
-[rank0]:     self._initialize_kv_caches()
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 377, in _initialize_kv_caches
-[rank0]:     self.model_executor.initialize_cache(num_gpu_blocks, num_cpu_blocks)
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/executor/gpu_executor.py", line 105, in initialize_cache
-[rank0]:     self.driver_worker.initialize_cache(num_gpu_blocks, num_cpu_blocks)
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/worker.py", line 219, in initialize_cache
-[rank0]:     self._init_cache_engine()
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/worker.py", line 224, in _init_cache_engine
-[rank0]:     self.cache_engine = [
-[rank0]:                         ^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/worker.py", line 225, in <listcomp>
-[rank0]:     CacheEngine(self.cache_config, self.model_config,
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/cache_engine.py", line 66, in __init__
-[rank0]:     self.gpu_cache = self._allocate_kv_cache(
-[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/cache_engine.py", line 85, in _allocate_kv_cache
-[rank0]:     torch.zeros(kv_cache_shape,
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.71 GiB. GPU 
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 360, in <module>
-[rank0]:     main(**args)
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 290, in main
-[rank0]:     experiment: CodexExperiment = CodexExperiment(
-[rank0]:                                   ^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 89, in __init__
-[rank0]:     self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
-[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/codex_client.py", line 257, in __init__
-[rank0]:     self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True)
-[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 155, in __init__
-[rank0]:     self.llm_engine = LLMEngine.from_engine_args(
-[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 441, in from_engine_args
-[rank0]:     engine = cls(
-[rank0]:              ^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 265, in __init__
-[rank0]:     self._initialize_kv_caches()
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 377, in _initialize_kv_caches
-[rank0]:     self.model_executor.initialize_cache(num_gpu_blocks, num_cpu_blocks)
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/executor/gpu_executor.py", line 105, in initialize_cache
-[rank0]:     self.driver_worker.initialize_cache(num_gpu_blocks, num_cpu_blocks)
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/worker.py", line 219, in initialize_cache
-[rank0]:     self._init_cache_engine()
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/worker.py", line 224, in _init_cache_engine
-[rank0]:     self.cache_engine = [
-[rank0]:                         ^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/worker.py", line 225, in <listcomp>
-[rank0]:     CacheEngine(self.cache_config, self.model_config,
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/cache_engine.py", line 66, in __init__
-[rank0]:     self.gpu_cache = self._allocate_kv_cache(
-[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/vllm/worker/cache_engine.py", line 85, in _allocate_kv_cache
-[rank0]:     torch.zeros(kv_cache_shape,
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.71 GiB. GPU 
-wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
-wandb: 🚀 View run -runs-preliminary-bm25-python_no_guidelines-greedy-8B-dialog_context_text at: https://wandb.ai/hacastle12/refpydst/runs/lm6of0h5
-wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20240830_104051-lm6of0h5/logs

@@ -1,1113 +1,0 @@
-nohup: ignoring input
-/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
-  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
-wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
-wandb: wandb version 0.17.7 is available!  To upgrade, please run:
-wandb:  $ pip install wandb --upgrade
-wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240827_115641-0gc38rbc
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run -runs-preliminary-decoding-plain_text_beam_8B
-wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
-wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/0gc38rbc
-mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 6/2731 [00:00<00:53, 50.75it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:25, 105.00it/s]mapping supervised_set surface forms...:   1%|▏         | 40/2731 [00:00<00:27, 98.53it/s] mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 232.26it/s]mapping supervised_set surface forms...:   7%|▋         | 203/2731 [00:01<00:17, 143.46it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:18, 132.48it/s]mapping supervised_set surface forms...:   9%|▉         | 239/2731 [00:01<00:22, 111.94it/s]mapping supervised_set surface forms...:   9%|▉         | 249/2731 [00:02<00:27, 89.53it/s] mapping supervised_set surface forms...:  10%|▉         | 273/2731 [00:02<00:22, 110.89it/s]mapping supervised_set surface forms...:  14%|█▎        | 371/2731 [00:02<00:09, 258.34it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:02<00:06, 341.67it/s]mapping supervised_set surface forms...:  18%|█▊        | 494/2731 [00:02<00:08, 273.41it/s]mapping supervised_set surface forms...:  24%|██▍       | 659/2731 [00:02<00:03, 518.74it/s]mapping supervised_set surface forms...:  27%|██▋       | 732/2731 [00:02<00:03, 518.63it/s]mapping supervised_set surface forms...:  32%|███▏      | 883/2731 [00:03<00:02, 725.44it/s]mapping supervised_set surface forms...:  36%|███▌      | 974/2731 [00:03<00:02, 737.35it/s]mapping supervised_set surface forms...:  39%|███▉      | 1061/2731 [00:03<00:03, 547.03it/s]mapping supervised_set surface forms...:  41%|████▏     | 1132/2731 [00:03<00:03, 424.72it/s]mapping supervised_set surface forms...:  49%|████▉     | 1351/2731 [00:03<00:01, 717.53it/s]mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:03<00:01, 674.28it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1544/2731 [00:04<00:03, 358.77it/s]mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:04<00:02, 481.46it/s]mapping supervised_set surface forms...:  69%|██████▉   | 1891/2731 [00:04<00:01, 695.33it/s]mapping supervised_set surface forms...:  73%|███████▎  | 2007/2731 [00:05<00:01, 611.87it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2177/2731 [00:05<00:00, 777.49it/s]mapping supervised_set surface forms...:  84%|████████▍ | 2291/2731 [00:06<00:01, 307.51it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2374/2731 [00:06<00:01, 340.18it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2563/2731 [00:06<00:00, 504.56it/s]mapping supervised_set surface forms...:  99%|█████████▉| 2699/2731 [00:06<00:00, 617.86it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:06<00:00, 415.44it/s]
-reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 80.90it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 65.59it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  8.00it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:02<00:00,  7.73it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 10.39it/s]
-INFO 08-27 11:56:55 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='meta-llama/Meta-Llama-3-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Meta-Llama-3-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=meta-llama/Meta-Llama-3-8B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
-INFO 08-27 11:57:11 model_runner.py:680] Starting to load model meta-llama/Meta-Llama-3-8B-Instruct...
-INFO 08-27 11:57:25 weight_utils.py:223] Using model weights format ['*.safetensors']
-Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
-Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:02<00:06,  2.32s/it]
-Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:04<00:04,  2.35s/it]
-Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:07<00:02,  2.34s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.72s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.95s/it]
-
-INFO 08-27 11:57:34 model_runner.py:692] Loading model weights took 14.9595 GB
-INFO 08-27 11:58:06 gpu_executor.py:102] # GPU blocks: 27955, # CPU blocks: 2048
-0it [00:00, ?it/s]
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.40s/it, est. speed input: 488.32 toks/s, output: 2.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.40s/it, est. speed input: 488.32 toks/s, output: 2.95 toks/s]
-1it [00:06,  6.34s/it]
-few-shot completions: {"{'hotel-name': 'express by holiday inn cambridge'}": 1}
-few-shot best completion: {'hotel-name': 'express by holiday inn cambridge'}
-this is the 0th example. PMUL3470.json_turn_0
-system response: 
-user response: i am looking for a specific hotel , its name is express by holiday inn cambridge
-pred turn change: {'hotel-name': 'express by holiday inn cambridge'}
-gold turn change: {'hotel-name': 'express by holiday inn cambridge'}
-pred states: {'hotel-name': 'express by holiday inn cambridge'}
-gold states: {'hotel-name': 'express by holiday inn cambridge'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.33it/s, est. speed input: 3148.35 toks/s, output: 12.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.33it/s, est. speed input: 3148.35 toks/s, output: 12.00 toks/s]
-2it [00:07,  3.06s/it]
-few-shot completions: {"{'hotel-book people': '7'}": 1}
-few-shot best completion: {'hotel-book people': '7'}
-this is the 1th example. PMUL3470.json_turn_1
-system response: i have the express by holiday inn cambridge located on 1517 norman way , coldhams business park . their phone number is 01223866800 . would you like to know anything else ?
-user response: yes , could you book the hotel room for me for 7 people ?
-pred turn change: {'hotel-book people': '7'}
-gold turn change: {'hotel-book people': '7'}
-pred states: {'hotel-book people': '7', 'hotel-name': 'express by holiday inn cambridge'}
-gold states: {'hotel-book people': '7', 'hotel-name': 'express by holiday inn cambridge'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.12it/s, est. speed input: 2749.08 toks/s, output: 20.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.11it/s, est. speed input: 2749.08 toks/s, output: 20.09 toks/s]
-3it [00:08,  2.08s/it]
-few-shot completions: {"{'hotel-book day': 'monday', 'hotel-book stay': '4'}": 1}
-few-shot best completion: {'hotel-book day': 'monday', 'hotel-book stay': '4'}
-this is the 2th example. PMUL3470.json_turn_2
-system response: yes , of course . what day would you like to stay ?
-user response: monday , please . there will be 7 of us and we'd like to stay for 4 days .
-pred turn change: {'hotel-book day': 'monday', 'hotel-book stay': '4'}
-gold turn change: {'hotel-book day': 'monday', 'hotel-book stay': '4'}
-pred states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge'}
-gold states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.35it/s, est. speed input: 2951.30 toks/s, output: 8.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.35it/s, est. speed input: 2951.30 toks/s, output: 8.08 toks/s]
-4it [00:08,  1.56s/it]train not found in SlotName
-train not found in SlotName
-
-few-shot completions: {"{'train': True}": 1}
-few-shot best completion: {'train': True}
-this is the 3th example. PMUL3470.json_turn_3
-system response: here is the booking information:booking was successful . reference number is : 5f8g6j1g
-user response: thank you . i would also like to book a train , please .
-pred turn change: {}
-gold turn change: {}
-pred states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge'}
-gold states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 2167.94 toks/s, output: 21.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.02s/it, est. speed input: 2167.94 toks/s, output: 21.56 toks/s]
-5it [00:09,  1.37s/it]
-few-shot completions: {"{'train-departure': 'cambridge', 'train-destination': 'birmingham new street'}": 1}
-few-shot best completion: {'train-departure': 'cambridge', 'train-destination': 'birmingham new street'}
-this is the 4th example. PMUL3470.json_turn_4
-system response: sure , which stations will you be traveling between ?
-user response: i will be going from cambridge to birmingham new street .
-pred turn change: {'train-departure': 'cambridge', 'train-destination': 'birmingham new street'}
-gold turn change: {'train-departure': 'cambridge', 'train-destination': 'birmingham new street'}
-pred states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge',
- 'train-departure': 'cambridge',
- 'train-destination': 'birmingham new street'}
-gold states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge',
- 'train-departure': 'cambridge',
- 'train-destination': 'birmingham new street'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it, est. speed input: 2038.94 toks/s, output: 18.24 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it, est. speed input: 2038.94 toks/s, output: 18.24 toks/s]
-6it [00:10,  1.30s/it]
-few-shot completions: {"{'train-day': 'friday', 'train-arriveby': '17:30'}": 1}
-few-shot best completion: {'train-day': 'friday', 'train-arriveby': '17:30'}
-this is the 5th example. PMUL3470.json_turn_5
-system response: what time would you like to leave ? the trains depart every hour .
-user response: whenever will get me there by 17:30 . i do need to leave on friday and i will need the travel time please .
-pred turn change: {'train-arriveby': '17:30', 'train-day': 'friday'}
-gold turn change: {'train-arriveby': '17:30', 'train-day': 'friday', 'train-leaveat': 'dontcare'}
-pred states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge',
- 'train-arriveby': '17:30',
- 'train-day': 'friday',
- 'train-departure': 'cambridge',
- 'train-destination': 'birmingham new street'}
-gold states: {'hotel-book day': 'monday',
- 'hotel-book people': '7',
- 'hotel-book stay': '4',
- 'hotel-name': 'express by holiday inn cambridge',
- 'train-arriveby': '17:30',
- 'train-day': 'friday',
- 'train-departure': 'cambridge',
- 'train-destination': 'birmingham new street',
- 'train-leaveat': 'dontcare'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s, est. speed input: 3850.53 toks/s, output: 31.57 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s, est. speed input: 3850.53 toks/s, output: 31.57 toks/s]
-7it [00:11,  1.08s/it]
-few-shot completions: {"{'hotel-pricerange': 'moderate', 'hotel-internet': 'yes'}": 1}
-few-shot best completion: {'hotel-pricerange': 'moderate', 'hotel-internet': 'yes'}
-this is the 6th example. MUL0602.json_turn_0
-system response: 
-user response: i looking for information about a hotel in the moderate price range that include -s free wifi .
-pred turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
-gold turn change: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate', 'hotel-type': 'hotel'}
-pred states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
-gold states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate', 'hotel-type': 'hotel'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.26it/s, est. speed input: 7260.39 toks/s, output: 6.52 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.25it/s, est. speed input: 7260.39 toks/s, output: 6.52 toks/s]
-8it [00:11,  1.20it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 7th example. MUL0602.json_turn_1
-system response: there is acorn guest house available in the moderate price range with free wifi
-user response: what is the star rating of the acorn guest house ?
-pred turn change: {}
-gold turn change: {'hotel-name': 'acorn guest house'}
-pred states: {'hotel-internet': 'yes', 'hotel-pricerange': 'moderate'}
-gold states: {'hotel-internet': 'yes',
- 'hotel-name': 'acorn guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-type': 'hotel'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.01it/s, est. speed input: 4501.54 toks/s, output: 30.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.01it/s, est. speed input: 4501.54 toks/s, output: 30.21 toks/s]
-9it [00:12,  1.36it/s]
-few-shot completions: {"{'hotel-area': 'south', 'hotel-stars': '4'}": 1}
-few-shot best completion: {'hotel-area': 'south', 'hotel-stars': '4'}
-this is the 8th example. MUL0602.json_turn_2
-system response: we have many selections . there is also archway house in that price range with free wifi . would you like me to book a loaction for you ?
-user response: sorry , the hotel i am looking for also needs to be in the south area and have a 4 star rating . could you suggest anything that fills those requirement -s too ?
-pred turn change: {'hotel-area': 'south', 'hotel-stars': '4'}
-gold turn change: {'hotel-area': 'south', 'hotel-name': '[DELETE]', 'hotel-stars': '4'}
-pred states: {'hotel-area': 'south',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4'}
-gold states: {'hotel-area': 'south',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'hotel'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.74it/s, est. speed input: 6332.09 toks/s, output: 24.64 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.73it/s, est. speed input: 6332.09 toks/s, output: 24.64 toks/s]
-10it [00:12,  1.60it/s]
-few-shot completions: {"{'hotel-type': 'guest house'}": 1}
-few-shot best completion: {'hotel-type': 'guest house'}
-this is the 9th example. MUL0602.json_turn_3
-system response: aylesbray lodge guest house meets all of your requirement -s . are you okay with the hotel type being a guest house ?
-user response: yep sure , why not ?
-pred turn change: {'hotel-type': 'guest house'}
-gold turn change: {'hotel-name': 'aylesbray lodge guest house', 'hotel-type': 'guest house'}
-pred states: {'hotel-area': 'south',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house'}
-gold states: {'hotel-area': 'south',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s, est. speed input: 3147.16 toks/s, output: 36.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s, est. speed input: 3147.16 toks/s, output: 36.45 toks/s]
-11it [00:13,  1.52it/s]
-few-shot completions: {"{'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '2'}": 1}
-few-shot best completion: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '2'}
-this is the 10th example. MUL0602.json_turn_4
-system response: i can book this for you if you provide the day you want to stay , the duration of the stay and the number of people .
-user response: 4 people for 2 nights starting sunday , please !
-pred turn change: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '2'}
-gold turn change: {'hotel-book day': 'sunday', 'hotel-book people': '4', 'hotel-book stay': '2'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s, est. speed input: 2936.90 toks/s, output: 26.10 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s, est. speed input: 2936.90 toks/s, output: 26.10 toks/s]
-12it [00:14,  1.42it/s]train-book departure not found in SlotName
-train-book time not found in SlotName
-train-book departure not found in SlotName
-train-book time not found in SlotName
-
-few-shot completions: {"{'train-book departure': 'peterborough', 'train-book time': '10:45'}": 1}
-few-shot best completion: {'train-book departure': 'peterborough', 'train-book time': '10:45'}
-this is the 11th example. MUL0602.json_turn_5
-system response: booking was successful . reference number is : omug5y45 .
-user response: thanks . i also need a train departing from peterborough at 10:45 .
-pred turn change: {}
-gold turn change: {'train-departure': 'peterborough', 'train-leaveat': '10:45'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-departure': 'peterborough',
- 'train-leaveat': '10:45'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.16it/s, est. speed input: 2618.16 toks/s, output: 27.78 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.16it/s, est. speed input: 2618.16 toks/s, output: 27.78 toks/s]
-13it [00:15,  1.32it/s]
-few-shot completions: {"{'train-departure': 'peterborough', 'train-arriveby': '10:45'}": 1}
-few-shot best completion: {'train-departure': 'peterborough', 'train-arriveby': '10:45'}
-this is the 12th example. MUL0602.json_turn_6
-system response: i am sorry , there seems to be an error . can you please restate your request ?
-user response: the train should depart from peterborough and arrive in cambridge by 10:45 .
-pred turn change: {'train-arriveby': '10:45', 'train-departure': 'peterborough'}
-gold turn change: {'train-arriveby': '10:45',
- 'train-destination': 'cambridge',
- 'train-leaveat': '[DELETE]'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-departure': 'peterborough'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-departure': 'peterborough',
- 'train-destination': 'cambridge'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3261.51 toks/s, output: 2.77 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.38it/s, est. speed input: 3261.51 toks/s, output: 2.77 toks/s]
-14it [00:15,  1.33it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 13th example. MUL0602.json_turn_7
-system response: that s not a problem . what day would you like ?
-user response: sunday and can you please give me the price and travel time ?
-pred turn change: {}
-gold turn change: {'train-day': 'sunday'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-departure': 'peterborough'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-day': 'sunday',
- 'train-departure': 'peterborough',
- 'train-destination': 'cambridge'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.75it/s, est. speed input: 6462.76 toks/s, output: 24.73 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.74it/s, est. speed input: 6462.76 toks/s, output: 24.73 toks/s]
-15it [00:16,  1.57it/s]
-few-shot completions: {"{'train-book people': '4'}": 1}
-few-shot best completion: {'train-book people': '4'}
-this is the 14th example. MUL0602.json_turn_8
-system response: the price is 13.20 pounds and the travel time is 50 minutes .
-user response: book 4 seats for me please .
-pred turn change: {'train-book people': '4'}
-gold turn change: {'train-book people': '4'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-book people': '4',
- 'train-departure': 'peterborough'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-book people': '4',
- 'train-day': 'sunday',
- 'train-departure': 'peterborough',
- 'train-destination': 'cambridge'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s, est. speed input: 5205.01 toks/s, output: 3.96 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s, est. speed input: 5205.01 toks/s, output: 3.96 toks/s]
-16it [00:16,  1.66it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 15th example. MUL0602.json_turn_9
-system response: i booked tr1071 , the last train before 10:45 arrives 10:38 . your reference number will be aul3mjy9 . however , if you would have preferred something earlier , i can easily cancel and rebook .
-user response: no , that would be fine . thank you . that was all i needed for today .
-pred turn change: {}
-gold turn change: {}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-book people': '4',
- 'train-departure': 'peterborough'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'sunday',
- 'hotel-book people': '4',
- 'hotel-book stay': '2',
- 'hotel-internet': 'yes',
- 'hotel-name': 'aylesbray lodge guest house',
- 'hotel-pricerange': 'moderate',
- 'hotel-stars': '4',
- 'hotel-type': 'guest house',
- 'train-arriveby': '10:45',
- 'train-book people': '4',
- 'train-day': 'sunday',
- 'train-departure': 'peterborough',
- 'train-destination': 'cambridge'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.06it/s, est. speed input: 2457.33 toks/s, output: 9.57 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.06it/s, est. speed input: 2457.33 toks/s, output: 9.57 toks/s]
-17it [00:17,  1.41it/s]
-few-shot completions: {"{'hotel-parking': 'yes'}": 1}
-few-shot best completion: {'hotel-parking': 'yes'}
-this is the 16th example. PMUL0134.json_turn_0
-system response: 
-user response: hello , i am looking for a place to stay that offers free parking .
-pred turn change: {'hotel-parking': 'yes'}
-gold turn change: {'hotel-parking': 'yes'}
-pred states: {'hotel-parking': 'yes'}
-gold states: {'hotel-parking': 'yes'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s, est. speed input: 4574.01 toks/s, output: 15.29 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s, est. speed input: 4574.01 toks/s, output: 15.29 toks/s]
-18it [00:18,  1.52it/s]
-few-shot completions: {"{'hotel-area': 'south'}": 1}
-few-shot best completion: {'hotel-area': 'south'}
-this is the 17th example. PMUL0134.json_turn_1
-system response: what area would you like the hotel in ?
-user response: i would like it to be in south please .
-pred turn change: {'hotel-area': 'south'}
-gold turn change: {'hotel-area': 'south'}
-pred states: {'hotel-area': 'south', 'hotel-parking': 'yes'}
-gold states: {'hotel-area': 'south', 'hotel-parking': 'yes'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.54it/s, est. speed input: 5687.94 toks/s, output: 27.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.53it/s, est. speed input: 5687.94 toks/s, output: 27.89 toks/s]
-19it [00:18,  1.72it/s]
-few-shot completions: {"{'hotel-pricerange': 'expensive'}": 1}
-few-shot best completion: {'hotel-pricerange': 'expensive'}
-this is the 18th example. PMUL0134.json_turn_2
-system response: is there a price you are looking for ?
-user response: i am looking for an expensive place to stay .
-pred turn change: {'hotel-pricerange': 'expensive'}
-gold turn change: {'hotel-pricerange': 'expensive'}
-pred states: {'hotel-area': 'south', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
-gold states: {'hotel-area': 'south', 'hotel-parking': 'yes', 'hotel-pricerange': 'expensive'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s, est. speed input: 2694.07 toks/s, output: 9.35 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s, est. speed input: 2694.07 toks/s, output: 9.35 toks/s]
-20it [00:19,  1.50it/s]
-few-shot completions: {"{'hotel-type': 'hotel'}": 1}
-few-shot best completion: {'hotel-type': 'hotel'}
-this is the 19th example. PMUL0134.json_turn_3
-system response: would you like a hotel or guest house ?
-user response: i would like a hotel please .
-pred turn change: {'hotel-type': 'hotel'}
-gold turn change: {'hotel-type': 'hotel'}
-pred states: {'hotel-area': 'south',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel'}
-gold states: {'hotel-area': 'south',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.03it/s, est. speed input: 6774.86 toks/s, output: 6.07 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.03it/s, est. speed input: 6774.86 toks/s, output: 6.07 toks/s]
-21it [00:19,  1.75it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 20th example. PMUL0134.json_turn_4
-system response: i have 1 hotel that would suit your needs . it s called the lensfield hotel . they offer free parking and free wifi . can i book you a room ?
-user response: how many people ?
-pred turn change: {}
-gold turn change: {'hotel-name': 'lensfield hotel'}
-pred states: {'hotel-area': 'south',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel'}
-gold states: {'hotel-area': 'south',
- 'hotel-name': 'lensfield hotel',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.19it/s, est. speed input: 2596.05 toks/s, output: 30.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.19it/s, est. speed input: 2596.05 toks/s, output: 30.90 toks/s]
-22it [00:20,  1.52it/s]
-few-shot completions: {"{'hotel-book people': '3', 'hotel-book stay': '5', 'hotel-book day': 'friday'}": 1}
-few-shot best completion: {'hotel-book people': '3', 'hotel-book stay': '5', 'hotel-book day': 'friday'}
-this is the 21th example. PMUL0134.json_turn_5
-system response: how many people will be staying with you ?
-user response: i need it booked for 3 people for 5 nights starting from friday .
-pred turn change: {'hotel-book day': 'friday', 'hotel-book people': '3', 'hotel-book stay': '5'}
-gold turn change: {'hotel-book day': 'friday', 'hotel-book people': '3', 'hotel-book stay': '5'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-name': 'lensfield hotel',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 4304.04 toks/s, output: 31.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s, est. speed input: 4304.04 toks/s, output: 31.62 toks/s]
-23it [00:21,  1.60it/s]
-few-shot completions: {"{'restaurant-food': 'mexican', 'restaurant-area': 'south'}": 1}
-few-shot best completion: {'restaurant-food': 'mexican', 'restaurant-area': 'south'}
-this is the 22th example. PMUL0134.json_turn_6
-system response: booked ! reference number: 68sv7auh .
-user response: thank you , i also need to find a place to eat serving mexican food in the same area as the hotel
-pred turn change: {'restaurant-area': 'south', 'restaurant-food': 'mexican'}
-gold turn change: {'restaurant-area': 'south', 'restaurant-food': 'mexican'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-name': 'lensfield hotel',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.50it/s, est. speed input: 3456.88 toks/s, output: 33.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.50it/s, est. speed input: 3456.88 toks/s, output: 33.08 toks/s]
-24it [00:22,  1.52it/s]restaurant-phone not found in SlotName
-restaurant-postcode not found in SlotName
-restaurant-phone not found in SlotName
-restaurant-postcode not found in SlotName
-
-few-shot completions: {"{'restaurant-name': 'chiquito', 'restaurant-phone': '', 'restaurant-postcode': ''}": 1}
-few-shot best completion: {'restaurant-name': 'chiquito', 'restaurant-phone': '', 'restaurant-postcode': ''}
-this is the 23th example. PMUL0134.json_turn_7
-system response: there s the chiquito restaurant bar but its rather expensive . if that s okay , i can help you make a reservation .
-user response: can i have the phone number and post code for that please ?
-pred turn change: {'restaurant-name': 'chiquito restaurant bar'}
-gold turn change: {'restaurant-name': 'chiquito restaurant bar'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican',
- 'restaurant-name': 'chiquito restaurant bar'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-name': 'lensfield hotel',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican',
- 'restaurant-name': 'chiquito restaurant bar'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.05it/s, est. speed input: 2359.99 toks/s, output: 37.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.05it/s, est. speed input: 2359.99 toks/s, output: 37.71 toks/s]
-25it [00:23,  1.33it/s]taxi-pickup not found in SlotName
-taxi-dropoff not found in SlotName
-taxi-pickup not found in SlotName
-taxi-dropoff not found in SlotName
-
-few-shot completions: {"{'taxi-pickup': 'hotel', 'taxi-dropoff': 'chiquito restaurant bar', 'taxi-leaveat': '02:30'}": 1}
-few-shot best completion: {'taxi-pickup': 'hotel', 'taxi-dropoff': 'chiquito restaurant bar', 'taxi-leaveat': '02:30'}
-this is the 24th example. PMUL0134.json_turn_8
-system response: their phone number is 01223400170 and their postcode is cb17dy
-user response: i need a taxi from the hotel to the restaurant , leaving the hotel by 02:30 , i have to make sure im first in line when they open for breakfast .
-pred turn change: {'taxi-leaveat': '02:30'}
-gold turn change: {'taxi-departure': 'lensfield hotel',
- 'taxi-destination': 'chiquito restaurant bar',
- 'taxi-leaveat': '02:30'}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican',
- 'restaurant-name': 'chiquito restaurant bar',
- 'taxi-leaveat': '02:30'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-name': 'lensfield hotel',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican',
- 'restaurant-name': 'chiquito restaurant bar',
- 'taxi-departure': 'lensfield hotel',
- 'taxi-destination': 'chiquito restaurant bar',
- 'taxi-leaveat': '02:30'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.22it/s, est. speed input: 5438.95 toks/s, output: 4.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.22it/s, est. speed input: 5438.95 toks/s, output: 4.45 toks/s]
-26it [00:23,  1.50it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 25th example. PMUL0134.json_turn_9
-system response: out taxis operate 24 and 7 , so you are in luck . look for a white skoda , there phone number is 07842340394 , any further questions ?
-user response: no thats all i need for today .
-pred turn change: {}
-gold turn change: {}
-pred states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican',
- 'restaurant-name': 'chiquito restaurant bar',
- 'taxi-leaveat': '02:30'}
-gold states: {'hotel-area': 'south',
- 'hotel-book day': 'friday',
- 'hotel-book people': '3',
- 'hotel-book stay': '5',
- 'hotel-name': 'lensfield hotel',
- 'hotel-parking': 'yes',
- 'hotel-pricerange': 'expensive',
- 'hotel-type': 'hotel',
- 'restaurant-area': 'south',
- 'restaurant-food': 'mexican',
- 'restaurant-name': 'chiquito restaurant bar',
- 'taxi-departure': 'lensfield hotel',
- 'taxi-destination': 'chiquito restaurant bar',
- 'taxi-leaveat': '02:30'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.49it/s, est. speed input: 3642.52 toks/s, output: 19.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.49it/s, est. speed input: 3642.52 toks/s, output: 19.36 toks/s]
-27it [00:24,  1.48it/s]
-few-shot completions: {"{'taxi-leaveat': '10:30'}": 1}
-few-shot best completion: {'taxi-leaveat': '10:30'}
-this is the 26th example. SNG0019.json_turn_0
-system response: 
-user response: hi , i need to book a taxi , please ? i need to leave sometime after 10:30 .
-pred turn change: {'taxi-leaveat': '10:30'}
-gold turn change: {'taxi-leaveat': '10:30'}
-pred states: {'taxi-leaveat': '10:30'}
-gold states: {'taxi-leaveat': '10:30'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.41it/s, est. speed input: 3090.79 toks/s, output: 36.73 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.41it/s, est. speed input: 3090.79 toks/s, output: 36.73 toks/s]
-28it [00:25,  1.38it/s]taxi-pickup not found in SlotName
-taxi-pickup not found in SlotName
-
-few-shot completions: {"{'taxi-pickup': 'cambridge belfy', 'taxi-destination': 'cambridge shop'}": 1}
-few-shot best completion: {'taxi-pickup': 'cambridge belfy', 'taxi-destination': 'cambridge shop'}
-this is the 27th example. SNG0019.json_turn_1
-system response: i would love to help you with that . where would you like to be picked up , and where are you going ?
-user response: i would like to be picked up at the cambridge belfy and go to the cambridge shop .
-pred turn change: {'taxi-destination': 'cambridge shop'}
-gold turn change: {'taxi-departure': 'cambridge belfry', 'taxi-destination': 'cambridge shop'}
-pred states: {'taxi-destination': 'cambridge shop', 'taxi-leaveat': '10:30'}
-gold states: {'taxi-departure': 'cambridge belfry',
- 'taxi-destination': 'cambridge shop',
- 'taxi-leaveat': '10:30'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.13it/s, est. speed input: 5388.44 toks/s, output: 27.72 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.13it/s, est. speed input: 5388.44 toks/s, output: 27.72 toks/s]
-29it [00:25,  1.53it/s]
-few-shot completions: {"{'taxi-destination': 'cambridge chop house'}": 1}
-few-shot best completion: {'taxi-destination': 'cambridge chop house'}
-this is the 28th example. SNG0019.json_turn_2
-system response: i am sorry , are you going to the cambridge chop house , or did you mean the cambridge shop ?
-user response: the chop house .
-pred turn change: {'taxi-destination': 'cambridge chop house'}
-gold turn change: {'taxi-destination': 'cambridge chop house'}
-pred states: {'taxi-destination': 'cambridge chop house', 'taxi-leaveat': '10:30'}
-gold states: {'taxi-departure': 'cambridge belfry',
- 'taxi-destination': 'cambridge chop house',
- 'taxi-leaveat': '10:30'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.94it/s, est. speed input: 4710.96 toks/s, output: 3.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.94it/s, est. speed input: 4710.96 toks/s, output: 3.89 toks/s]
-30it [00:26,  1.61it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 29th example. SNG0019.json_turn_3
-system response: i have you booked . a yellow lexus will pick you up at 10:30 . the contact number is 07463778759 . will there be anything else ?
-user response: i am sorry , i need to leave after 10:30 , could you change the reservation ?
-pred turn change: {}
-gold turn change: {}
-pred states: {'taxi-destination': 'cambridge chop house', 'taxi-leaveat': '10:30'}
-gold states: {'taxi-departure': 'cambridge belfry',
- 'taxi-destination': 'cambridge chop house',
- 'taxi-leaveat': '10:30'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3460.64 toks/s, output: 3.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.59it/s, est. speed input: 3460.64 toks/s, output: 3.18 toks/s]
-31it [00:26,  1.59it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 30th example. SNG0019.json_turn_4
-system response: yes , i have you arranged to be picked up by a black honda at 10:45 .
-user response: that s perfect . thank you for all of your help .
-pred turn change: {}
-gold turn change: {}
-pred states: {'taxi-destination': 'cambridge chop house', 'taxi-leaveat': '10:30'}
-gold states: {'taxi-departure': 'cambridge belfry',
- 'taxi-destination': 'cambridge chop house',
- 'taxi-leaveat': '10:30'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.49it/s, est. speed input: 5665.99 toks/s, output: 27.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.49it/s, est. speed input: 5665.99 toks/s, output: 27.44 toks/s]
-32it [00:27,  1.76it/s]
-few-shot completions: {"{'restaurant-pricerange': 'moderate'}": 1}
-few-shot best completion: {'restaurant-pricerange': 'moderate'}
-this is the 31th example. SNG01172.json_turn_0
-system response: 
-user response: i want to eat at a moderate -ly priced restaurant please
-pred turn change: {'restaurant-pricerange': 'moderate'}
-gold turn change: {'restaurant-pricerange': 'moderate'}
-pred states: {'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-pricerange': 'moderate'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s, est. speed input: 3732.32 toks/s, output: 16.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s, est. speed input: 3732.32 toks/s, output: 16.97 toks/s]
-33it [00:27,  1.72it/s]
-few-shot completions: {"{'restaurant-food': 'belgian'}": 1}
-few-shot best completion: {'restaurant-food': 'belgian'}
-this is the 32th example. SNG01172.json_turn_1
-system response: what type of food would you like ?
-user response: belgian please , i am craving that lately
-pred turn change: {'restaurant-food': 'belgian'}
-gold turn change: {'restaurant-food': 'belgian'}
-pred states: {'restaurant-food': 'belgian', 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-food': 'belgian', 'restaurant-pricerange': 'moderate'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.66it/s, est. speed input: 6629.50 toks/s, output: 21.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.65it/s, est. speed input: 6629.50 toks/s, output: 21.26 toks/s]
-34it [00:28,  1.90it/s]
-few-shot completions: {"{'restaurant-area': 'centre'}": 1}
-few-shot best completion: {'restaurant-area': 'centre'}
-this is the 33th example. SNG01172.json_turn_2
-system response: we need some more information . where are looking to eat ?
-user response: i prefer to eat in the center of town , please .
-pred turn change: {'restaurant-area': 'centre'}
-gold turn change: {'restaurant-area': 'centre'}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-food': 'belgian',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'centre',
- 'restaurant-food': 'belgian',
- 'restaurant-pricerange': 'moderate'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.69it/s, est. speed input: 6331.56 toks/s, output: 5.37 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.68it/s, est. speed input: 6331.56 toks/s, output: 5.37 toks/s]
-35it [00:28,  2.05it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 34th example. SNG01172.json_turn_3
-system response: no , i did not find any restaurant -s in the centre .
-user response: hmm . how about somewhere else in town , what is available ?
-pred turn change: {}
-gold turn change: {'restaurant-area': 'dontcare'}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-food': 'belgian',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'dontcare',
- 'restaurant-food': 'belgian',
- 'restaurant-pricerange': 'moderate'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.81it/s, est. speed input: 4441.41 toks/s, output: 16.32 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.81it/s, est. speed input: 4441.41 toks/s, output: 16.32 toks/s]
-36it [00:29,  1.95it/s]
-few-shot completions: {"{'restaurant-food': 'turkish'}": 1}
-few-shot best completion: {'restaurant-food': 'turkish'}
-this is the 35th example. SNG01172.json_turn_4
-system response: i am sorry but i do not have any belgian place -s in the centre . can i try a different area ?
-user response: why do not we try turkish food instead
-pred turn change: {'restaurant-food': 'turkish'}
-gold turn change: {'restaurant-area': 'centre', 'restaurant-food': 'turkish'}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'centre',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s, est. speed input: 2943.72 toks/s, output: 25.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s, est. speed input: 2943.72 toks/s, output: 25.60 toks/s]
-37it [00:29,  1.67it/s]
-few-shot completions: {"{'restaurant-book day': 'tuesday', 'restaurant-book time': '20:00'}": 1}
-few-shot best completion: {'restaurant-book day': 'tuesday', 'restaurant-book time': '20:00'}
-this is the 36th example. SNG01172.json_turn_5
-system response: there are 2 turkish restaurant -s in the centre of town . they are efe s restaurant and anatolia .
-user response: either would be fine . can you book for 1 at 20:00 on tuesday ?
-pred turn change: {'restaurant-book day': 'tuesday', 'restaurant-book time': '20:00'}
-gold turn change: {'restaurant-book day': 'tuesday',
- 'restaurant-book people': '1',
- 'restaurant-book time': '20:00'}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book time': '20:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book people': '1',
- 'restaurant-book time': '20:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.58it/s, est. speed input: 3996.83 toks/s, output: 17.34 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s, est. speed input: 3996.83 toks/s, output: 17.34 toks/s]
-38it [00:30,  1.62it/s]
-few-shot completions: {"{'restaurant-book time': '19:00'}": 1}
-few-shot best completion: {'restaurant-book time': '19:00'}
-this is the 37th example. SNG01172.json_turn_6
-system response: i am sorry , it looks like they are both booked during yoir preferred time and day . would you like to try something else ?
-user response: yes try 19:00 and please give me the reference number .
-pred turn change: {'restaurant-book time': '19:00'}
-gold turn change: {'restaurant-book time': '19:00'}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book time': '19:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book people': '1',
- 'restaurant-book time': '19:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 6469.65 toks/s, output: 5.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s, est. speed input: 6469.65 toks/s, output: 5.44 toks/s]
-39it [00:31,  1.82it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 38th example. SNG01172.json_turn_7
-system response: booking was successful at efes restaurant . the table will be reserved for 15 minutes . reference number is : qxz05j29 .
-user response: thanks so much ! you've been helpful .
-pred turn change: {}
-gold turn change: {}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book time': '19:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book people': '1',
- 'restaurant-book time': '19:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.10it/s, est. speed input: 7566.58 toks/s, output: 6.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.10it/s, est. speed input: 7566.58 toks/s, output: 6.21 toks/s]
-40it [00:31,  2.05it/s]
-few-shot completions: {'{}': 1}
-few-shot best completion: {}
-this is the 39th example. SNG01172.json_turn_8
-system response: have a nice day
-user response: you have a nice day also .
-pred turn change: {}
-gold turn change: {}
-pred states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book time': '19:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-gold states: {'restaurant-area': 'centre',
- 'restaurant-book day': 'tuesday',
- 'restaurant-book people': '1',
- 'restaurant-book time': '19:00',
- 'restaurant-food': 'turkish',
- 'restaurant-pricerange': 'moderate'}
-
-=====================wrong!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.87it/s, est. speed input: 6240.44 toks/s, output: 22.99 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.87it/s, est. speed input: 6240.44 toks/s, output: 22.99 toks/s]
-41it [00:31,  2.21it/s]hotel-find not found in SlotName
-hotel-find not found in SlotName
-
-few-shot completions: {"{'hotel-find': 'yes'}": 1}
-few-shot best completion: {'hotel-find': 'yes'}
-this is the 40th example. PMUL1579.json_turn_0
-system response: 
-user response: please help me find somewhere to stay .
-pred turn change: {}
-gold turn change: {}
-pred states: {}
-gold states: {}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s, est. speed input: 3015.22 toks/s, output: 34.80 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s, est. speed input: 3015.22 toks/s, output: 34.80 toks/s]
-42it [00:32,  1.80it/s]
-few-shot completions: {"{'hotel-type': 'guest house', 'hotel-pricerange': 'moderate', 'hotel-internet': 'yes'}": 1}
-few-shot best completion: {'hotel-type': 'guest house', 'hotel-pricerange': 'moderate', 'hotel-internet': 'yes'}
-this is the 41th example. PMUL1579.json_turn_1
-system response: absolutely ! what type of hotel would you like to stay in and what is your price range ?
-user response: i would like to stay in a guest house type of hotel that is in the moderate price range . also , it should have free wifi .
-pred turn change: {'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-type': 'guest house'}
-gold turn change: {'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-type': 'guest house'}
-pred states: {'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-type': 'guest house'}
-gold states: {'hotel-internet': 'yes',
- 'hotel-pricerange': 'moderate',
- 'hotel-type': 'guest house'}
-
-=====================correct!=======================
-
-
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A

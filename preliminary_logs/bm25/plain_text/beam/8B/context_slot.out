@@ -1,93 +1,0 @@
-/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
-  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
-wandb: Currently logged in as: hacastle12. Use `wandb login --relogin` to force relogin
-wandb: wandb version 0.17.8 is available!  To upgrade, please run:
-wandb:  $ pip install wandb --upgrade
-wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240830_183434-x1vnz2rh
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run -runs-preliminary-bm25-plain_text-beam-8B-context_slot
-wandb: ⭐️ View project at https://wandb.ai/hacastle12/refpydst
-wandb: 🚀 View run at https://wandb.ai/hacastle12/refpydst/runs/x1vnz2rh
-mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 7/2731 [00:00<00:53, 50.95it/s]mapping supervised_set surface forms...:   1%|          | 30/2731 [00:00<00:20, 131.66it/s]mapping supervised_set surface forms...:   2%|▏         | 44/2731 [00:00<00:21, 124.88it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:10, 248.87it/s]mapping supervised_set surface forms...:   8%|▊         | 206/2731 [00:01<00:16, 155.90it/s]mapping supervised_set surface forms...:   8%|▊         | 227/2731 [00:01<00:16, 152.36it/s]mapping supervised_set surface forms...:   9%|▉         | 242/2731 [00:01<00:17, 145.01it/s]mapping supervised_set surface forms...:   9%|▉         | 256/2731 [00:01<00:20, 120.86it/s]mapping supervised_set surface forms...:  16%|█▌        | 442/2731 [00:01<00:05, 419.76it/s]mapping supervised_set surface forms...:  18%|█▊        | 504/2731 [00:02<00:05, 383.63it/s]mapping supervised_set surface forms...:  25%|██▍       | 670/2731 [00:02<00:03, 619.01it/s]mapping supervised_set surface forms...:  33%|███▎      | 890/2731 [00:02<00:01, 953.32it/s]mapping supervised_set surface forms...:  38%|███▊      | 1042/2731 [00:02<00:01, 1032.87it/s]mapping supervised_set surface forms...:  43%|████▎     | 1167/2731 [00:02<00:02, 768.81it/s] mapping supervised_set surface forms...:  52%|█████▏    | 1422/2731 [00:02<00:01, 1116.97it/s]mapping supervised_set surface forms...:  57%|█████▋    | 1570/2731 [00:03<00:01, 651.30it/s] mapping supervised_set surface forms...:  62%|██████▏   | 1694/2731 [00:03<00:01, 715.94it/s]mapping supervised_set surface forms...:  69%|██████▉   | 1892/2731 [00:03<00:00, 927.60it/s]mapping supervised_set surface forms...:  74%|███████▍  | 2029/2731 [00:03<00:00, 760.60it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2177/2731 [00:03<00:00, 864.62it/s]mapping supervised_set surface forms...:  84%|████████▍ | 2294/2731 [00:04<00:01, 316.40it/s]mapping supervised_set surface forms...:  87%|████████▋ | 2379/2731 [00:05<00:01, 347.79it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2563/2731 [00:05<00:00, 502.22it/s]mapping supervised_set surface forms...:  98%|█████████▊| 2686/2731 [00:05<00:00, 596.82it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:05<00:00, 514.95it/s]
-reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 73.29it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 60.47it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  7.55it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:03<00:00,  7.34it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:03<00:00,  9.84it/s]
-INFO 08-30 18:34:48 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='meta-llama/Meta-Llama-3-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Meta-Llama-3-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=meta-llama/Meta-Llama-3-8B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
-INFO 08-30 18:34:50 model_runner.py:680] Starting to load model meta-llama/Meta-Llama-3-8B-Instruct...
-INFO 08-30 18:34:51 weight_utils.py:223] Using model weights format ['*.safetensors']
-Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
-Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.90s/it]
-Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:04,  2.01s/it]
-Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:06<00:02,  2.04s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.52s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:06<00:00,  1.69s/it]
-
-INFO 08-30 18:34:59 model_runner.py:692] Loading model weights took 14.9595 GB
-INFO 08-30 18:35:00 gpu_executor.py:102] # GPU blocks: 27955, # CPU blocks: 2048
-0it [00:00, ?it/s]0it [00:00, ?it/s]
-wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/preliminary/bm25/plain_text/beam/8B/context_slot)... Done. 0.0s
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
-[rank0]:     main(**args)
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 310, in main
-[rank0]:     running_log, stats = experiment.run()
-[rank0]:                          ^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 316, in run
-[rank0]:     examples: List[Turn] = self.get_demonstrations(data_item)
-[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 272, in get_demonstrations
-[rank0]:     examples = self.retriever.item_to_best_examples(
-[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 147, in item_to_best_examples
-[rank0]:     return decoder.select_k(k=k, examples=((self.label_to_data_item(turn_label), score)
-[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/decoders/top_k.py", line 17, in select_k
-[rank0]:     return [turn for _, (turn, score) in zip(range(k), examples)][::-1]
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/decoders/top_k.py", line 17, in <listcomp>
-[rank0]:     return [turn for _, (turn, score) in zip(range(k), examples)][::-1]
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 147, in <genexpr>
-[rank0]:     return decoder.select_k(k=k, examples=((self.label_to_data_item(turn_label), score)
-[rank0]:                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 39, in iterate_nearest_dialogs
-[rank0]:     query_result = np.array([[score_idx_dict[top_score]
-[rank0]:                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 39, in <listcomp>
-[rank0]:     query_result = np.array([[score_idx_dict[top_score]
-[rank0]:                              ~~~~~~~~~~~~~~^^^^^^^^^^^
-[rank0]: TypeError: list indices must be integers or slices, not list
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 405, in <module>
-[rank0]:     main(**args)
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 310, in main
-[rank0]:     running_log, stats = experiment.run()
-[rank0]:                          ^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 316, in run
-[rank0]:     examples: List[Turn] = self.get_demonstrations(data_item) 
-[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 272, in get_demonstrations
-[rank0]:     examples = self.retriever.item_to_best_examples(
-[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 147, in item_to_best_examples
-[rank0]:     return decoder.select_k(k=k, examples=((self.label_to_data_item(turn_label), score) 
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/decoders/top_k.py", line 17, in select_k
-[rank0]:     return [turn for _, (turn, score) in zip(range(k), examples)][::-1]
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/decoders/top_k.py", line 17, in <listcomp>
-[rank0]:     return [turn for _, (turn, score) in zip(range(k), examples)][::-1]
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 147, in <genexpr>
-[rank0]:     return decoder.select_k(k=k, examples=((self.label_to_data_item(turn_label), score) 
-[rank0]:                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 39, in iterate_nearest_dialogs
-[rank0]:     query_result = np.array([[score_idx_dict[top_score] 
-[rank0]:                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/retriever/code/bm25_retriever.py", line 39, in <listcomp>
-[rank0]:     query_result = np.array([[score_idx_dict[top_score] 
-[rank0]:                               ~~~~~~~~~~~~~~^^^^^^^^^^^
-[rank0]: TypeError: list indices must be integers or slices, not list
-wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
-wandb: 🚀 View run -runs-preliminary-bm25-plain_text-beam-8B-context_slot at: https://wandb.ai/hacastle12/refpydst/runs/x1vnz2rh
-wandb: Synced 6 W&B file(s), 0 media file(s), 1 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20240830_183434-x1vnz2rh/logs
