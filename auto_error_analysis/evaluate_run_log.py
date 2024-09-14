@@ -2,7 +2,7 @@ from collections import defaultdict
 from typing import Dict, List, Any
 from tqdm import tqdm
 
-from evaluate_metrics import evaluate
+from auto_error_analysis.evaluate_metrics import evaluate
 
 
 def evaluate_logs(running_log, test_set, turn=-1) -> Dict[str, Any]:

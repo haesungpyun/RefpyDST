@@ -10,16 +10,14 @@ from collections import defaultdict, Counter
 from typing import Dict, List, Tuple, Union, Literal
 import copy
 
-
-from evaluate_run_log import evaluate_logs
-from evaluate_metrics import evaluate, slot_level_f1
-from normalization.data_ontology_normalizer import DataOntologyNormalizer
-from db.ontology import Ontology
-from data_types import SlotName, SlotValue, MultiWOZDict
-from utils import validate_path_and_make_abs_path,read_json, save_analyzed_log, load_analyzed_log
-from bs_utils import compute_dict_difference, sort_data_item, unroll_or, update_dialogue_state
-
-from completion_parser import PARSING_FUNCTIONS
+from auto_error_analysis.evaluate_run_log import evaluate_logs
+from auto_error_analysis.evaluate_metrics import evaluate, slot_level_f1
+from auto_error_analysis.normalization.data_ontology_normalizer import DataOntologyNormalizer
+from auto_error_analysis.db.ontology import Ontology
+from auto_error_analysis.data_types import SlotName, SlotValue, MultiWOZDict
+from auto_error_analysis.utils import validate_path_and_make_abs_path,read_json, save_analyzed_log, load_analyzed_log
+from auto_error_analysis.bs_utils import compute_dict_difference, sort_data_item, unroll_or, update_dialogue_state
+from auto_error_analysis.completion_parser import PARSING_FUNCTIONS
 
 class AbstractAnalyzer(metaclass=abc.ABCMeta):
     @abc.abstractmethod
@@ -513,6 +511,8 @@ class ErrorAnalyzer(AbstractAnalyzer):
 
             if idx % 1000 == 0:
                 save_analyzed_log(output_dir_path=self.output_dir_path, analyzed_log=analyzed_log)
+        
+        save_analyzed_log(output_dir_path=self.output_dir_path, analyzed_log=analyzed_log)
         return analyzed_log
 
     def show_stats(self, analyzed_log):

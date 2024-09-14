@@ -15,7 +15,7 @@ from collections import namedtuple, Counter
 from typing import List, Dict, Tuple
 from collections import defaultdict
 from tqdm import tqdm
-from data_types import MultiWOZDict, Turn
+from auto_error_analysis.data_types import MultiWOZDict, Turn
 
 EvalResult = namedtuple('EvalResult', ['jga', 'acc', 'f1'])
 PRFResult = namedtuple('PRFResult', ['f1', 'precision', 'recall'])

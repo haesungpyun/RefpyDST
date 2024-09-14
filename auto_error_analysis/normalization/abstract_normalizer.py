@@ -1,7 +1,7 @@
 """FROM REFPYDST"""
 import abc
 
-from data_types import MultiWOZDict
+from auto_error_analysis.data_types import MultiWOZDict
 
 
 class AbstractNormalizer(metaclass=abc.ABCMeta):

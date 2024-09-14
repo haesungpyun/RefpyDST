@@ -1,6 +1,6 @@
 import copy
 
-from data_types import MultiWOZDict
+from auto_error_analysis.data_types import MultiWOZDict
 
 def compute_dict_difference(A: MultiWOZDict, B: MultiWOZDict) -> MultiWOZDict:
     """

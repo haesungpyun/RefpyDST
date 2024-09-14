@@ -9,9 +9,9 @@ from typing import Dict, List, TypedDict, Optional, Any, get_args, Set, Tuple
 
 from fuzzywuzzy import process, fuzz
 from num2words import num2words
-from data_types import SlotName, SlotValue
+from auto_error_analysis.data_types import SlotName, SlotValue
 
-from resources import _read_resource
+from auto_error_analysis.resources import _read_resource
 
 # Categorical slots can plausibly be checked at parse time by a real system, where names
 # would require a DB round-trip
