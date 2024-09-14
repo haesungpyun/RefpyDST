@@ -331,10 +331,7 @@ if __name__ == "__main__":
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # # # raise ValueError
     
-    run_file: str = 'runs/instance_ad_hoc/8B/bm25_pt_sbert/top_k_round_robin.json'
-    # round_robin_div_top_k
-    # top_k_round_robin
-
+    run_file: str = 'runs/preliminary/bm25/plain_text_no_guidelines/beam/8B/dialog_gt_full_bs.json'
     # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
     # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
     # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
@@ -351,7 +348,7 @@ if __name__ == "__main__":
         args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
     if not 'run_name' in args:
         args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
-    args['train_fn'] = 'mw21_1p_train_v1.json'
+
     default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
     wandb_entity: str = os.environ.get(WANDB_ENTITY, "haesung-pyun-seoul-national-university")

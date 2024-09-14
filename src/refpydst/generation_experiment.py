@@ -107,8 +107,9 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         )
         self.logger = WandbStepLogger()
         
-        search_index_filename=None
-        if 'pretrained_sbert' in retriever_dir:
+        search_index_filename = retriever_args.pop('search_index_filename')
+        search_index_filename = os.path.join(get_output_dir_full_path(search_index_filename), "train_index.npy") if search_index_filename else None
+        if 'pretrained_sbert' in retriever_dir and search_index_filename is None:
             search_index_filename = os.path.join(get_output_dir_full_path(retriever_dir), "pretrained_index")
             file = '_'.join([i for i in self.output_dir.split('/')[-1].split('_') if not re.match(r'\d+', i)])
             if os.path.exists(os.path.join(search_index_filename, file)):
@@ -544,9 +545,9 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
 
 def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_args: Dict[str, Any], **kwargs) -> ExampleRetriever:
     if kwargs.get('search_index_filename'):
-            search_index_filename = kwargs['search_index_filename']
+        search_index_filename = kwargs['search_index_filename']
     else:
-        search_index_filename = os.path.join(retriever_full_path, "train_index.npy")
+        search_index_filename = os.path.join(get_output_dir_full_path(retriever_dir), "train_index.npy")
     if retriever_type == "EmbeddingRetriever":
         retriever_full_path: str = get_output_dir_full_path(retriever_dir)
         if retriever_full_path != retriever_dir:

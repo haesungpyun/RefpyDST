@@ -34,9 +34,12 @@ class MixedDecoder(AbstractExampleListDecoder):
             self.bm25_k = k
             self.sbert_k = k
         
+        query_id = kwargs.get('query_id', None)
+        query_doc_id = query_id.split('_turn')[0]
+        
         # Select up to "from N possible" in the iterator
-        sbert_examples: List[Tuple[Turn, float]] = [turn_label_and_score for turn_label_and_score in examples]
-        bm25_examples: Dict[Tuple[Turn, float]] = {turn_label: score for turn_label, score in bm25_examples}
+        sbert_examples: List[Tuple[Turn, float]] = [(turn_label, score) for turn_label, score in examples if turn_label.split('_turn')[0] != query_doc_id]
+        bm25_examples: Dict[Tuple[Turn, float]] = {turn_label: score for turn_label, score in bm25_examples if turn_label.split('_turn')[0] != query_doc_id}
         
         # scores from retriever are euclidean distances, of unit vectors (range 0-2). cos(y, z) = 1-.5*euc(y, z)^2
         # We initialize example_scores with the cosine similarity of each example e to x, the input turn (implicit from
@@ -49,17 +52,17 @@ class MixedDecoder(AbstractExampleListDecoder):
             return self.div_topk_round_robin(sbert_examples, bm25_examples, self.bm25_k+self.sbert_k)
 
         elif self.decoding_logic == 'multiply_div_top_k':
-            sbert_score, bm25_score = self.standardize_distribution(sbert_score, bm25_score)
+            sbert_score, bm25_score = self.transform_distribution(sbert_score, bm25_score)
             sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
             return self.multiply_div_top_k(sbert_examples, bm25_examples, self.bm25_k+self.sbert_k)
         
         elif self.decoding_logic == 'multiply_top_k':   # done
-            sbert_score, bm25_score = self.standardize_distribution(sbert_score, bm25_score)
+            sbert_score, bm25_score = self.transform_distribution(sbert_score, bm25_score)
             sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
             return self.multiply_top_k(sbert_examples, bm25_examples, self.bm25_k+self.sbert_k)       
 
         elif self.decoding_logic == 'round_robin_div_top_k':    # done
-            sbert_score, bm25_score = self.standardize_distribution(sbert_score, bm25_score)
+            sbert_score, bm25_score = self.transform_distribution(sbert_score, bm25_score)
             sbert_examples, bm25_examples = self.union_examples_update_score(sbert_examples, bm25_examples, sbert_score, bm25_score)
             return self.round_robin_div_top_k(sbert_examples, bm25_examples, self.bm25_k+self.sbert_k)
         
@@ -414,25 +417,28 @@ class MixedDecoder(AbstractExampleListDecoder):
         assert len(sbert_examples) == len(bm25_examples)
         return sbert_examples, bm25_examples
 
-    def standardize_distribution(self, sbert_score, bm25_score):
+    def transform_distribution(self, sbert_score, bm25_score):
         # tf-idf => [35-4] => z-score
         # cos sim => [-1 1] => [0 2] => [0 1] => z-score
         sbert_score = (sbert_score+1)/2     # [0, 1]
-        self.sbert_mean, self.sbert_std = np.mean(sbert_score), np.std(sbert_score)
-        self.bm25_mean, self.bm25_std = np.mean(bm25_score), np.std(bm25_score)
-        bm25_score = (bm25_score-self.bm25_mean)/self.bm25_std
         if self.zscore:
-            return (sbert_score-self.sbert_mean)/self.sbert_std, bm25_score
+            self.sbert_subtrahend, self.sbert_divisor= np.mean(sbert_score), np.std(sbert_score)
+            self.bm25_subtrahend, self.bm25_divisor = np.mean(bm25_score), np.std(bm25_score)
         else:
-            return sbert_score, bm25_score
+            self.sbert_subtrahend, self.sbert_divisor = np.min(sbert_score), (np.max(sbert_score) - np.min(sbert_score))
+            self.bm25_subtrahend, self.bm25_divisor = np.min(sbert_score), (np.max(sbert_score) - np.min(sbert_score))
+            
+        sbert_score = (sbert_score - self.sbert_subtrahend)/self.sbert_divisor
+        bm25_score = (bm25_score-self.bm25_subtrahend)/self.bm25_divisor
+        return sbert_score, bm25_score
 
     def standardize(self, sbert_score=None, bm25_score=None):
         if sbert_score is None and bm25_score is None:
             raise ValueError("Both scores provided to standard")
         if sbert_score is not None: 
-            sbert_score = (sbert_score+1)/2
-            return (sbert_score - self.sbert_mean) / self.sbert_std
+            sbert_score = (sbert_score+1)/2     # [0, 1]
+            return (sbert_score - self.sbert_subtrahend) / self.sbert_divisor
         elif bm25_score is not None:
-            return (bm25_score - self.bm25_mean) / self.bm25_std
+            return (bm25_score - self.bm25_subtrahend) / self.bm25_divisor
         else:   
             raise ValueError("No score provided to standard")

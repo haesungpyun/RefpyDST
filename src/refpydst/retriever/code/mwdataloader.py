@@ -376,6 +376,74 @@ class MWContrastiveDataloader:
                 for i in range(n_samples)]
                 
 
+
+class CLDataloader:
+    """
+    pos: top 10
+    neg: bot 10
+    """
+    def __init__(self, f1_set: MWDataset, score_type: str):
+        self.f1_set = f1_set
+        self.label_to_index = {label: idx for idx, label in enumerate(self.f1_set.turn_labels)}  
+        self.score_type = score_type
+
+    def hard_negative_sampling(self, topk=10):
+        sentences1 = []
+        sentences2 = []
+        scores = []
+
+        # do hard negative sampling
+        for ind in tqdm(range(self.f1_set.n_turns)):
+            if self.score_type == "simple":
+                score_full = self.f1_set.turn_scores[ind]['score_full']
+            elif self.score_type == "influence":
+                score_full = self.f1_set.turn_scores[ind]['influence_full']
+            elif self.score_type == "simple_delta":
+                score_full = self.f1_set.turn_scores[ind]['score_delta']
+            elif self.score_type == "influence_delta":
+                score_full = self.f1_set.turn_scores[ind]['influence_delta']
+            else:
+                raise ValueError(f"Unknown score type: {self.score_type}")
+            sorted_scores = sorted(score_full.items(), key=lambda item: item[1], reverse=True)
+
+            chosen_positive_args = sorted_scores[:topk]
+            chosen_negative_args = sorted_scores[-topk:]
+
+            for label, score in chosen_positive_args:
+                idx = self.label_to_index[label]  
+                sentences1.append(self.f1_set.turn_utts[ind])
+                sentences2.append(self.f1_set.turn_utts[idx])
+                scores.append(1)
+
+            for label, score in chosen_negative_args:
+                idx = self.label_to_index[label]  
+                sentences1.append(self.f1_set.turn_utts[ind])
+                sentences2.append(self.f1_set.turn_utts[idx])
+                scores.append(0)
+
+        positive_count = scores.count(1)
+        negative_count = scores.count(0)
+
+        print(f"Number of positive samples: {positive_count}")
+        print(f"Number of negative samples: {negative_count}")
+
+        return sentences1, sentences2, scores
+
+    def generate_eval_examples(self, topk=5):
+        # add topk closest, furthest, and n_random random indices
+        sentences1, sentences2, scores = self.hard_negative_sampling(
+            topk=topk)
+        scores = [float(s) for s in scores]
+        return sentences1, sentences2, scores
+
+    def generate_train_examples(self, topk=5):
+        sentences1, sentences2, scores = self.generate_eval_examples(
+            topk=topk)
+        n_samples = len(sentences1)
+        return [InputExample(texts=[sentences1[i], sentences2[i]], label=scores[i])
+                for i in range(n_samples)]
+
+
 class MWpos3neg012Dataloader:
     """
     pos: sampling 10 randomly in score_full=3

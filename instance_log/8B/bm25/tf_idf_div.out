@@ -1,51 +1,0 @@
-/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
-  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
-wandb: Currently logged in as: haesung-pyun (haesung-pyun-seoul-national-university). Use `wandb login --relogin` to force relogin
-wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: wandb version 0.17.8 is available!  To upgrade, please run:
-wandb:  $ pip install wandb --upgrade
-wandb: Tracking run with wandb version 0.13.11
-wandb: Run data is saved locally in /home/haesungpyun/my_refpydst/wandb/run-20240902_212631-nli7bj33
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run -runs-instance_ad_hoc-8B-bm25-tf_idf_div
-wandb: ⭐️ View project at https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD
-wandb: 🚀 View run at https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD/runs/nli7bj33
-mapping supervised_set surface forms...:   0%|          | 0/2731 [00:00<?, ?it/s]mapping supervised_set surface forms...:   0%|          | 7/2731 [00:00<00:46, 58.75it/s]mapping supervised_set surface forms...:   1%|          | 31/2731 [00:00<00:19, 141.37it/s]mapping supervised_set surface forms...:   7%|▋         | 186/2731 [00:00<00:06, 422.95it/s]mapping supervised_set surface forms...:   8%|▊         | 220/2731 [00:00<00:08, 301.29it/s]mapping supervised_set surface forms...:   9%|▉         | 247/2731 [00:01<00:11, 214.05it/s]mapping supervised_set surface forms...:  10%|▉         | 268/2731 [00:01<00:12, 201.10it/s]mapping supervised_set surface forms...:  16%|█▋        | 448/2731 [00:01<00:04, 495.91it/s]mapping supervised_set surface forms...:  19%|█▊        | 510/2731 [00:01<00:04, 479.94it/s]mapping supervised_set surface forms...:  25%|██▍       | 674/2731 [00:01<00:02, 725.07it/s]mapping supervised_set surface forms...:  34%|███▍      | 936/2731 [00:01<00:01, 1169.89it/s]mapping supervised_set surface forms...:  39%|███▉      | 1077/2731 [00:01<00:01, 1033.94it/s]mapping supervised_set surface forms...:  44%|████▍     | 1199/2731 [00:01<00:01, 963.01it/s] mapping supervised_set surface forms...:  53%|█████▎    | 1456/2731 [00:02<00:01, 1240.17it/s]mapping supervised_set surface forms...:  58%|█████▊    | 1592/2731 [00:02<00:01, 762.87it/s] mapping supervised_set surface forms...:  62%|██████▏   | 1698/2731 [00:02<00:01, 766.23it/s]mapping supervised_set surface forms...:  71%|███████   | 1938/2731 [00:02<00:00, 962.18it/s]mapping supervised_set surface forms...:  75%|███████▌  | 2052/2731 [00:02<00:00, 948.88it/s]mapping supervised_set surface forms...:  80%|███████▉  | 2178/2731 [00:03<00:00, 964.72it/s]mapping supervised_set surface forms...:  84%|████████▎ | 2283/2731 [00:03<00:01, 352.64it/s]mapping supervised_set surface forms...:  86%|████████▋ | 2360/2731 [00:04<00:00, 386.64it/s]mapping supervised_set surface forms...:  94%|█████████▍| 2564/2731 [00:04<00:00, 587.51it/s]mapping supervised_set surface forms...: 100%|██████████| 2731/2731 [00:04<00:00, 644.98it/s]
-reading surface forms from ontology.json:   0%|          | 0/31 [00:00<?, ?it/s]reading surface forms from ontology.json:  29%|██▉       | 9/31 [00:00<00:00, 82.60it/s]reading surface forms from ontology.json:  61%|██████▏   | 19/31 [00:00<00:00, 67.81it/s]reading surface forms from ontology.json:  84%|████████▍ | 26/31 [00:02<00:00,  8.59it/s]reading surface forms from ontology.json:  97%|█████████▋| 30/31 [00:02<00:00,  8.35it/s]reading surface forms from ontology.json: 100%|██████████| 31/31 [00:02<00:00, 11.19it/s]
-INFO 09-02 21:26:47 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='meta-llama/Meta-Llama-3-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Meta-Llama-3-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=meta-llama/Meta-Llama-3-8B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
-INFO 09-02 21:26:49 model_runner.py:680] Starting to load model meta-llama/Meta-Llama-3-8B-Instruct...
-INFO 09-02 21:26:50 weight_utils.py:223] Using model weights format ['*.safetensors']
-Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
-Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:04,  1.64s/it]
-Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.70s/it]
-Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:05<00:01,  1.73s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.30s/it]
-Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.44s/it]
-
-INFO 09-02 21:26:57 model_runner.py:692] Loading model weights took 14.9595 GB
-INFO 09-02 21:26:58 gpu_executor.py:102] # GPU blocks: 27955, # CPU blocks: 2048
-0it [00:00, ?it/s]0it [00:00, ?it/s]
-wandb: Adding directory to artifact (/home/haesungpyun/my_refpydst/outputs/runs/instance_ad_hoc/8B/bm25/tf_idf_div_0902_2126)... Done. 0.0s
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 400, in <module>
-[rank0]:     main(**args)
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 305, in main
-[rank0]:     running_log, stats = experiment.run()
-[rank0]:                          ^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 313, in run
-[rank0]:     prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False, add_guidelines=self.add_guidelines)
-[rank0]:                                                                                                                       ^^^^^^^^^^^^^^^^^^^
-[rank0]: AttributeError: 'CodexExperiment' object has no attribute 'add_guidelines'
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 400, in <module>
-[rank0]:     main(**args)
-[rank0]:   File "/home/haesungpyun/my_refpydst/src/refpydst/run_codex_experiment.py", line 305, in main
-[rank0]:     running_log, stats = experiment.run()
-[rank0]:                          ^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/haesungpyun/anaconda3/envs/llama/lib/python3.11/site-packages/refpydst/generation_experiment.py", line 313, in run
-[rank0]:     prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False, add_guidelines=self.add_guidelines)
-[rank0]:                                                                                                                       ^^^^^^^^^^^^^^^^^^^
-[rank0]: AttributeError: 'CodexExperiment' object has no attribute 'add_guidelines'
-wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
-wandb: 🚀 View run -runs-instance_ad_hoc-8B-bm25-tf_idf_div at: https://wandb.ai/haesung-pyun-seoul-national-university/error_TOD/runs/nli7bj33
-wandb: Synced 6 W&B file(s), 0 media file(s), 1 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20240902_212631-nli7bj33/logs

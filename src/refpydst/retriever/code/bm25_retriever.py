@@ -91,7 +91,6 @@ class BM25Retriever(ExampleRetriever):
         gt_type = kwargs.get('gt_type', None)
         input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot, 'gt_type':gt_type})
 
-
         def default_transformation(turn):
             return data_item_to_string(turn, **input_kwargs)
 
