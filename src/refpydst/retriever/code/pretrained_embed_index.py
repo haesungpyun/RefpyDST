@@ -123,7 +123,7 @@ def embed_everything(model = None, model_name: str = 'sentence-transformers/all-
 
     model.to(device)
 
-    mw_train = read_MW_with_string_transformation("mw21_5p_train_v1.json", **kwargs)
+    mw_train = read_MW_with_string_transformation("mw21_100p_train.json", **kwargs)
     print("Finish reading data")
 
     def embed_sentence_with_this_model(sentence):

@@ -66,18 +66,26 @@ class Retriever:
         query_emb = self.normalize(query_emb)
         i = 0
         fetch_size: int = k
-        while i < len(self.emb_keys):
-            scores, query_result = self.kdtree.query(query_emb, k=fetch_size, p=2)
-            if query_result.shape == (1,):
+        
+        # Query KDTree
+        scores, query_result = self.kdtree.query(query_emb, k=len(self.emb_keys), p=2)
+
+        # Sort results by score first, then by index (to ensure stable ordering in case of ties)
+        sorted_indices = np.lexsort((query_result, scores)).squeeze()
+
+        # Rearrange query_result and scores according to the sorted indices
+        query_result = query_result[:,sorted_indices]
+        scores = scores[:,sorted_indices]
+
+        if query_result.shape == (1,):
+            i += 1
+            yield self.emb_keys[query_result.item()], scores.item()
+        else:
+            for item, score_item in zip(query_result.squeeze(0)[i:], scores.squeeze(0)[i:]):
                 i += 1
-                yield self.emb_keys[query_result.item()], scores.item()
-            else:
-                for item, score_item in zip(query_result.squeeze(0)[i:], scores.squeeze(0)[i:]):
-                    i += 1
-                    if item.item() >= len(self.emb_keys):
-                        return  # stop iteration!
-                    yield self.emb_keys[item.item()], score_item.item()
-            fetch_size = min(2 * fetch_size, len(self.emb_keys))
+                if item.item() >= len(self.emb_keys):
+                    return  # stop iteration!
+                yield self.emb_keys[item.item()], score_item.item()
 
     def topk_nearest_dialogs(self, query_emb, k=5):
         query_emb = self.normalize(query_emb)
@@ -146,8 +154,7 @@ class MixedRetriever(ExampleRetriever):
             only_slot = kwargs.get('only_slot', False)
             gt_type = kwargs.get('gt_type', None)
             sbert_input_kwargs.update({'full_history': full_history, 'input_type': input_type, 'only_slot': only_slot, 'gt_type':gt_type})
-
-
+        
         def bm25_default_transformation(turn):
             return data_item_to_string(turn, **bm25_input_kwargs)
         
@@ -281,4 +288,3 @@ class MixedRetriever(ExampleRetriever):
             scores = bm25.get_scores(query)  
             return np.array(scores)
         
-

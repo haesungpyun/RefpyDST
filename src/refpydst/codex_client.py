@@ -254,7 +254,7 @@ class LlamaClient(AbstractLMClient):
         self.beam_search_config = beam_search_config
 
         if use_vllm:
-            self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True, gpu_memory_utilization=1)
+            self.model = LLM(model=self.engine, quantization=quantization, enforce_eager=True)
             self.tokenizer = self.model.get_tokenizer()
         else:
             self.tokenizer = AutoTokenizer.from_pretrained(self.engine)
@@ -278,7 +278,7 @@ class LlamaClient(AbstractLMClient):
             self.tokenizer.convert_tokens_to_ids("<|eot_id|>")    
         ]
 
-    def greedy_lm_completion(self, prompt_text: str) -> Dict[str, float]:
+    def greedy_lm_completion(self, prompt_ids: str) -> Dict[str, float]:
         """
         Given a prompt, generate a completion using the given engine and other completion parameters.
     
@@ -300,11 +300,11 @@ class LlamaClient(AbstractLMClient):
                     sampling_params.use_beam_search = True
                     sampling_params.best_of = self.beam_search_config['beam_size']
 
-                if not isinstance(prompt_text[0], torch.Tensor):
-                    prompt_text = [self.tokenizer.apply_chat_template(
-                        prompt_text, add_generation_prompt=True, return_tensors="pt"
+                if not isinstance(prompt_ids[0], torch.Tensor):
+                    prompt_ids = [self.tokenizer.apply_chat_template(
+                        prompt_ids, add_generation_prompt=True, return_tensors="pt"
                     )]
-                prompts = [self.tokenizer.batch_decode(prompt, skip_special_tokens=False)[0] for prompt in prompt_text]
+                prompts = [self.tokenizer.batch_decode(prompt, skip_special_tokens=False)[0] for prompt in prompt_ids]
                 result = self.model.generate(prompts, sampling_params=sampling_params)
                 if len(result) > 1:
                     # if batched
@@ -313,7 +313,7 @@ class LlamaClient(AbstractLMClient):
                     completions = [{result[0].outputs[0].text: 1}]
             else:
                 input_ids = self.tokenizer.apply_chat_template(
-                prompt_text,
+                prompt_ids,
                 add_generation_prompt=True,
                 return_tensors="pt"
                 )

@@ -8,6 +8,7 @@ Ultimately, these need to define parse-able dialogue states, the parsing of whic
 the prompt-format mechanisms
 """
 import abc
+import re
 import copy
 import itertools
 import json
@@ -105,12 +106,21 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             counts_from_ontology_file=ontology_file_path
         )
         self.logger = WandbStepLogger()
-
-        if 'pretrained_sbert' in retriever_dir:
-            import re
+        
+        search_index_filename = retriever_args.pop('search_index_filename')
+        search_index_filename = os.path.join(get_output_dir_full_path(search_index_filename), "train_index.npy") if search_index_filename else None
+        if 'pretrained_sbert' in retriever_dir and search_index_filename is None:
+            search_index_filename = os.path.join(get_output_dir_full_path(retriever_dir), "pretrained_index")
             file = '_'.join([i for i in self.output_dir.split('/')[-1].split('_') if not re.match(r'\d+', i)])
-            search_index_filename = os.path.join(get_output_dir_full_path(retriever_dir), "pretrained_index", file, "train_index.npy")
-            assert os.path.exists(search_index_filename)
+            if os.path.exists(os.path.join(search_index_filename, file)):
+                search_index_filename = os.path.join(search_index_filename, file, "train_index.npy")
+            else:
+                if retriever_args.get('input_type'):
+                    search_index_filename = os.path.join(search_index_filename, retriever_args['input_type'], "train_index.npy")
+                else:
+                    search_index_filename = os.path.join(search_index_filename, retriever_args['sbert_input_kwargs']['input_type'], "train_index.npy")
+                assert os.path.exists(search_index_filename), f"search index file not found: {search_index_filename}"
+            
         # load the selection pool and retriever
         self.retriever = get_retriever_by_type(retriever_type, retriever_dir, retriever_args={
             "datasets": [self.train_set],
@@ -534,6 +544,10 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
 
 
 def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_args: Dict[str, Any], **kwargs) -> ExampleRetriever:
+    if kwargs.get('search_index_filename'):
+        search_index_filename = kwargs['search_index_filename']
+    else:
+        search_index_filename = os.path.join(get_output_dir_full_path(retriever_dir), "train_index.npy")
     if retriever_type == "EmbeddingRetriever":
         retriever_full_path: str = get_output_dir_full_path(retriever_dir)
         if retriever_full_path != retriever_dir:
@@ -542,10 +556,7 @@ def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_arg
                                  f"{get_output_dir_full_path('')}, but not found. Set an abs path to retriever or "
                                  f"check setting of REFPYDST_OUTPUTS_DIR.")
             logging.info(f"loading retriever from {retriever_full_path}")
-        if kwargs.get('search_index_filename'):
-            search_index_filename = kwargs['search_index_filename']
-        else:
-            search_index_filename = os.path.join(retriever_full_path, "train_index.npy")
+        
         return EmbeddingRetriever(**{
             "model_path": retriever_full_path,
             "search_index_filename": search_index_filename,
@@ -561,7 +572,7 @@ def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_arg
         retriever_full_path: str = get_output_dir_full_path(retriever_dir)
         return MixedRetriever(**{
             "model_path": retriever_full_path,
-            "search_index_filename": os.path.join(retriever_full_path, "train_index.npy"),
+            "search_index_filename": search_index_filename,
             **retriever_args
         })
     elif retriever_type == "Error":

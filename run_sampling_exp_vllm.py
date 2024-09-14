@@ -102,6 +102,9 @@ class CodexExperiment(AbstractLMPromptingExperiment):
             **kwargs   
         )
         self.lm_decoding_config = lm_decoding_config
+        self.beam_search_config = None
+        if self.lm_decoding_config is not None:
+            self.beam_search_config = {'beam_size': lm_decoding_config.pop('beam_size')} if lm_decoding_config.get('beam_size') else None
         
         min_null_token_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_token_null_probability', 0) or 0
         self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
@@ -110,13 +113,16 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         if codex_engine.startswith('gpt'):
             self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
         elif codex_engine.startswith('llama') or codex_engine.startswith('meta') or 'llama' in codex_engine.lower():
-            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), quantization=kwargs.get('quantization'))
+            # self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), quantization=kwargs.get('quantization'))
+            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), quantization=kwargs.get('quantization'), beam_search_config=self.beam_search_config)
+        
         self.num_sampling_iteration = kwargs.get("num_sampling_iteration", 5)
         self.num_samples = kwargs.get("num_samples", 10)
         self.score_type = kwargs.get("score_type", "score_delta")
+        self.add_guidelines = kwargs.get("add_guidelines", True)
 
 
-    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn]) -> Tuple[
+    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn], just_return_completion:bool = False) -> Tuple[
         Dict[str, float], List[Turn]]:
         # codex completion
         complete_flag = False
@@ -125,7 +131,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         completions: Dict[str, float] = {}
         while not complete_flag and parse_error_count < 5 and other_error_cnt < 5:
             try:
-                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") == "greedy":
+                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") in ["greedy", "beam_search"]:
                     completions = self.codex_client.greedy_lm_completion(prompt_text)
                 elif self.lm_decoding_config["method"] == "top_p":
                     completions = self.codex_client.top_p_lm_completion(prompt_text, **self.lm_decoding_config)
@@ -274,14 +280,19 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     # check if CODEX is crazy
                     predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
                     # for now, just verify our best completion is parse-able
-                    temp_parse = self.completion_parser(max(completions[0], key=completions[0].get).strip().replace('agent.state.', ''), predicted_context)
+                    tmp_comp = list(completions[0].keys())[0]
+                    temp_parse = self.completion_parser(tmp_comp, predicted_context)
+                    # temp_parse = self.completion_parser(max(completions[0], key=completions[0].get).strip().replace('agent.state.', ''), predicted_context)
                     # temp_parse = self.completion_parser(max(completions, key=completions.get), predicted_context)
                     complete_flag = True
                 except Exception:
                     parse_error_count += 1
 
         if not complete_flag:
+            if just_return_completion:
+                return completions, examples
             raise ValueError("unable to generate completion")
+        
         return completions, examples
 
 
@@ -299,7 +310,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
             # aggregate the prediction and the history states
             predicted_prior_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
             batch_predicted_slot_values = [self.completion_parser(comp, predicted_prior_context) for comp in best_completion]
-            batch_pred_turn_slot_values = [parse_state_change(comp, predicted_prior_context) for comp in best_completion]
+            batch_pred_turn_slot_values = [self.completion_parser(comp, predicted_prior_context) for comp in best_completion]
 
         except Exception as e:
             print(f"the output could not be parsed successfully: {best_completion}", e)
@@ -395,18 +406,19 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                 predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
                 modified_item = copy.deepcopy(data_item)
                 modified_item['last_slot_values'] = predicted_context
-                example_by_retriever = self.retriever.item_to_best_examples(
-                    modified_item, k=self.num_examples, decoder=self.demonstration_decoder)
+                # import pdb
+                # pdb.set_trace()
+                retrieved_examples = self.retriever.item_to_best_examples(
+                    modified_item, k=self.num_examples, decoder=self.demonstration_decoder)[::-1]
             # verify we haven't selected an example in this dialogue
-            key_iter = itertools.cycle(example_by_retriever.keys())
-            while True:
-                key = next(key_iter)
-                try:
-                    retrieved_examples.append(example_by_retriever[key].pop())
-                except:
-                    retrieved_examples.extend(example_by_retriever[next(key_iter)][::-1])
-                    break
-    
+            # key_iter = itertools.cycle(example_by_retriever.keys())
+            # while True:
+            #     key = next(key_iter)
+            #     try:
+            #         retrieved_examples.append(example_by_retriever[key].pop())
+            #     except:
+            #         retrieved_examples.extend(example_by_retriever[next(key_iter)][::-1])
+            #         break
             retrieved_example_ids = [self.label_id(e) for e in retrieved_examples]
             assert len(set(retrieved_example_ids)) == len(retrieved_example_ids), f"The {data_item_idx}-th data {data_item['ID']}, {data_item['turn_id']}. The retrieved examples are not unique. set: {len(set(retrieved_example_ids))}, total: {len(retrieved_example_ids)}"
 
@@ -436,12 +448,13 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     examples[step] = sampling_pool[sample_idx : sample_idx + self.num_samples] 
                     sample_idx += self.num_samples   
                     example_ids[step] = [self.label_id(x) for x in examples[step]]
-
+                    
                     prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples[step], zero_one_shot=False)
                     prompt_token_ids = self.codex_client.tokenizer.apply_chat_template(
                         prompt_text_dict['10-shot'], add_generation_prompt=True, return_tensors="pt")
                     prompt_list.append(prompt_token_ids)  
-
+                # import pdb
+                # pdb.set_trace()
                 batch_all_slot_values, batch_predicted_slot_values, predicted_prior_context, \
                 batch_pred_turn_slot_values,  best_completion, completions = \
                     self.make_prediction(data_item, train_by_dial_id, prompt_list, examples, save_prediction=False)
@@ -455,7 +468,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                         for key in ['score_delta', 'score_full', 'influence_delta', 'influence_full']:
                             iter_scores[key][ex_id] += batch_delta_jga[idx] if 'delta' in key else batch_full_jga[idx]
 
-                    for neg_ex_id in set(retrieved_example_ids) - set(example_ids):
+                    for neg_ex_id in set(retrieved_example_ids) - set(ex_id_list):
                         iter_scores['influence_delta'][neg_ex_id] -= (1/(num_sub_group-1))*batch_delta_jga[idx]
                         iter_scores['influence_full'][neg_ex_id] -= (1/(num_sub_group-1))*batch_full_jga[idx]
                 
@@ -471,7 +484,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     step_log['prompt_counts'] = count_prompts_from_examples(examples[idx])
                     step_log['examples'] = [(e['ID'], e['turn_id']) for e in examples[idx]]
 
-                iter_log[f'iter_{iteration}'].append(step_log)
+                    iter_log[f'iter_{iteration}'].append(step_log)
 
                 print(f"\n======= iteration: {iteration+1} / {self.num_sampling_iteration} =======")
                 print(f"few-shot best completions: {best_completion}")
@@ -489,6 +502,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                 data_item['sampling_exp']['exp'].append(iter_log)
                 data_item['sampling_exp']['scores'].append(iter_scores)     
             data_item['final_scores'] = {}
+            # Aggregate the scores in each iteration to final_score
             for score_idx, scores in enumerate(data_item['sampling_exp']['scores']):
                 for key in scores:
                     if key not in data_item['final_scores']:
@@ -548,8 +562,8 @@ class CodexExperiment(AbstractLMPromptingExperiment):
             else:
                 jga_by_turn_id[data_item['turn_id']].append(0)
                 print("\n=====================wrong!=======================")
-            print({"current_jga": n_correct / n_total, "n_total": n_total})
-            self.logger.log({"current_jga": n_correct / n_total, "n_total": n_total})
+            print({"current_jga": n_correct / n_total, "n_correct": n_correct, "n_total": n_total})
+            self.logger.log({"current_jga": n_correct / n_total,"n_correct": n_correct, "n_total": n_total})
             self.logger.step()
             print("\n")
 
@@ -644,12 +658,12 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
 if __name__ == "__main__":
     os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
     os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
-
-    # import warnings
-    # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
-    # # raise ValueError
     
-    # run_file: str = "runs/table4_llama/5p/smapling_exp_train/split_v1_topk_bm_5_fs_5_8B_vllm_full_log_half.json"
+    import warnings
+    warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
+    # raise ValueError
+    
+    # run_file: str = "/home/haesungpyun/my_refpydst/runs/instance_ad_hoc/8B/ft_sbert/baseline_sim.json"
     # # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
     # # "runs/table4/5p/bm25/mixed.json"
     # # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
@@ -668,8 +682,8 @@ if __name__ == "__main__":
     
     # default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     # default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
-    # wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
-    # wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    # wandb_entity: str = os.environ.get(WANDB_ENTITY, "haesung-pyun-seoul-national-university")
+    # wandb_project: str = os.environ.get(WANDB_PROJECT, "error_TOD")
     # run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
     #                  name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
     #                  group=args.get("run_group", default_run_group),
@@ -712,8 +726,8 @@ if __name__ == "__main__":
         args = vars(args)
     default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
-    wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
-    wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    wandb_entity: str = os.environ.get(WANDB_ENTITY, "haesung-pyun-seoul-national-university")
+    wandb_project: str = os.environ.get(WANDB_PROJECT, "error_TOD")
     run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
                      name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
                      group=args.get("run_group", default_run_group),
@@ -721,6 +735,3 @@ if __name__ == "__main__":
     # args.pop('format_example')
     # args['num_examples'] = 0
     main(**args)
-
-
-
