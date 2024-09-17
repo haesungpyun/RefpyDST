@@ -28,8 +28,8 @@ class MixedDecoder(AbstractExampleListDecoder):
     def select_k(self, examples: Iterator[Tuple[Turn, float]],
                  bm25_examples:Iterator[Tuple[Turn, float]], k: int, **kwargs) -> List[Turn]:
         if isinstance(k, dict):
-            self.bm25_k = k.get('BM25', 5)
-            self.sbert_k = k.get('SBERT', 5)
+            self.bm25_k = k.get('BM25', 0)
+            self.sbert_k = k.get('SBERT', 0)
         else:
             self.bm25_k = k
             self.sbert_k = k
@@ -314,7 +314,7 @@ class MixedDecoder(AbstractExampleListDecoder):
                     break
                 s_idx += 1
             while b_idx < len(bm25_examples):
-                turn_label, _ = sbert_examples[s_idx]
+                turn_label, _ = bm25_examples[b_idx]
                 if turn_label not in result:
                     result.update({turn_label: 0})
                     b_idx += 1
@@ -358,10 +358,7 @@ class MixedDecoder(AbstractExampleListDecoder):
     def sbert_div(self, examples, k = 10):
         """
         SBERT -> diversity
-        """
-         # Select up to "from N possible" in the iterator
-        examples: List[Tuple[Turn, float]] = \
-            [turn_and_score for _, turn_and_score in zip(range(self.from_n_possible), examples)]
+        """       
         # shape: (example_idx, embedding size)
         sbert_embeddings: NDArray = np.asarray([
             self.retriever.label_to_search_embedding(turn_label) 
@@ -408,13 +405,13 @@ class MixedDecoder(AbstractExampleListDecoder):
         bm25_set = set(list(bm25_dict.keys())[:self.from_n_possible])
         union_set = sbert_set.union(bm25_set)
         
-        sbert_examples = [(turn_label, sbert_dict[turn_label]) for turn_label in union_set]
-        bm25_examples = [(turn_label, bm25_dict[turn_label]) for turn_label in union_set]
+        sbert_examples = [(turn_label, sbert_dict[turn_label]) for turn_label in union_set if turn_label in sbert_dict]
+        bm25_examples = [(turn_label, bm25_dict[turn_label]) for turn_label in union_set if turn_label in bm25_dict]
 
         sbert_examples = list(sorted(sbert_examples, key=lambda x: x[1], reverse=True)) # [high to low]
         bm25_examples = list(sorted(bm25_examples, key=lambda item: item[1], reverse=True)) # [high to low]
 
-        assert len(sbert_examples) == len(bm25_examples)
+        assert len(sbert_examples) == len(union_set) or len(bm25_examples) == len(union_set)
         return sbert_examples, bm25_examples
 
     def transform_distribution(self, sbert_score, bm25_score):
