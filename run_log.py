@@ -1,6 +1,7 @@
 import argparse
 import copy
 import datetime
+import itertools
 import json
 import logging
 import os
@@ -20,7 +21,7 @@ from refpydst.data_types import ExampleListDecoderConfig, CodexDecodingConfig, E
 from refpydst.data_types import Turn, CompletionParser, CodexPromptingRunConfig, MultiWOZDict
 
 from refpydst.artifacts import output_dir_to_run_or_artifact_name
-from refpydst.codex_client import CodexClient, PromptOverlengthError
+from refpydst.codex_client import CodexClient, PromptOverlengthError, LlamaClient
 from refpydst.db.ontology import Ontology
 from refpydst.generation_experiment import AbstractLMPromptingExperiment
 from refpydst.prompting import PROMPT_VARIANTS, PromptGenerator, STOP_SEQUENCES, IC_DST
@@ -34,6 +35,7 @@ from refpydst.normalization.abstract_normalizer import AbstractNormalizer
 from refpydst.retriever.abstract_example_retriever import ExampleRetriever
 from refpydst.retriever.abstract_example_set_decoder import AbstractExampleListDecoder
 import refpydst.prompt_formats.python.demo as python_demo
+from refpydst.prompt_formats.python.completion_parser import parse_state_change
 from refpydst.utils.dialogue_state import group_by_dial_id_and_turn
 from refpydst.utils.dialogue_state import update_dialogue_state
 from refpydst.utils.general import read_json, get_output_dir_full_path
@@ -100,27 +102,27 @@ class CodexExperiment(AbstractLMPromptingExperiment):
             **kwargs   
         )
         self.lm_decoding_config = lm_decoding_config
+        self.beam_search_config = None
+        if self.lm_decoding_config is not None:
+            self.beam_search_config = {'beam_size': lm_decoding_config.pop('beam_size')} if lm_decoding_config.get('beam_size') else None
         
         min_null_token_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_token_null_probability', 0) or 0
         self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
         min_null_sequence_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_null_probability', 0) or 0
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
-        self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
-        self.lm_decoding_config = lm_decoding_config
+        if codex_engine.startswith('gpt'):
+            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
+        elif codex_engine.startswith('llama') or codex_engine.startswith('meta') or 'llama' in codex_engine.lower():
+            # self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), quantization=kwargs.get('quantization'))
+            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), quantization=kwargs.get('quantization'), beam_search_config=self.beam_search_config)
         
-        min_null_token_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_token_null_probability', 0) or 0
-        self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
-        min_null_sequence_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_null_probability', 0) or 0
-        self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
-        self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format))
-
-
         self.num_sampling_iteration = kwargs.get("num_sampling_iteration", 5)
         self.num_samples = kwargs.get("num_samples", 10)
         self.score_type = kwargs.get("score_type", "score_delta")
+        self.add_guidelines = kwargs.get("add_guidelines", True)
 
 
-    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn]) -> Tuple[
+    def generate_completion(self, prompt_text: str, data_item: Turn, examples: List[Turn], just_return_completion:bool = False) -> Tuple[
         Dict[str, float], List[Turn]]:
         # codex completion
         complete_flag = False
@@ -129,7 +131,7 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         completions: Dict[str, float] = {}
         while not complete_flag and parse_error_count < 5 and other_error_cnt < 5:
             try:
-                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") == "greedy":
+                if self.lm_decoding_config is None or self.lm_decoding_config.get("method", "greedy") in ["greedy", "beam_search"]:
                     completions = self.codex_client.greedy_lm_completion(prompt_text)
                 elif self.lm_decoding_config["method"] == "top_p":
                     completions = self.codex_client.top_p_lm_completion(prompt_text, **self.lm_decoding_config)
@@ -278,58 +280,45 @@ class CodexExperiment(AbstractLMPromptingExperiment):
                     # check if CODEX is crazy
                     predicted_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
                     # for now, just verify our best completion is parse-able
-                    temp_parse = self.completion_parser(max(completions, key=completions.get).replace('    agent.state.', ''), predicted_context)
+                    tmp_comp = list(completions[0].keys())[0]
+                    temp_parse = self.completion_parser(tmp_comp, predicted_context)
+                    # temp_parse = self.completion_parser(max(completions[0], key=completions[0].get).strip().replace('agent.state.', ''), predicted_context)
                     # temp_parse = self.completion_parser(max(completions, key=completions.get), predicted_context)
                     complete_flag = True
                 except Exception:
                     parse_error_count += 1
 
         if not complete_flag:
+            if just_return_completion:
+                return completions, examples
             raise ValueError("unable to generate completion")
+        
         return completions, examples
 
 
     def make_prediction(self, data_item, train_by_dial_id, prompt_text_dict, examples, save_prediction=False):
         predicted_slot_values: MultiWOZDict = {}
+        all_predicted_slot_values: MultiWOZDict = {}
         predicted_prior_context: MultiWOZDict = None
         try:
-            dial_id, turn_id = data_item['ID'], data_item['turn_id']
-            if self.run_log_cache and dial_id in self.run_log_cache:
-                cache_result: Turn = copy.deepcopy(self.run_log_cache[dial_id][turn_id])
-                assert 'completion' in cache_result
-                logging.info(f"Found a cached turn {dial_id}-{turn_id}, re-using completion: {cache_result['completion']}")
-                best_completion = cache_result['completion']
-                completions = cache_result.get('all_completions')
-                examples = [train_by_dial_id[ex_dial_id][ex_turn_id] for ex_dial_id, ex_turn_id in cache_result['examples']]
-                if 'log_prob_given_null' in cache_result:
-                    data_item['log_prob_given_null'] = cache_result['log_prob_given_null']
-                if 'log_probs' in cache_result:
-                    data_item['log_probs'] = cache_result['log_probs']
-                if 'completion_to_canonical' in cache_result:
-                    data_item['completion_to_canonical'] = cache_result['completion_to_canonical']
-            else:
-                # get completion from language model
-                all_completions = {}
-                all_best_completions = {}                   
-                for ids, prompt_text in prompt_text_dict.items():
-                    completions = None  # the except block will print it, which can be confusing if its from the previous turn
-                    completions, examples = self.generate_completion(prompt_text, data_item, examples)
-                    best_completion = max(completions, key=completions.get)
-                    best_completion = best_completion.replace('    agent.state.', '')
-                    all_completions[ids] = completions
-                    all_best_completions[ids] = best_completion
+            dial_id, turn_id = data_item['ID'], data_item['turn_id']         
+            
+            completions = None  # the except block will print it, which can be confusing if its from the previous turn
+            completions, examples = self.generate_completion(prompt_text_dict, data_item, examples)
+            best_completion = [comp.strip().replace('agent.state.', '') for dic in completions for comp,_ in dic.items()][0]
 
             # aggregate the prediction and the history states
             predicted_prior_context = self.prediction_recorder.retrieve_previous_turn_state(data_item)
             predicted_slot_values = self.completion_parser(best_completion, predicted_prior_context)
-            pred_turn_slot_values = self.completion_parser(best_completion, {})
-
+            pred_turn_slot_values = self.completion_parser(best_completion, predicted_prior_context)
+            
         except Exception as e:
             print(f"the output could not be parsed successfully: {best_completion}", e)
             data_item['not_valid'] = 1
             data_item['completion'] = best_completion
         
         predicted_slot_values = self.normalizer.normalize(predicted_slot_values)
+        pred_turn_slot_values = self.normalizer.normalize(pred_turn_slot_values)
 
         # merge context and prediction
         if self.use_gold:
@@ -384,12 +373,21 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         for data_item_idx, data_item in tqdm(enumerate(selected_set)):
             n_total += 1
             
-            examples = data_item['best_example']
+            best_ex_id_score = sorted(data_item['final_scores'][self.score_type].items(), key=lambda x: x[1], reverse=True)[:self.num_samples][::-1]
+            examples = []
+            for (ex_id, score) in best_ex_id_score:    
+                data = self.retriever.label_to_data_item(ex_id)
+                examples.append(data)
+            
+            data_item['best_example'] = examples
             prompt_text_dict: Final[str] = self.get_prompt_text_dict(data_item, examples, zero_one_shot=False)
             data_item['prompt'] = prompt_text_dict
 
+            prompt_token_ids = self.codex_client.tokenizer.apply_chat_template(
+                prompt_text_dict['10-shot'], add_generation_prompt=True, return_tensors="pt")
+
             all_slot_values, predicted_slot_values, predicted_prior_context, pred_turn_slot_values, best_completion, completions = \
-                self.make_prediction(data_item, train_by_dial_id, prompt_text_dict, examples, save_prediction=True)
+                self.make_prediction(data_item, train_by_dial_id, [prompt_token_ids], examples, save_prediction=True)
 
             # record the predictions
             data_item['pred'] = all_slot_values
@@ -465,8 +463,6 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
          artifact_cache: str = None,
          format_example: Optional[Turn] = None, num_examples: int = 10, **kwargs) -> None:
     # create the output folder
-    if os.path.exists(output_dir):
-        output_dir = output_dir + "_" + str(datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=9))).strftime('%m%d_%H%M'))
     os.makedirs(output_dir, exist_ok=True)
     # write out this experiment's configuration
     exp_config: Dict[str, Union[str, int]] = dict(locals())
@@ -522,60 +518,42 @@ if __name__ == "__main__":
     import warnings
     warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # raise ValueError
+    try:
+        run_file: str = sys.argv[1]
+    except:
+        raise ValueError("Please provide the run file name")
+        # run_file = 'bm_gds_sbert_gdb/multiply_div_top_k'
+        
+    # TODO
+    # bm_gds_sbert_gdb/round_robin_div_top_k
+    args = {
+        "output_dir":f"/home/haesungpyun/my_refpydst/outputs/runs/upperbound/8B/influence_delta/{run_file}",
+        "test_fn": f"/home/haesungpyun/my_refpydst/outputs/runs/upperbound/8B/score_delta/{run_file}/running_log.json",
+        "train_fn": "mw21_1p_train_v1.json",
+        "prompt_format": "plain_text",
+        "add_guidelines": False,
+        "retriever_type": "BM25",
+        "retriever_dir": "BM25",
+        "retriever_args":  {
+            "state_transformation": "ref_aware",
+        },
+        "lm_decoding_config": {
+            "method": "beam_search",
+            "beam_size": 4
+        },
+        "codex_engine":"meta-llama/Meta-Llama-3-8B-Instruct",
+        "decoding_pool": "all_train_set",
+        "num_examples": 10,
+        "score_type":"influence_delta"
+    }
     
-    run_file: str ="runs/table4/5p/smapling_exp/split_v1_topk_bm_re_run.json"
-    # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
-    # "runs/table4/5p/bm25/mixed.json"
-    # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
-    # 'runs/table4/5p/pretrained_sbert/split_v1.json'
-
-    # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-    # 'runs/codex/zero_shot/python/split_v1.json'
-    # "runs/codex/toy_test.json"
-    # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-        # arguments are input from a configuration file if the first argument to the program is a valid file
-    args: CodexPromptingRunConfig = read_json(run_file)
-    if 'output_dir' not in args:
-        args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
     if not 'run_name' in args:
         args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
 
-    # if os.path.exists(sys.argv[1]):
-    #     run_file: str = sys.argv[1]
-    #     # arguments are input from a configuration file if the first argument to the program is a valid file
-    #     args: CodexPromptingRunConfig = read_json(run_file)
-    #     if 'output_dir' not in args:
-    #         args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))
-    #     if not 'run_name' in args:
-    #         args['run_name'] = output_dir_to_run_or_artifact_name(args['output_dir'])
-    # else:
-    #     # otherwise, try to parse from argparse
-    #     parser = argparse.ArgumentParser()
-    #     parser.add_argument('--train_fn', type=str, help="training data file (few-shot or full shot)",
-    #                         required=True)  # e.g. "./data/mw21_10p_train_v3.json"
-    #     parser.add_argument('--prompt_format', type=str, choices=PROMPT_VARIANTS,
-    #                         help=f"prompt format variant, among: {', '.join(PROMPT_VARIANTS)}",
-    #                         default="IC-DST")  # e.g. "IC-DST"
-    #     parser.add_argument('--retriever_dir', type=str, required=True,
-    #                         help="sentence transformer saved path")  # "./retriever/expts/mw21_10p_v3_0304_400_20"
-    #     parser.add_argument('--output_dir', type=str, default="./expts/debug",
-    #                         help="directory to save running log and configs")
-    #     parser.add_argument('--mwz_ver', type=str, default="2.1", choices=['2.1', '2.4'], help="version of MultiWOZ")
-    #     parser.add_argument('--codex_engine', type=str, default="gpt-3.5-turbo", choices=["text-davinci-002"],
-    #                         help="version of GPT-3/Codex to complete with")
-    #     parser.add_argument('--demonstration_mapping_path', type=str, default=None,
-    #                         help="if provided, don't use retriever to find nearby dialogue turns, and instead use those "
-    #                              "provided in the mapping load-able at this path. It should contain a dictionary of the"
-    #                              "form: {dial_id: {turn_id: [(dial_id, turn_id), ...]}, ...}")
-    #     parser.add_argument('--test_fn', type=str, default='', help="file to evaluate on, empty means use the test set")
-    #     parser.add_argument('--retriever_type', type=str, default='EmbeddingRetriever',
-    #                         help="what kind of retriever to use")
-    #     args = parser.parse_args()
-    #     args = vars(args)
     default_run_name: str = output_dir_to_run_or_artifact_name(args['output_dir'])
     default_run_group: str = default_run_name.rsplit('-', maxsplit=1)[0]
-    wandb_entity: str = os.environ.get(WANDB_ENTITY, "hacastle12")
-    wandb_project: str = os.environ.get(WANDB_PROJECT, "refpydst")
+    wandb_entity: str = os.environ.get(WANDB_ENTITY, "haesung-pyun-seoul-national-university")
+    wandb_project: str = os.environ.get(WANDB_PROJECT, "error_TOD")
     run = wandb.init(config=args, project=wandb_project, entity=wandb_entity,
                      name=args.get("run_name", default_run_name), notes=args.get("run_notes", None),
                      group=args.get("run_group", default_run_group),

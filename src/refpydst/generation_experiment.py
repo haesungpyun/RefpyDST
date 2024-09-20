@@ -35,6 +35,7 @@ from refpydst.retriever.abstract_example_set_decoder import AbstractExampleListD
 from refpydst.retriever.code.embed_based_retriever import EmbeddingRetriever
 from refpydst.retriever.code.bm25_retriever import BM25Retriever
 from refpydst.retriever.code.mixed_retriever import MixedRetriever
+from refpydst.retriever.code.twostep_retriever import TwoStepRetriever
 from refpydst.retriever.code.error_retriever import ErrorRetriever
 from refpydst.retriever.decoders.bm25_max_emb_distance import BM25MaxEmbDistinct
 from refpydst.retriever.decoders.mixed_max_emb_distance import MixedMaxEmbDistinct
@@ -107,7 +108,10 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         )
         self.logger = WandbStepLogger()
         
-        search_index_filename = retriever_args.pop('search_index_filename', None)
+        try:
+            search_index_filename = retriever_args.pop('search_index_filename', None)
+        except:
+            search_index_filename = None
         search_index_filename = os.path.join(get_output_dir_full_path(search_index_filename), "train_index.npy") if search_index_filename else None
         try:
             assert os.path.exists(search_index_filename) 
@@ -138,7 +142,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
             )
         
         elif decoder_config['decoder_type'] == 'bm25_max_emb_distance':
-            if not isinstance(self.retriever, BM25Retriever):
+            if not isinstance(self.retriever, BM25Retriever) or not isinstance(self.retriever, TwoStepRetriever):
                 raise ValueError(f"cannot maximize embedding distance with a retriever of type: {type(self.retriever)}")
             self.demonstration_decoder = BM25MaxEmbDistinct(
                 retriever=self.retriever,
@@ -261,7 +265,10 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
         # we've already decided which demonstrations to use, just retrieve these
         examples: List[Turn] = []
         if self.format_example:
-            examples.append(self.format_example)
+            if isinstance(self.format_example, list):
+                examples.extend(self.format_example)
+            else:
+                examples.append(self.format_example)
         if self.demonstration_mapping:
             return self.demonstration_mapping[data_item['ID']][str(data_item['turn_id'])]
 
@@ -366,6 +373,7 @@ class AbstractLMPromptingExperiment(metaclass=abc.ABCMeta):
                 print(f"the output could not be parsed successfully: {completions}", e)
                 data_item['not_valid'] = 1
                 data_item['completion'] = completions
+            
             predicted_slot_values = self.normalizer.normalize(predicted_slot_values)
             
             ############# NEW CODE #############
@@ -575,6 +583,9 @@ def get_retriever_by_type(retriever_type: str, retriever_dir: str, retriever_arg
             "search_index_filename": os.path.join(retriever_full_path, "train_index.npy"),
             **retriever_args
         })
+    elif retriever_type == "TwoStep":
+        retriever_full_path: str = get_output_dir_full_path(retriever_dir)
+        return TwoStepRetriever(**retriever_args)
     else:
         raise ValueError(f"unknown retriever type: {retriever_type}")
 

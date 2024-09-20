@@ -45,8 +45,8 @@ class ErrorAnalyzer(AbstractAnalyzer):
         Initializes the error analyzer.
             
         Args:
-            train_data_path (str): The path to the training data.
-            result_file_path (str): The path to the result file.
+            train_data_path (str): The path to the training data. This is used to get the normalizer.
+            result_file_path (str): The path to the result file. 
             output_dir_path (str): The path to save the analyzed log.
             ontology_path (str): The path to the ontology file.
             parsing_func (function): The parsing function to use for iterative parsing.
@@ -140,7 +140,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
         # Delta(State Change) Belief State parsing. Parse the completion and normalize considering surface forms
         pred_delta_bs = analyzed_item.get(f'pred_delta_{self.parsing_func.__name__}', None)
         if pred_delta_bs is None:
-            pred_delta_bs = self.parsing_func(python_completion=analyzed_item['completion'], state=prev_pred_bs)
+            pred_delta_bs = self.parsing_func(analyzed_item['completion'], state=prev_pred_bs)
             pred_delta_bs = self.normalizer.normalize(raw_parse=pred_delta_bs) if 'DELETE' not in str(pred_delta_bs) else pred_delta_bs
             analyzed_item[f'pred_delta_{self.parsing_func.__name__}'] = pred_delta_bs
         gold_delta_bs, pred_delta_bs = unroll_or(gold=analyzed_item['turn_slot_values'], pred=pred_delta_bs)
@@ -159,6 +159,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
         delta_over_pred: MultiWOZDict, 
         gold_delta_bs: MultiWOZDict, 
         pred_delta_bs: MultiWOZDict,
+        prev_pred_bs: MultiWOZDict,
         visited: List[Tuple[SlotName, SlotValue]]
     )-> Tuple[Dict[str, List[Tuple[str, Tuple[SlotName, SlotValue]]]], List[Tuple[SlotName, SlotValue]]]:
         """
@@ -201,8 +202,8 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 
                 # if gold_value is a special value and not in the prediction, record the error.
                 if gold_value in self.special_values and pred_delta_bs.get(gold_slot, None) == None:
-                    error_name = f'delta_miss_{re.sub(r"[^a-zA-Z]", "", gold_value)}'
-                    error_s_v_pairs = (gold_slot, gold_value)
+                    error_name = f'delta_miss_{re.sub(r"[^a-zA-Z]", "", gold_value)}'.lower()
+                    error_s_v_pairs = (gold_slot, gold_value, gold_slot, prev_pred_bs.get(gold_slot, None))
                     
             error_dict, visited = self.record_error_and_update_visited(error_dict, error_name, error_s_v_pairs, visited) 
         return error_dict, visited
@@ -315,7 +316,9 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 error_slot, error_value = err_s_v[-2], err_s_v[-1]
             if 'miss' in err_name :
                 error_slot, error_value = err_s_v[0], err_s_v[1]
-
+                if 'delete' in err_name:
+                    error_slot, error_value = err_s_v[-2], err_s_v[-1]
+                
             if (error_slot, error_value) in visited:
                 continue
             
@@ -376,7 +379,8 @@ class ErrorAnalyzer(AbstractAnalyzer):
             delta_over_pred=delta_over_pred, 
             gold_delta_bs=gold_delta_bs,
             pred_delta_bs=pred_delta_bs,
-            visited=visited
+            prev_pred_bs=prev_pred_bs,
+            visited=[]
         )
         item['error'].extend(error_case.get('error', []))
 
@@ -388,7 +392,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
             pred_delta_bs=pred_delta_bs, 
             prev_gold_bs=prev_gold_bs,
             prev_pred_bs=prev_pred_bs, 
-            visited=visited
+            visited=[]
         )
         item['error'].extend(error_case.get('error', []))
         
@@ -704,8 +708,9 @@ class ErrorAnalyzer(AbstractAnalyzer):
 if __name__ == '__main__':
     analyzer = ErrorAnalyzer(
         train_data_path='/home/haesungpyun/my_refpydst/data/mw21_0p_train.json',
-        result_file_path='/home/haesungpyun/my_refpydst/outputs/runs/table4_llama/zero_shot/split_v1_greedy_0620_1337/running_log.json',
+        result_file_path='/home/haesungpyun/my_refpydst/outputs/runs/zero_shot/8B_plain_text_1_0920_0810/running_log.json',
         output_dir_path='./outputs/',
+        parsing_func='parse_nl_completion'
     )
     analyzer.analyze()
 
