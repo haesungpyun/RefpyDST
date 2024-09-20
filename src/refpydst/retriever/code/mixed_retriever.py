@@ -29,16 +29,16 @@ class Retriever:
         # to query faster, stack all search embeddings and record keys
         self.emb_keys: List[str] = list(emb_dict.keys())
         self.label_to_idx = {k: i for i, k in enumerate(self.emb_keys)}
-        emb_dim = emb_dict[self.emb_keys[0]].shape[-1]
-
+        
+        emb_dim = emb_dict[self.emb_keys[0]].shape[-1] if emb_dict else 0
         self.emb_values = np.zeros((len(self.emb_keys), emb_dim))
+
         for i, k in enumerate(self.emb_keys):
-            self.emb_values[i] = emb_dict[k]
+            self.emb_values[i] = emb_dict.get(k, None)
 
         # normalize for cosine distance (kdtree only support euclidean when p=2)
         self.emb_values = self.normalize(self.emb_values)
         self.kdtree = KDTree(self.emb_values)
-
         self.bm25 = BM25Okapi(corpus=list(bm25_emb_dict.values()))
     
     def bm25_iterate_nearest_dialogs(self, query, k=5) -> Iterator[Tuple[str, float]]:
@@ -63,6 +63,8 @@ class Retriever:
             fetch_size = min(2 * fetch_size, len(self.emb_keys))
     
     def iterate_nearest_dialogs(self, query_emb, k=5) -> Iterator[Tuple[str, float]]:
+        if query_emb is None:
+            return
         query_emb = self.normalize(query_emb)
         i = 0
         fetch_size: int = k
@@ -123,6 +125,7 @@ class MixedRetriever(ExampleRetriever):
         return {k: v for k, v in embs.items() if k.split('_')[0] in selected_dial_ids}
 
     def pre_assigned_sample_selection(self, embs, examples):
+        embs = {} if embs is None else embs
         selected_dial_ids = set([dial['ID'] for dial in examples])
         return {k: v for k, v in embs.items() if k.split('_')[0] in selected_dial_ids}
 
@@ -174,7 +177,7 @@ class MixedRetriever(ExampleRetriever):
 
         self.model = model
 
-        if model is None:
+        if model is None and model_path is not None:
             self.model = SentenceTransformer(model_path)
         
         # load the search index embeddings
@@ -235,7 +238,7 @@ class MixedRetriever(ExampleRetriever):
 
     def item_to_best_examples(self, data_item, k, decoder: AbstractExampleListDecoder = TopKDecoder()):
         # the nearest neighbor is at the end
-        query = self.data_item_to_embedding(data_item)
+        query = self.data_item_to_embedding(data_item) if self.model is not None else None
         bm25_query = self.data_item_to_bm25_embedding(data_item)
         if isinstance(k, dict):
             k_sbert = k.get('SBERT', 0)

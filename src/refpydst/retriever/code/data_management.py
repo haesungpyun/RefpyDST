@@ -80,7 +80,7 @@ def input_to_string(context_dict, sys_utt, usr_utt):
 
 
 def gt_to_NL(slot_value_dict):
-    output = "[BS] "
+    output = " [BS] "
     for k, v in slot_value_dict.items():
         output += f"{' '.join(k.split('-'))}: {v.split('|')[0]}, "
     return output

@@ -56,7 +56,7 @@ def sort_data_item(data_item, parsing_func='iterative_parsing'):
     return_data_item[f'pred_{parsing_func}'] = _sort_dictionary(data_item[f'pred_{parsing_func}'])
 
     return_data_item['turn_slot_values'] = _sort_dictionary(data_item['turn_slot_values'])
-    return_data_item[f'pred_delta_{parsing_func}'] = _sort_dictionary(data_item[f'pred_{parsing_func}'])
+    return_data_item[f'pred_delta_{parsing_func}'] = _sort_dictionary(data_item[f'pred_delta_{parsing_func}'])
     return_data_item['completion'] = data_item['completion']
 
     return_data_item['error'] = data_item['error']
