@@ -364,10 +364,122 @@ def parse_nl_completion(nl_completion: str, state = None,
         #     raise e
         return bs_dict
 
+def error_analysis_parse_nl_completion(nl_completion: str, state = None,
+                            exceptions_are_empty: bool = True, **kwargs) -> MultiWOZDict:
+    """
+    Do not match the slot name with the SlotName enum, just parse the slot name and value from the completion.
+
+    :param python_completion: the dialogue state update in python function-call form
+    :param state: the existing dialogue state (y_{t-1})
+    :param exceptions_are_empty: If an exception is encountered (un-parseable completion), treat this as containing no
+      update to the dialogue state.
+    :param kwargs: Not used, but included as other parsers use different arguments.
+    :return: the updated dialogue state y_t.
+
+    {'attraction-name': 'cineworld cinema', 'train-book people': '6', 'train-destination': 'cambridge', 'train-day': 'wednesday', 'train-arriveby': '19:45', 'train-departure': 'london kings cross'}
+
+    """
+
+    if '{' not in nl_completion:
+        reason = 'raw text hallucination'
+        return None, reason
+    
+    try:
+        full_statement = nl_completion.strip()
+        full_statement = full_statement.replace('{', '').replace('}', '')
+        
+        bs_dict = {}
+        for d_s_v in full_statement.split(','):
+            d_s = eval(d_s_v.split(":")[0])
+            v = d_s_v.split(":")[1:]
+            v = str(eval(":".join(v)))
+            
+            bs_dict[d_s] = v
+
+        return bs_dict
+    except Exception as e:
+        reason = 'format error'
+        return bs_dict, reason
+    
+
+def error_analysis_iterative_parsing(python_completion: str, state: Union[MultiWOZDict, ParserBeliefState] = None,
+                            exceptions_are_empty: bool = True, **kwargs) -> MultiWOZDict:
+    
+    class_dict = {'hotel': Hotel(), 'train': Train(), 'attraction': Attraction(), 'restaurant': Restaurant(), 'taxi': Taxi()}
+
+    if 'agent' not in python_completion and 'update' not in python_completion:
+        error_reason = 'raw text hallucination'
+        return None, error_reason
+
+    if not type(state) == ParserBeliefState:
+        state = parser_belief_state_from_mwoz_dict(state)
+        for domain in state.__dict__:
+            if state.__dict__[domain] is None:
+                state.__dict__[domain] = class_dict[domain]
+
+    full_statement = "agent.state." + python_completion.strip()
+    full_statement = replace_state_references(full_statement)
+    
+    agent = ParserAgent()
+    agent.state = ParserBeliefState()
+    for domain in agent.state.__dict__:
+        agent.state.__dict__[domain] = class_dict[domain]
+
+    error_reason = ''
+    for statement in full_statement.splitlines():
+        if not statement.startswith("agent.state."):
+            statement = "agent.state." + statement.strip()
+        
+        if statement.strip().startswith("agent.state.del "):
+            try:
+                statement = statement.replace("agent.state.del ", "").replace('agent.state.', '')
+                domain, slot = statement.split('.')[-2], statement.split('.')[-1]
+            except Exception as e:
+                error_reason = 'format error'
+                continue
+                
+            try:
+                statement = statement.replace(f"{domain}.{slot}", '')
+                exec(f'agent.state.{domain}.{slot} = None')
+            except Exception as e:
+                error_reason = 'execution error'
+                continue
+            
+        prefix = statement.split('(')[0] 
+        try:                        
+            args_list = statement.split('(')[1].split(',')
+            args_list[-1] = args_list[-1].replace(')', '') if args_list[-1].endswith(')') else args_list[-1]
+        except Exception as e:
+            error_reason = 'format error'
+            continue
+        
+        for arg in args_list:
+            if 'agent.state.' in arg:
+                arg = arg.replace('agent.state.', 'state.')
+            try:
+                naive_prefix = prefix.split('=')[0].strip()
+            except Exception as e:
+                error_reason = 'format error'
+                continue
+            
+            try:
+                sub_statement = naive_prefix + '.' + arg if 'update' not in naive_prefix else naive_prefix + '(' + arg + ')'
+                exec(sub_statement)    
+            except Exception as e:
+                error_reason = 'execution error'
+                continue
+
+    if error_reason:
+        return None, error_reason            
+    return agent.state.to_mwoz_dict(), error_reason
+
+
 PARSING_FUNCTIONS = {
     'iterative_parsing': iterative_parsing,
     'parse_python_completion': parse_python_completion,
     'parse_python_modified': parse_python_modified,
     'parse_state_change': parse_state_change,
-    'parse_nl_completion': parse_nl_completion
+    'parse_nl_completion': parse_nl_completion,
+    'error_analysis_parse_nl_completion': error_analysis_parse_nl_completion,
+    'error_analysis_iterative_parsing': error_analysis_iterative_parsing
 }
