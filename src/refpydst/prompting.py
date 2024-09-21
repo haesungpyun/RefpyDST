@@ -483,6 +483,7 @@ class PromptGenerator:
                 turn_msg += '        - Provide your output strictly in the Required Output Format below.\n\n'
                 turn_msg += "    **Required Output Format:**\n"
                 turn_msg += "        **Dialogue state change after Latest Conversation Between System and User:** \n"
+                turn_msg += '            { "DOMAIN_1-SLOT_1": "VALUE_1", "DOMAIN_2-SLOT_2": "VALUE_2", ... }\n'
                 # for s, v in turn_slot_values.items():
                 #     bs_msg += f"The value of slot \"{s.split('-')[1]}\" of \"{s.split('-')[0]}\" is {v}. "
                 bs_msg = f"            {turn_slot_values}\n"
@@ -519,6 +520,7 @@ class PromptGenerator:
             turn_msg += '        - Provide your output strictly in the Required Output Format below.\n\n'
             turn_msg += "    **Required Output Format:**\n"
             turn_msg += "        **Dialogue state change after Latest Conversation Between System and User:** \n"
+            turn_msg += '            { "DOMAIN_1-SLOT_1": "VALUE_1", "DOMAIN_2-SLOT_2": "VALUE_2", ... }\n'
         else:
             pass  # default adds our null input at end
         msg.append({"role": "user","content": prefix_msg+turn_msg})

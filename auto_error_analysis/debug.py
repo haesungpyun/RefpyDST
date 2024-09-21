@@ -1,5 +1,4 @@
 import abc
-import os
 import re
 from pathlib import Path
 import pandas as pd
@@ -56,8 +55,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
             output_dir_path (str): The path to save the analyzed log.
             ontology_path (str): The path to the ontology file.
             parsing_func (function): The parsing function to use for iterative parsing.
-                                     [error_analysis_parse_nl_completion(default), error_analysis_iterative_parsing, 
-                                     iterative_parsing, parse_python_modified, parse_state_change, parse_python_completion]
+                                     [naive_parse_nl_completion(default), naive_iterative_parsing, parse_python_modified, parse_state_change, parse_python_completion]
             special_values (List[str]): The special values to consider as errors.
         """
         
@@ -158,29 +156,28 @@ class ErrorAnalyzer(AbstractAnalyzer):
         prev_item: dict,
     ):
         # get the previous item's dialogue state and the previous predicted dialogue state
-        prev_pred_bs = prev_item.get(f'pred_{self.parsing_func.__name__}', {})
+        prev_gold_bs, prev_pred_bs = unroll_or(
+            gold=analyzed_item['last_slot_values'], pred=prev_item.get(f'pred_{self.parsing_func.__name__}', {})
+        )
         analyzed_item[f'last_pred_{self.parsing_func.__name__}'] = prev_pred_bs
-        tmp_prev_pred_bs = copy.deepcopy(prev_pred_bs) if prev_pred_bs else {}
-        prev_gold_bs, prev_pred_bs = unroll_or(gold=analyzed_item['last_slot_values'], pred=tmp_prev_pred_bs)
-    
+
         # Delta(State Change) Belief State parsing. Parse the completion and normalize considering surface forms
-        return_tuple = self.parsing_func(analyzed_item['completion'], state=tmp_prev_pred_bs)
-        if isinstance(return_tuple, tuple) and len(return_tuple) == 2:
-            parsed_pred_delta_bs, error_reason = return_tuple
-        else:
-            parsed_pred_delta_bs, error_reason = return_tuple, None
-        if parsed_pred_delta_bs:
-            parsed_pred_delta_bs = self.normalizer.normalize(raw_parse=parsed_pred_delta_bs) if 'DELETE' not in str(parsed_pred_delta_bs) else parsed_pred_delta_bs
-        analyzed_item[f'pred_delta_{self.parsing_func.__name__}'] = parsed_pred_delta_bs
-        
-        tmp_pred_delta = copy.deepcopy(parsed_pred_delta_bs) if parsed_pred_delta_bs else {}
-        gold_delta_bs, tmp_pred_delta = unroll_or(gold=analyzed_item['turn_slot_values'], pred=tmp_pred_delta)
+        pred_delta_bs = analyzed_item.get(f'pred_delta_{self.parsing_func.__name__}', None)
+        if pred_delta_bs is None:
+            return_tuple = self.parsing_func(analyzed_item['completion'], state=prev_pred_bs)
+            if isinstance(return_tuple, tuple) and len(return_tuple) == 2:
+                parsed_pred_delta_bs, error_reason = return_tuple
+            else:
+                parsed_pred_delta_bs, error_reason = return_tuple, None
+            if parsed_pred_delta_bs:
+                parsed_pred_delta_bs = self.normalizer.normalize(raw_parse=parsed_pred_delta_bs) if 'DELETE' not in str(parsed_pred_delta_bs) else parsed_pred_delta_bs
+            analyzed_item[f'pred_delta_{self.parsing_func.__name__}'] = parsed_pred_delta_bs
+        gold_delta_bs, parsed_pred_delta_bs = unroll_or(gold=analyzed_item['turn_slot_values'], pred=parsed_pred_delta_bs)
         
         # Accumulated Dialogue State Belief State. Update the pred with parsed delta(State Change) belief state
-        pred_bs = update_dialogue_state(context=tmp_prev_pred_bs, normalized_turn_parse=tmp_pred_delta) 
+        tmp_pred_delta = copy.deepcopy(parsed_pred_delta_bs) if parsed_pred_delta_bs else {}
+        pred_bs = update_dialogue_state(context=prev_pred_bs, normalized_turn_parse=tmp_pred_delta) 
         gold_bs, pred_bs = unroll_or(gold=analyzed_item['slot_values'], pred=pred_bs)
-        if not prev_pred_bs and not parsed_pred_delta_bs:
-            pred_bs = None
         analyzed_item[f'pred_{self.parsing_func.__name__}'] = pred_bs
 
         return gold_bs, pred_bs, gold_delta_bs, parsed_pred_delta_bs, prev_gold_bs, prev_pred_bs, error_reason
@@ -349,9 +346,6 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 err_name, err_s_v = err_item
             else:
                 print("Unexpected error format:", err_item)
-            
-            if err_name in ['raw text hallucination', 'format error', 'execution error']:
-                continue
         
             if 'hall' in err_name:
                 error_slot, error_value = err_s_v[-2], err_s_v[-1]
@@ -525,8 +519,8 @@ class ErrorAnalyzer(AbstractAnalyzer):
     
         # 분석된 항목의 정보를 가져옵니다.
         context = analyzed_item.get('dialog')
-        gold_delta_bs = analyzed_item.get('turn_slot_values')
-        pred_delta_bs = analyzed_item.get(f'pred_delta_{self.parsing_func.__name__}')
+        gold_bs = analyzed_item.get('turn_slot_values')
+        pred_bs = analyzed_item.get(f'pred_{self.parsing_func.__name__}')
         analyzed_item['error_reason'] = copy.deepcopy(analyzed_item.get('error', []))
 
         # iterate over the error cases
@@ -544,9 +538,9 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 user_prompt += f"**User**: {usr_utt}\n"
 
             user_prompt += f"### Gold Standard Dialogue State Change ###\n"
-            user_prompt += f"    {gold_delta_bs}\n"
+            user_prompt += f"    {gold_bs}\n"
             user_prompt += f"### Predicted Dialogue State Change ###\n"
-            user_prompt += f"    {pred_delta_bs}\n"
+            user_prompt += f"    {pred_bs}\n"
 
             user_prompt += f"### Error Type: {error_type} ###\n"
             user_prompt += "    " + reason_dict[error_type]
@@ -574,10 +568,10 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 result = self.LLM.generate(prompts, sampling_params=self.sampling_params)
 
                 completions = result[0].outputs[0].text
-                scalar = re.sub(r"[^0-9 ]", "", completions)
-                scalar = int(scalar)
+                scalars = re.sub(r"[^0-9 ]", "", completions)
+                scalars = int(scalars)
 
-                reason = explanation_list[scalar][0]
+                reason = [explanation_list[s][0] for s in scalars]
             except Exception as e:
                 reason = None
                 print(f"Error in generating the reason for the error: {e}")
@@ -590,7 +584,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
         """
         Analyzes the errors in the prediction compared to the gold standard and records them.
         """
-        print('\n\n=============== Start analyzing the error cases... ===============\n\n')
+        print('Start analyzing the error cases...')
         logs = read_json(self.result_file_path)
         
         analyzed_log = []
@@ -612,28 +606,9 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 n_correct+=1
 
             analyzed_item['error'] = []
-            analyzed_item['error_reason'] = []
-
-            if pred_bs is None:
-                pred_bs = {}
-            if pred_delta_bs is None:
-                pred_delta_bs = {}
-            if prev_pred_bs is None:
-                prev_pred_bs = {}
 
             if error_reason:
                 analyzed_item['error'].append((error_reason, None)) 
-                analyzed_item['error_reason'].append((error_reason, None, error_reason)) 
-                error_case, visited = self.detect_error_propagations(
-                    delta_miss_gold=gold_delta_bs, delta_over_pred={}, 
-                    gold_bs=gold_bs, pred_bs=pred_bs,
-                    prev_gold_bs=prev_gold_bs, prev_pred_bs=prev_pred_bs,
-                    visited=[], prev_item=prev_item
-                )
-                analyzed_item['error'].extend(error_case.get('error', []))
-                analyzed_item = sort_data_item(data_item=analyzed_item, parsing_func=self.parsing_func.__name__)
-                analyzed_log.append(analyzed_item)
-                prev_item = analyzed_item
                 continue
 
             analyzed_item = self.categorize_error_case(
@@ -649,8 +624,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
             # remove the redundant error cases
             analyzed_item['error'] = sorted(list(set(tuple(x) for x in analyzed_item['error'])))
 
-            if self.use_llm:
-                analyzed_item = self.reason_error(analyzed_item)
+            analyzed_item = self.reason_error(analyzed_item)
             
             analyzed_item = sort_data_item(data_item=analyzed_item, parsing_func=self.parsing_func.__name__)
             analyzed_log.append(analyzed_item)
@@ -661,17 +635,11 @@ class ErrorAnalyzer(AbstractAnalyzer):
 
         save_analyzed_log(output_dir_path=self.output_dir_path, analyzed_log=analyzed_log)
         self.plot_error_stats(analyzed_log)
-        
-        print('\n\n=============== Finished analyzing the error cases! ===============\n\n')
-        print(f"Total number of turns: {len(analyzed_log)}")
-        print(f"Number of correct turns: {n_correct}")
-        print(f"Joint Goal Accuracy: {n_correct/len(analyzed_log)}\n\n")
+
         return analyzed_log
     
     def plot_error_stats(self, analyzed_log):
         # Count the error statistics
-        if not os.path.exists(self.output_dir_path + '/plots'):
-            os.makedirs(self.output_dir_path + '/plots')
         error_stats = defaultdict(int)
         for data_item in analyzed_log:
             for error_name, error_s_v_pairs in data_item['error']:
@@ -688,22 +656,22 @@ class ErrorAnalyzer(AbstractAnalyzer):
         plt.title('Error Statistics')
 
         for index, (key, value) in enumerate(error_stats.items()):
-            plt.text(value, index, str(value))
+            plt.text(value, index,
+                    str(value))
         
         # save the plot
-        plt.savefig(self.output_dir_path + '/plots/error_stats.png')
+        plt.savefig(self.output_dir_path + '/error_stats.png')
 
         error_reason_stats = defaultdict(int)
-        reason_by_error = defaultdict(dict)
         for data_item in analyzed_log:
             for error_name, error_s_v_pairs, reason in data_item['error_reason']:
                 if reason is None:
                     continue
-                error_reason_stats[reason] += 1
-                reason_by_error[error_name][reason] = reason_by_error[error_name].get(reason, 0) + 1
+                for r in reason:
+                    error_reason_stats[r] += 1
 
         # Plot the error statistics wiht exact numbers
-        error_reason_stats = dict(sorted(error_reason_stats.items(), key=lambda x: x[1], reverse=True))        
+        error_reason_stats = dict(sorted(error_reason_stats.items(), key=lambda x: x[1], reverse=True))
         sns.set_theme(style="whitegrid")
         plt.figure(figsize=(20, 10))
         sns.barplot(x=list(error_reason_stats.values()), y=list(error_reason_stats.keys()))
@@ -713,30 +681,11 @@ class ErrorAnalyzer(AbstractAnalyzer):
         plt.title('Error Statistics')
 
         for index, (key, value) in enumerate(error_reason_stats.items()):
-            plt.text(value, index, str(value))
+            plt.text(value, index,
+                    str(value))
         
         # save the plot
-        plt.savefig(self.output_dir_path + '/plots/reason_stats.png')
-
-
-        for error_name, reason_stats in reason_by_error.items():
-            if 'error_prop' in error_name or 'raw' in error_name or 'format' in error_name or 'execution' in error_name:
-                continue
-            reason_stats = dict(sorted(reason_stats.items(), key=lambda x: x[1], reverse=True))
-
-            sns.set_theme(style="whitegrid")
-            plt.figure(figsize=(20, 10))
-            sns.barplot(x=list(reason_stats.values()), y=list(reason_stats.keys()))
-            plt.xlabel('Number of Errors')
-            plt.ylabel('Error Type')
-            plt.grid(axis='y')
-            plt.title('Error Statistics')
-
-            for index, (key, value) in enumerate(reason_stats.items()):
-                plt.text(value, index, str(value))
-
-            # save the plot
-            plt.savefig(self.output_dir_path + f'/plots/{error_name}_reason_stats.png')
+        plt.savefig(self.output_dir_path + '/error_reason_stats.png')
 
         return error_stats
 
@@ -803,7 +752,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
 
         for data_item in analyzed_log:
             
-            pred_delta_bs = data_item[f'pred_delta_{self.parsing_func.__name__}'] if data_item[f'pred_delta_{self.parsing_func.__name__}'] else {}
+            pred_delta_bs = data_item[f'pred_delta_{self.parsing_func.__name__}']
             gold_delta_bs = data_item['turn_slot_values']
 
             # filter out text hallucination totally wrong generation
@@ -911,7 +860,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
         axes[1].set_xlabel('Predicted State Change')
         axes[1].set_ylabel('Gold State Change')
 
-        print('\n=============== Confusion matrix saved to the output directory ===============\n')
+        print('Confusion matrix saved to the output directory')
         print('PRED Confusion matrix')
         print("# of hal value (Right SLOT Wrong VALUE): ", pred_delta_df.loc['hall_value'].sum())
         print("# of confused (Wrong SLOT Right VALUE): ", pred_delta_df.loc[slots].values.sum() - pred_delta_df.loc[slots].values.diagonal().sum())
@@ -922,7 +871,7 @@ class ErrorAnalyzer(AbstractAnalyzer):
         print("# of confused (Wrong SLOT Right VALUE): ", gold_delta_df.loc[slots].values.sum() - gold_delta_df.loc[slots].values.diagonal().sum())
         print("# of miss total (Wrong SLOT Wrong VALUE): ", gold_delta_df.loc[:, 'miss_total'].sum())
         
-        plt.savefig(self.output_dir_path + '/plots/confusion_matrix.png')
+        plt.savefig(self.output_dir_path + '/confusion_matrix.png')
         return None
     
 
@@ -932,33 +881,21 @@ if __name__ == '__main__':
         "engine":"meta-llama/Meta-Llama-3-8B-Instruct",
         "quantization": None,
     }
-    dir_path = 'outputs/runs/preliminary/random/plain_text/beam/8B'
     analyzer = ErrorAnalyzer(
         train_data_path='/home/haesungpyun/my_refpydst/data/mw21_1p_train_v1.json',
-        result_file_path=dir_path+'/running_log.json',
-        output_dir_path=dir_path,
-        use_llm=True,
+        result_file_path='/home/haesungpyun/my_refpydst/outputs/runs/table4/5p/smapling_exp/split_v1_topk_bm_5_fs_5/running_log.json',
+        output_dir_path='/home/haesungpyun/my_refpydst/outputs/runs/table4/5p/smapling_exp/split_v1_topk_bm_5_fs_5',
+        use_llm=False,
         llm_config=llm_config,
-        parsing_func='error_analysis_parse_nl_completion'
+        parsing_func='naive_iterative_parsing'
     )
     analyzer.analyze()
 
-    analyzer.show_state_change_confusion_matrix()
+    # # analyzer.show_state_change_confusion_matrix()
+    # output_dir = 'outputs/runs/table4/5p/smapling_exp/split_v1_topk_bm_5_fs_5/'
+    # analyzed_log = load_analyzed_log(output_dir_path=output_dir)
 
-    # output_dir_path = 'outputs/runs/table4/5p/smapling_exp/split_v1_topk_bm_5_fs_5'
-    # analyzed_log = load_analyzed_log(output_dir_path=output_dir_path)
-
-    # correct = 0
-    # for data_item in analyzed_log:
-    #     if  data_item['pred'] == data_item['slot_values']:
-    #         correct += 1 
-        
-    # print(f"Total number of turns: {len(analyzed_log)}")
-    # print(f"Number of correct turns: {correct}")
-    # print(f"Joint Goal Accuracy: {correct/len(analyzed_log)}\n\n")
-    
-    # if not os.path.exists(output_dir_path + '/plots'):
-    #         os.makedirs(output_dir_path + '/plots')
+    # # Count the error statistics
     # error_stats = defaultdict(int)
     # for data_item in analyzed_log:
     #     for error_name, error_s_v_pairs in data_item['error']:
@@ -979,47 +916,4 @@ if __name__ == '__main__':
     #             str(value))
     
     # # save the plot
-    # plt.savefig(output_dir_path + '/plots/error_stats.png')
-
-    # error_reason_stats = defaultdict(int)
-    # reason_by_error = defaultdict(dict)
-    # for data_item in analyzed_log:
-    #     for error_name, error_s_v_pairs, reason in data_item['error_reason']:
-    #         if reason is None:
-    #             continue
-    #         error_reason_stats[reason] += 1
-    #         reason_by_error[error_name][reason] = reason_by_error[error_name].get(reason, 0) + 1
-
-    # # Plot the error statistics wiht exact numbers
-    # error_reason_stats = dict(sorted(error_reason_stats.items(), key=lambda x: x[1], reverse=True))        
-    # sns.set_theme(style="whitegrid")
-    # plt.figure(figsize=(20, 10))
-    # sns.barplot(x=list(error_reason_stats.values()), y=list(error_reason_stats.keys()))
-    # plt.xlabel('Number of Errors')
-    # plt.ylabel('Error Type')
-    # plt.grid(axis='y')
-    # plt.title('Error Statistics')
-
-    # for index, (key, value) in enumerate(error_reason_stats.items()):
-    #     plt.text(value, index, str(value))
-    
-    # # save the plot
-    # plt.savefig(output_dir_path + '/plots/reason_stats.png')
-
-
-    # for error_name, reason_stats in reason_by_error.items():
-    #     reason_stats = dict(sorted(reason_stats.items(), key=lambda x: x[1], reverse=True))
-
-    #     sns.set_theme(style="whitegrid")
-    #     plt.figure(figsize=(20, 10))
-    #     sns.barplot(x=list(reason_stats.values()), y=list(reason_stats.keys()))
-    #     plt.xlabel('Number of Errors')
-    #     plt.ylabel('Error Type')
-    #     plt.grid(axis='y')
-    #     plt.title('Error Statistics')
-
-    #     for index, (key, value) in enumerate(reason_stats.items()):
-    #         plt.text(value, index, str(value))
-
-    #     # save the plot
-    #     plt.savefig(output_dir_path + f'/plots/{error_name}_reason_stats.png')
+    # plt.savefig(output_dir + '/error_stats.png')
