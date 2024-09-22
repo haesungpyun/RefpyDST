@@ -2,13 +2,13 @@
 from collections import defaultdict, Counter
 from typing import List, Dict
 
+from data_types import Turn, SlotName, MultiWOZDict, SlotValue
 from tqdm import tqdm
 
-from auto_error_analysis.data_types import Turn, SlotName, MultiWOZDict, SlotValue
-from auto_error_analysis.normalization.abstract_normalizer import AbstractNormalizer
-from auto_error_analysis.db.ontology import Ontology
-from auto_error_analysis.utils import read_json
-from auto_error_analysis.resources import read_json_resource
+from normalization.abstract_normalizer import AbstractNormalizer
+from db.ontology import Ontology
+from utils import read_json
+from resources import read_json_resource
 
 
 class DataOntologyNormalizer(AbstractNormalizer):

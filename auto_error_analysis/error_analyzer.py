@@ -491,34 +491,34 @@ class ErrorAnalyzer(AbstractAnalyzer):
             if 'delta_hall' in error_type:
                 slot_name, value_name = error_slot_value[-2], error_slot_value[-1]
                 dicts = {
-                    'annotation': f"This means that the model made '{error_type }' error because the provided annotation was incorrect considering dialog.",
-                    'context_hallucination': f"This means that the model made '{error_type }' error because it captures a {slot_name} and {value_name} that are irrelevant to the current dialogue, even though they are mentioned in the dialogue context.",
-                    'hallucination': f"This means that the model made '{error_type }' error because it hallucinated {slot_name} and {value_name} which are completely outside the context of the dialogue.",
-                    'infer_hallucination': f"This means that the model made '{error_type }' error because it inferred the {slot_name} and {value_name} incorrectly from the dialogue context.",
-                    'intent_hallucination': f"This means that the model made '{error_type }' error because it misunderstood the user's intent from the utterances.",
-                    'late': f"This means that the model made '{error_type }' error because it should have been predicted in earlier turns.",
-                    'update_hallucination': f"This means that the model made '{error_type }' error because it updated the {slot_name} and {value_name} with incorrect slot or value.",
-                    'co_reference': f"This means the model made '{error_type }' error because it failed to resolve the co-reference using the dialogue context and current utterances.",
-                    'time': f"This means that the model made '{error_type }' error because it captures the wrong time.",
+                    'annotation_error': f"This means that the model made '{error_type }' error because the provided annotation was incorrect considering dialog.",
+                    'contextual_hallucination': f"This means that the model made '{error_type }' error because it captures a {slot_name} and {value_name} that are irrelevant to the current dialogue, even though they are mentioned in the dialogue context.",
+                    'incorrect_inference': f"This means that the model made '{error_type }' error because it inferred the {slot_name} and {value_name} incorrectly from the dialogue context.",
+                    'intent_misunderstanding': f"This means that the model made '{error_type }' error because it misunderstood the user's intent from the utterances.",
+                    'complete_hallucination': f"This means that the model made '{error_type }' error because it hallucinated {slot_name} and {value_name} which are completely outside the context of the dialogue.",
+                    'late_prediction': f"This means that the model made '{error_type }' error because it should have been predicted in earlier turns.",
+                    'incorrect_update': f"This means that the model made '{error_type }' error because it updated the {slot_name} and {value_name} with incorrect slot or value.",
+                    'coreference_error': f"This means the model made '{error_type }' error because it failed to resolve the co-reference using the dialogue context and current utterances.",
+                    'time_error': f"This means that the model made '{error_type }' error because it captures the wrong time.",
                 }
                 
             if 'delta_miss' in error_type:
                 slot_name, value_name = error_slot_value[-2], error_slot_value[-1]
                 dicts =  {
-                    'annotation': f"This means that the model made '{error_type }' error because the provided annotation was incorrect considering dialog.",
-                    'miss_utter': f"This means that the model made '{error_type }' error because it misses user's flexible preference from the utterances.",
-                    'context_change': f"This means that the model made '{error_type }' error because it misses the context change in dialog context.",
-                    'co-reference': f"This means that the model made '{error_type }' error because it failed to resolve the co-reference using the dialogue context and current utterances.",
-                    'usr_ex_confirm': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user explicitly confirmed.",
-                    'usr_im_confirm': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user implicitly confirmed.",
-                    'usr_request': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user requested.",
-                    'usr_state': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user's state.",
-                    'usr_refusal': f"This means that the model made '{error_type }' error because it misses the user's refusal from the utterances.",
-                    'domain_slot_miss_align': f"This means that the model made '{error_type }' error because the {slot_name} and {value_name} are not aligned correctly to the domain.",
-                    'slot_value_miss_align': f"This means that the model made '{error_type }' error because the value is not aligned correctly to the slot.",
-                    'hallucination': f"This means that the model made '{error_type }' error because it hallucinated {slot_name} and {value_name} which are completely outside the context of the dialogue.",
-                    'mixed_intent': f"This means that the model made '{error_type }' error because it misses mixed the intents from the user's utterances.",
-                    'slot_confuse': f"This means that the model made '{error_type }' error because it confused the slot with another slot.",            
+                    'context_change_error': f"This means that the model made '{error_type }' error because it misses the context change in dialog context.",
+                    'coreference_error': f"This means that the model made '{error_type }' error because it failed to resolve the co-reference using the dialogue context and current utterances.",
+                    'user_explicit_confirmation_miss': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user explicitly confirmed.",
+                    'user_implicit_confirmation_miss': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user implicitly confirmed.",
+                    'annotation_error': f"This means that the model made '{error_type }' error because the provided annotation was incorrect considering dialog.",
+                    'user_request_miss': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user requested.",
+                    'user_state_miss': f"This means that the model made '{error_type }' error because it misses the {slot_name} and {value_name} which the user's state.",
+                    'user_refusal_miss': f"This means that the model made '{error_type }' error because it misses the user's refusal from the utterances.",
+                    'domain_slot_misalignment': f"This means that the model made '{error_type }' error because the {slot_name} and {value_name} are not aligned correctly to the domain.",
+                    'slot_value_misalignment': f"This means that the model made '{error_type }' error because the value is not aligned correctly to the slot.",
+                    'complete_hallucination': f"This means that the model made '{error_type }' error because it hallucinated {slot_name} and {value_name} which are completely outside the context of the dialogue.",
+                    'mixed_intent_error': f"This means that the model made '{error_type }' error because it misses mixed the intents from the user's utterances.",
+                    'slot_confusion': f"This means that the model made '{error_type }' error because it confused the slot with another slot.",            
+                    'missing_preference': f"This means that the model made '{error_type }' error because it misses user's flexible preference from the utterances.",
                     'context_hallucination': f"This means that the model made '{error_type }' error because it captures a {slot_name} and {value_name} that are irrelevant to the current dialogue, even though they are mentioned in the dialogue context.",
                 }            
             return dicts
@@ -535,37 +535,56 @@ class ErrorAnalyzer(AbstractAnalyzer):
             if 'error_prop' in error_type:
                 analyzed_item['error_reason'][i] = (error_type, error_slot_value, 'error_propagation')
                 continue
-                
-            prompt = [{"role": "system", "content": "You are a talented error analyzer! Let's analyze the error cases together."}]
-            
-            user_prompt = f"### Dialog ###\n"
+                      
+            sys_prompt = "You are a talented error analyzer! Let's analyze the error cases and find out the cause of it together. \n\n"            
+            sys_prompt += "**INSTRUCTION**\n\n"
+            sys_prompt += "You will be provided with a **Dialogue** between a system and a user, along with the **Gold Standard Dialogue State**, the **Predicted Dialogue State Change**, an **Error**, and a **List of Possible Reasons**.\n\n"
+
+            sys_prompt += "Your task is to analyze the **Error** by identifying the most likely cause from the **List of Possible Reasons**. "
+            sys_prompt += "Base your analysis on the discrepancies between the **Gold Standard Dialogue State** and the **Predicted Dialogue State Change**, considering the overall context of the **Dialogue**. " 
+            sys_prompt += "Return the **Index** of the cause that best explains the **Error** from the **List of Possible Reasons**. \n\n"
+
+            sys_prompt += "**Analysis Criteria**:\n"
+            sys_prompt += "1. The cause should be identifiable from the context of the **Dialogue** and the mismatch between the **Gold Standard Dialogue State** and the **Predicted Dialogue State Change**. \n"
+            sys_prompt += "2. The cause should consider the **Dialogue**, the **Gold Standard Dialogue State**, and the **Predicted Dialogue State Change** to explain the **Error**. \n"
+            sys_prompt += "3. The identified cause should reflect the nature of the discrepancy between the **Gold Standard Dialogue State** and the **Predicted Dialogue State Change**. \n"
+            sys_prompt += "4. The cause should logically align with the **Error** and the overall context of the **Dialogue**. \n"
+            sys_prompt += "5. The identified cause must match one of the options in the **List of Possible Reasons**. \n\n"
+
+            sys_prompt += "**Analysis Steps**:\n"
+            sys_prompt += "1. **Examine the Dialogue**: Review the conversation to understand the context and the system's behavior. \n"
+            sys_prompt += "2. **Compare State Changes**: Analyze the **Gold Standard Dialogue State** and the **Predicted Dialogue State Change** to identify discrepancies. \n"
+            sys_prompt += "3. **Assess the Error**: Validate that the identified discrepancy corresponds to the provided **Error**. \n"
+            sys_prompt += "4. **Evaluate Possible Reasons**: Analyze the **List of Possible Reasons** and identify which one best explains the **Error** based on the **Dialogue**, **Gold Standard Dialogue State**, and **Predicted Dialogue State Change**. \n"
+            sys_prompt += "5. **Return the Cause Index**: Provide the index of the most appropriate cause from the **List of Possible Reasons**, without additional commentary. \n\n"
+
+            user_prompt = f"**Dialog**:\n"
             for sys_utt, usr_utt in zip(context['sys'], context['usr']):
-                user_prompt += f"**System**: {sys_utt}\n"
-                user_prompt += f"**User**: {usr_utt}\n"
+                user_prompt += f" System: {sys_utt}\n"
+                user_prompt += f" User: {usr_utt}\n"
 
-            user_prompt += f"### Gold Standard Dialogue State Change ###\n"
-            user_prompt += f"    {gold_delta_bs}\n"
-            user_prompt += f"### Predicted Dialogue State Change ###\n"
-            user_prompt += f"    {pred_delta_bs}\n"
+            user_prompt += f"\n**Gold Standard Dialogue State Change**:\n"
+            user_prompt += f"    {gold_delta_bs}\n\n"
+            user_prompt += f"**Predicted Dialogue State Change**:\n"
+            user_prompt += f"    {pred_delta_bs}\n\n"
 
-            user_prompt += f"### Error Type: {error_type} ###\n"
-            user_prompt += "    " + reason_dict[error_type]
+            user_prompt += f"**Error**: \n"
+            user_prompt += f"    {error_type}: " + reason_dict[error_type]
 
             explanation_list = list(retrun_explanation_dict(error_type, error_slot_value).items())
 
-            user_prompt += "The reason for the error is as follows: \n"
+            user_prompt += "\n\n**List of Possible Reasons**: \n\n"
             for idx,(reason_name, explanaton) in enumerate(explanation_list):
                 user_prompt += f"({idx}) **{reason_name}**\n"
                 user_prompt += f"{explanaton} \n\n"
 
-            user_prompt += "#### Instruction ####\n"
-            user_prompt += f"   - Based on the dialogue, gold standard dialogue state change, and predicted dialogue state change, select the most related and correct reason for the error. \n"
-            user_prompt += f"   - DO NOT select reasons unrelated to the error. \n"
-            user_prompt += f"   - DO NOT generate text. \n"
-            user_prompt += f"   - DO NOT generate multiple scalar values.\n\n"
-            user_prompt += f"## Provide only a single scalar value as output. ##\n"
+            # user_prompt += f"Provide only a single scalar value as output.\n"
+            user_prompt += f"**Index**: \n"
 
-            prompt.append({"role": "user","content": user_prompt})
+            prompt = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user","content": user_prompt}
+            ]
 
             # Make a request to the LLM to generate the reason for the error.
             prompt_ids = self.tokenizer.apply_chat_template(prompt, add_generation_prompt=True, return_tensors="pt")
@@ -599,8 +618,17 @@ class ErrorAnalyzer(AbstractAnalyzer):
         for idx, data_item in tqdm(enumerate(logs), desc="analyzing items", total=len(logs)):
             if data_item['turn_id'] == 0:
                 prev_item = {}            
-
+            
             analyzed_item = copy.deepcopy(data_item)
+            if isinstance(data_item['pred'], list):
+                analyzed_item['pred'] = analyzed_item['pred'][0]
+            if isinstance(data_item['pred_delta_slot_values'], list):
+                analyzed_item['pred_delta_slot_values'] = analyzed_item['pred_delta_slot_values'][0]
+            if isinstance(data_item['pred_prior_context'], list):
+                analyzed_item['pred_prior_context'] = analyzed_item['pred_prior_context'][0]
+            if isinstance(data_item['completion'], list):
+                analyzed_item['completion'] = analyzed_item['completion'][0]
+
             
             (   
                 gold_bs, pred_bs, 
@@ -620,6 +648,9 @@ class ErrorAnalyzer(AbstractAnalyzer):
                 pred_delta_bs = {}
             if prev_pred_bs is None:
                 prev_pred_bs = {}
+
+            
+
 
             if error_reason:
                 analyzed_item['error'].append((error_reason, None)) 
@@ -927,19 +958,28 @@ class ErrorAnalyzer(AbstractAnalyzer):
     
 
 if __name__ == '__main__':
+    import sys  
+    try:
+        dir_path = sys.argv[1]
+    except:
+        dir_path = 'outputs/runs/upperbound/8B/score_delta/bm_d_gds_sbert_gdb/round_robin_div_top_k'
+    try:
+        parsing_func = sys.argv[2]
+    except:
+        parsing_func = 'error_analysis_parse_nl_completion'
 
     llm_config = {
-        "engine":"meta-llama/Meta-Llama-3-8B-Instruct",
-        "quantization": None,
+        "engine":"../models/Meta-Llama-3-70B-Instruct-GPTQ",
+        "quantization":"GPTQ",
     }
-    dir_path = 'outputs/runs/preliminary/random/plain_text/beam/8B'
+    
     analyzer = ErrorAnalyzer(
         train_data_path='/home/haesungpyun/my_refpydst/data/mw21_1p_train_v1.json',
         result_file_path=dir_path+'/running_log.json',
         output_dir_path=dir_path,
         use_llm=True,
         llm_config=llm_config,
-        parsing_func='error_analysis_parse_nl_completion'
+        parsing_func=parsing_func
     )
     analyzer.analyze()
 
