@@ -83,10 +83,10 @@ class CodexExperiment(AbstractLMPromptingExperiment):
         self.min_null_token_log_probability = np.log(min_null_token_prob) if min_null_token_prob != 0 else sys.float_info.min
         min_null_sequence_prob: float = self.lm_decoding_config and self.lm_decoding_config.get('min_null_probability', 0) or 0
         self.min_null_sequence_log_probability = np.log(min_null_sequence_prob) if min_null_sequence_prob != 0 else sys.float_info.min
-        # if codex_engine.startswith('gpt'):
-        #     self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
-        # elif "llama" in codex_engine.lower():
-        #     self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+        if codex_engine.startswith('gpt'):
+            self.codex_client = CodexClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
+        elif "llama" in codex_engine.lower():
+            self.codex_client = LlamaClient(engine=codex_engine, stop_sequences=STOP_SEQUENCES.get(self.prompt_format), beam_search_config=self.beam_search_config)
 
         self.add_guidelines = kwargs.get("add_guidelines", True)
 
@@ -272,8 +272,8 @@ def main(train_fn: str, retriever_dir: str, output_dir: str, test_fn: str, promp
          artifact_cache: str = None,
          format_example: Optional[Turn] = None, num_examples: int = 10, **kwargs) -> None:
     # create the output folder
-    if os.path.exists(output_dir):
-        output_dir = output_dir + "_" + str(datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=9))).strftime('%m%d_%H%M'))
+    # if os.path.exists(output_dir):
+    output_dir = output_dir + "_" + str(datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=9))).strftime('%m%d_%H%M'))
     os.makedirs(output_dir, exist_ok=True)
     # write out this experiment's configuration
     exp_config: Dict[str, Union[str, int]] = dict(locals())
@@ -327,22 +327,12 @@ if __name__ == "__main__":
     os.environ['REFPYDST_DATA_DIR'] = "/home/haesungpyun/my_refpydst/data"
     os.environ['REFPYDST_OUTPUTS_DIR'] = "/home/haesungpyun/my_refpydst/outputs"    
 
+
     # import warnings
     # warnings.warn("This script is deprecated. Please use the `run_codex_experiment.py` script instead.")
     # # # raise ValueError
     
     run_file: str = 'runs/preliminary/bm25/plain_text_no_guidelines/beam/8B/dialog_gt_full_bs.json'
-    # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
-    # 'runs/table4_llama/5p/bm25/split_v1_10_all_sim_div.json'
-    # 'runs/table4/5p/bm25/split_v1_10_all_sim.json'
-    # "runs/table4/5p/bm25/mixed.json"
-    # 'runs/table4/5p/fine_tuned_sbert/split_v1.json'
-    # 'runs/table4/5p/pretrained_sbert/split_v1.json'
-    # 'runs/codex/mw21_1p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-    # 'runs/codex/zero_shot/python/split_v1.json'
-    # "runs/codex/toy_test.json"
-    # 'runs/codex/mw21_5p_train/python/top_p_0_9_x_max_emb_02_canonical_beta_0_4/split_v1.json'
-        # arguments are input from a configuration file if the first argument to the program is a valid file
     args: CodexPromptingRunConfig = read_json(run_file)
     if 'output_dir' not in args:
         args['output_dir'] = get_output_dir_full_path(run_file.replace('.json', ''))

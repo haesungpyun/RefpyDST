@@ -369,29 +369,39 @@ class LlamaClient(AbstractLMClient):
         sequences, logits = [], []
 
         try:
-            
+            self.timer.step()
+            # result = openai.completions.create(**args)
+            sampling_params = SamplingParams(
+                n=1, best_of=1, max_tokens=120, 
+                temperature=0, stop=stop_sequences,
+                stop_token_ids=self.terminators)
+            if self.beam_search_config:
+                sampling_params.use_beam_search = True
+                sampling_params.best_of = self.beam_search_config['beam_size']
+
+            if not isinstance(prompt_ids[0], torch.Tensor):
+                prompt_ids = [self.tokenizer.apply_chat_template(
+                    prompt_ids, add_generation_prompt=True, return_tensors="pt"
+                )]
+            prompts = [self.tokenizer.batch_decode(prompt, skip_special_tokens=False)[0] for prompt in prompt_ids]
             for _ in range(2):
-                # result = openai.completions.create(**args)
-                result = self.model.generate(
-                    input_ids,
-                    max_new_tokens=120,
-                    eos_token_id=self.terminators,
-                    do_sample=True,
-                    top_p=0.9,
-                    output_scores= True,
-                    return_dict_in_generate=True,
-                    stop_strings=stop_sequences,
-                    tokenizer=self.tokenizer,
-                    output_logits=True,
-                    )
+
+                result = self.model.generate(prompts, sampling_params=sampling_params)
 
                 sequences.append(result['sequences'][0])
                 logits.append(result['logits'])
+            
+            if len(result) > 1:
+                # if batched
+                completions = [{output.outputs[0].text: 1} for output in result]
+            else:
+                completions = [{result[0].outputs[0].text: 1}]
+
             completions = dict(zip(
                 [self.tokenizer.decode(seq[input_len:], skip_special_tokens=True) for seq in sequences] ,
                 [torch.stack(logit).softmax(dim=-1).max(dim=-1)[0].log().sum().item() for logit in logits]))
-        
             return completions
+        
         except BadRequestError as e:
             # if e.user_message.startswith(TOO_MANY_TOKENS_FOR_ENGINE):
             #   raise PromptOverlengthError(e)
